@@ -1,0 +1,3 @@
+- platform: ping
+  hosts:
+    motog6: MotoG6Plus.jain.lan

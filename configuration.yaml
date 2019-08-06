@@ -1,0 +1,54 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Enables configuration UI
+config:
+
+logger:
+  default: info
+
+homeassistant:
+  name: !secret name
+  unit_system: metric
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 50
+  time_zone: !secret time_zone
+
+  customize: !include customise.yaml
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret base_url
+  use_x_forwarded_for: true
+# You must set the trusted proxy IP address so that Home Assistant will properly accept connections
+# Set this to your NGINX machine IP, or localhost if hosted on the same machine.
+  trusted_proxies:
+    - 192.168.8.10
+  server_port: 8123
+  #server_port: 443
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# automation: !include automations.yaml
+group: !include groups.yaml
+script: !include scripts.yaml
+
+light: !include lights.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+binary_sensor: !include binary-sensors.yaml
+device_tracker: !include device_trackers.yaml
+
+
+mqtt:
+  discovery: false
+  broker: !secret mqtt_broker  # Remove if you want to use builtin-in MQTT broker
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'

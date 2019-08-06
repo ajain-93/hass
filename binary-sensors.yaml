@@ -1,0 +1,76 @@
+# Door Sensors
+- platform: "mqtt"
+  name: aqara_sensor_switch_01_contact
+  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.contact }}"
+  device_class: "door"
+
+# Motion Sensors
+- platform: "mqtt"
+  name: smartthings_motion_temp_01_occupancy
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.occupancy }}"
+  device_class: "motion"
+- platform: "mqtt"
+  name: smartthings_motion_temp_02_occupancy
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.occupancy }}"
+  device_class: "motion"
+
+# Connected Devices
+- platform: ping
+  host: jain10.jain.lan
+  name: ping_jain10
+  count: 1
+- platform: ping
+  host: jain56.jain.lan
+  name: ping_jain56
+  count: 1
+- platform: ping
+  host: docker56.jain.lan
+  name: ping_docker56
+  count: 1
+
+- platform: ping
+  host: octopi.jain.lan
+  name: ping_octopi
+  count: 1
+- platform: ping
+  host: raspberrypi.jain.lan
+  name: ping_raspberrypi
+  count: 1
+
+- platform: ping
+  host: MotoG6Plus.jain.lan
+  name: ping_motorola_g6_plus
+  count: 1
+- platform: ping
+  host: XperiaZR.jain.lan
+  name: ping_sony_xperia_zr
+  count: 1
+- platform: ping
+  host: Tablet35.jain.lan
+  name: ping_asus_a810
+  count: 1
+
+- platform: ping
+  host: ChromeAudioBedroom.jain.lan
+  name: ping_chromecast_audio_bedroom
+  count: 1
+- platform: ping
+  host: ChromeAudioLivingroom.jain.lan
+  name: ping_chromecast_audio_livingroom
+  count: 1
+- platform: ping
+  host: Cast50.jain.lan
+  name: ping_chromecast_video
+  count: 1

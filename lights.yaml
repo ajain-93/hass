@@ -1,0 +1,159 @@
+# White E27
+- platform: "mqtt"
+  name: tradfri_led_white_01_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_white_01"
+  command_topic: "zigbee2mqtt/tradfri_led_white_01/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_white_02_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_white_02"
+  command_topic: "zigbee2mqtt/tradfri_led_white_02/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_white_03_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_white_03"
+  command_topic: "zigbee2mqtt/tradfri_led_white_03/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+# White GU10
+- platform: "mqtt"
+  name: tradfri_led_gu10_01_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_01"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_01/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_gu10_02_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_02"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_02/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_gu10_03_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_03"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_03/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_gu10_04_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_04"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_04/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_gu10_05_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_05"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_05/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_gu10_06_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_06"
+  command_topic: "zigbee2mqtt/tradfri_led_gu10_06/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+# RGB E27
+- platform: "mqtt"
+  name: tradfri_led_rgb_01_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_01"
+  command_topic: "zigbee2mqtt/tradfri_led_rgb_01/set"
+  brightness: true
+  xy: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_rgb_02_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_02"
+  command_topic: "zigbee2mqtt/tradfri_led_rgb_02/set"
+  brightness: true
+  xy: true
+  schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_rgb_03_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_03"
+  command_topic: "zigbee2mqtt/tradfri_led_rgb_03/set"
+  brightness: true
+  xy: true
+  schema: "json"
+
+
+# Plugs
+- platform: "mqtt"
+  name: tradfri_plug_01_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_plug_01"
+  command_topic: "zigbee2mqtt/tradfri_plug_01/set"
+  schema: "json"
+
+
+
+# Groups
+- platform: group
+  name: bathroom
+  entities:
+  - light.tradfri_led_rgb_03_light
+- platform: group
+  name: bedroom
+  entities:
+  - light.tradfri_led_rgb_01_light
+  - light.tradfri_led_rgb_02_light
+  - light.tradfri_led_gu10_05_light
+  - light.tradfri_led_gu10_06_light
+- platform: group
+  name: bedroom_ceiling
+  entities:
+  - light.tradfri_led_gu10_05_light
+  - light.tradfri_led_gu10_06_light
+- platform: group
+  name: bedroom_bed
+  entities:
+  - light.tradfri_led_rgb_01_light
+  - light.tradfri_led_rgb_02_light
+- platform: "mqtt"
+  name: gallery
+  state_topic: "zigbee2mqtt/lights_gallery"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_gallery/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
+  name: kitchen
+  state_topic: "zigbee2mqtt/lights_kitchen"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_kitchen/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: group
+  name: livingroom
+  entities: 
+  - light.tradfri_plug_01_light
+- platform: group
+  name: store
+  entities:
+  - light.tradfri_led_white_03_light
+
+  

@@ -1,0 +1,230 @@
+
+# Temperature
+- platform: "mqtt"
+  name: smartthings_motion_temp_01_temperature
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  device_class: "temperature"
+  value_template: "{{ value_json.temperature }}"
+- platform: "mqtt"
+  name: smartthings_motion_temp_02_temperature
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  device_class: "temperature"
+  value_template: "{{ value_json.temperature }}"
+
+# Power
+- platform: "mqtt"
+  name: fibaro_switch_01_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/fibaro_switch_01/49/1/4"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: fibaro_switch_01_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_01"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+
+
+# Energy
+- platform: "mqtt"
+  name: fibaro_switch_01_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/fibaro_switch_01/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: fibaro_switch_01_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_01"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+
+# Remotes
+- platform: "mqtt"
+  name: tradfri_switch_01_action
+  state_topic: "zigbee2mqtt/tradfri_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action}}"
+  icon: mdi:"mdi:gesture-double-tap"
+- platform: "mqtt"
+  name: tradfri_switch_02_action
+  state_topic: "zigbee2mqtt/tradfri_switch_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action}}"
+  icon: mdi:"mdi:gesture-double-tap"
+
+
+
+# Link Quality
+# Plugs
+- platform: "mqtt"
+  name: tradfri_plug_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_plug_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# Remotes
+- platform: "mqtt"
+  name: tradfri_switch_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_switch_02_linkquality
+  state_topic: "zigbee2mqtt/tradfri_switch_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# Door Sensors
+- platform: "mqtt"
+  name: aqara_sensor_switch_01_linkquality
+  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# Motion Sensors
+- platform: "mqtt"
+  name: smartthings_motion_temp_01_linkquality
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: smartthings_motion_temp_02_linkquality
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# Lights
+# RGB Lights
+- platform: "mqtt"
+  name: tradfri_led_rgb_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_rgb_02_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_rgb_03_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_03"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# White Lights
+- platform: "mqtt"
+  name: tradfri_led_white_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_white_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_white_02_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_white_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_white_03_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_white_03"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+# GU10 Lights
+- platform: "mqtt"
+  name: tradfri_led_gu10_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_gu10_02_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_gu10_03_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_03"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_gu10_04_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_04"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_gu10_05_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_05"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_gu10_06_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_gu10_06"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+
+
+# Battery Levels
+# Remotes
+- platform: "mqtt"
+  name: tradfri_switch_01_battery
+  state_topic: "zigbee2mqtt/tradfri_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
+- platform: "mqtt"
+  name: tradfri_switch_02_battery
+  state_topic: "zigbee2mqtt/tradfri_switch_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
+# Door Sensors
+- platform: "mqtt"
+  name: aqara_sensor_switch_01_battery
+  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
+# Motion Sensors
+- platform: "mqtt"
+  name: smartthings_motion_temp_01_battery
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
+- platform: "mqtt"
+  name: smartthings_motion_temp_02_battery
+  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
