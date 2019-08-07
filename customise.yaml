@@ -220,7 +220,7 @@ sensor.aqara_sensor_switch_01_linkquality:
 
 
 
-# Sensors
+# Connectivity
 binary_sensor.ping_jain10:
   friendly_name: Jain10
   device_class: connectivity
