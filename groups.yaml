@@ -86,16 +86,16 @@ device_connectivity:
     - binary_sensor.ping_jain10
     - binary_sensor.ping_jain56
     - binary_sensor.ping_docker56
-    
+
     # Mobile Devices
     - binary_sensor.ping_motorola_g6_plus
     - binary_sensor.ping_sony_xperia_zr
     - binary_sensor.ping_asus_a810
-    
+
     # Raspberry Pis'
     - binary_sensor.ping_octopi
     - binary_sensor.ping_raspberrypi
-    
+
     # Chromecasts
     - binary_sensor.ping_chromecast_audio_bedroom
     - binary_sensor.ping_chromecast_audio_livingroom
