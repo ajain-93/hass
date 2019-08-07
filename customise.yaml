@@ -155,6 +155,24 @@ sensor.smartthings_motion_temp_02_battery:
   friendly_name: Kitchen Motion Battery
   device_class: battery
 
+switch.tplink_plug_01:
+  friendly_name: Fridge
+  icon: mdi:fridge
+sensor.tplink_plug_01_amps:
+  hidden: true
+  # icon: mdi:flash
+sensor.tplink_plug_01_watts:
+  icon: mdi:power-plug
+sensor.tplink_plug_01_volts:
+  hidden: true
+  # icon: mdi:flash
+sensor.tplink_plug_01_today_kwh:
+  icon: mdi:power-plug
+sensor.tplink_plug_01_total_kwh:
+  icon: mdi:power-plug
+
+
+
 # Living room
 light.livingroom:
   friendly_name: Living room

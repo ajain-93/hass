@@ -228,3 +228,29 @@
   unit_of_measurement: "%"
   value_template: "{{ value_json.battery}}"
   device_class: "battery"
+
+
+# Templates
+- platform: template
+  sensors:
+    # TP-Link Plug #1
+    tplink_plug_01_amps:
+      friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Current"
+      value_template: '{{ states.switch.tplink_plug_01.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+    tplink_plug_01_watts:
+      friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Current Consumption"
+      value_template: '{{ states.switch.tplink_plug_01.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    tplink_plug_01_total_kwh:
+      friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Total Consumption"
+      value_template: '{{ states.switch.tplink_plug_01.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    tplink_plug_01_volts:
+      friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Voltage"
+      value_template: '{{ states.switch.tplink_plug_01.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    tplink_plug_01_today_kwh:
+      friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Today's Consumption"
+      value_template: '{{ states.switch.tplink_plug_01.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'

@@ -52,3 +52,8 @@ mqtt:
   will_message:
     topic: 'hass/status'
     payload: 'offline'
+
+tplink:
+  discovery: false
+  switch:
+    - host: tplink-plug-01.jain.lan
