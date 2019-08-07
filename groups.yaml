@@ -13,6 +13,7 @@ room_lights:
 
 bedroom:
   name: "Bedroom"
+  control: hidden
   entities:
    - light.tradfri_led_rgb_01_light
    - light.tradfri_led_rgb_02_light
@@ -21,11 +22,13 @@ bedroom:
 
 livingroom:
    name: "Living Room"
+   control: hidden
    entities:
      - light.tradfri_plug_01_light
 
 kitchen:
   name: "Kitchen"
+  control: hidden
   entities:
     - binary_sensor.smartthings_motion_temp_02_occupancy
     - sensor.smartthings_motion_temp_02_temperature
@@ -37,6 +40,7 @@ kitchen:
 
 gallery:
   name: "Gallery"
+  control: hidden
   entities:
     - binary_sensor.smartthings_motion_temp_01_occupancy
     - sensor.smartthings_motion_temp_01_temperature
@@ -49,12 +53,14 @@ gallery:
 
 bathroom:
   name: "Bathroom"
+  control: hidden
   entities:
     - light.tradfri_led_rgb_03_light
     - sensor.tradfri_switch_02_battery
 
 store:
   name: "Store"
+  control: hidden
   entities:
     - light.tradfri_led_white_03_light
     - binary_sensor.aqara_sensor_switch_01_contact
@@ -74,6 +80,7 @@ battery_levels:
 
 device_connectivity:
   name: "Devices"
+  control: hidden
   entities:
     # LAN Devices
     - binary_sensor.ping_jain10
