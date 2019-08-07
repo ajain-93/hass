@@ -166,6 +166,16 @@ sensor.tradfri_plug_01_linkquality:
   friendly_name: Study Light Link
   device_class: signal_strength
   hidden: true
+switch.fibaro_switch_01_switch:
+  friendly_name: Jain10
+  icon: mdi:desktop-tower-monitor
+sensor.fibaro_switch_01_power:
+  friendly_name: Jain10 Power
+  icon: mdi:flash
+sensor.fibaro_switch_01_energy:
+  friendly_name: Jain10 Energy
+  icon: mdi:power-plug
+
 
 # Store
 light.store:
@@ -257,7 +267,4 @@ switch.ha_lights_manual_control:
 #  device_class: signal_strength
 #  hidden: true
 
-#Testing Fibaro Switch
-switch.fibaro_switch_01_switch:
-  friendly_name: Jain10
-  icon: mdi:desktop-tower-monitor
+
