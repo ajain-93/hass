@@ -220,6 +220,11 @@ sensor.aqara_sensor_switch_01_linkquality:
 
 
 
+# Location
+person.arnav:
+  hidden: true
+
+
 # Connectivity
 binary_sensor.ping_jain10:
   friendly_name: Jain10
