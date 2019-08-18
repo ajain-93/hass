@@ -15,6 +15,7 @@
   device_class: "temperature"
   value_template: "{{ value_json.temperature }}"
 
+
 # Power
 - platform: "mqtt"
   name: fibaro_switch_01_power
@@ -27,6 +28,23 @@
   device: {
     "identifiers": [
         "zwave2mqtt_fibaro_switch_01"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+- platform: "mqtt"
+  name: fibaro_switch_02_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/fibaro_switch_02/49/1/4"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: fibaro_switch_02_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_02"
       ],
       "manufacturer": "FIBARO System",
       "model": "0x1001",
@@ -53,6 +71,24 @@
       "name": "FGWPE/F Wall Plug Gen5",
       "sw_version": "3.02"
   }
+- platform: "mqtt"
+  name: fibaro_switch_02_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/fibaro_switch_02/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: fibaro_switch_02_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_02"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+  
 
 # Remotes
 - platform: "mqtt"

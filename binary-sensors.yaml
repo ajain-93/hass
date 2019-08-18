@@ -1,3 +1,21 @@
+#  Switches
+- platform: "mqtt"
+  name: fibaro_switch_02_switch
+  state_topic: "zwave2mqtt/fibaro_switch_02/37/1/0"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: fibaro_switch_02_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_02"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+
 # Door Sensors
 - platform: "mqtt"
   name: aqara_sensor_switch_01_contact

@@ -193,6 +193,16 @@ sensor.fibaro_switch_01_power:
 sensor.fibaro_switch_01_energy:
   friendly_name: Jain10 Energy
   icon: mdi:power-plug
+binary_sensor.fibaro_switch_02_switch:
+  friendly_name: Jain56
+  icon: mdi:server
+sensor.fibaro_switch_02_power:
+  friendly_name: Jain56 Power
+  icon: mdi:flash
+sensor.fibaro_switch_02_energy:
+  friendly_name: Jain56 Energy
+  icon: mdi:power-plug
+
 
 
 # Store

@@ -28,6 +28,9 @@ livingroom:
      - switch.fibaro_switch_01_switch
      - sensor.fibaro_switch_01_power
      - sensor.fibaro_switch_01_energy
+     - binary_sensor.fibaro_switch_02_switch
+     - sensor.fibaro_switch_02_power
+     - sensor.fibaro_switch_02_energy
 
 kitchen:
   name: "Kitchen"
