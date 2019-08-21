@@ -25,12 +25,12 @@ livingroom:
    control: hidden
    entities:
      - light.tradfri_plug_01_light
-     - switch.fibaro_switch_01_switch
-     - sensor.fibaro_switch_01_power
-     - sensor.fibaro_switch_01_energy
      - binary_sensor.fibaro_switch_02_switch
      - sensor.fibaro_switch_02_power
      - sensor.fibaro_switch_02_energy
+     - switch.fibaro_switch_01_switch
+     - sensor.fibaro_switch_01_power
+     - sensor.fibaro_switch_01_energy
 
 kitchen:
   name: "Kitchen"
