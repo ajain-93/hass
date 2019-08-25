@@ -10,6 +10,11 @@ room_lights:
     - light.kitchen
     - light.livingroom
     - light.store
+    - sensor.ha_lights_mode
+    - switch.ha_lights_mode_morning
+    - switch.ha_lights_mode_afternoon
+    - switch.ha_lights_mode_evening
+    - switch.ha_lights_mode_night
 
 bedroom:
   name: "Bedroom"

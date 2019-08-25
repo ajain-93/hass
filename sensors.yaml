@@ -106,6 +106,14 @@
 
 
 
+# Lights
+- platform: "mqtt"
+  name: ha_lights_mode
+  state_topic: "hass/lights/mode"
+  value_template: "{{value}}"
+
+
+
 # Link Quality
 # Plugs
 - platform: "mqtt"

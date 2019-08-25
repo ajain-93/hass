@@ -302,6 +302,23 @@ switch.ha_lights_manual_control:
   icon: mdi:lock-clock
 
 
+sensor.ha_lights_mode:
+  friendly_name: Lights Mode
+switch.ha_lights_mode_morning:
+  friendly_name: Lights Morning
+  icon: mdi:weather-sunset-up
+switch.ha_lights_mode_afternoon:
+  friendly_name: Lights Afternoon
+  icon: mdi:white-balance-sunny
+switch.ha_lights_mode_evening:
+  friendly_name: Lights Evening
+  icon: mdi:weather-sunset
+switch.ha_lights_mode_night:
+  friendly_name: Lights Night
+  icon: mdi:weather-night
+
+
+
 #sensor.:
 #  friendly_name:  Link
 #  device_class: signal_strength

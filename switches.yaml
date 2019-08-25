@@ -36,3 +36,42 @@
   payload_off: "false"
   payload_on: "true"
 
+- platform: "mqtt"
+  name: ha_lights_mode_morning
+  state_topic: "hass/lights/mode/morning"
+  command_topic: "hass/lights/mode"
+  value_template: "{{value}}"
+  state_on: "true"
+  state_off: "false"
+  payload_on: "morning"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_afternoon
+  state_topic: "hass/lights/mode/afternoon"
+  command_topic: "hass/lights/mode"
+  value_template: "{{value}}"
+  state_on: "true"
+  state_off: "false"
+  payload_on: "afternoon"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_evening
+  state_topic: "hass/lights/mode/evening"
+  command_topic: "hass/lights/mode"
+  value_template: "{{value}}"
+  state_on: "true"
+  state_off: "false"
+  payload_on: "evening"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_night
+  state_topic: "hass/lights/mode/night"
+  command_topic: "hass/lights/mode"
+  value_template: "{{value}}"
+  state_on: "true"
+  state_off: "false"
+  payload_on: "night"
+  retain: "on"
