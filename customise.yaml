@@ -167,7 +167,7 @@ sensor.tplink_plug_01_amps:
   hidden: true
   # icon: mdi:flash
 sensor.tplink_plug_01_watts:
-  icon: mdi:power-plug
+  icon: mdi:flash
 sensor.tplink_plug_01_volts:
   hidden: true
   # icon: mdi:flash
