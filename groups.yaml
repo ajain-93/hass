@@ -78,6 +78,19 @@ store:
     - sensor.aqara_sensor_switch_01_battery
 #    - sensor.aqara_sensor_switch_01_linkquality
 
+power_usage:
+  name: Power
+  control: hidden
+  entities:
+    - sensor.fibaro_switch_01_power
+    - sensor.fibaro_switch_01_energy
+    - sensor.fibaro_switch_02_power
+    - sensor.fibaro_switch_02_energy
+    - sensor.tplink_plug_01_watts
+    - sensor.tplink_plug_01_total_kwh
+    - sensor.tplink_plug_01_volts
+    - sensor.tplink_plug_01_amps
+
 
 battery_levels:
   name: "Battery"
