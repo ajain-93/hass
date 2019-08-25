@@ -21,6 +21,8 @@ sensor.tradfri_switch_02_battery:
   friendly_name: Bathroom Switch Battery
   device_class: battery
 
+
+
 # Bedroom
 light.bedroom:
   friendly_name: "Bedroom"
@@ -61,6 +63,7 @@ sensor.tradfri_led_gu10_06_linkquality:
   friendly_name: Bedroom - Ceilng North Link
   device_class: signal_strength
   hidden: true
+
 
 
 #Galley
@@ -110,6 +113,8 @@ sensor.smartthings_motion_temp_01_linkquality:
 sensor.smartthings_motion_temp_01_battery:
   friendly_name: Gallery Motion Battery
   device_class: battery
+
+
 
 # Kitchen
 light.kitchen:
@@ -235,6 +240,7 @@ person.arnav:
   hidden: true
 
 
+
 # Connectivity
 binary_sensor.ping_jain10:
   friendly_name: Jain10
@@ -287,6 +293,7 @@ binary_sensor.ping_chromecast_video:
   friendly_name: Chromecast Video
   device_class: connectivity
   icon: mdi:google-chrome
+
 
 
 # Manual Controls:

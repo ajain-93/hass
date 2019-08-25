@@ -1,9 +1,12 @@
+# Wake On LAN
 # - platform: wake_on_lan
 #   mac_address: "F8-32-E4-86-7F-BF"
 #   name: "Jain10 WOL"
 #   host: "jain10.jain.lan"
 #   broadcast_address: "192.168.8.255"
 
+
+# Power
 - platform: "mqtt"
   name: fibaro_switch_01_switch
   icon: "mdi:flash"
@@ -23,6 +26,8 @@
       "sw_version": "3.02"
   }
 
+
+# Light Controls
 - platform: "mqtt"
   name: ha_lights_manual_control
   state_topic: "hass/lights/manual-control"
