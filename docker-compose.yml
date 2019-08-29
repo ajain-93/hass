@@ -1,0 +1,14 @@
+---
+version: "2.4"
+services:
+
+    hass:
+       image: homeassistant/home-assistant
+       environment:
+           - PUID=1000
+           - PGID=1000
+           - TZ=Europe/Stockholm
+       volumes:
+           - W:\.DockerConfig\hass:/config
+       ports:
+           - 8123:8123
