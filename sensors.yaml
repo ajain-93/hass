@@ -298,3 +298,24 @@
       friendly_name_template: "{{ states.switch.tplink_plug_01.name}} Today's Consumption"
       value_template: '{{ states.switch.tplink_plug_01.attributes["today_energy_kwh"] | float }}'
       unit_of_measurement: 'kWh'
+    # TP-Link Plug #2
+    tplink_plug_02_amps:
+      friendly_name_template: "{{ states.switch.tplink_plug_02.name}} Current"
+      value_template: '{{ states.switch.tplink_plug_02.attributes["current_a"] | float }}'
+      unit_of_measurement: 'A'
+    tplink_plug_02_watts:
+      friendly_name_template: "{{ states.switch.tplink_plug_02.name}} Current Consumption"
+      value_template: '{{ states.switch.tplink_plug_02.attributes["current_power_w"] | float }}'
+      unit_of_measurement: 'W'
+    tplink_plug_02_total_kwh:
+      friendly_name_template: "{{ states.switch.tplink_plug_02.name}} Total Consumption"
+      value_template: '{{ states.switch.tplink_plug_02.attributes["total_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'
+    tplink_plug_02_volts:
+      friendly_name_template: "{{ states.switch.tplink_plug_02.name}} Voltage"
+      value_template: '{{ states.switch.tplink_plug_02.attributes["voltage"] | float }}'
+      unit_of_measurement: 'V'
+    tplink_plug_02_today_kwh:
+      friendly_name_template: "{{ states.switch.tplink_plug_02.name}} Today's Consumption"
+      value_template: '{{ states.switch.tplink_plug_02.attributes["today_energy_kwh"] | float }}'
+      unit_of_measurement: 'kWh'

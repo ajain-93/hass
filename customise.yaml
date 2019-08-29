@@ -176,6 +176,21 @@ sensor.tplink_plug_01_today_kwh:
 sensor.tplink_plug_01_total_kwh:
   icon: mdi:power-plug
 
+switch.tplink_plug_02:
+  friendly_name: Microwave
+  icon: mdi:microwave
+sensor.tplink_plug_02_amps:
+  hidden: true
+  # icon: mdi:flash
+sensor.tplink_plug_02_watts:
+  icon: mdi:flash
+sensor.tplink_plug_02_volts:
+  hidden: true
+  # icon: mdi:flash
+sensor.tplink_plug_02_today_kwh:
+  icon: mdi:power-plug
+sensor.tplink_plug_02_total_kwh:
+  icon: mdi:power-plug
 
 
 # Living room
