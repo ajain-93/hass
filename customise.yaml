@@ -165,12 +165,12 @@ switch.tplink_plug_01:
   icon: mdi:fridge
 sensor.tplink_plug_01_amps:
   hidden: true
-  # icon: mdi:flash
+  icon: mdi:current-dc
 sensor.tplink_plug_01_watts:
   icon: mdi:flash
 sensor.tplink_plug_01_volts:
   hidden: true
-  # icon: mdi:flash
+  icon: mdi:current-ac
 sensor.tplink_plug_01_today_kwh:
   icon: mdi:power-plug
 sensor.tplink_plug_01_total_kwh:
@@ -181,12 +181,12 @@ switch.tplink_plug_02:
   icon: mdi:microwave
 sensor.tplink_plug_02_amps:
   hidden: true
-  # icon: mdi:flash
+  icon: mdi:current-dc
 sensor.tplink_plug_02_watts:
   icon: mdi:flash
 sensor.tplink_plug_02_volts:
   hidden: true
-  # icon: mdi:flash
+  icon: mdi:current-ac
 sensor.tplink_plug_02_today_kwh:
   icon: mdi:power-plug
 sensor.tplink_plug_02_total_kwh:
