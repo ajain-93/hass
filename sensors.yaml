@@ -88,7 +88,7 @@
       "name": "FGWPE/F Wall Plug Gen5",
       "sw_version": "3.02"
   }
-  
+
 
 # Remotes
 - platform: "mqtt"
