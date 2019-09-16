@@ -222,6 +222,21 @@ sensor.fibaro_switch_02_power:
 sensor.fibaro_switch_02_energy:
   friendly_name: Jain56 Energy
   icon: mdi:power-plug
+switch.telldus_switch_01_switch:
+  friendly_name: TV45
+  icon: mdi:television-classic
+sensor.telldus_switch_01_power:
+  friendly_name: TV45 Power
+  icon: mdi:flash
+sensor.telldus_switch_01_energy:
+  friendly_name: TV45 Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_01_voltage:
+  friendly_name: TV45 Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_01_current:
+  friendly_name: TV45 Current
+  icon: mdi:current-dc
 
 
 

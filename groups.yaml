@@ -36,6 +36,9 @@ livingroom:
      - switch.fibaro_switch_01_switch
      - sensor.fibaro_switch_01_power
      - sensor.fibaro_switch_01_energy
+     - switch.telldus_switch_01_switch
+     - sensor.telldus_switch_01_power
+     - sensor.telldus_switch_01_energy
 
 kitchen:
   name: "Kitchen"
@@ -99,7 +102,10 @@ power_usage:
     - sensor.tplink_plug_01_total_kwh
     - sensor.tplink_plug_01_volts
     - sensor.tplink_plug_01_amps
-
+    - sensor.telldus_switch_01_power
+    - sensor.telldus_switch_01_energy
+    - sensor.telldus_switch_01_voltage
+    - sensor.telldus_switch_01_current
 
 battery_levels:
   name: "Battery"

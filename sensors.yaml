@@ -62,6 +62,23 @@
       "name": "FGWPE/F Wall Plug Gen5",
       "sw_version": "3.02"
   }
+- platform: "mqtt"
+  name: telldus_switch_01_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/8"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_01_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
 
 
 # Energy
@@ -99,6 +116,64 @@
       "name": "FGWPE/F Wall Plug Gen5",
       "sw_version": "3.02"
   }
+- platform: "mqtt"
+  name: telldus_switch_01_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
+
+
+# Voltage
+- platform: "mqtt"
+  name: telldus_switch_01_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/16"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
+
+
+# Current
+- platform: "mqtt"
+  name: telldus_switch_01_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/20"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
+
 
 
 # Remotes
