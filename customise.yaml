@@ -256,6 +256,33 @@ person.arnav:
 
 
 
+# Weather
+# Frösunda
+sensor.frosunda_wind_strength:
+  hidden: true
+sensor.frosunda_gust_strength:
+  hidden: true
+sensor.frosunda_temperature:
+  friendly_name: Frösunda Temperature
+  hidden: false
+sensor.frosunda_humidity:
+  friendly_name: Frösunda Humidity
+  hidden: false
+sensor.frosunda_pressure:
+  friendly_name: Frösunda Pressure
+  hidden: true
+sensor.frosunda_rain:
+  friendly_name: Frösunda Rain
+  hidden: false
+sensor.frosunda_sum_rain_1:
+  friendly_name: Frösunda Rain (Last Hour)
+  hidden: true
+sensor.frosunda_sum_rain_24:
+  friendly_name: Frösunda Rain (Last Day)
+  hidden: true
+
+
+
 # Connectivity
 binary_sensor.ping_jain10:
   friendly_name: Jain10

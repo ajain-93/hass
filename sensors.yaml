@@ -1,4 +1,15 @@
 
+# Weather Stations
+- platform: netatmo
+  areas:
+    - lat_ne: 59.378333
+      lon_ne: 18.015062
+      lat_sw: 59.364555
+      lon_sw: 18.009887
+      name: Frösunda
+      mode: avg
+
+
 # Temperature
 - platform: "mqtt"
   name: smartthings_motion_temp_01_temperature
