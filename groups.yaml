@@ -80,6 +80,10 @@ bathroom:
   entities:
     - light.tradfri_led_rgb_03_light
     - sensor.tradfri_switch_02_battery
+    - sensor.aeotec_sensor6_01_temperature
+    - sensor.aeotec_sensor6_01_luminance
+    - sensor.aeotec_sensor6_01_battery
+    - sensor.aeotec_sensor6_01_humidity
 
 store:
   name: "Store"

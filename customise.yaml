@@ -21,6 +21,23 @@ sensor.tradfri_switch_02_battery:
   friendly_name: Bathroom Switch Battery
   device_class: battery
 
+sensor.aeotec_sensor6_01_temperature:
+  friendly_name: Bathroom Temperature
+  device_class: temperature
+  icon: mdi:temperature-celsius
+sensor.aeotec_sensor6_01_luminance:
+  friendly_name: Bathroom Luminance
+  device_class: illuminance
+  icon: mdi:brightness-5
+sensor.aeotec_sensor6_01_battery:
+  friendly_name: Bathroom Sensor Battery
+  device_class: battery
+  icon: mdi:battery-70
+sensor.aeotec_sensor6_01_humidity:
+  friendly_name: Bathroom  Humidity
+  device_class: humidity
+  icon: mdi:water-percent
+
 
 
 # Bedroom
