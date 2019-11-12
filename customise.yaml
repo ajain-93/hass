@@ -209,6 +209,22 @@ sensor.tplink_plug_02_today_kwh:
 sensor.tplink_plug_02_total_kwh:
   icon: mdi:power-plug
 
+switch.telldus_switch_02_switch:
+  friendly_name: Dishwasher
+  icon: mdi:dishwasher
+sensor.telldus_switch_02_power:
+  friendly_name: Dishwasher Power
+  icon: mdi:flash
+sensor.telldus_switch_02_energy:
+  friendly_name: Dishwasher Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_02_voltage:
+  friendly_name: Dishwasher Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_02_current:
+  friendly_name: Dishwasher Current
+  icon: mdi:current-dc
+
 
 # Living room
 light.livingroom:

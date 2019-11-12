@@ -96,6 +96,23 @@
       "name": "TZWP-102 Plug-in Switch",
       "sw_version": "2.11"
   }
+- platform: "mqtt"
+  name: telldus_switch_02_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/8"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_02_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
 
 
 # Energy
@@ -150,6 +167,23 @@
       "name": "TZWP-102 Plug-in Switch",
       "sw_version": "2.11"
   }
+- platform: "mqtt"
+  name: telldus_switch_02_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
 
 
 # Voltage
@@ -170,6 +204,23 @@
       "name": "TZWP-102 Plug-in Switch",
       "sw_version": "2.11"
   }
+- platform: "mqtt"
+  name: telldus_switch_02_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/16"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
 
 
 # Current
@@ -184,6 +235,23 @@
   device: {
     "identifiers": [
         "zwave2mqtt_telldus_switch_01"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_02_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/20"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
       ],
       "manufacturer": "Telldus",
       "model": "313510",

@@ -59,6 +59,11 @@ kitchen:
     - sensor.tplink_plug_02_watts
     - sensor.tplink_plug_02_today_kwh
     - sensor.tplink_plug_02_total_kwh
+    - switch.telldus_switch_02_switch
+    - sensor.telldus_switch_02_power
+    - sensor.telldus_switch_02_energy
+    - sensor.telldus_switch_02_voltage
+    - sensor.telldus_switch_02_current
 
 
 gallery:
