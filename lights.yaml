@@ -117,20 +117,24 @@
 - platform: group
   name: bedroom
   entities:
-  - light.tradfri_led_rgb_01_light
-  - light.tradfri_led_rgb_02_light
-  - light.tradfri_led_gu10_05_light
-  - light.tradfri_led_gu10_06_light
-- platform: group
+  - light.bedroom_ceiling
+  - light.bedroom_bed
+- platform: "mqtt"
   name: bedroom_ceiling
-  entities:
-  - light.tradfri_led_gu10_05_light
-  - light.tradfri_led_gu10_06_light
-- platform: group
+  state_topic: "zigbee2mqtt/lights_bedroom_ceiling"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_bedroom_ceiling/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
+- platform: "mqtt"
   name: bedroom_bed
-  entities:
-  - light.tradfri_led_rgb_01_light
-  - light.tradfri_led_rgb_02_light
+  state_topic: "zigbee2mqtt/lights_bedroom_bed"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_bedroom_bed/set"
+  brightness: true
+  xy: true
+  schema: "json"
 - platform: "mqtt"
   name: gallery
   state_topic: "zigbee2mqtt/lights_gallery"

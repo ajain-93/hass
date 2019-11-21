@@ -20,6 +20,7 @@ bedroom:
   name: "Bedroom"
   control: hidden
   entities:
+   - light.bedroom
    - light.tradfri_led_rgb_01_light
    - light.tradfri_led_rgb_02_light
    - light.tradfri_led_gu10_05_light
