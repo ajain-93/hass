@@ -111,6 +111,15 @@
 
 # Groups
 - platform: group
+  name: all
+  entities:
+    - light.bathroom
+    - light.bedroom
+    - light.gallery
+    - light.kitchen
+    - light.livingroom
+    - light.store
+- platform: group
   name: bathroom
   entities:
   - light.tradfri_led_rgb_03_light

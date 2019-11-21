@@ -1,3 +1,10 @@
+# Generic
+light.all:
+  friendly_name: All Lights
+  icon: mdi:home-lightbulb
+
+
+
 # Bathroom
 light.bathroom:
   friendly_name: Bathroom

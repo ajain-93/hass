@@ -2,6 +2,7 @@ room_lights:
   name: "Lights"
   entities:
     - switch.ha_lights_manual_control
+    - light.all
     - light.bathroom
     - light.bedroom
     - light.bedroom_ceiling
