@@ -61,6 +61,24 @@
       "name": "TZWP-102 Plug-in Switch",
       "sw_version": "2.11"
   }
+- platform: "mqtt"
+  name: telldus_switch_03_switch
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_03/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_03/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_03_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+      "manufacturer": "Telldus",
+      "model": "313510",
+      "name": "TZWP-102 Plug-in Switch",
+      "sw_version": "2.11"
+  }
 
 
 # Light Controls
