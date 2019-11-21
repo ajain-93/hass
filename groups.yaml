@@ -165,9 +165,9 @@ weather:
   control: hidden
   entities:
     - sun.sun
-    - sensor.frosunda_temperature
-    - sensor.frosunda_pressure
-    - sensor.frosunda_humidity
-    - sensor.frosunda_rain
-    - sensor.frosunda_sum_rain_1
-    - sensor.frosunda_sum_rain_24
+    # - sensor.frosunda_temperature
+    # - sensor.frosunda_pressure
+    # - sensor.frosunda_humidity
+    # - sensor.frosunda_rain
+    # - sensor.frosunda_sum_rain_1
+    # - sensor.frosunda_sum_rain_24
