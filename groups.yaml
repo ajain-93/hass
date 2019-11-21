@@ -21,26 +21,26 @@ bedroom:
   name: "Bedroom"
   control: hidden
   entities:
-   - light.bedroom
-   - light.tradfri_led_rgb_01_light
-   - light.tradfri_led_rgb_02_light
-   - light.tradfri_led_gu10_05_light
-   - light.tradfri_led_gu10_06_light
+    - light.bedroom
+    - light.tradfri_led_rgb_01_light
+    - light.tradfri_led_rgb_02_light
+    - light.tradfri_led_gu10_05_light
+    - light.tradfri_led_gu10_06_light
 
 livingroom:
-   name: "Living Room"
-   control: hidden
-   entities:
-     - light.tradfri_plug_01_light
-     - binary_sensor.fibaro_switch_02_switch
-     - sensor.fibaro_switch_02_power
-     - sensor.fibaro_switch_02_energy
-     - switch.fibaro_switch_01_switch
-     - sensor.fibaro_switch_01_power
-     - sensor.fibaro_switch_01_energy
-     - switch.telldus_switch_01_switch
-     - sensor.telldus_switch_01_power
-     - sensor.telldus_switch_01_energy
+  name: "Living Room"
+  control: hidden
+  entities:
+    - light.tradfri_plug_01_light
+    - binary_sensor.fibaro_switch_02_switch
+    - sensor.fibaro_switch_02_power
+    - sensor.fibaro_switch_02_energy
+    - switch.fibaro_switch_01_switch
+    - sensor.fibaro_switch_01_power
+    - sensor.fibaro_switch_01_energy
+    - switch.telldus_switch_01_switch
+    - sensor.telldus_switch_01_power
+    - sensor.telldus_switch_01_energy
 
 kitchen:
   name: "Kitchen"

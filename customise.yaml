@@ -4,7 +4,6 @@ light.all:
   icon: mdi:home-lightbulb
 
 
-
 # Bathroom
 light.bathroom:
   friendly_name: Bathroom
@@ -244,6 +243,7 @@ sensor.tradfri_plug_01_linkquality:
   friendly_name: Study Light Link
   device_class: signal_strength
   hidden: true
+
 switch.fibaro_switch_01_switch:
   friendly_name: Jain10
   icon: mdi:desktop-tower-monitor
@@ -253,6 +253,7 @@ sensor.fibaro_switch_01_power:
 sensor.fibaro_switch_01_energy:
   friendly_name: Jain10 Energy
   icon: mdi:power-plug
+
 binary_sensor.fibaro_switch_02_switch:
   friendly_name: Jain56
   icon: mdi:server
@@ -262,6 +263,7 @@ sensor.fibaro_switch_02_power:
 sensor.fibaro_switch_02_energy:
   friendly_name: Jain56 Energy
   icon: mdi:power-plug
+
 switch.telldus_switch_01_switch:
   friendly_name: TV45
   icon: mdi:television-classic
