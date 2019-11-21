@@ -153,11 +153,10 @@
   schema: "json"
 - platform: group
   name: livingroom
-  entities: 
+  entities:
   - light.tradfri_plug_01_light
 - platform: group
   name: store
   entities:
   - light.tradfri_led_white_03_light
 
-  
