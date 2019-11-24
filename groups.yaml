@@ -26,6 +26,11 @@ bedroom:
     - light.tradfri_led_rgb_02_light
     - light.tradfri_led_gu10_05_light
     - light.tradfri_led_gu10_06_light
+    - light.telldus_switch_07_light
+    - sensor.telldus_switch_07_power
+    - sensor.telldus_switch_07_energy
+    - sensor.telldus_switch_07_voltage
+    - sensor.telldus_switch_07_current
 
 livingroom:
   name: "Living Room"
@@ -46,6 +51,16 @@ livingroom:
     - sensor.telldus_switch_03_energy
     - sensor.telldus_switch_03_voltage
     - sensor.telldus_switch_03_current
+    - switch.telldus_switch_04_switch
+    - sensor.telldus_switch_04_power
+    - sensor.telldus_switch_04_energy
+    - sensor.telldus_switch_04_voltage
+    - sensor.telldus_switch_04_current
+    - light.telldus_switch_06_light
+    - sensor.telldus_switch_06_power
+    - sensor.telldus_switch_06_energy
+    - sensor.telldus_switch_06_voltage
+    - sensor.telldus_switch_06_current
 
 kitchen:
   name: "Kitchen"
@@ -71,6 +86,11 @@ kitchen:
     - sensor.telldus_switch_02_energy
     - sensor.telldus_switch_02_voltage
     - sensor.telldus_switch_02_current
+    - switch.telldus_switch_05_switch
+    - sensor.telldus_switch_05_power
+    - sensor.telldus_switch_05_energy
+    - sensor.telldus_switch_05_voltage
+    - sensor.telldus_switch_05_current
 
 
 gallery:
@@ -126,6 +146,31 @@ power_usage:
     - sensor.telldus_switch_01_energy
     - sensor.telldus_switch_01_voltage
     - sensor.telldus_switch_01_current
+    - sensor.telldus_switch_02_power
+    - sensor.telldus_switch_02_energy
+    - sensor.telldus_switch_02_voltage
+    - sensor.telldus_switch_02_current
+    - sensor.telldus_switch_03_power
+    - sensor.telldus_switch_03_energy
+    - sensor.telldus_switch_03_voltage
+    - sensor.telldus_switch_03_current
+    - sensor.telldus_switch_04_power
+    - sensor.telldus_switch_04_energy
+    - sensor.telldus_switch_04_voltage
+    - sensor.telldus_switch_04_current
+    - sensor.telldus_switch_05_power
+    - sensor.telldus_switch_05_energy
+    - sensor.telldus_switch_05_voltage
+    - sensor.telldus_switch_05_current
+    - sensor.telldus_switch_06_power
+    - sensor.telldus_switch_06_energy
+    - sensor.telldus_switch_06_voltage
+    - sensor.telldus_switch_06_current
+    - sensor.telldus_switch_07_power
+    - sensor.telldus_switch_07_energy
+    - sensor.telldus_switch_07_voltage
+    - sensor.telldus_switch_07_current
+
 
 battery_levels:
   name: "Battery"

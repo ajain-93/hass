@@ -20,10 +20,10 @@
     "identifiers": [
         "zwave2mqtt_fibaro_switch_01"
       ],
-      "manufacturer": "FIBARO System",
-      "model": "0x1001",
-      "name": "FGWPE/F Wall Plug Gen5",
-      "sw_version": "3.02"
+    "manufacturer": "FIBARO System",
+    "model": "0x1001",
+    "name": "FGWPE/F Wall Plug Gen5",
+    "sw_version": "3.02"
   }
 - platform: "mqtt"
   name: telldus_switch_01_switch
@@ -38,10 +38,10 @@
     "identifiers": [
         "zwave2mqtt_telldus_switch_01"
       ],
-      "manufacturer": "Telldus",
-      "model": "313510",
-      "name": "TZWP-102 Plug-in Switch",
-      "sw_version": "2.11"
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
   }
 - platform: "mqtt"
   name: telldus_switch_02_switch
@@ -56,10 +56,10 @@
     "identifiers": [
         "zwave2mqtt_telldus_switch_02"
       ],
-      "manufacturer": "Telldus",
-      "model": "313510",
-      "name": "TZWP-102 Plug-in Switch",
-      "sw_version": "2.11"
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
   }
 - platform: "mqtt"
   name: telldus_switch_03_switch
@@ -74,10 +74,46 @@
     "identifiers": [
         "zwave2mqtt_telldus_switch_03"
       ],
-      "manufacturer": "Telldus",
-      "model": "313510",
-      "name": "TZWP-102 Plug-in Switch",
-      "sw_version": "2.11"
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_04_switch
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_04/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_04/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_04_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_04"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_05_switch
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_05/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_05/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_05_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_05"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
   }
 
 

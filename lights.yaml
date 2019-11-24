@@ -106,7 +106,40 @@
   state_topic: "zigbee2mqtt/tradfri_plug_01"
   command_topic: "zigbee2mqtt/tradfri_plug_01/set"
   schema: "json"
-
+- platform: "mqtt"
+  name: telldus_switch_06_light
+  state_topic: "zwave2mqtt/telldus_switch_06/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_06/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_06_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_06"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_07_light
+  state_topic: "zwave2mqtt/telldus_switch_07/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_07/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_07_light
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_07"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
 
 
 # Groups
@@ -128,6 +161,7 @@
   entities:
   - light.bedroom_ceiling
   - light.bedroom_bed
+  - light.telldus_switch_07_light
 - platform: "mqtt"
   name: bedroom_ceiling
   state_topic: "zigbee2mqtt/lights_bedroom_ceiling"
@@ -164,6 +198,7 @@
   name: livingroom
   entities:
   - light.tradfri_plug_01_light
+  - light.telldus_switch_06_light
 - platform: group
   name: store
   entities:

@@ -87,6 +87,22 @@ sensor.tradfri_led_gu10_06_linkquality:
   device_class: signal_strength
   hidden: true
 
+light.telldus_switch_07_light:
+  friendly_name: Decoration Lights
+  icon: mdi:ceiling-light
+sensor.telldus_switch_07_power:
+  friendly_name: Decoration Lights Power
+  icon: mdi:flash
+sensor.telldus_switch_07_energy:
+  friendly_name: Decoration Lights Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_07_voltage:
+  friendly_name: Decoration Lights Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_07_current:
+  friendly_name: Decoration Lights Current
+  icon: mdi:current-dc
+
 
 
 #Galley
@@ -231,6 +247,23 @@ sensor.telldus_switch_02_current:
   friendly_name: Dishwasher Current
   icon: mdi:current-dc
 
+switch.telldus_switch_05_switch:
+  friendly_name: Toaster
+  icon: mdi:desk
+sensor.telldus_switch_05_power:
+  friendly_name: Toaster Power
+  icon: mdi:flash
+sensor.telldus_switch_05_energy:
+  friendly_name: Toaster Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_05_voltage:
+  friendly_name: Toaster Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_05_current:
+  friendly_name: Toaster Current
+  icon: mdi:current-dc
+
+
 
 # Living room
 light.livingroom:
@@ -296,6 +329,37 @@ sensor.telldus_switch_03_current:
   friendly_name: Study Table Current
   icon: mdi:current-dc
 
+switch.telldus_switch_04_switch:
+  friendly_name: Misc
+  icon: mdi:desk
+sensor.telldus_switch_04_power:
+  friendly_name: Misc Power
+  icon: mdi:flash
+sensor.telldus_switch_04_energy:
+  friendly_name: Misc Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_04_voltage:
+  friendly_name: Misc Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_04_current:
+  friendly_name: Misc Current
+  icon: mdi:current-dc
+
+light.telldus_switch_06_light:
+  friendly_name: Decoration Lights
+  icon: mdi:ceiling-light
+sensor.telldus_switch_06_power:
+  friendly_name: Decoration Lights Power
+  icon: mdi:flash
+sensor.telldus_switch_06_energy:
+  friendly_name: Decoration Lights Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_06_voltage:
+  friendly_name: Decoration Lights Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_06_current:
+  friendly_name: Decoration Lights Current
+  icon: mdi:current-dc
 
 
 # Store
