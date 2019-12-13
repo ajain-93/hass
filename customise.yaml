@@ -2,7 +2,9 @@
 light.all:
   friendly_name: All Lights
   icon: mdi:home-lightbulb
-
+light.decorations:
+  friendly_name: Decorations
+  icon: mdi:string-lights
 
 # Bathroom
 light.bathroom:

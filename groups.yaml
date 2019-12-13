@@ -3,6 +3,7 @@ room_lights:
   entities:
     - switch.ha_lights_manual_control
     - light.all
+    - light.decorations
     - light.bathroom
     - light.bedroom
     - light.bedroom_ceiling
