@@ -331,9 +331,13 @@ sensor.telldus_switch_01_current:
   friendly_name: TV45 Current
   icon: mdi:current-dc
 
-switch.telldus_switch_03_switch:
+binary_sensor.telldus_switch_03_switch:
   friendly_name: Study Table
   icon: mdi:desk
+  device_class: plug
+# switch.telldus_switch_03_switch:
+#   friendly_name: Study Table
+#   icon: mdi:desk
 sensor.telldus_switch_03_power:
   friendly_name: Study Table Power
   icon: mdi:flash
