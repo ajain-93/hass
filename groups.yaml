@@ -1,5 +1,6 @@
 room_lights:
   name: "Lights"
+  control: hidden
   entities:
     - switch.ha_lights_manual_control
     - light.all
@@ -37,6 +38,7 @@ livingroom:
   name: "Living Room"
   control: hidden
   entities:
+    - light.tradfri_led_rgb_04_light
     - light.tradfri_plug_01_light
     # - light.telldus_switch_06_light
     - sensor.telldus_switch_06_power

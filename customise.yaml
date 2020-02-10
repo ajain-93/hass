@@ -287,6 +287,13 @@ sensor.tradfri_plug_01_linkquality:
   friendly_name: Study Light Link
   device_class: signal_strength
   hidden: true
+light.tradfri_led_rgb_04_light:
+  friendly_name: Living Room Centre
+  icon: mdi:ceiling-light
+sensor.tradfri_led_rgb_04_linkquality:
+  friendly_name: Living Room Centre Link
+  device_class: signal_strength
+  hidden: true
 
 switch.fibaro_switch_01_switch:
   friendly_name: Jain10

@@ -699,6 +699,12 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
   value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_led_rgb_04_linkquality
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_04"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
 # White Lights
 - platform: "mqtt"
   name: tradfri_led_white_01_linkquality
