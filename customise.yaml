@@ -42,9 +42,18 @@ sensor.aeotec_sensor6_01_battery:
   device_class: battery
   icon: mdi:battery-70
 sensor.aeotec_sensor6_01_humidity:
-  friendly_name: Bathroom  Humidity
+  friendly_name: Bathroom Humidity
   device_class: humidity
   icon: mdi:water-percent
+sensor.aeotec_sensor6_01_motion_vibration:
+  friendly_name: Bathroom Motion & Vibration
+  hidden: true
+binary_sensor.aeotec_sensor6_01_motion:
+  friendly_name: Bathroom Motion
+  device_class: motion
+binary_sensor.aeotec_sensor6_01_vibration:
+  friendly_name: Bathroom Vibration
+  device_class: vibration
 
 
 

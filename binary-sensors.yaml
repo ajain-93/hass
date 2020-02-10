@@ -44,6 +44,16 @@
   value_template: "{{ value_json.occupancy }}"
   device_class: "motion"
 
+# Templates
+- platform: template
+  sensors:
+    aeotec_sensor6_01_motion:
+      device_class: motion
+      value_template: "{{ states('sensor.aeotec_sensor6_01_motion_vibration') | int == 8}}"
+    aeotec_sensor6_01_vibration:
+      device_class: vibration
+      value_template: "{{ states('sensor.aeotec_sensor6_01_motion_vibration') | int == 3}}"
+
 # Connected Devices
 - platform: ping
   host: jain10.jain.lan
