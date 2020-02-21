@@ -54,6 +54,7 @@ livingroom:
     - switch.telldus_switch_01_switch
     - sensor.telldus_switch_01_power
     - sensor.telldus_switch_01_energy
+    - switch.tradfri_plug_02_power
     - binary_sensor.telldus_switch_03_switch
     - sensor.telldus_switch_03_power
     - sensor.telldus_switch_03_energy
