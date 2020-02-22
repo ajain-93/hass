@@ -260,7 +260,7 @@ sensor.telldus_switch_02_current:
 
 switch.telldus_switch_05_switch:
   friendly_name: Toaster
-  icon: mdi:desk
+  icon: mdi:toaster
 sensor.telldus_switch_05_power:
   friendly_name: Toaster Power
   icon: mdi:flash
@@ -279,7 +279,7 @@ sensor.telldus_switch_05_current:
 # Living room
 light.livingroom:
   friendly_name: Living room
-  icon: mdi:lamp
+  icon: mdi:ceiling-light
 light.tradfri_plug_01_light:
   friendly_name: Study Light
   icon: mdi:lamp
@@ -360,7 +360,7 @@ sensor.telldus_switch_03_current:
 
 switch.telldus_switch_04_switch:
   friendly_name: Misc
-  icon: mdi:desk
+  icon: mdi:power-socket-eu
 sensor.telldus_switch_04_power:
   friendly_name: Misc Power
   icon: mdi:flash
