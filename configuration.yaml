@@ -17,6 +17,10 @@ homeassistant:
 
   customize: !include customise.yaml
 
+# Control the Lovelace UI via the ui-lovelace.yaml file
+lovelace:
+  mode: yaml
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
   base_url: !secret base_url

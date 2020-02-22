@@ -1,0 +1,1132 @@
+title: Frösunda
+views:
+  - badges:
+      - entity: binary_sensor.updater
+    cards:
+      - columns: 6
+        entities:
+          - entity: light.all
+            name: All
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_manual_control
+            name: Manual
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_morning
+            name: Morning
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_afternoon
+            name: Afternoon
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_evening
+            name: Evening
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_night
+            name: Night
+            tap_action:
+              action: toggle
+          - entity: light.bathroom
+            tap_action:
+              action: toggle
+          - entity: light.bedroom
+            tap_action:
+              action: toggle
+          - entity: light.gallery
+            tap_action:
+              action: toggle
+          - entity: light.kitchen
+            tap_action:
+              action: toggle
+          - entity: light.livingroom
+            tap_action:
+              action: toggle
+          - entity: light.store
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Lights
+        type: glance
+      - columns: 6
+        entities:
+          - entity: light.bathroom
+            icon: 'mdi:shower'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/bathroom
+          - entity: light.bedroom
+            icon: 'mdi:bed-double'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/bedroom
+          - entity: light.gallery
+            icon: 'mdi:shoe-print'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/gallery
+          - entity: light.kitchen
+            icon: 'mdi:table-chair'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/kitchen
+          - entity: light.livingroom
+            icon: 'mdi:sofa'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom
+          - entity: light.store
+            icon: 'mdi:wardrobe-outline'
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/store
+        show_name: false
+        show_state: false
+        title: Rooms
+        type: glance
+      - entities:
+          - sun.sun
+        show_header_toggle: false
+        title: Weather
+        type: entities
+      - entities:
+          - light.telldus_switch_06_light
+          - light.telldus_switch_07_light
+        title: Light
+        type: entities
+      - entity: weather.frosunda
+        type: weather-forecast
+    icon: 'mdi:home-outline'
+    path: ''
+    title: Home
+  - badges: []
+    cards:
+      - entity: light.bathroom
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: binary_sensor.aeotec_sensor6_01_motion
+            name: Motion
+          - entity: binary_sensor.aeotec_sensor6_01_vibration
+            name: Vibration
+          - entity: sensor.aeotec_sensor6_01_temperature
+            name: Temperature
+          - entity: sensor.aeotec_sensor6_01_humidity
+            name: Humidity
+          - entity: sensor.aeotec_sensor6_01_luminance
+            name: Luminace
+        show_name: false
+        type: glance
+      - entities:
+          - entity: binary_sensor.aeotec_sensor6_01_motion
+            name: Motion
+          - entity: binary_sensor.aeotec_sensor6_01_vibration
+            name: Vibration
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+      - entities:
+          - entity: sensor.aeotec_sensor6_01_temperature
+            name: Temperature
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+      - entities:
+          - entity: sensor.aeotec_sensor6_01_luminance
+            name: Luminance
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+      - entities:
+          - entity: sensor.aeotec_sensor6_01_humidity
+            name: Humidity
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+    icon: 'mdi:shower'
+    path: bathroom
+    title: Bathroom
+  - badges: []
+    cards:
+      - columns: 3
+        entities:
+          - entity: light.bedroom
+            icon: 'mdi:lightbulb-group'
+            name: Bedroom
+            tap_action:
+              action: toggle
+          - entity: light.bedroom_bed
+            name: Bed
+            tap_action:
+              action: toggle
+          - entity: light.bedroom_ceiling
+            icon: 'mdi:vanity-light'
+            name: Ceiling
+            tap_action:
+              action: toggle
+        show_name: false
+        show_state: false
+        type: glance
+      - entities:
+          - entity: light.tradfri_led_rgb_02_light
+            name: Bed - West
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_rgb_01_light
+            name: Bed - East
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_06_light
+            name: Ceiling - North
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_05_light
+            name: Ceiling - South
+            tap_action:
+              action: toggle
+        show_state: false
+        type: glance
+    icon: 'mdi:bed-double-outline'
+    path: bedroom
+    title: Bedroom
+  - badges: []
+    cards:
+      - entities:
+          - entity: light.gallery
+            name: Gallery
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_01_light
+            name: Lamp 1
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_02_light
+            name: Lamp 2
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_03_light
+            name: Lamp 3
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_04_light
+            name: Lamp 4
+            tap_action:
+              action: toggle
+        show_state: false
+        type: glance
+      - entities:
+          - entity: binary_sensor.smartthings_motion_temp_01_occupancy
+          - entity: sensor.smartthings_motion_temp_01_temperature
+        show_name: false
+        show_state: true
+        type: glance
+      - entities:
+          - entity: sensor.smartthings_motion_temp_01_temperature
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+    icon: 'mdi:shoe-print'
+    path: gallery
+    title: Gallery
+  - badges: []
+    cards:
+      - entities:
+          - entity: light.kitchen
+            name: Kitchen
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_white_01_light
+            name: Light - Sink
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_white_02_light
+            name: Light - Stove
+            tap_action:
+              action: toggle
+        show_state: false
+        type: glance
+      - entities:
+          - entity: binary_sensor.smartthings_motion_temp_02_occupancy
+          - entity: sensor.smartthings_motion_temp_02_temperature
+        show_name: false
+        show_state: true
+        type: glance
+      - entities:
+          - entity: switch.tplink_plug_01
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/kitchen-fridge
+          - entity: switch.tplink_plug_02
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/kitchen-microwave
+          - entity: switch.telldus_switch_02_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/kitchen-dishwasher
+          - entity: switch.telldus_switch_05_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/kitchen-toaster
+        show_state: false
+        title: Appliances
+        type: glance
+      - entities:
+          - entity: sensor.smartthings_motion_temp_02_temperature
+        hours_to_show: 24
+        refresh_interval: 0
+        type: history-graph
+    icon: 'mdi:table-chair'
+    path: kitchen
+    title: Kitchen
+  - icon: 'mdi:sofa'
+    path: livingroom
+    title: Living Room
+    badges: []
+    cards:
+      - entities:
+          - entity: light.tradfri_led_rgb_04_light
+            name: Ceiling Lamp
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_plug_01_light
+            name: Study Lamp
+            tap_action:
+              action: toggle
+        show_state: false
+        type: glance
+      - columns: 6
+        entities:
+          - entity: switch.fibaro_switch_01_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom-jain10
+          - entity: switch.tradfri_plug_02_power
+            tap_action:
+              action: toggle
+          - entity: binary_sensor.fibaro_switch_02_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom-jain56
+          - entity: switch.telldus_switch_01_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom-tv
+          - entity: binary_sensor.telldus_switch_03_switch
+            name: Table
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom-studytable
+          - entity: switch.telldus_switch_04_switch
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/livingroom-misc
+        show_state: false
+        title: Devices
+        type: glance
+  - badges: []
+    cards:
+      - entity: light.store
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entity: binary_sensor.aqara_sensor_switch_01_contact
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+    icon: 'mdi:wardrobe-outline'
+    path: store
+    title: Store
+  - badges: []
+    cards:
+      - entity: light.all
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - columns: 6
+        entities:
+          - entity: light.bathroom
+            tap_action:
+              action: toggle
+          - entity: light.bedroom
+            tap_action:
+              action: toggle
+          - entity: light.gallery
+            tap_action:
+              action: toggle
+          - entity: light.kitchen
+            tap_action:
+              action: toggle
+          - entity: light.livingroom
+            tap_action:
+              action: toggle
+          - entity: light.store
+            tap_action:
+              action: toggle
+        show_state: false
+        type: glance
+      - entities:
+          - entity: switch.ha_lights_manual_control
+            name: Manual
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_morning
+            name: Morning
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_afternoon
+            name: Afternoon
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_evening
+            name: Evening
+            tap_action:
+              action: toggle
+          - entity: switch.ha_lights_mode_night
+            name: Night
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Manual
+        type: glance
+      - entities:
+          - entity: light.tradfri_led_rgb_03_light
+            name: Ceiling Light
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Bathroom
+        type: glance
+      - columns: 3
+        entities:
+          - entity: light.bedroom_bed
+            name: Bed
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_rgb_02_light
+            name: Bed - West
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_rgb_01_light
+            name: Bed - East
+            tap_action:
+              action: toggle
+          - entity: light.bedroom_ceiling
+            name: Ceiling
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_06_light
+            name: Ceiling - North
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_05_light
+            name: Ceiling - South
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Bedroom
+        type: glance
+      - entities:
+          - entity: light.gallery
+            name: Gallery
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_01_light
+            name: Lamp 1
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_02_light
+            name: Lamp 2
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_03_light
+            name: Lamp 3
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_gu10_04_light
+            name: Lamp 4
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Gallery
+        type: glance
+      - entities:
+          - entity: light.kitchen
+            name: Kitchen
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_white_01_light
+            name: Light - Sink
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_led_white_02_light
+            name: Light - Stove
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Kitchen
+        type: glance
+      - entities:
+          - entity: light.tradfri_led_rgb_04_light
+            name: Ceiling Lamp
+            tap_action:
+              action: toggle
+          - entity: light.tradfri_plug_01_light
+            name: Study Lamp
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Living Room
+        type: glance
+      - entities:
+          - entity: light.tradfri_led_white_03_light
+            name: Ceiling Light
+            tap_action:
+              action: toggle
+        show_state: false
+        title: Store
+        type: glance
+    icon: 'mdi:lightbulb-group'
+    path: lights
+    title: Lights
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.tradfri_led_white_03_linkquality
+            icon: 'mdi:ceiling-light'
+            name: Ceiling Light
+          - entity: sensor.aqara_sensor_switch_01_linkquality
+            icon: 'mdi:door-closed'
+            name: Door Sensor
+        show_name: true
+        title: Store
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_led_rgb_03_linkquality
+            icon: 'mdi:ceiling-light'
+            name: Ceiling Light
+          - entity: sensor.tradfri_switch_02_linkquality
+            icon: 'mdi:gesture-double-tap'
+            name: Switch
+        show_name: true
+        title: Bathroom
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_led_gu10_01_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Lamp 1
+          - entity: sensor.tradfri_led_gu10_02_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Lamp 2
+          - entity: sensor.tradfri_led_gu10_03_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Lamp 3
+          - entity: sensor.tradfri_led_gu10_04_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Lamp 4
+          - entity: sensor.smartthings_motion_temp_01_linkquality
+            icon: 'mdi:motion-sensor'
+            name: Motion Sensor
+        title: Gallery
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_led_white_01_linkquality
+            icon: 'mdi:ceiling-light'
+            name: Light - Sink
+          - entity: sensor.tradfri_led_white_02_linkquality
+            icon: 'mdi:ceiling-light'
+            name: Light - Stove
+          - entity: sensor.tradfri_switch_01_linkquality
+            icon: 'mdi:gesture-double-tap'
+            name: Switch
+          - entity: sensor.smartthings_motion_temp_02_linkquality
+            icon: 'mdi:motion-sensor'
+            name: Motion Sensor
+        title: Kitchen
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_led_rgb_04_linkquality
+            icon: 'mdi:ceiling-light'
+            name: Ceiling Lamp
+          - entity: sensor.tradfri_plug_01_linkquality
+            icon: 'mdi:wall-sconce-flat'
+            name: Study Lamp
+          - entity: sensor.tradfri_plug_02_linkquality
+            icon: 'mdi:desktop-tower-monitor'
+            name: Monitor
+        show_name: true
+        title: Living Room
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_led_rgb_02_linkquality
+            icon: 'mdi:lightbulb'
+            name: Bed - West
+          - entity: sensor.tradfri_led_rgb_01_linkquality
+            icon: 'mdi:lightbulb'
+            name: Bed - East
+          - entity: sensor.tradfri_led_gu10_06_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Ceiling - North
+          - entity: sensor.tradfri_led_gu10_05_linkquality
+            icon: 'mdi:spotlight-beam'
+            name: Ceiling - South
+        title: Bedroom
+        type: glance
+    icon: 'mdi:signal-cellular-2'
+    path: zigbee-linq
+    title: Zigbee Link
+  - badges: []
+    cards:
+      - entities:
+          - entity: sensor.aqara_sensor_switch_01_battery
+            icon: 'mdi:wardrobe'
+            name: Store
+        title: Door Sensors
+        type: glance
+      - entities:
+          - entity: sensor.aeotec_sensor6_01_battery
+            icon: 'mdi:shower'
+            name: Bathroom
+          - entity: sensor.smartthings_motion_temp_01_battery
+            icon: 'mdi:shoe-print'
+            name: Gallery
+          - entity: sensor.smartthings_motion_temp_02_battery
+            icon: 'mdi:table-chair'
+            name: Kitchen
+        show_name: false
+        title: Motion Sensors
+        type: glance
+      - entities:
+          - entity: sensor.tradfri_switch_02_battery
+            icon: 'mdi:shower'
+            name: Bathroom
+          - entity: sensor.tradfri_switch_01_battery
+            icon: 'mdi:table-chair'
+            name: Kitchen
+        title: Buttons
+        type: glance
+    icon: 'mdi:battery-60'
+    path: battery-levels
+    title: Battery Levels
+  - badges: []
+    cards:
+      - columns: 1
+        entities:
+          - entity: binary_sensor.ping_jain10
+          - entity: binary_sensor.ping_jain56
+          - entity: binary_sensor.ping_docker56
+          - entity: binary_sensor.ping_motorola_g6_plus
+          - entity: binary_sensor.ping_sony_xperia_zr
+          - entity: binary_sensor.ping_asus_a810
+          - entity: binary_sensor.ping_octopi
+          - entity: binary_sensor.ping_raspberrypi
+          - entity: binary_sensor.ping_chromecast_audio_bedroom
+            name: Bedroom
+          - entity: binary_sensor.ping_chromecast_audio_livingroom
+            name: Living Room
+          - entity: binary_sensor.ping_chromecast_video
+            name: Video
+        show_state: false
+        type: glance
+    icon: 'mdi:check-network'
+    panel: false
+    path: network
+    title: Network
+  - badges: []
+    cards:
+      - elements:
+          - entity: light.livingroom
+            style:
+              left: 65%
+              top: 50%
+            tap_action:
+              action: toggle
+            type: state-icon
+          - entity: light.bedroom
+            image: /local/FloorPlan_Bedroom.png
+            state_filter:
+              'off': grayscale(100%)
+              'on': grayscale(0%)
+            style:
+              left: 89%
+              top: 50%
+              width: 20%
+            tap_action:
+              action: toggle
+            type: image
+        image: /local/FloorPlan.png
+        type: picture-elements
+      - entity: light.all
+        hold_action:
+          action: toggle
+        name: All Lights
+        show_icon: true
+        show_name: true
+        tap_action:
+          action: navigate
+        type: entity-button
+      - entities:
+          - entity: light.store
+            tap_action:
+              action: toggle
+          - entity: light.gallery
+            tap_action:
+              action: toggle
+          - entity: light.kitchen
+            tap_action:
+              action: toggle
+          - entity: light.livingroom
+            icon: 'mdi:ceiling-light'
+            tap_action:
+              action: toggle
+          - entity: light.bedroom
+            tap_action:
+              action: toggle
+        show_icon: true
+        show_state: false
+        type: glance
+    panel: true
+    path: floorplan-lights
+    title: Floorplan
+  - badges: []
+    cards:
+      - elements:
+          - entity: light.tradfri_led_rgb_01_light
+            icon: 'mdi:lightbulb'
+            style:
+              left: 52%
+              top: 6%
+              transform: 'scale(2,2)'
+            tap_action:
+              action: toggle
+            type: state-icon
+          - entity: light.tradfri_led_rgb_02_light
+            icon: 'mdi:lightbulb'
+            style:
+              left: 27%
+              top: 6%
+              transform: 'scale(2,2)'
+            tap_action:
+              action: toggle
+            type: state-icon
+          - entity: light.tradfri_led_gu10_05_light
+            icon: 'mdi:spotlight-beam'
+            style:
+              left: 80%
+              top: 40%
+              transform: 'scale(3,3) rotate(160deg)'
+            tap_action:
+              action: toggle
+            type: state-icon
+          - entity: light.tradfri_led_gu10_06_light
+            icon: 'mdi:spotlight-beam'
+            style:
+              left: 80%
+              top: 55%
+              transform: 'scale(3,3) rotate(115deg)'
+            tap_action:
+              action: toggle
+            type: state-icon
+        image: /local/FloorPlan_Bedroom.png
+        type: picture-elements
+    icon: ''
+    panel: false
+    path: floorplan-bedroom
+    title: Bedroom
+  - badges: []
+    cards:
+      - entity: switch.tplink_plug_01
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.tplink_plug_01_watts
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_01_today_kwh
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy (Today)
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_01_total_kwh
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_01_volts
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_01_amps
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:fridge'
+    path: kitchen-fridge
+    title: Fridge
+    visible: false
+  - badges: []
+    cards:
+      - entity: switch.tplink_plug_02
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.tplink_plug_02_watts
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_02_today_kwh
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy (Today)
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_02_total_kwh
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_02_volts
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.tplink_plug_02_amps
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:microwave'
+    path: kitchen-microwave
+    title: Microwave
+    visible: false
+  - badges: []
+    cards:
+      - entity: switch.telldus_switch_05_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.telldus_switch_05_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_05_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_05_voltage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_05_current
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:toaster'
+    path: kitchen-toaster
+    title: Toaster
+    visible: false
+  - badges: []
+    cards:
+      - entity: switch.telldus_switch_02_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.telldus_switch_02_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_02_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_02_voltage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_02_current
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:dishwasher'
+    path: kitchen-dishwasher
+    title: Dishwasher
+    visible: false
+  - badges: []
+    cards:
+      - entity: switch.fibaro_switch_01_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.fibaro_switch_01_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.fibaro_switch_01_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+    icon: 'mdi:desktop-tower-monitor'
+    path: livingroom-jain10
+    title: Jain10
+    visible: false
+  - badges: []
+    cards:
+      - entity: binary_sensor.fibaro_switch_02_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.fibaro_switch_02_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.fibaro_switch_02_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+    icon: 'mdi:server'
+    path: livingroom-jain56
+    title: Jain56
+    visible: false
+  - badges: []
+    cards:
+      - entity: switch.telldus_switch_01_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.telldus_switch_01_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_01_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_01_voltage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_01_current
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:television-classic'
+    path: livingroom-tv
+    title: TV
+    visible: false
+  - badges: []
+    cards:
+      - entity: binary_sensor.telldus_switch_03_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.telldus_switch_03_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_03_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_03_voltage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_03_current
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+    icon: 'mdi:desk'
+    path: livingroom-studytable
+    title: Study Table
+    visible: false
+  - path: livingroom-misc
+    icon: 'mdi:power-socket-eu'
+    title: Misc
+    visible: false
+    badges: []
+    cards:
+      - entity: switch.telldus_switch_04_switch
+        hold_action:
+          action: more-info
+        show_icon: true
+        show_name: false
+        tap_action:
+          action: toggle
+        type: entity-button
+      - entities:
+          - entity: sensor.telldus_switch_04_power
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Power Usage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_04_energy
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Energy
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_04_voltage
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Voltage
+        type: history-graph
+      - entities:
+          - entity: sensor.telldus_switch_04_current
+        hours_to_show: 24
+        refresh_interval: 0
+        title: Current
+        type: history-graph
+  - path: power
+    title: Power
+    badges: []
+    cards:
+      - title: Power
+        type: entities
+        entities:
+          - sensor.fibaro_switch_01_power
+          - sensor.fibaro_switch_01_energy
+          - sensor.fibaro_switch_02_power
+          - sensor.fibaro_switch_02_energy
+          - sensor.tplink_plug_01_watts
+          - sensor.tplink_plug_01_total_kwh
+          - sensor.tplink_plug_01_volts
+          - sensor.tplink_plug_01_amps
+          - sensor.tplink_plug_02_watts
+          - sensor.tplink_plug_02_total_kwh
+          - sensor.tplink_plug_02_volts
+          - sensor.tplink_plug_02_amps
+          - sensor.telldus_switch_01_power
+          - sensor.telldus_switch_01_energy
+          - sensor.telldus_switch_01_voltage
+          - sensor.telldus_switch_01_current
+          - sensor.telldus_switch_02_power
+          - sensor.telldus_switch_02_energy
+          - sensor.telldus_switch_02_voltage
+          - sensor.telldus_switch_02_current
+          - sensor.telldus_switch_03_power
+          - sensor.telldus_switch_03_energy
+          - sensor.telldus_switch_03_voltage
+          - sensor.telldus_switch_03_current
+          - sensor.telldus_switch_04_power
+          - sensor.telldus_switch_04_energy
+          - sensor.telldus_switch_04_voltage
+          - sensor.telldus_switch_04_current
+          - sensor.telldus_switch_05_power
+          - sensor.telldus_switch_05_energy
+          - sensor.telldus_switch_05_voltage
+          - sensor.telldus_switch_05_current
+          - sensor.telldus_switch_06_power
+          - sensor.telldus_switch_06_energy
+          - sensor.telldus_switch_06_voltage
+          - sensor.telldus_switch_06_current
+          - sensor.telldus_switch_07_power
+          - sensor.telldus_switch_07_energy
+          - sensor.telldus_switch_07_voltage
+          - sensor.telldus_switch_07_current
+        show_header_toggle: false
