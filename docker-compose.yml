@@ -3,7 +3,7 @@ version: "2.4"
 services:
 
     hass:
-       image: homeassistant/home-assistant:0.98.4
+       image: homeassistant/home-assistant:0.103.6
        environment:
            - PUID=1000
            - PGID=1000
@@ -12,3 +12,8 @@ services:
            - W:\.DockerConfig\hass:/config
        ports:
            - 8123:8123
+       logging:
+            driver: "json-file"
+            options:
+                max-size: "200k"
+                max-file: "10"
