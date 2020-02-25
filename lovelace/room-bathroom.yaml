@@ -1,6 +1,7 @@
 title: Bathroom
 path: bathroom
 icon: 'mdi:shower'
+visible: false
 
 badges: []
 

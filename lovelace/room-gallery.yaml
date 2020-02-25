@@ -1,6 +1,7 @@
 title: Gallery
 path: gallery
 icon: 'mdi:shoe-print'
+visible: false
 
 badges: []
 

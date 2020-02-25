@@ -1,6 +1,7 @@
 title: Store
 path: store
 icon: 'mdi:wardrobe-outline'
+visible: false
 
 badges: []
 

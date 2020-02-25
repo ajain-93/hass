@@ -1,6 +1,7 @@
 title: Bedroom
 path: bedroom
 icon: 'mdi:bed-double-outline'
+visible: false
 
 badges: []
 

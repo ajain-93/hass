@@ -1,6 +1,7 @@
 path: livingroom
 title: Living Room
 icon: 'mdi:sofa'
+visible: false
 
 badges: []
 
