@@ -1,0 +1,25 @@
+title: Network
+path: network
+icon: 'mdi:check-network'
+
+badges: []
+
+cards:
+  - type: glance
+    show_state: false
+    columns: 1
+    entities:
+      - entity: binary_sensor.ping_jain10
+      - entity: binary_sensor.ping_jain56
+      - entity: binary_sensor.ping_docker56
+      - entity: binary_sensor.ping_motorola_g6_plus
+      - entity: binary_sensor.ping_sony_xperia_zr
+      - entity: binary_sensor.ping_asus_a810
+      - entity: binary_sensor.ping_octopi
+      - entity: binary_sensor.ping_raspberrypi
+      - entity: binary_sensor.ping_chromecast_audio_bedroom
+        name: Bedroom
+      - entity: binary_sensor.ping_chromecast_audio_livingroom
+        name: Living Room
+      - entity: binary_sensor.ping_chromecast_video
+        name: Video

@@ -1,0 +1,91 @@
+title: Zigbee Link Quality
+path: zigbee-link
+icon: 'mdi:signal-cellular-2'
+
+badges: []
+
+cards:
+  - type: glance
+    title: Store
+    entities:
+      - entity: sensor.tradfri_led_white_03_linkquality
+        name: Ceiling Light
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.aqara_sensor_switch_01_linkquality
+        name: Door Sensor
+        icon: 'mdi:door-closed'
+
+  - type: glance
+    show_name: true
+    title: Bathroom
+    entities:
+      - entity: sensor.tradfri_led_rgb_03_linkquality
+        name: Ceiling Light
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.tradfri_switch_02_linkquality
+        name: Switch
+        icon: 'mdi:gesture-double-tap'
+
+  - type: glance
+    title: Gallery
+    entities:
+      - entity: sensor.tradfri_led_gu10_01_linkquality
+        name: Lamp 1
+        icon: 'mdi:spotlight-beam'
+      - entity: sensor.tradfri_led_gu10_02_linkquality
+        name: Lamp 2
+        icon: 'mdi:spotlight-beam'
+      - entity: sensor.tradfri_led_gu10_03_linkquality
+        name: Lamp 3
+        icon: 'mdi:spotlight-beam'
+      - entity: sensor.tradfri_led_gu10_04_linkquality
+        name: Lamp 4
+        icon: 'mdi:spotlight-beam'
+      - entity: sensor.smartthings_motion_temp_01_linkquality
+        name: Motion Sensor
+        icon: 'mdi:motion-sensor'
+
+  - type: glance
+    title: Kitchen
+    entities:
+      - entity: sensor.tradfri_led_white_01_linkquality
+        name: Light - Sink
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.tradfri_led_white_02_linkquality
+        name: Light - Stove
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.tradfri_switch_01_linkquality
+        name: Switch
+        icon: 'mdi:gesture-double-tap'
+      - entity: sensor.smartthings_motion_temp_02_linkquality
+        name: Motion Sensor
+        icon: 'mdi:motion-sensor'
+
+  - type: glance
+    title: Living Room
+    entities:
+      - entity: sensor.tradfri_led_rgb_04_linkquality
+        name: Ceiling Lamp
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.tradfri_plug_01_linkquality
+        name: Study Lamp
+        icon: 'mdi:wall-sconce-flat'
+      - entity: sensor.tradfri_plug_02_linkquality
+        name: Monitor
+        icon: 'mdi:desktop-tower-monitor'
+
+  - type: glance
+    title: Bedroom
+    entities:
+      - entity: sensor.tradfri_led_rgb_02_linkquality
+        icon: 'mdi:lightbulb'
+        name: Bed - West
+      - entity: sensor.tradfri_led_rgb_01_linkquality
+        icon: 'mdi:lightbulb'
+        name: Bed - East
+      - entity: sensor.tradfri_led_gu10_06_linkquality
+        icon: 'mdi:spotlight-beam'
+        name: Ceiling - North
+      - entity: sensor.tradfri_led_gu10_05_linkquality
+        icon: 'mdi:spotlight-beam'
+        name: Ceiling - South

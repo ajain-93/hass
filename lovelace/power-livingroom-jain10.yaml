@@ -1,0 +1,31 @@
+title: Jain10
+path: livingroom-jain10
+icon: 'mdi:desktop-tower-monitor'
+visible: false
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: switch.fibaro_switch_01_switch
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: history-graph
+    title: Power Usage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.fibaro_switch_01_power
+
+  - type: history-graph
+    title: Energy
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.fibaro_switch_01_energy
+

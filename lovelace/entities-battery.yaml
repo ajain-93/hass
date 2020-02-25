@@ -1,0 +1,37 @@
+title: Battery Levels
+path: battery-levels
+icon: mdi:battery-charging-wireless-60
+# icon: 'mdi:battery-60'
+
+badges: []
+
+cards:
+  - type: glance
+    title: Door Sensors
+    entities:
+      - entity: sensor.aqara_sensor_switch_01_battery
+        name: Store
+        icon: 'mdi:wardrobe'
+  - type: glance
+    title: Motion Sensors
+    show_name: false
+    entities:
+      - entity: sensor.aeotec_sensor6_01_battery
+        name: Bathroom
+        icon: 'mdi:shower'
+      - entity: sensor.smartthings_motion_temp_01_battery
+        name: Gallery
+        icon: 'mdi:shoe-print'
+      - entity: sensor.smartthings_motion_temp_02_battery
+        name: Kitchen
+        icon: 'mdi:table-chair'
+  - type: glance
+    title: Buttons
+    entities:
+      - entity: sensor.tradfri_switch_02_battery
+        name: Bathroom
+        icon: 'mdi:shower'
+      - entity: sensor.tradfri_switch_01_battery
+        name: Kitchen
+        icon: 'mdi:table-chair'
+

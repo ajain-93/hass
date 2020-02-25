@@ -1,0 +1,44 @@
+title: Study Table
+path: livingroom-studytable
+icon: 'mdi:desk'
+visible: false
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: binary_sensor.telldus_switch_03_switch
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: history-graph
+    title: Power Usage
+    hours_to_show: 24
+    refresh_interval: 0
+    entities:
+      - entity: sensor.telldus_switch_03_power
+
+  - type: history-graph
+    title: Energy
+    hours_to_show: 24
+    refresh_interval: 0
+    entities:
+      - entity: sensor.telldus_switch_03_energy
+
+  - type: history-graph
+    title: Voltage
+    hours_to_show: 24
+    refresh_interval: 0
+    entities:
+      - entity: sensor.telldus_switch_03_voltage
+
+  - type: history-graph
+    title: Current
+    hours_to_show: 24
+    refresh_interval: 0
+    entities:
+      - entity: sensor.telldus_switch_03_current

@@ -1,0 +1,59 @@
+title: Bedroom
+path: floorplan-bedroom
+visible: false
+
+badges: []
+
+cards:
+  - type: picture-elements
+    image: /local/FloorPlan_Bedroom.png
+
+    elements:
+      - type: state-icon
+        entity: light.tradfri_led_rgb_01_light
+        icon: 'mdi:lightbulb'
+        style:
+          left: 52%
+          top: 6%
+          transform: 'scale(2,2)'
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+      - type: state-icon
+        entity: light.tradfri_led_rgb_02_light
+        icon: 'mdi:lightbulb'
+        style:
+          left: 27%
+          top: 6%
+          transform: 'scale(2,2)'
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+      - type: state-icon
+        entity: light.tradfri_led_gu10_05_light
+        icon: 'mdi:spotlight-beam'
+        style:
+          left: 80%
+          top: 40%
+          transform: 'scale(3,3) rotate(160deg)'
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+      - type: state-icon
+        entity: light.tradfri_led_gu10_06_light
+        icon: 'mdi:spotlight-beam'
+        style:
+          left: 80%
+          top: 55%
+          transform: 'scale(3,3) rotate(115deg)'
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+

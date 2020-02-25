@@ -1,0 +1,63 @@
+title: Kitchen
+path: kitchen
+icon: 'mdi:table-chair'
+
+badges: []
+
+cards:
+  - type: glance
+    show_state: false
+    entities:
+      - entity: light.kitchen
+        name: Kitchen
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: light.tradfri_led_white_01_light
+        name: Light - Sink
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: light.tradfri_led_white_02_light
+        name: Light - Stove
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+  - type: glance
+    show_name: false
+    show_state: true
+    entities:
+      - entity: binary_sensor.smartthings_motion_temp_02_occupancy
+      - entity: sensor.smartthings_motion_temp_02_temperature
+
+  - type: glance
+    title: Appliances
+    show_state: false
+    entities:
+      - entity: switch.tplink_plug_01
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-fridge
+      - entity: switch.tplink_plug_02
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-microwave
+      - entity: switch.telldus_switch_02_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-dishwasher
+      - entity: switch.telldus_switch_05_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-toaster
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.smartthings_motion_temp_02_temperature
+

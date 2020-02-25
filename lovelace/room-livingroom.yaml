@@ -1,0 +1,52 @@
+path: livingroom
+title: Living Room
+icon: 'mdi:sofa'
+
+badges: []
+
+cards:
+  - type: glance
+    show_state: false
+    entities:
+      - entity: light.tradfri_led_rgb_04_light
+        name: Ceiling Lamp
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: light.tradfri_plug_01_light
+        name: Study Lamp
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+  - type: glance
+    title: Devices
+    show_state: false
+    columns: 6
+    entities:
+      - entity: switch.fibaro_switch_01_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-jain10
+      - entity: switch.tradfri_plug_02_power
+        tap_action:
+          action: toggle
+      - entity: binary_sensor.fibaro_switch_02_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-jain56
+      - entity: switch.telldus_switch_01_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-tv
+      - entity: binary_sensor.telldus_switch_03_switch
+        name: Table
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-studytable
+      - entity: switch.telldus_switch_04_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-misc

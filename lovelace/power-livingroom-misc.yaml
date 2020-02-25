@@ -1,0 +1,44 @@
+title: Misc Appliance
+path: livingroom-misc
+icon: 'mdi:power-socket-eu'
+visible: false
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: switch.telldus_switch_04_switch
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: history-graph
+    title: Power Usage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_04_power
+
+  - entities:
+      - entity: sensor.telldus_switch_04_energy
+    hours_to_show: 24
+    refresh_interval: 0
+    title: Energy
+    type: history-graph
+
+  - type: history-graph
+    title: Voltage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_04_voltage
+
+  - type: history-graph
+    title: Current
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_04_current

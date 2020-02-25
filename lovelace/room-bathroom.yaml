@@ -1,0 +1,59 @@
+title: Bathroom
+path: bathroom
+icon: 'mdi:shower'
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: light.bathroom
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: glance
+    show_name: false
+    entities:
+      - entity: binary_sensor.aeotec_sensor6_01_motion
+        name: Motion
+      - entity: binary_sensor.aeotec_sensor6_01_vibration
+        name: Vibration
+      - entity: sensor.aeotec_sensor6_01_temperature
+        name: Temperature
+      - entity: sensor.aeotec_sensor6_01_humidity
+        name: Humidity
+      - entity: sensor.aeotec_sensor6_01_luminance
+        name: Luminace
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: binary_sensor.aeotec_sensor6_01_motion
+        name: Motion
+      - entity: binary_sensor.aeotec_sensor6_01_vibration
+        name: Vibration
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.aeotec_sensor6_01_temperature
+        name: Temperature
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.aeotec_sensor6_01_luminance
+        name: Luminance
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.aeotec_sensor6_01_humidity
+        name: Humidity

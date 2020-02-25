@@ -1,0 +1,34 @@
+title: Floorplan
+path: floorplan-lights
+visible: false
+panel: true
+
+badges: []
+
+cards:
+  - type: picture-elements
+    image: /local/FloorPlan.png
+    elements:
+      - type: state-icon
+        entity: light.livingroom
+        style:
+          left: 65%
+          top: 50%
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - type: image
+        image: /local/FloorPlan_Bedroom.png
+        entity: light.bedroom
+        state_filter:
+          'off': grayscale(100%)
+          'on': grayscale(0%)
+        style:
+          left: 89%
+          top: 50%
+          width: 20%
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info

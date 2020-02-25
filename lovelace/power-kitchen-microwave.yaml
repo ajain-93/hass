@@ -1,0 +1,52 @@
+title: Microwave
+path: kitchen-microwave
+icon: 'mdi:microwave'
+visible: false
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: switch.tplink_plug_02
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: history-graph
+    title: Power Usage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.tplink_plug_02_watts
+
+
+  - type: history-graph
+    title: Energy (Today)
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.tplink_plug_02_today_kwh
+
+  - type: history-graph
+    title: Energy
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.tplink_plug_02_total_kwh
+
+  - type: history-graph
+    title: Voltage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.tplink_plug_02_volts
+
+  - type: history-graph
+    title: Current
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.tplink_plug_02_amps

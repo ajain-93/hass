@@ -1,0 +1,24 @@
+title: Store
+path: store
+icon: 'mdi:wardrobe-outline'
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: light.store
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: entity-button
+    entity: binary_sensor.aqara_sensor_switch_01_contact
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: more-info
+    hold_action:
+      action: more-info
