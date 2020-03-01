@@ -1,0 +1,67 @@
+title: Available Updates
+path: updates
+icon: 'mdi:cellphone-arrow-down'
+
+badges: []
+
+cards:
+  - type: glance
+    title: Plugs
+    entities:
+      - entity: binary_sensor.tradfri_plug_01_update
+        name: Study Light
+      - entity: binary_sensor.tradfri_plug_02_update
+        name: Monitor
+
+  - type: glance
+    title: Remotes
+    entities:
+      - entity: binary_sensor.tradfri_switch_01_update
+        name: Kitchen
+      - entity: binary_sensor.tradfri_switch_02_update
+        name: Bathroom
+
+  - type: glance
+    title: Motion Sensors
+    entities:
+      - entity: binary_sensor.tradfri_motion_01_update
+        name: Bedroom
+
+  - type: glance
+    title: E27 RGB Lights
+    entities:
+      - entity: binary_sensor.tradfri_led_rgb_01_update
+        name: Bed - East
+      - entity: binary_sensor.tradfri_led_rgb_02_update
+        name: Bed - West
+      - entity: binary_sensor.tradfri_led_rgb_03_update
+        name: Bathroom
+      - entity: binary_sensor.tradfri_led_rgb_04_update
+        name: Livingroom
+
+  - type: glance
+    title: E27 White Lights
+    entities:
+      - entity: binary_sensor.tradfri_led_white_01_update
+        name: Kitchen - Sink
+      - entity: binary_sensor.tradfri_led_white_02_update
+        name: Kitchen - Stove
+      - entity: binary_sensor.tradfri_led_white_03_update
+        name: Store
+
+  - type: glance
+    title: GU10 White Lights
+    columns: 4
+    entities:
+      - entity: binary_sensor.tradfri_led_gu10_01_update
+        name: Gallery 01
+      - entity: binary_sensor.tradfri_led_gu10_02_update
+        name: Gallery 02
+      - entity: binary_sensor.tradfri_led_gu10_03_update
+        name: Gallery 03
+      - entity: binary_sensor.tradfri_led_gu10_04_update
+        name: Gallery 04
+      - entity: binary_sensor.tradfri_led_gu10_05_update
+        name: Ceiling - South
+      - entity: binary_sensor.tradfri_led_gu10_06_update
+        name: Ceiling - North

@@ -10,6 +10,7 @@ views:
   - !include lovelace/entities-network.yaml
   - !include lovelace/entities-link-quality.yaml
   - !include lovelace/entities-power.yaml
+  - !include lovelace/entities-updates.yaml
 
   # Rooms
   - !include lovelace/room-bathroom.yaml

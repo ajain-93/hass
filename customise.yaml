@@ -28,6 +28,8 @@ sensor.tradfri_switch_02_linkquality:
 sensor.tradfri_switch_02_battery:
   friendly_name: Bathroom Switch Battery
   device_class: battery
+binary_sensor.tradfri_switch_02_update:
+  friendly_name: Bathroom Switch Update
 
 sensor.aeotec_sensor6_01_temperature:
   friendly_name: Bathroom Temperature
@@ -75,6 +77,8 @@ sensor.tradfri_led_rgb_01_linkquality:
   friendly_name: Bedroom - Bed East Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_rgb_01_update:
+  friendly_name: Bedroom - Bed East Update
 light.tradfri_led_rgb_02_light:
   friendly_name: Bedroom - Bed West
   icon: mdi:lamp
@@ -82,6 +86,8 @@ sensor.tradfri_led_rgb_02_linkquality:
   friendly_name: Bedroom - Bed West Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_rgb_02_update:
+  friendly_name: Bedroom - Bed West Update
 
 light.tradfri_led_gu10_05_light:
   friendly_name: Bedroom - Ceilng South
@@ -90,6 +96,8 @@ sensor.tradfri_led_gu10_05_linkquality:
   friendly_name: Bedroom - Ceilng South Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_05_update:
+  friendly_name: Bedroom - Ceilng South Update
 light.tradfri_led_gu10_06_light:
   friendly_name: Bedroom - Ceilng North
   icon: mdi:spotlight-beam
@@ -97,6 +105,8 @@ sensor.tradfri_led_gu10_06_linkquality:
   friendly_name: Bedroom - Ceilng North Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_06_update:
+  friendly_name: Bedroom - Ceilng North Update
 
 light.telldus_switch_07_light:
   friendly_name: Decoration Lights
@@ -120,6 +130,8 @@ sensor.tradfri_motion_01_battery:
   friendly_name: Bedroom Motion Battery
 sensor.tradfri_motion_01_linkquality:
   friendly_name: Bedroom Motion Link
+binary_sensor.tradfri_motion_01_update:
+  friendly_name: Bedroom Motion Update
 
 
 
@@ -135,6 +147,8 @@ sensor.tradfri_led_gu10_01_linkquality:
   friendly_name: Gallery 01 Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_01_update:
+  friendly_name: Gallery 01 Update
 light.tradfri_led_gu10_02_light:
   friendly_name: Gallery 02
   icon: mdi:spotlight-beam
@@ -142,6 +156,8 @@ sensor.tradfri_led_gu10_02_linkquality:
   friendly_name: Gallery 02 Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_02_update:
+  friendly_name: Gallery 02 Update
 light.tradfri_led_gu10_03_light:
   friendly_name: Gallery 03
   icon: mdi:spotlight-beam
@@ -149,6 +165,8 @@ sensor.tradfri_led_gu10_03_linkquality:
   friendly_name: Gallery 03 Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_03_update:
+  friendly_name: Gallery 03 Update
 light.tradfri_led_gu10_04_light:
   friendly_name: Gallery 04
   icon: mdi:spotlight-beam
@@ -156,6 +174,8 @@ sensor.tradfri_led_gu10_04_linkquality:
   friendly_name: Gallery 04 Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_gu10_04_update:
+  friendly_name: Gallery 04 Update
 
 binary_sensor.smartthings_motion_temp_01_occupancy:
   friendly_name: Gallery Motion
@@ -184,6 +204,8 @@ sensor.tradfri_led_white_01_linkquality:
   friendly_name: Kitchen - Sink Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_white_01_update:
+  friendly_name: itchen - Sink Update
 light.tradfri_led_white_02_light:
   friendly_name: Kitchen - Stove
   icon: mdi:ceiling-light
@@ -191,6 +213,8 @@ sensor.tradfri_led_white_02_linkquality:
   friendly_name: Kitchen - Stove Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_white_02_update:
+  friendly_name: Kitchen - Stove Update
 
 sensor.tradfri_switch_01_action:
   friendly_name: Kitchen Switch
@@ -202,6 +226,8 @@ sensor.tradfri_switch_01_linkquality:
 sensor.tradfri_switch_01_battery:
   friendly_name: Kitchen Switch Battery
   device_class: battery
+binary_sensor.tradfri_switch_01_update:
+  friendly_name: Kitchen Switch Update
 
 binary_sensor.smartthings_motion_temp_02_occupancy:
   friendly_name: Kitchen Motion
@@ -294,13 +320,17 @@ sensor.tradfri_plug_01_linkquality:
   friendly_name: Study Light Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_plug_01_update:
+  friendly_name: Study Light Update
 switch.tradfri_plug_02_power:
   friendly_name: Monitor
   icon: mdi:desktop-tower-monitor
 sensor.tradfri_plug_02_linkquality:
-  friendly_name: Study Monitor Link
+  friendly_name: Monitor Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_plug_02_update:
+  friendly_name: Monitor Update
 light.tradfri_led_rgb_04_light:
   friendly_name: Living Room Centre
   icon: mdi:ceiling-light
@@ -308,6 +338,8 @@ sensor.tradfri_led_rgb_04_linkquality:
   friendly_name: Living Room Centre Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_rgb_04_update:
+  friendly_name: Living Room Centre Update
 
 switch.fibaro_switch_01_switch:
   friendly_name: Jain10
@@ -409,6 +441,8 @@ sensor.tradfri_led_white_03_linkquality:
   friendly_name: Store Link
   device_class: signal_strength
   hidden: true
+binary_sensor.tradfri_led_white_03_update:
+  friendly_name: Store Update
 
 binary_sensor.aqara_sensor_switch_01_contact:
   friendly_name: Store Door
