@@ -140,6 +140,7 @@
   state_on: "true"
   state_off: "false"
   payload_on: "morning"
+  payload_off: "morning"
   retain: "on"
 
 - platform: "mqtt"
@@ -150,6 +151,7 @@
   state_on: "true"
   state_off: "false"
   payload_on: "afternoon"
+  payload_off: "afternoon"
   retain: "on"
 
 - platform: "mqtt"
@@ -160,6 +162,7 @@
   state_on: "true"
   state_off: "false"
   payload_on: "evening"
+  payload_off: "evening"
   retain: "on"
 
 - platform: "mqtt"
@@ -170,4 +173,5 @@
   state_on: "true"
   state_off: "false"
   payload_on: "night"
+  payload_off: "night"
   retain: "on"
