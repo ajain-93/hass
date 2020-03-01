@@ -557,8 +557,6 @@
     "name": "TZWP-102 Plug-in Switch",
     "sw_version": "2.12"
   }
-
-
 - platform: "mqtt"
   name: telldus_switch_06_current
   icon: "mdi:flash-circle"
@@ -575,8 +573,6 @@
     "name": "TZWP-102 Plug-in Switch",
     "sw_version": "2.12"
   }
-
-
 - platform: "mqtt"
   name: telldus_switch_07_current
   icon: "mdi:flash-circle"
@@ -602,13 +598,19 @@
   state_topic: "zigbee2mqtt/tradfri_switch_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action}}"
-  icon: mdi:"mdi:gesture-double-tap"
+  icon: mdi:gesture-double-tap
 - platform: "mqtt"
   name: tradfri_switch_02_action
   state_topic: "zigbee2mqtt/tradfri_switch_02"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action}}"
-  icon: mdi:"mdi:gesture-double-tap"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_01_action
+  state_topic: "zigbee2mqtt/tradfri_button_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.click }}"
+  icon: mdi:toggle-switch
 
 
 
@@ -662,6 +664,12 @@
 - platform: "mqtt"
   name: tradfri_switch_02_linkquality
   state_topic: "zigbee2mqtt/tradfri_switch_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+- platform: "mqtt"
+  name: tradfri_button_01_linkquality
+  state_topic: "zigbee2mqtt/tradfri_button_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
   value_template: "{{ value_json.linkquality }}"
@@ -787,6 +795,13 @@
 - platform: "mqtt"
   name: tradfri_switch_02_battery
   state_topic: "zigbee2mqtt/tradfri_switch_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.battery}}"
+  device_class: "battery"
+- platform: "mqtt"
+  name: tradfri_button_01_battery
+  state_topic: "zigbee2mqtt/tradfri_button_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
   value_template: "{{ value_json.battery}}"

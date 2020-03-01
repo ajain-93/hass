@@ -20,6 +20,8 @@ cards:
         name: Kitchen
       - entity: binary_sensor.tradfri_switch_02_update
         name: Bathroom
+      - entity: binary_sensor.tradfri_button_01_update
+        name: Livingroom
 
   - type: glance
     title: Motion Sensors

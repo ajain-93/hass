@@ -73,6 +73,9 @@ cards:
       - entity: sensor.tradfri_plug_02_linkquality
         name: Monitor
         icon: 'mdi:desktop-tower-monitor'
+      - entity: sensor.tradfri_button_01_action
+        name: Button
+        # icon: 'mdi:ceiling-light'
 
   - type: glance
     title: Bedroom

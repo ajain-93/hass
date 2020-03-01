@@ -159,6 +159,13 @@
   payload_on: true
   payload_off: false
   value_template: "{{ value_json.update_available}}"
+- platform: "mqtt"
+  name: tradfri_button_01_update
+  state_topic: "zigbee2mqtt/tradfri_button_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: true
+  payload_off: false
+  value_template: "{{ value_json.update_available}}"
 # Door Sensors
 # N/A
 # Motion Sensors
