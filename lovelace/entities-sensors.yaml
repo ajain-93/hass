@@ -1,0 +1,47 @@
+title: Sensors
+path: sensors
+icon: 'mdi:ghost'
+
+badges: []
+
+cards:
+  - type: glance
+    title: Store
+    show_name: false
+    entities:
+      - entity: binary_sensor.aqara_sensor_switch_01_contact
+
+  - type: glance
+    title: Bathroom
+    show_name: false
+    entities:
+      - entity: binary_sensor.aeotec_sensor6_01_motion
+      - entity: binary_sensor.aeotec_sensor6_01_vibration
+      - entity: sensor.aeotec_sensor6_01_temperature
+      - entity: sensor.aeotec_sensor6_01_humidity
+      - entity: sensor.aeotec_sensor6_01_luminance
+
+  - type: glance
+    title: Gallery
+    show_name: false
+    entities:
+      - entity: binary_sensor.smartthings_motion_temp_01_occupancy
+      - entity: sensor.smartthings_motion_temp_01_temperature
+
+  - type: glance
+    title: Kitchen
+    show_name: false
+    entities:
+      - entity: binary_sensor.smartthings_motion_temp_02_occupancy
+      - entity: sensor.smartthings_motion_temp_02_temperature
+
+  # - type: glance
+  #   title: Living Room
+  #   show_name: false
+  #   entities:
+
+  - type: glance
+    title: Bedroom
+    show_name: false
+    entities:
+      - entity: binary_sensor.tradfri_motion_01_occupancy

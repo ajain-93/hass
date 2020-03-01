@@ -5,6 +5,7 @@ views:
 
   # Entity Types
   - !include lovelace/lights-all.yaml
+  - !include lovelace/entities-sensors.yaml
   - !include lovelace/entities-battery.yaml
   - !include lovelace/entities-network.yaml
   - !include lovelace/entities-link-quality.yaml
