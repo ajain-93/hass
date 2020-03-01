@@ -1,224 +1,224 @@
-room_lights:
-  name: "Lights"
-  control: hidden
-  entities:
-    - switch.ha_lights_manual_control
-    - light.all
-    - light.decorations
-    - light.bathroom
-    - light.bedroom
-    - light.bedroom_ceiling
-    - light.bedroom_bed
-    - light.gallery
-    - light.kitchen
-    - light.livingroom
-    - light.store
-    - sensor.ha_lights_mode
-    - switch.ha_lights_mode_morning
-    - switch.ha_lights_mode_afternoon
-    - switch.ha_lights_mode_evening
-    - switch.ha_lights_mode_night
+# # room_lights:
+# #   name: "Lights"
+# #   control: hidden
+# #   entities:
+# #     - switch.ha_lights_manual_control
+# #     - light.all
+# #     - light.decorations
+# #     - light.bathroom
+# #     - light.bedroom
+# #     - light.bedroom_ceiling
+# #     - light.bedroom_bed
+# #     - light.gallery
+# #     - light.kitchen
+# #     - light.livingroom
+# #     - light.store
+# #     - sensor.ha_lights_mode
+# #     - switch.ha_lights_mode_morning
+# #     - switch.ha_lights_mode_afternoon
+# #     - switch.ha_lights_mode_evening
+# #     - switch.ha_lights_mode_night
 
-bedroom:
-  name: "Bedroom"
-  control: hidden
-  entities:
-    - light.bedroom
-    - light.tradfri_led_rgb_01_light
-    - light.tradfri_led_rgb_02_light
-    - light.tradfri_led_gu10_05_light
-    - light.tradfri_led_gu10_06_light
-    # - light.telldus_switch_07_light
-    - sensor.telldus_switch_07_power
-    - sensor.telldus_switch_07_energy
-    - sensor.telldus_switch_07_voltage
-    - sensor.telldus_switch_07_current
+# bedroom:
+#   name: "Bedroom"
+#   control: hidden
+#   entities:
+#     - light.bedroom
+#     - light.tradfri_led_rgb_01_light
+#     - light.tradfri_led_rgb_02_light
+#     - light.tradfri_led_gu10_05_light
+#     - light.tradfri_led_gu10_06_light
+#     # - light.telldus_switch_07_light
+#     - sensor.telldus_switch_07_power
+#     - sensor.telldus_switch_07_energy
+#     - sensor.telldus_switch_07_voltage
+#     - sensor.telldus_switch_07_current
 
-livingroom:
-  name: "Living Room"
-  control: hidden
-  entities:
-    - light.tradfri_led_rgb_04_light
-    - light.tradfri_plug_01_light
-    # - light.telldus_switch_06_light
-    - sensor.telldus_switch_06_power
-    - sensor.telldus_switch_06_energy
-    - sensor.telldus_switch_06_voltage
-    - sensor.telldus_switch_06_current
-    - binary_sensor.fibaro_switch_02_switch
-    - sensor.fibaro_switch_02_power
-    - sensor.fibaro_switch_02_energy
-    - switch.fibaro_switch_01_switch
-    - sensor.fibaro_switch_01_power
-    - sensor.fibaro_switch_01_energy
-    - switch.telldus_switch_01_switch
-    - sensor.telldus_switch_01_power
-    - sensor.telldus_switch_01_energy
-    - switch.tradfri_plug_02_power
-    - binary_sensor.telldus_switch_03_switch
-    - sensor.telldus_switch_03_power
-    - sensor.telldus_switch_03_energy
-    - sensor.telldus_switch_03_voltage
-    - sensor.telldus_switch_03_current
-    - switch.telldus_switch_04_switch
-    - sensor.telldus_switch_04_power
-    - sensor.telldus_switch_04_energy
-    - sensor.telldus_switch_04_voltage
-    - sensor.telldus_switch_04_current
+# livingroom:
+#   name: "Living Room"
+#   control: hidden
+#   entities:
+#     - light.tradfri_led_rgb_04_light
+#     - light.tradfri_plug_01_light
+#     # - light.telldus_switch_06_light
+#     - sensor.telldus_switch_06_power
+#     - sensor.telldus_switch_06_energy
+#     - sensor.telldus_switch_06_voltage
+#     - sensor.telldus_switch_06_current
+#     - binary_sensor.fibaro_switch_02_switch
+#     - sensor.fibaro_switch_02_power
+#     - sensor.fibaro_switch_02_energy
+#     - switch.fibaro_switch_01_switch
+#     - sensor.fibaro_switch_01_power
+#     - sensor.fibaro_switch_01_energy
+#     - switch.telldus_switch_01_switch
+#     - sensor.telldus_switch_01_power
+#     - sensor.telldus_switch_01_energy
+#     - switch.tradfri_plug_02_power
+#     - binary_sensor.telldus_switch_03_switch
+#     - sensor.telldus_switch_03_power
+#     - sensor.telldus_switch_03_energy
+#     - sensor.telldus_switch_03_voltage
+#     - sensor.telldus_switch_03_current
+#     - switch.telldus_switch_04_switch
+#     - sensor.telldus_switch_04_power
+#     - sensor.telldus_switch_04_energy
+#     - sensor.telldus_switch_04_voltage
+#     - sensor.telldus_switch_04_current
 
-kitchen:
-  name: "Kitchen"
-  control: hidden
-  entities:
-    - binary_sensor.smartthings_motion_temp_02_occupancy
-    - sensor.smartthings_motion_temp_02_temperature
-    - light.kitchen
-    - light.tradfri_led_white_01_light
-    - light.tradfri_led_white_02_light
-    - sensor.tradfri_switch_01_battery
-    - sensor.smartthings_motion_temp_02_battery
-    - switch.tplink_plug_01
-    - sensor.tplink_plug_01_watts
-    - sensor.tplink_plug_01_today_kwh
-    - sensor.tplink_plug_01_total_kwh
-    - switch.tplink_plug_02
-    - sensor.tplink_plug_02_watts
-    - sensor.tplink_plug_02_today_kwh
-    - sensor.tplink_plug_02_total_kwh
-    - switch.telldus_switch_02_switch
-    - sensor.telldus_switch_02_power
-    - sensor.telldus_switch_02_energy
-    - sensor.telldus_switch_02_voltage
-    - sensor.telldus_switch_02_current
-    - switch.telldus_switch_05_switch
-    - sensor.telldus_switch_05_power
-    - sensor.telldus_switch_05_energy
-    - sensor.telldus_switch_05_voltage
-    - sensor.telldus_switch_05_current
-
-
-gallery:
-  name: "Gallery"
-  control: hidden
-  entities:
-    - binary_sensor.smartthings_motion_temp_01_occupancy
-    - sensor.smartthings_motion_temp_01_temperature
-    - light.gallery
-    - light.tradfri_led_gu10_01_light
-    - light.tradfri_led_gu10_02_light
-    - light.tradfri_led_gu10_03_light
-    - light.tradfri_led_gu10_04_light
-    - sensor.smartthings_motion_temp_01_battery
-
-bathroom:
-  name: "Bathroom"
-  control: hidden
-  entities:
-    - light.tradfri_led_rgb_03_light
-    - sensor.tradfri_switch_02_battery
-    - binary_sensor.aeotec_sensor6_01_motion
-    - binary_sensor.aeotec_sensor6_01_vibration
-    - sensor.aeotec_sensor6_01_temperature
-    - sensor.aeotec_sensor6_01_luminance
-    - sensor.aeotec_sensor6_01_battery
-    - sensor.aeotec_sensor6_01_humidity
-
-store:
-  name: "Store"
-  control: hidden
-  entities:
-    - light.tradfri_led_white_03_light
-    - binary_sensor.aqara_sensor_switch_01_contact
-    - sensor.aqara_sensor_switch_01_battery
-#    - sensor.aqara_sensor_switch_01_linkquality
-
-power_usage:
-  name: Power
-  control: hidden
-  entities:
-    - sensor.fibaro_switch_01_power
-    - sensor.fibaro_switch_01_energy
-    - sensor.fibaro_switch_02_power
-    - sensor.fibaro_switch_02_energy
-    - sensor.tplink_plug_01_watts
-    - sensor.tplink_plug_01_total_kwh
-    - sensor.tplink_plug_01_volts
-    - sensor.tplink_plug_01_amps
-    - sensor.tplink_plug_02_watts
-    - sensor.tplink_plug_02_total_kwh
-    - sensor.tplink_plug_02_volts
-    - sensor.tplink_plug_02_amps
-    - sensor.telldus_switch_01_power
-    - sensor.telldus_switch_01_energy
-    - sensor.telldus_switch_01_voltage
-    - sensor.telldus_switch_01_current
-    - sensor.telldus_switch_02_power
-    - sensor.telldus_switch_02_energy
-    - sensor.telldus_switch_02_voltage
-    - sensor.telldus_switch_02_current
-    - sensor.telldus_switch_03_power
-    - sensor.telldus_switch_03_energy
-    - sensor.telldus_switch_03_voltage
-    - sensor.telldus_switch_03_current
-    - sensor.telldus_switch_04_power
-    - sensor.telldus_switch_04_energy
-    - sensor.telldus_switch_04_voltage
-    - sensor.telldus_switch_04_current
-    - sensor.telldus_switch_05_power
-    - sensor.telldus_switch_05_energy
-    - sensor.telldus_switch_05_voltage
-    - sensor.telldus_switch_05_current
-    - sensor.telldus_switch_06_power
-    - sensor.telldus_switch_06_energy
-    - sensor.telldus_switch_06_voltage
-    - sensor.telldus_switch_06_current
-    - sensor.telldus_switch_07_power
-    - sensor.telldus_switch_07_energy
-    - sensor.telldus_switch_07_voltage
-    - sensor.telldus_switch_07_current
+# kitchen:
+#   name: "Kitchen"
+#   control: hidden
+#   entities:
+#     - binary_sensor.smartthings_motion_temp_02_occupancy
+#     - sensor.smartthings_motion_temp_02_temperature
+#     - light.kitchen
+#     - light.tradfri_led_white_01_light
+#     - light.tradfri_led_white_02_light
+#     - sensor.tradfri_switch_01_battery
+#     - sensor.smartthings_motion_temp_02_battery
+#     - switch.tplink_plug_01
+#     - sensor.tplink_plug_01_watts
+#     - sensor.tplink_plug_01_today_kwh
+#     - sensor.tplink_plug_01_total_kwh
+#     - switch.tplink_plug_02
+#     - sensor.tplink_plug_02_watts
+#     - sensor.tplink_plug_02_today_kwh
+#     - sensor.tplink_plug_02_total_kwh
+#     - switch.telldus_switch_02_switch
+#     - sensor.telldus_switch_02_power
+#     - sensor.telldus_switch_02_energy
+#     - sensor.telldus_switch_02_voltage
+#     - sensor.telldus_switch_02_current
+#     - switch.telldus_switch_05_switch
+#     - sensor.telldus_switch_05_power
+#     - sensor.telldus_switch_05_energy
+#     - sensor.telldus_switch_05_voltage
+#     - sensor.telldus_switch_05_current
 
 
-battery_levels:
-  name: "Battery"
-  control: hidden
-  entities:
-    - sensor.smartthings_motion_temp_01_battery
-    - sensor.smartthings_motion_temp_02_battery
-    - sensor.aqara_sensor_switch_01_battery
-    - sensor.tradfri_switch_01_battery
-    - sensor.tradfri_switch_02_battery
+# gallery:
+#   name: "Gallery"
+#   control: hidden
+#   entities:
+#     - binary_sensor.smartthings_motion_temp_01_occupancy
+#     - sensor.smartthings_motion_temp_01_temperature
+#     - light.gallery
+#     - light.tradfri_led_gu10_01_light
+#     - light.tradfri_led_gu10_02_light
+#     - light.tradfri_led_gu10_03_light
+#     - light.tradfri_led_gu10_04_light
+#     - sensor.smartthings_motion_temp_01_battery
 
-device_connectivity:
-  name: "Devices"
-  control: hidden
-  entities:
-    # LAN Devices
-    - binary_sensor.ping_jain10
-    - binary_sensor.ping_jain56
-    - binary_sensor.ping_docker56
+# bathroom:
+#   name: "Bathroom"
+#   control: hidden
+#   entities:
+#     - light.tradfri_led_rgb_03_light
+#     - sensor.tradfri_switch_02_battery
+#     - binary_sensor.aeotec_sensor6_01_motion
+#     - binary_sensor.aeotec_sensor6_01_vibration
+#     - sensor.aeotec_sensor6_01_temperature
+#     - sensor.aeotec_sensor6_01_luminance
+#     - sensor.aeotec_sensor6_01_battery
+#     - sensor.aeotec_sensor6_01_humidity
 
-    # Mobile Devices
-    - binary_sensor.ping_motorola_g6_plus
-    - binary_sensor.ping_sony_xperia_zr
-    - binary_sensor.ping_asus_a810
+# store:
+#   name: "Store"
+#   control: hidden
+#   entities:
+#     - light.tradfri_led_white_03_light
+#     - binary_sensor.aqara_sensor_switch_01_contact
+#     - sensor.aqara_sensor_switch_01_battery
+# #    - sensor.aqara_sensor_switch_01_linkquality
 
-    # Raspberry Pis'
-    - binary_sensor.ping_octopi
-    - binary_sensor.ping_raspberrypi
+# power_usage:
+#   name: Power
+#   control: hidden
+#   entities:
+#     - sensor.fibaro_switch_01_power
+#     - sensor.fibaro_switch_01_energy
+#     - sensor.fibaro_switch_02_power
+#     - sensor.fibaro_switch_02_energy
+#     - sensor.tplink_plug_01_watts
+#     - sensor.tplink_plug_01_total_kwh
+#     - sensor.tplink_plug_01_volts
+#     - sensor.tplink_plug_01_amps
+#     - sensor.tplink_plug_02_watts
+#     - sensor.tplink_plug_02_total_kwh
+#     - sensor.tplink_plug_02_volts
+#     - sensor.tplink_plug_02_amps
+#     - sensor.telldus_switch_01_power
+#     - sensor.telldus_switch_01_energy
+#     - sensor.telldus_switch_01_voltage
+#     - sensor.telldus_switch_01_current
+#     - sensor.telldus_switch_02_power
+#     - sensor.telldus_switch_02_energy
+#     - sensor.telldus_switch_02_voltage
+#     - sensor.telldus_switch_02_current
+#     - sensor.telldus_switch_03_power
+#     - sensor.telldus_switch_03_energy
+#     - sensor.telldus_switch_03_voltage
+#     - sensor.telldus_switch_03_current
+#     - sensor.telldus_switch_04_power
+#     - sensor.telldus_switch_04_energy
+#     - sensor.telldus_switch_04_voltage
+#     - sensor.telldus_switch_04_current
+#     - sensor.telldus_switch_05_power
+#     - sensor.telldus_switch_05_energy
+#     - sensor.telldus_switch_05_voltage
+#     - sensor.telldus_switch_05_current
+#     - sensor.telldus_switch_06_power
+#     - sensor.telldus_switch_06_energy
+#     - sensor.telldus_switch_06_voltage
+#     - sensor.telldus_switch_06_current
+#     - sensor.telldus_switch_07_power
+#     - sensor.telldus_switch_07_energy
+#     - sensor.telldus_switch_07_voltage
+#     - sensor.telldus_switch_07_current
 
-    # Chromecasts
-    - binary_sensor.ping_chromecast_audio_bedroom
-    - binary_sensor.ping_chromecast_audio_livingroom
-    - binary_sensor.ping_chromecast_video
 
-weather:
-  name: "Weather"
-  control: hidden
-  entities:
-    - sun.sun
-    # - sensor.frosunda_temperature
-    # - sensor.frosunda_pressure
-    # - sensor.frosunda_humidity
-    # - sensor.frosunda_rain
-    # - sensor.frosunda_sum_rain_1
-    # - sensor.frosunda_sum_rain_24
+# battery_levels:
+#   name: "Battery"
+#   control: hidden
+#   entities:
+#     - sensor.smartthings_motion_temp_01_battery
+#     - sensor.smartthings_motion_temp_02_battery
+#     - sensor.aqara_sensor_switch_01_battery
+#     - sensor.tradfri_switch_01_battery
+#     - sensor.tradfri_switch_02_battery
+
+# device_connectivity:
+#   name: "Devices"
+#   control: hidden
+#   entities:
+#     # LAN Devices
+#     - binary_sensor.ping_jain10
+#     - binary_sensor.ping_jain56
+#     - binary_sensor.ping_docker56
+
+#     # Mobile Devices
+#     - binary_sensor.ping_motorola_g6_plus
+#     - binary_sensor.ping_sony_xperia_zr
+#     - binary_sensor.ping_asus_a810
+
+#     # Raspberry Pis'
+#     - binary_sensor.ping_octopi
+#     - binary_sensor.ping_raspberrypi
+
+#     # Chromecasts
+#     - binary_sensor.ping_chromecast_audio_bedroom
+#     - binary_sensor.ping_chromecast_audio_livingroom
+#     - binary_sensor.ping_chromecast_video
+
+# weather:
+#   name: "Weather"
+#   control: hidden
+#   entities:
+#     - sun.sun
+#     # - sensor.frosunda_temperature
+#     # - sensor.frosunda_pressure
+#     # - sensor.frosunda_humidity
+#     # - sensor.frosunda_rain
+#     # - sensor.frosunda_sum_rain_1
+#     # - sensor.frosunda_sum_rain_24
