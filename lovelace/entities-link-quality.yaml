@@ -89,3 +89,6 @@ cards:
       - entity: sensor.tradfri_led_gu10_05_linkquality
         icon: 'mdi:spotlight-beam'
         name: Ceiling - South
+      - entity: sensor.tradfri_motion_01_linkquality
+        icon: 'mdi:motion-sensor'
+        name: Motion Sensor

@@ -114,6 +114,13 @@ sensor.telldus_switch_07_current:
   friendly_name: Decoration Lights Current
   icon: mdi:current-dc
 
+binary_sensor.tradfri_motion_01_occupancy:
+  friendly_name: Bedroom Motion
+sensor.tradfri_motion_01_battery:
+  friendly_name: Bedroom Motion Battery
+sensor.tradfri_motion_01_linkquality:
+  friendly_name: Bedroom Motion Link
+
 
 
 #Galley

@@ -12,6 +12,7 @@ cards:
       - entity: sensor.aqara_sensor_switch_01_battery
         name: Store
         icon: 'mdi:wardrobe'
+
   - type: glance
     title: Motion Sensors
     show_name: false
@@ -25,6 +26,10 @@ cards:
       - entity: sensor.smartthings_motion_temp_02_battery
         name: Kitchen
         icon: 'mdi:table-chair'
+      - entity: sensor.tradfri_motion_01_battery
+        name: Bedroom
+        icon: 'mdi:bed-double'
+
   - type: glance
     title: Buttons
     entities:
