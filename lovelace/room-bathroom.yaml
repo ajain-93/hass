@@ -18,6 +18,7 @@ cards:
   - type: glance
     show_name: false
     entities:
+      - entity: binary_sensor.tradfri_motion_01_occupancy
       - entity: binary_sensor.aeotec_sensor6_01_motion
         name: Motion
       - entity: binary_sensor.aeotec_sensor6_01_vibration
@@ -33,6 +34,8 @@ cards:
     refresh_interval: 0
     hours_to_show: 24
     entities:
+      - entity: binary_sensor.tradfri_motion_01_occupancy
+        name: Motion Wall
       - entity: binary_sensor.aeotec_sensor6_01_motion
         name: Motion
       - entity: binary_sensor.aeotec_sensor6_01_vibration

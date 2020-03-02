@@ -25,6 +25,9 @@ cards:
       - entity: sensor.tradfri_switch_02_linkquality
         name: Switch
         icon: 'mdi:gesture-double-tap'
+      - entity: sensor.tradfri_motion_01_linkquality
+        name: Motion Sensor
+        icon: 'mdi:motion-sensor'
 
   - type: glance
     title: Gallery
@@ -75,7 +78,6 @@ cards:
         icon: 'mdi:desktop-tower-monitor'
       - entity: sensor.tradfri_button_01_action
         name: Button
-        # icon: 'mdi:ceiling-light'
 
   - type: glance
     title: Bedroom
@@ -92,6 +94,3 @@ cards:
       - entity: sensor.tradfri_led_gu10_05_linkquality
         icon: 'mdi:spotlight-beam'
         name: Ceiling - South
-      - entity: sensor.tradfri_motion_01_linkquality
-        icon: 'mdi:motion-sensor'
-        name: Motion Sensor

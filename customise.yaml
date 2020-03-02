@@ -57,6 +57,15 @@ binary_sensor.aeotec_sensor6_01_vibration:
   friendly_name: Bathroom Vibration
   device_class: vibration
 
+binary_sensor.tradfri_motion_01_occupancy:
+  friendly_name: Bathroom Motion Wall
+sensor.tradfri_motion_01_battery:
+  friendly_name: Bathroom Motion Wall Battery
+sensor.tradfri_motion_01_linkquality:
+  friendly_name: Bathroom Motion Wall Link
+binary_sensor.tradfri_motion_01_update:
+  friendly_name: Bathroom Motion Wall Update
+
 
 
 # Bedroom
@@ -123,15 +132,6 @@ sensor.telldus_switch_07_voltage:
 sensor.telldus_switch_07_current:
   friendly_name: Decoration Lights Current
   icon: mdi:current-dc
-
-binary_sensor.tradfri_motion_01_occupancy:
-  friendly_name: Bedroom Motion
-sensor.tradfri_motion_01_battery:
-  friendly_name: Bedroom Motion Battery
-sensor.tradfri_motion_01_linkquality:
-  friendly_name: Bedroom Motion Link
-binary_sensor.tradfri_motion_01_update:
-  friendly_name: Bedroom Motion Update
 
 
 

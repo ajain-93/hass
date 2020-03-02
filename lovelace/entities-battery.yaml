@@ -20,15 +20,15 @@ cards:
       - entity: sensor.aeotec_sensor6_01_battery
         name: Bathroom
         icon: 'mdi:shower'
+      - entity: sensor.tradfri_motion_01_battery
+        name: Bathroom 2
+        icon: 'mdi:shower'
       - entity: sensor.smartthings_motion_temp_01_battery
         name: Gallery
         icon: 'mdi:shoe-print'
       - entity: sensor.smartthings_motion_temp_02_battery
         name: Kitchen
         icon: 'mdi:table-chair'
-      - entity: sensor.tradfri_motion_01_battery
-        name: Bedroom
-        icon: 'mdi:bed-double'
 
   - type: glance
     title: Buttons

@@ -27,7 +27,7 @@ cards:
     title: Motion Sensors
     entities:
       - entity: binary_sensor.tradfri_motion_01_update
-        name: Bedroom
+        name: Bathroom
 
   - type: glance
     title: E27 RGB Lights
