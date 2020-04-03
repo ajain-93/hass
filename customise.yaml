@@ -126,20 +126,20 @@ sensor.tradfri_led_gu10_06_linkquality:
 binary_sensor.tradfri_led_gu10_06_update:
   friendly_name: Bedroom - Ceilng North Update
 
-light.telldus_switch_07_light:
-  friendly_name: Decoration Lights
-  icon: mdi:ceiling-light
+switch.telldus_switch_07_switch:
+  friendly_name: Maker
+  icon: mdi:mdi:printer-3d-nozzle
 sensor.telldus_switch_07_power:
-  friendly_name: Decoration Lights Power
+  friendly_name: Maker Power
   icon: mdi:flash
 sensor.telldus_switch_07_energy:
-  friendly_name: Decoration Lights Energy
+  friendly_name: Maker Energy
   icon: mdi:power-plug
 sensor.telldus_switch_07_voltage:
-  friendly_name: Decoration Lights Voltage
+  friendly_name: Maker Voltage
   icon: mdi:current-ac
 sensor.telldus_switch_07_current:
-  friendly_name: Decoration Lights Current
+  friendly_name: Maker Current
   icon: mdi:current-dc
 
 
@@ -432,20 +432,20 @@ sensor.telldus_switch_04_current:
   friendly_name: Misc Current
   icon: mdi:current-dc
 
-light.telldus_switch_06_light:
-  friendly_name: Decoration Lights
+switch.telldus_switch_06_switch:
+  friendly_name: Fan Lamp
   icon: mdi:ceiling-light
 sensor.telldus_switch_06_power:
-  friendly_name: Decoration Lights Power
+  friendly_name: Fan Lamp Power
   icon: mdi:flash
 sensor.telldus_switch_06_energy:
-  friendly_name: Decoration Lights Energy
+  friendly_name: Fan Lamp Energy
   icon: mdi:power-plug
 sensor.telldus_switch_06_voltage:
-  friendly_name: Decoration Lights Voltage
+  friendly_name: Fan Lamp Voltage
   icon: mdi:current-ac
 sensor.telldus_switch_06_current:
-  friendly_name: Decoration Lights Current
+  friendly_name: Fan Lamp Current
   icon: mdi:current-dc
 
 

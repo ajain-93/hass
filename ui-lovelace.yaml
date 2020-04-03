@@ -30,9 +30,11 @@ views:
   - !include lovelace/power-kitchen-microwave.yaml
   - !include lovelace/power-kitchen-toaster.yaml
   - !include lovelace/power-kitchen-dishwasher.yaml
+  - !include lovelace/power-kitchen-fanlamp.yaml
   ## Living Room
   - !include lovelace/power-livingroom-jain10.yaml
   - !include lovelace/power-livingroom-jain56.yaml
   - !include lovelace/power-livingroom-tv.yaml
   - !include lovelace/power-livingroom-studytable.yaml
   - !include lovelace/power-livingroom-misc.yaml
+  - !include lovelace/power-livingroom-maker.yaml

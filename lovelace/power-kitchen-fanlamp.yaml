@@ -1,0 +1,45 @@
+title: Fan Lamp
+path: kitchen-fanlamp
+icon: 'mdi:lamp'
+visible: false
+
+badges: []
+
+cards:
+  - type: entity-button
+    entity: switch.telldus_switch_06_switch
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: history-graph
+    title: Power Usage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_06_power
+
+  - type: history-graph
+    title: Energy
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_06_energy
+
+  - type: history-graph
+    title: Voltage
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_06_voltage
+
+  - type: history-graph
+    title: Current
+    refresh_interval: 0
+    hours_to_show: 24
+    entities:
+      - entity: sensor.telldus_switch_06_current
+
