@@ -78,7 +78,7 @@ cards:
       - entity: sensor.tradfri_plug_02_linkquality
         name: Monitor
         icon: 'mdi:desktop-tower-monitor'
-      - entity: sensor.tradfri_button_01_action
+      - entity: sensor.tradfri_button_01_linkquality
         name: Button
 
   - type: glance
