@@ -5,6 +5,123 @@ icon: mdi:flash-outline
 badges: []
 
 cards:
+  - type: glance
+    title: TP-Link
+    show_state: false
+    entities:
+      - entity: switch.tplink_plug_01
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-fridge
+      - entity: switch.tplink_plug_02
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-microwave
+
+  - type: glance
+    title: Fibaro
+    show_state: false
+    entities:
+      - entity: switch.fibaro_switch_01_switch
+        tap_action:
+          action: navigate
+          navigation_path: livingroom-jain10
+      - entity: binary_sensor.fibaro_switch_02_switch
+        tap_action:
+          action: navigate
+          navigation_path: livingroom-jain56
+
+  - type: glance
+    title: Telldus
+    show_state: false
+    entities:
+      - entity: switch.telldus_switch_01_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-tv
+      - entity: switch.telldus_switch_02_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-dishwasher
+      - entity: binary_sensor.telldus_switch_03_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-studytable
+      - entity: switch.telldus_switch_04_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-misc
+      - entity: switch.telldus_switch_05_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-toaster
+      - entity: switch.telldus_switch_06_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen-fanlamp
+      - entity: switch.telldus_switch_07_switch
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom-maker
+
+  - type: glance
+    title: Trådfri
+    show_state: false
+    entities:
+      - entity: light.tradfri_plug_01_light
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_02_power
+        tap_action:
+          action: toggle
+
+  - type: glance
+    title: Voltage
+    columns: 3
+    entities:
+      - entity: sensor.tplink_plug_01_volts
+        name: Fridge
+      - entity: sensor.tplink_plug_02_volts
+        name: Microwave
+      - entity: sensor.telldus_switch_05_voltage
+        name: Toaster
+      - entity: sensor.telldus_switch_06_voltage
+        name: Fan Lamp
+      - entity: sensor.telldus_switch_02_voltage
+        name: Dishwasher
+      - entity: sensor.telldus_switch_01_voltage
+        name: TV
+      - entity: sensor.telldus_switch_03_voltage
+        name: Study Table
+      - entity: sensor.telldus_switch_04_voltage
+        name: Misc
+      - entity: sensor.telldus_switch_07_voltage
+        name: Maker
+
+  - type: history-graph
+    title: Voltage 60m
+    refresh_interval: 0
+    hours_to_show: 1
+    entities:
+      - entity: sensor.tplink_plug_01_volts
+        name: Fridge
+      - entity: sensor.tplink_plug_02_volts
+        name: Microwave
+      - entity: sensor.telldus_switch_05_voltage
+        name: Toaster
+      - entity: sensor.telldus_switch_06_voltage
+        name: Fan Lamp
+      - entity: sensor.telldus_switch_02_voltage
+        name: Dishwasher
+      - entity: sensor.telldus_switch_01_voltage
+        name: TV
+      - entity: sensor.telldus_switch_03_voltage
+        name: Study Table
+      - entity: sensor.telldus_switch_04_voltage
+        name: Misc
+      - entity: sensor.telldus_switch_07_voltage
+        name: Maker
+
   - type: entities
     title: Power
     show_header_toggle: false
