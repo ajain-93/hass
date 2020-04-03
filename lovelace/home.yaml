@@ -90,9 +90,15 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/bathroom
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/bathroom
       - entity: light.bedroom
         icon: 'mdi:bed-double'
         tap_action:
+          action: navigate
+          navigation_path: /lovelace/bedroom
+        hold_action:
           action: navigate
           navigation_path: /lovelace/bedroom
       - entity: light.gallery
@@ -100,9 +106,15 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/gallery
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/gallery
       - entity: light.kitchen
         icon: 'mdi:table-chair'
         tap_action:
+          action: navigate
+          navigation_path: /lovelace/kitchen
+        hold_action:
           action: navigate
           navigation_path: /lovelace/kitchen
       - entity: light.livingroom
@@ -110,9 +122,15 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/livingroom
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/livingroom
       - entity: light.store
         icon: 'mdi:wardrobe-outline'
         tap_action:
+          action: navigate
+          navigation_path: /lovelace/store
+        hold_action:
           action: navigate
           navigation_path: /lovelace/store
 
