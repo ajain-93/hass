@@ -31,6 +31,15 @@ sensor.tradfri_switch_02_battery:
 binary_sensor.tradfri_switch_02_update:
   friendly_name: Bathroom Switch Update
 
+sensor.tradfri_button_02_action:
+  friendly_name: Bathroom Button
+sensor.tradfri_button_02_battery:
+  friendly_name: Bathroom Button Battery
+sensor.tradfri_button_02_linkquality:
+  friendly_name: Bathroom Button Link
+binary_sensor.tradfri_button_02_update:
+  friendly_name: Bathroom Button Update
+
 sensor.aeotec_sensor6_01_temperature:
   friendly_name: Bathroom Temperature
   device_class: temperature

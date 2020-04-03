@@ -28,6 +28,8 @@ cards:
       - entity: sensor.tradfri_motion_01_linkquality
         name: Motion Sensor
         icon: 'mdi:motion-sensor'
+      - entity: sensor.tradfri_button_02_linkquality
+        name: Button
 
   - type: glance
     title: Gallery
