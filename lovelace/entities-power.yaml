@@ -122,47 +122,47 @@ cards:
       - entity: sensor.telldus_switch_07_voltage
         name: Maker
 
-  - type: entities
-    title: Power
-    show_header_toggle: false
-    entities:
-      - sensor.fibaro_switch_01_power
-      - sensor.fibaro_switch_01_energy
-      - sensor.fibaro_switch_02_power
-      - sensor.fibaro_switch_02_energy
-      - sensor.tplink_plug_01_watts
-      - sensor.tplink_plug_01_total_kwh
-      - sensor.tplink_plug_01_volts
-      - sensor.tplink_plug_01_amps
-      - sensor.tplink_plug_02_watts
-      - sensor.tplink_plug_02_total_kwh
-      - sensor.tplink_plug_02_volts
-      - sensor.tplink_plug_02_amps
-      - sensor.telldus_switch_01_power
-      - sensor.telldus_switch_01_energy
-      - sensor.telldus_switch_01_voltage
-      - sensor.telldus_switch_01_current
-      - sensor.telldus_switch_02_power
-      - sensor.telldus_switch_02_energy
-      - sensor.telldus_switch_02_voltage
-      - sensor.telldus_switch_02_current
-      - sensor.telldus_switch_03_power
-      - sensor.telldus_switch_03_energy
-      - sensor.telldus_switch_03_voltage
-      - sensor.telldus_switch_03_current
-      - sensor.telldus_switch_04_power
-      - sensor.telldus_switch_04_energy
-      - sensor.telldus_switch_04_voltage
-      - sensor.telldus_switch_04_current
-      - sensor.telldus_switch_05_power
-      - sensor.telldus_switch_05_energy
-      - sensor.telldus_switch_05_voltage
-      - sensor.telldus_switch_05_current
-      - sensor.telldus_switch_06_power
-      - sensor.telldus_switch_06_energy
-      - sensor.telldus_switch_06_voltage
-      - sensor.telldus_switch_06_current
-      - sensor.telldus_switch_07_power
-      - sensor.telldus_switch_07_energy
-      - sensor.telldus_switch_07_voltage
-      - sensor.telldus_switch_07_current
+  # - type: entities
+  #   title: Power
+  #   show_header_toggle: false
+  #   entities:
+  #     - sensor.fibaro_switch_01_power
+  #     - sensor.fibaro_switch_01_energy
+  #     - sensor.fibaro_switch_02_power
+  #     - sensor.fibaro_switch_02_energy
+  #     - sensor.tplink_plug_01_watts
+  #     - sensor.tplink_plug_01_total_kwh
+  #     - sensor.tplink_plug_01_volts
+  #     - sensor.tplink_plug_01_amps
+  #     - sensor.tplink_plug_02_watts
+  #     - sensor.tplink_plug_02_total_kwh
+  #     - sensor.tplink_plug_02_volts
+  #     - sensor.tplink_plug_02_amps
+  #     - sensor.telldus_switch_01_power
+  #     - sensor.telldus_switch_01_energy
+  #     - sensor.telldus_switch_01_voltage
+  #     - sensor.telldus_switch_01_current
+  #     - sensor.telldus_switch_02_power
+  #     - sensor.telldus_switch_02_energy
+  #     - sensor.telldus_switch_02_voltage
+  #     - sensor.telldus_switch_02_current
+  #     - sensor.telldus_switch_03_power
+  #     - sensor.telldus_switch_03_energy
+  #     - sensor.telldus_switch_03_voltage
+  #     - sensor.telldus_switch_03_current
+  #     - sensor.telldus_switch_04_power
+  #     - sensor.telldus_switch_04_energy
+  #     - sensor.telldus_switch_04_voltage
+  #     - sensor.telldus_switch_04_current
+  #     - sensor.telldus_switch_05_power
+  #     - sensor.telldus_switch_05_energy
+  #     - sensor.telldus_switch_05_voltage
+  #     - sensor.telldus_switch_05_current
+  #     - sensor.telldus_switch_06_power
+  #     - sensor.telldus_switch_06_energy
+  #     - sensor.telldus_switch_06_voltage
+  #     - sensor.telldus_switch_06_current
+  #     - sensor.telldus_switch_07_power
+  #     - sensor.telldus_switch_07_energy
+  #     - sensor.telldus_switch_07_voltage
+  #     - sensor.telldus_switch_07_current
