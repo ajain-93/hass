@@ -15,6 +15,21 @@ cards:
     hold_action:
       action: more-info
 
+  - type: glance
+    show_name: false
+    entities:
+      - entity: sensor.tplink_plug_01_watts
+      - entity: sensor.tplink_plug_01_today_kwh
+      - entity: sensor.tplink_plug_01_total_kwh
+      - entity: sensor.tplink_plug_01_volts
+      - entity: sensor.tplink_plug_01_amps
+
+  - type: history-graph
+    title: Power Usage 60m
+    refresh_interval: 0
+    hours_to_show: 1
+    entities:
+      - entity: sensor.tplink_plug_01_watts
 
   - type: history-graph
     title: Power Usage

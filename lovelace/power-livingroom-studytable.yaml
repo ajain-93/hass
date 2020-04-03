@@ -15,6 +15,21 @@ cards:
     hold_action:
       action: more-info
 
+  - type: glance
+    show_name: false
+    entities:
+      - entity: sensor.telldus_switch_03_power
+      - entity: sensor.telldus_switch_03_energy
+      - entity: sensor.telldus_switch_03_voltage
+      - entity: sensor.telldus_switch_03_current
+
+  - type: history-graph
+    title: Power Usage 60m
+    hours_to_show: 1
+    refresh_interval: 0
+    entities:
+      - entity: sensor.telldus_switch_03_power
+
   - type: history-graph
     title: Power Usage
     hours_to_show: 24
