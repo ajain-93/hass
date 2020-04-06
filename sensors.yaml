@@ -596,24 +596,28 @@
 - platform: "mqtt"
   name: tradfri_switch_01_action
   state_topic: "zigbee2mqtt/tradfri_switch_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_switch_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action}}"
   icon: mdi:gesture-double-tap
 - platform: "mqtt"
   name: tradfri_switch_02_action
   state_topic: "zigbee2mqtt/tradfri_switch_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_switch_02"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action}}"
   icon: mdi:gesture-double-tap
 - platform: "mqtt"
   name: tradfri_button_01_action
   state_topic: "zigbee2mqtt/tradfri_button_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.click }}"
   icon: mdi:toggle-switch
 - platform: "mqtt"
   name: tradfri_button_02_action
   state_topic: "zigbee2mqtt/tradfri_button_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_02"
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.click }}"
   icon: mdi:toggle-switch

@@ -3,6 +3,7 @@
   name: tradfri_led_white_01_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_white_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_white_01"
   command_topic: "zigbee2mqtt/tradfri_led_white_01/set"
   brightness: true
   color_temp: true
@@ -11,6 +12,7 @@
   name: tradfri_led_white_02_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_white_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_white_02"
   command_topic: "zigbee2mqtt/tradfri_led_white_02/set"
   brightness: true
   color_temp: true
@@ -19,6 +21,7 @@
   name: tradfri_led_white_03_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_white_03"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_white_03"
   command_topic: "zigbee2mqtt/tradfri_led_white_03/set"
   brightness: true
   color_temp: true
@@ -28,6 +31,7 @@
   name: tradfri_led_gu10_01_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_01"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_01/set"
   brightness: true
   color_temp: true
@@ -36,6 +40,7 @@
   name: tradfri_led_gu10_02_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_02"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_02/set"
   brightness: true
   color_temp: true
@@ -44,6 +49,7 @@
   name: tradfri_led_gu10_03_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_03"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_03"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_03/set"
   brightness: true
   color_temp: true
@@ -52,6 +58,7 @@
   name: tradfri_led_gu10_04_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_04"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_04"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_04/set"
   brightness: true
   color_temp: true
@@ -60,6 +67,7 @@
   name: tradfri_led_gu10_05_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_05"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_05"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_05/set"
   brightness: true
   color_temp: true
@@ -68,6 +76,7 @@
   name: tradfri_led_gu10_06_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_gu10_06"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_gu10_06"
   command_topic: "zigbee2mqtt/tradfri_led_gu10_06/set"
   brightness: true
   color_temp: true
@@ -77,6 +86,7 @@
   name: tradfri_led_rgb_01_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_rgb_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_rgb_01"
   command_topic: "zigbee2mqtt/tradfri_led_rgb_01/set"
   brightness: true
   xy: true
@@ -85,6 +95,7 @@
   name: tradfri_led_rgb_02_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_rgb_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_rgb_02"
   command_topic: "zigbee2mqtt/tradfri_led_rgb_02/set"
   brightness: true
   xy: true
@@ -93,6 +104,7 @@
   name: tradfri_led_rgb_03_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_rgb_03"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_rgb_03"
   command_topic: "zigbee2mqtt/tradfri_led_rgb_03/set"
   brightness: true
   xy: true
@@ -101,6 +113,7 @@
   name: tradfri_led_rgb_04_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_led_rgb_04"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_rgb_04"
   command_topic: "zigbee2mqtt/tradfri_led_rgb_04/set"
   brightness: true
   xy: true
@@ -112,6 +125,7 @@
   name: tradfri_plug_01_light
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_plug_01"
   command_topic: "zigbee2mqtt/tradfri_plug_01/set"
   schema: "json"
 

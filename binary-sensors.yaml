@@ -37,6 +37,7 @@
 - platform: "mqtt"
   name: aqara_sensor_switch_01_contact
   state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  json_attributes_topic: "zigbee2mqtt/aqara_sensor_switch_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
   payload_off: true
@@ -47,6 +48,7 @@
 - platform: "mqtt"
   name: smartthings_motion_temp_01_occupancy
   state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
+  json_attributes_topic: "zigbee2mqtt/smartthings_motion_temp_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true
   payload_off: false
@@ -55,6 +57,7 @@
 - platform: "mqtt"
   name: smartthings_motion_temp_02_occupancy
   state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
+  json_attributes_topic: "zigbee2mqtt/smartthings_motion_temp_02"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true
   payload_off: false
@@ -63,6 +66,7 @@
 - platform: "mqtt"
   name: tradfri_motion_01_occupancy
   state_topic: "zigbee2mqtt/tradfri_motion_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_motion_01"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: true
   payload_off: false
