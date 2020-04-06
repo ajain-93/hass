@@ -11,20 +11,12 @@
 
 
 # Temperature
-- platform: "mqtt"
-  name: smartthings_motion_temp_01_temperature
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "°C"
-  device_class: "temperature"
-  value_template: "{{ value_json.temperature }}"
-- platform: "mqtt"
-  name: smartthings_motion_temp_02_temperature
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "°C"
-  device_class: "temperature"
-  value_template: "{{ value_json.temperature }}"
+- platform: template
+  sensors:
+    smartthings_motion_temp_01_temperature:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'temperature') }}"
+    smartthings_motion_temp_02_temperature:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'temperature') }}"
 - platform: "mqtt"
   name: aeotec_sensor6_01_temperature
   icon: "mdi:flash"
