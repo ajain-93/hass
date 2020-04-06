@@ -711,58 +711,29 @@
 
 
 # Battery Levels
+- platform: template
+  sensors:
 # Remotes
-- platform: "mqtt"
-  name: tradfri_switch_01_battery
-  state_topic: "zigbee2mqtt/tradfri_switch_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
-- platform: "mqtt"
-  name: tradfri_switch_02_battery
-  state_topic: "zigbee2mqtt/tradfri_switch_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
-- platform: "mqtt"
-  name: tradfri_button_01_battery
-  state_topic: "zigbee2mqtt/tradfri_button_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
-- platform: "mqtt"
-  name: tradfri_button_02_battery
-  state_topic: "zigbee2mqtt/tradfri_button_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
+    tradfri_switch_01_battery:
+      value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'battery') }}"
+    tradfri_switch_02_battery:
+      value_template: "{{ state_attr('sensor.tradfri_switch_02_action', 'battery') }}"
+    tradfri_button_01_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'battery') }}"
+    tradfri_button_02_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'battery') }}"
 # Door Sensors
-- platform: "mqtt"
-  name: aqara_sensor_switch_01_battery
-  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
+    aqara_sensor_switch_01_battery:
+      entity_id: binary_sensor.aqara_sensor_switch_01_contact
+      value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'battery') }}"
 # Motion Sensors
-- platform: "mqtt"
-  name: smartthings_motion_temp_01_battery
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
-- platform: "mqtt"
-  name: smartthings_motion_temp_02_battery
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.battery}}"
-  device_class: "battery"
+    tradfri_motion_01_battery:
+      value_template: "{{ state_attr('binary_sensor.tradfri_motion_01_occupancy', 'battery') }}"
+    smartthings_motion_temp_01_battery:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'battery') }}"
+      device_class: battery
+    smartthings_motion_temp_02_battery:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'battery') }}"
 - platform: "mqtt"
   name: aeotec_sensor6_01_battery
   icon: "mdi:flash"
@@ -780,13 +751,6 @@
       "name": "ZW100 MultiSensor 6 ",
       "sw_version": "1.11"
   }
-- platform: "mqtt"
-  name: tradfri_motion_01_battery
-  state_topic: "zigbee2mqtt/tradfri_motion_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  device_class: "battery"
-  value_template: "{{ value_json.battery }}"
 
 
 # Humidity
