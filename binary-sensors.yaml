@@ -133,155 +133,54 @@
   count: 1
 
 # Zigbee Updates
+- platform: template
+  sensors:
 # Plugs
-- platform: "mqtt"
-  name: tradfri_plug_01_update
-  state_topic: "zigbee2mqtt/tradfri_plug_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_plug_02_update
-  state_topic: "zigbee2mqtt/tradfri_plug_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
+    tradfri_plug_01_update:
+      value_template: "{{ state_attr('light.tradfri_plug_01_light', 'update_available') }}"
+    tradfri_plug_02_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'update_available') }}"
 # Remotes
-- platform: "mqtt"
-  name: tradfri_switch_01_update
-  state_topic: "zigbee2mqtt/tradfri_switch_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_switch_02_update
-  state_topic: "zigbee2mqtt/tradfri_switch_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_button_01_update
-  state_topic: "zigbee2mqtt/tradfri_button_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_button_02_update
-  state_topic: "zigbee2mqtt/tradfri_button_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
+    tradfri_switch_01_update:
+      value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'update_available') }}"
+    tradfri_switch_02_update:
+      value_template: "{{ state_attr('sensor.tradfri_switch_02_action', 'update_available') }}"
+    tradfri_button_01_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'update_available') }}"
+    tradfri_button_02_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'update_available') }}"
 # Door Sensors
 # N/A
 # Motion Sensors
-- platform: "mqtt"
-  name: tradfri_motion_01_update
-  state_topic: "zigbee2mqtt/tradfri_motion_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
+    tradfri_motion_01_update:
+      value_template: "{{ state_attr('binary_sensor.tradfri_motion_01', 'update_available') }}"
 # Lights
 # RGB Lights
-- platform: "mqtt"
-  name: tradfri_led_rgb_01_update
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_02_update
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_03_update
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_04_update
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_04"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
+    tradfri_led_rgb_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_01_light', 'update_available') }}"
+    tradfri_led_rgb_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_02_light', 'update_available') }}"
+    tradfri_led_rgb_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'update_available') }}"
+    tradfri_led_rgb_04_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'update_available' ) }}"
 # White Lights
-- platform: "mqtt"
-  name: tradfri_led_white_01_update
-  state_topic: "zigbee2mqtt/tradfri_led_white_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_white_02_update
-  state_topic: "zigbee2mqtt/tradfri_led_white_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_white_03_update
-  state_topic: "zigbee2mqtt/tradfri_led_white_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
+    tradfri_led_white_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'update_available') }}"
+    tradfri_led_white_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_02_light', 'update_available') }}"
+    tradfri_led_white_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_03_light', 'update_available') }}"
 # GU10 Lights
-- platform: "mqtt"
-  name: tradfri_led_gu10_01_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_02_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_03_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_04_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_04"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_05_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_05"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_06_update
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_06"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  payload_on: true
-  payload_off: false
-  value_template: "{{ value_json.update_available}}"
-
-
-
+    tradfri_led_gu10_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'update_available') }}"
+    tradfri_led_gu10_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_02_light', 'update_available') }}"
+    tradfri_led_gu10_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_03_light', 'update_available') }}"
+    tradfri_led_gu10_04_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_04_light', 'update_available') }}"
+    tradfri_led_gu10_05_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_05_light', 'update_available') }}"
+    tradfri_led_gu10_06_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_06_light', 'update_available') }}"
