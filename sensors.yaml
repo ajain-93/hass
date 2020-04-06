@@ -651,152 +651,63 @@
 
 
 # Link Quality
+- platform: template
+  sensors:
 # Plugs
-- platform: "mqtt"
-  name: tradfri_plug_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_plug_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_plug_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_plug_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    tradfri_plug_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_plug_01_light', 'linkquality') }}"
+    tradfri_plug_02_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'linkquality') }}"
 # Remotes
-- platform: "mqtt"
-  name: tradfri_switch_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_switch_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_switch_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_switch_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_button_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_button_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_button_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_button_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    tradfri_switch_01_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'linkquality') }}"
+    tradfri_switch_02_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_switch_02_action', 'linkquality') }}"
+    tradfri_button_01_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'linkquality') }}"
+    tradfri_button_02_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'linkquality') }}"
 # Door Sensors
-- platform: "mqtt"
-  name: aqara_sensor_switch_01_linkquality
-  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    aqara_sensor_switch_01_linkquality:
+      entity_id: binary_sensor.aqara_sensor_switch_01_contact
+      value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'linkquality') }}"
 # Motion Sensors
-- platform: "mqtt"
-  name: smartthings_motion_temp_01_linkquality
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: smartthings_motion_temp_02_linkquality
-  state_topic: "zigbee2mqtt/smartthings_motion_temp_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_motion_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_motion_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    smartthings_motion_temp_01_linkquality:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'linkquality') }}"
+    smartthings_motion_temp_02_linkquality:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'linkquality') }}"
+    tradfri_motion_01_linkquality:
+      value_template: "{{ state_attr('binary_sensor.tradfri_motion_01_occupancy', 'linkquality') }}"
 # Lights
 # RGB Lights
-- platform: "mqtt"
-  name: tradfri_led_rgb_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_03_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_rgb_04_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_rgb_04"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    tradfri_led_rgb_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_01_light', 'linkquality') }}"
+    tradfri_led_rgb_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_02_light', 'linkquality') }}"
+    tradfri_led_rgb_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'linkquality') }}"
+    tradfri_led_rgb_04_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'linkquality') }}"
 # White Lights
-- platform: "mqtt"
-  name: tradfri_led_white_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_white_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_white_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_white_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_white_03_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_white_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    tradfri_led_white_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'linkquality') }}"
+    tradfri_led_white_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_02_light', 'linkquality') }}"
+    tradfri_led_white_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_03_light', 'linkquality') }}"
 # GU10 Lights
-- platform: "mqtt"
-  name: tradfri_led_gu10_01_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_01"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_02_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_02"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_03_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_03"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_04_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_04"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_05_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_05"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
-- platform: "mqtt"
-  name: tradfri_led_gu10_06_linkquality
-  state_topic: "zigbee2mqtt/tradfri_led_gu10_06"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  unit_of_measurement: "%"
-  value_template: "{{ value_json.linkquality }}"
+    tradfri_led_gu10_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'linkquality') }}"
+    tradfri_led_gu10_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'linkquality') }}"
+    tradfri_led_gu10_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_03_light', 'linkquality') }}"
+    tradfri_led_gu10_04_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_04_light', 'linkquality') }}"
+    tradfri_led_gu10_05_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_05_light', 'linkquality') }}"
+    tradfri_led_gu10_06_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_06_light', 'linkquality') }}"
 
 
 # Battery Levels
