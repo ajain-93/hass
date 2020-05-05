@@ -85,9 +85,15 @@
 
 # Connected Devices
 - platform: ping
-  host: jain10.jain.lan
-  name: ping_jain10
+  host: RT242.jain.lan
+  name: ping_asus_router242
   count: 1
+  scan_interval: 30
+- platform: ping
+  host: nas83.jain.lan
+  name: ping_nas83
+  count: 1
+  scan_interval: 30
 - platform: ping
   host: jain56.jain.lan
   name: ping_jain56
@@ -98,8 +104,26 @@
   count: 1
 
 - platform: ping
+  host: jain10.jain.lan
+  name: ping_jain10
+  count: 1
+  scan_interval: 30
+- platform: ping
+  host: jain70.jain.lan
+  name: ping_jain70
+  count: 1
+- platform: ping
+  host: stolx0831.jain.lan
+  name: ping_sas_stolx0831
+  count: 1
+
+- platform: ping
   host: octopi.jain.lan
   name: ping_octopi
+  count: 1
+- platform: ping
+  host: ha-bridge.jain.lan
+  name: ping_raspberrypi_ha_bridge
   count: 1
 - platform: ping
   host: raspberrypi.jain.lan
@@ -117,6 +141,14 @@
 - platform: ping
   host: Tablet35.jain.lan
   name: ping_asus_a810
+  count: 1
+- platform: ping
+  host: nexus10.jain.lan
+  name: ping_google_nexus_10
+  count: 1
+- platform: ping
+  host: Kindle65.jain.lan
+  name: ping_amazon_kindle_fire_7
   count: 1
 
 - platform: ping

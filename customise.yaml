@@ -494,12 +494,16 @@ sensor.frosunda_sum_rain_24:
 
 
 # Connectivity
-binary_sensor.ping_jain10:
-  friendly_name: Jain10
+binary_sensor.ping_asus_router242:
+  friendly_name: Asus RT-AC66U B1
   device_class: connectivity
-  icon: mdi:desktop-tower-monitor
+  icon: mdi:router-wireless
+binary_sensor.ping_nas83:
+  friendly_name: Up²
+  device_class: connectivity
+  icon: mdi:nas
 binary_sensor.ping_jain56:
-  friendly_name: HP Server
+  friendly_name: HP Jain56
   device_class: connectivity
   icon: mdi:server
 binary_sensor.ping_docker56:
@@ -507,12 +511,29 @@ binary_sensor.ping_docker56:
   device_class: connectivity
   icon: mdi:docker
 
+binary_sensor.ping_jain10:
+  friendly_name: Jain10
+  device_class: connectivity
+  icon: mdi:desktop-tower-monitor
+binary_sensor.ping_jain70:
+  friendly_name: Surface70
+  device_class: connectivity
+  icon: mdi:laptop-windows
+binary_sensor.ping_sas_stolx0831:
+  friendly_name: HP Elitebook 840
+  device_class: connectivity
+  icon: mdi:laptop
+
 binary_sensor.ping_octopi:
   friendly_name: Octoprint
   device_class: connectivity
   icon: mdi:printer-3d-nozzle
 binary_sensor.ping_raspberrypi:
   friendly_name: Pi-Bridge
+  device_class: connectivity
+  icon: mdi:raspberry-pi
+binary_sensor.ping_raspberrypi_ha_bridge:
+  friendly_name: HA-Bridge
   device_class: connectivity
   icon: mdi:raspberry-pi
 
@@ -531,7 +552,15 @@ binary_sensor.ping_sony_xperia_zr:
 binary_sensor.ping_asus_a810:
   friendly_name: Asus A810
   device_class: connectivity
+  icon: mdi:tablet-dashboard
+binary_sensor.ping_google_nexus_10:
+  friendly_name: Google Nexus 10
+  device_class: connectivity
   icon: mdi:tablet
+binary_sensor.ping_amazon_kindle_fire_7:
+  friendly_name: Amazon Kindle Fire 7
+  device_class: connectivity
+  icon: mdi:tablet-android
 
 binary_sensor.ping_chromecast_audio_bedroom:
   friendly_name: Chromecast Audio Bedroom
