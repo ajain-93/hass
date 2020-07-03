@@ -64,6 +64,7 @@ tplink:
     - host: tplink-plug-02.jain.lan
 
 prometheus:
+  namespace: hass
 
 # netatmo:
 #   api_key: 5d7e1acb400903001940c8cc
