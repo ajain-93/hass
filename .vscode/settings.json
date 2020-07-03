@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.yaml": "home-assistant"
-    },
-    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjZmZhZDcwZmM4YTQ0MDZlOTVjNmY5MThlNjgxNWNkMCIsImlhdCI6MTU2NzA5MTU2NywiZXhwIjoxODgyNDUxNTY3fQ.l7Evlu7qNaM9d1lJuaKAl5iKKl4-2RiKCEj__HG2N4Q",
-    "vscode-home-assistant.hostUrl": "http://jain10.jain.lan:8123/"
-}
