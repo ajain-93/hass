@@ -63,6 +63,8 @@ tplink:
     - host: tplink-plug-01.jain.lan
     - host: tplink-plug-02.jain.lan
 
+prometheus:
+
 # netatmo:
 #   api_key: 5d7e1acb400903001940c8cc
 #   secret_key: C6EyyZeIi6DbScFv6Ma6bLzV3U1vkJ2mLtP4TbCNhs
