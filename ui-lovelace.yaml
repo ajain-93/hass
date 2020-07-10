@@ -2,6 +2,7 @@ title: Frösunda
 views:
   # Main
   - !include lovelace/home.yaml
+  - !include lovelace/test.yaml
 
   # Entity Types
   - !include lovelace/lights-all.yaml

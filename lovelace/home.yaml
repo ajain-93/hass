@@ -149,3 +149,8 @@ cards:
   - type: weather-forecast
     entity: weather.frosunda
 
+  # - type: entity-button
+  #   entity: light.store
+  #   tap_action:
+  #         action: navigate
+  #         navigation_path: /lovelace/test

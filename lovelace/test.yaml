@@ -1,0 +1,41 @@
+title: Test
+path: test
+visible: false
+
+badges: []
+
+cards:
+  - type: glance
+    # columns: 6
+    title: Store
+    entities:
+    - entity: light.store
+    - entity: binary_sensor.aqara_sensor_switch_01_contact
+    - entity: binary_sensor.light_trigger_store
+
+  - type: glance
+    # columns: 6
+    title: Gallery
+    entities:
+    - entity: light.gallery
+    - entity: binary_sensor.smartthings_motion_temp_01_occupancy
+    - entity: binary_sensor.smartthings_motion_temp_01_occupancy_delayed
+    - entity: binary_sensor.light_trigger_gallery
+
+  - type: glance
+    # columns: 6
+    title: Bathroom
+    entities:
+    - entity: light.bathroom
+    - entity: binary_sensor.tradfri_motion_01_occupancy
+    - entity: binary_sensor.aeotec_sensor6_01_motion
+    - entity: binary_sensor.light_trigger_bathroom
+
+  - type: glance
+    # columns: 6
+    title: Kitchen
+    entities:
+    - entity: light.kitchen
+    - entity: binary_sensor.smartthings_motion_temp_02_occupancy
+    - entity: binary_sensor.smartthings_motion_temp_02_occupancy_delayed
+    - entity: binary_sensor.light_trigger_kitchen
