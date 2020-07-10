@@ -149,6 +149,44 @@ cards:
   - type: weather-forecast
     entity: weather.frosunda
 
+  - type: vertical-stack
+    title: Corona Virus
+    cards:
+    - type: horizontal-stack
+      cards:
+      - type: sensor
+        name: Sweden
+        entity: sensor.sweden_coronavirus_confirmed
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: India
+        entity: sensor.india_coronavirus_confirmed
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: Worldwide
+        entity: sensor.worldwide_coronavirus_confirmed
+        graph: line
+        hours_to_show: 170
+    - type: horizontal-stack
+      cards:
+      - type: sensor
+        entity: sensor.sweden_coronavirus_deaths
+        name: Sweden
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: India
+        entity: sensor.india_coronavirus_deaths
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: Worldwide
+        entity: sensor.worldwide_coronavirus_deaths
+        graph: line
+        hours_to_show: 170
+
   # - type: entity-button
   #   entity: light.store
   #   tap_action:

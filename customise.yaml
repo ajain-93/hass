@@ -617,3 +617,18 @@ switch.ha_lights_mode_night:
   icon: mdi:weather-night
 
 
+
+# Corona
+sensor.sweden_coronavirus_confirmed:
+  friendly_name: Sweden Confirmed
+sensor.sweden_coronavirus_deaths:
+  friendly_name: Sweden Deaths
+sensor.india_coronavirus_confirmed:
+  friendly_name: India Confirmed
+sensor.india_coronavirus_deaths:
+  friendly_name: India Deaths
+sensor.worldwide_coronavirus_confirmed:
+  friendly_name: Worldwide Confirmed
+sensor.worldwide_coronavirus_deaths:
+  friendly_name: Worldwide Deaths
+
