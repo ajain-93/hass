@@ -5,6 +5,21 @@ icon: 'mdi:check-network'
 badges: []
 
 cards:
+  - type: horizontal-stack
+    cards:
+      - type: sensor
+        entity: sensor.speedtest_download
+        name: Download
+        graph: line
+      - type: sensor
+        entity: sensor.speedtest_ping
+        name: Ping
+        graph: line
+      - type: sensor
+        entity: sensor.speedtest_upload
+        name: Upload
+        graph: line
+
   - type: glance
     show_state: false
     entities:
