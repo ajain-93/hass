@@ -191,6 +191,9 @@ binary_sensor.tradfri_led_gu10_04_update:
 binary_sensor.smartthings_motion_temp_01_occupancy:
   friendly_name: Gallery Motion
   device_class: motion
+binary_sensor.smartthings_motion_temp_01_occupancy_delayed:
+  friendly_name: Gallery Motion w Delay
+  device_class: motion
 sensor.smartthings_motion_temp_01_temperature:
   friendly_name: Gallery Temp
   device_class: temperature
@@ -243,6 +246,9 @@ binary_sensor.tradfri_switch_01_update:
 
 binary_sensor.smartthings_motion_temp_02_occupancy:
   friendly_name: Kitchen Motion
+  device_class: motion
+binary_sensor.smartthings_motion_temp_02_occupancy_delayed:
+  friendly_name: Kitchen Motion w Delay
   device_class: motion
 sensor.smartthings_motion_temp_02_temperature:
   friendly_name: Kitchen Temp
