@@ -10,6 +10,9 @@ light.decorations:
 light.bathroom:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
+binary_sensor.light_trigger_bathroom:
+  friendly_name: Bathroom Light Trigger
+  icon: mdi:ceiling-light
 light.tradfri_led_rgb_03_light:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
@@ -148,6 +151,9 @@ sensor.telldus_switch_07_current:
 light.gallery:
   friendly_name: Gallery
   icon: mdi:spotlight
+binary_sensor.light_trigger_gallery:
+  friendly_name: Gallery Light Trigger
+  icon: mdi:spotlight
 
 light.tradfri_led_gu10_01_light:
   friendly_name: Gallery 01
@@ -202,6 +208,9 @@ sensor.smartthings_motion_temp_01_battery:
 # Kitchen
 light.kitchen:
   friendly_name: Kitchen
+  icon: mdi:ceiling-light
+binary_sensor.light_trigger_kitchen:
+  friendly_name: Kitchen Light Trigger
   icon: mdi:ceiling-light
 light.tradfri_led_white_01_light:
   friendly_name: Kitchen - Sink
@@ -443,6 +452,9 @@ sensor.telldus_switch_06_current:
 # Store
 light.store:
   friendly_name: Store
+  icon: mdi:ceiling-light
+binary_sensor.light_trigger_store:
+  friendly_name: Store Light Trigger
   icon: mdi:ceiling-light
 light.tradfri_led_white_03_light:
   friendly_name: Store

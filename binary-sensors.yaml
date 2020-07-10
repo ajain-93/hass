@@ -232,3 +232,16 @@
       value_template: "{{ state_attr('light.tradfri_led_gu10_05_light', 'update_available') }}"
     tradfri_led_gu10_06_update:
       value_template: "{{ state_attr('light.tradfri_led_gu10_06_light', 'update_available') }}"
+
+
+# Light Triggers
+- platform: template
+  sensors:
+    light_trigger_bathroom:
+      value_template: "{{ is_state('binary_sensor.tradfri_motion_01_occupancy', 'on') or is_state('binary_sensor.aeotec_sensor6_01_motion', 'on') }}"
+    light_trigger_gallery:
+      value_template: "{{ is_state('binary_sensor.smartthings_motion_temp_01_occupancy_delayed', 'on') }}"
+    light_trigger_kitchen:
+      value_template: "{{ is_state('binary_sensor.smartthings_motion_temp_02_occupancy_delayed', 'on') }}"
+    light_trigger_store:
+      value_template: "{{ is_state('binary_sensor.aqara_sensor_switch_01_contact', 'on') }}"
