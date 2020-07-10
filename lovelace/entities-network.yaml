@@ -56,6 +56,7 @@ cards:
         name: Video
 
   - type: glance
+    title: Depricated
     show_state: false
     entities:
       - entity: binary_sensor.ping_jain56
