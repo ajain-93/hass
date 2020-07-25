@@ -12,7 +12,7 @@ light.bathroom:
   icon: mdi:ceiling-light
 binary_sensor.light_trigger_bathroom:
   friendly_name: Bathroom Light Trigger
-  icon: mdi:ceiling-light
+  icon: mdi:flash
 light.tradfri_led_rgb_03_light:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
@@ -153,7 +153,7 @@ light.gallery:
   icon: mdi:spotlight
 binary_sensor.light_trigger_gallery:
   friendly_name: Gallery Light Trigger
-  icon: mdi:spotlight
+  icon: mdi:flash
 
 light.tradfri_led_gu10_01_light:
   friendly_name: Gallery 01
@@ -214,7 +214,7 @@ light.kitchen:
   icon: mdi:ceiling-light
 binary_sensor.light_trigger_kitchen:
   friendly_name: Kitchen Light Trigger
-  icon: mdi:ceiling-light
+  icon: mdi:flash
 light.tradfri_led_white_01_light:
   friendly_name: Kitchen - Sink
   icon: mdi:ceiling-light
@@ -461,7 +461,7 @@ light.store:
   icon: mdi:ceiling-light
 binary_sensor.light_trigger_store:
   friendly_name: Store Light Trigger
-  icon: mdi:ceiling-light
+  icon: mdi:flash
 light.tradfri_led_white_03_light:
   friendly_name: Store
   icon: mdi:ceiling-light
@@ -574,7 +574,7 @@ binary_sensor.ping_asus_a810:
 binary_sensor.ping_google_nexus_10:
   friendly_name: Google Nexus 10
   device_class: connectivity
-  icon: mdi:tablet
+  icon: mdi:tablet-dashboard
 binary_sensor.ping_amazon_kindle_fire_7:
   friendly_name: Amazon Kindle Fire 7
   device_class: connectivity
