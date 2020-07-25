@@ -2,7 +2,7 @@ title: Available Updates
 path: updates
 icon: 'mdi:cellphone-arrow-down'
 
-badges: []
+badges: [binary_sensor.updater]
 
 cards:
   - type: glance
