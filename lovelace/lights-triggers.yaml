@@ -1,0 +1,168 @@
+title: Light Triggers
+path: light-triggers
+icon: mdi:lightbulb-group-outline
+visible: false
+
+badges: []
+
+cards:
+  - type: glance
+    title: Bathroom
+    show_state: false
+    entities:
+      - entity: binary_sensor.tradfri_motion_01_occupancy
+        name: Wall
+      - entity: binary_sensor.aeotec_sensor6_01_motion
+        name: Washing Machine
+      - entity: binary_sensor.light_trigger_bathroom
+        name: Trigger
+      - entity: light.tradfri_led_rgb_03_light
+        name: Ceiling Light
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
+  # - type: glance
+  #   title: Bedroom
+  #   show_state: false
+  #   columns: 3
+  #   entities:
+  #     - entity: light.bedroom_bed
+  #       name: Bed
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.tradfri_led_rgb_02_light
+  #       name: Bed - West
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.tradfri_led_rgb_01_light
+  #       name: Bed - East
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.bedroom_ceiling
+  #       name: Ceiling
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.tradfri_led_gu10_06_light
+  #       name: Ceiling - North
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.tradfri_led_gu10_05_light
+  #       name: Ceiling - South
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+
+  - type: glance
+    title: Gallery
+    show_state: false
+    entities:
+      - entity: binary_sensor.smartthings_motion_temp_01_occupancy
+        name: Wall
+      - entity: binary_sensor.smartthings_motion_temp_01_occupancy_delayed
+        name: Wall Delayed
+      - entity: binary_sensor.light_trigger_gallery
+        name: Trigger
+      - entity: light.gallery
+        name: Gallery
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      # - entity: light.tradfri_led_gu10_01_light
+      #   name: Lamp 1
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+      # - entity: light.tradfri_led_gu10_02_light
+      #   name: Lamp 2
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+      # - entity: light.tradfri_led_gu10_03_light
+      #   name: Lamp 3
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+      # - entity: light.tradfri_led_gu10_04_light
+      #   name: Lamp 4
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+
+  - type: glance
+    title: Kitchen
+    show_state: false
+    entities:
+      - entity: binary_sensor.smartthings_motion_temp_02_occupancy
+        name: Wall
+      - entity: binary_sensor.smartthings_motion_temp_02_occupancy_delayed
+        name: Wall Delayed
+      - entity: binary_sensor.light_trigger_kitchen
+        name: Trigger
+      - entity: light.kitchen
+        name: Kitchen
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      # - entity: light.tradfri_led_white_01_light
+      #   name: Light - Sink
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+      # - entity: light.tradfri_led_white_02_light
+      #   name: Light - Stove
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+
+  # - type: glance
+  #   title: Living Room
+  #   show_state: false
+  #   entities:
+  #     - entity: light.tradfri_led_rgb_04_light
+  #       name: Ceiling Lamp
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+  #     - entity: light.tradfri_plug_01_light
+  #       name: Study Lamp
+  #       tap_action:
+  #         action: toggle
+  #       hold_action:
+  #         action: more-info
+
+  - type: glance
+    title: Store
+    show_state: false
+    entities:
+      - entity: binary_sensor.aqara_sensor_switch_01_contact
+        name: Door
+      - entity: binary_sensor.light_trigger_store
+        name: Trigger
+      - entity: light.tradfri_led_white_03_light
+        name: Ceiling Light
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
