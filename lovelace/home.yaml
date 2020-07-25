@@ -134,6 +134,87 @@ cards:
           action: navigate
           navigation_path: /lovelace/store
 
+  - type: glance
+    title: Navigation
+    show_name: true
+    show_state: false
+    columns: 4
+    entities:
+      - entity: light.all
+        name: Lights
+        icon: mdi:lightbulb-group-outline
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/lights
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/lights
+      - entity: light.all
+        name: Triggers
+        icon: mdi:lightbulb-group-outline
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/light-triggers
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/light-triggers
+      - entity: binary_sensor.aeotec_sensor6_01_motion
+        name: Sensors
+        icon: 'mdi:ghost'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/sensors
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/sensors
+      - entity: sensor.aqara_sensor_switch_01_battery
+        name: Battery
+        icon: 'mdi:battery-charging-wireless-60'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/battery-levels
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/battery-levels
+      - entity: binary_sensor.ping_docker56
+        name: Network
+        icon: 'mdi:check-network'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/network
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/network
+      - entity: sensor.tradfri_led_rgb_01_linkquality
+        name: Link
+        icon: 'mdi:signal-cellular-2'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/zigbee-link
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/zigbee-link
+      - entity: light.tradfri_plug_01_light
+        name: Power
+        icon: 'mdi:flash-outline'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/power
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/power
+      - entity: binary_sensor.updater
+        name: Updates
+        icon: 'mdi:cellphone-arrow-down'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/updates
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/updates
+
+
+
   # - type: entities
   #   title: Weather
   #   entities:
