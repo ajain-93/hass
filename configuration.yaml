@@ -14,8 +14,8 @@ homeassistant:
   longitude: !secret longitude
   elevation: 50
   time_zone: !secret time_zone
-  # external_url: !secret external_url
-  # internal_url: !secret internal_url
+  external_url: !secret external_url
+  internal_url: !secret internal_url
 
   customize: !include customise.yaml
 
