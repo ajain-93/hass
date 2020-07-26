@@ -131,7 +131,7 @@ binary_sensor.tradfri_led_gu10_06_update:
 
 switch.telldus_switch_07_switch:
   friendly_name: Maker
-  icon: mdi:mdi:printer-3d-nozzle
+  icon: mdi:printer-3d-nozzle
 sensor.telldus_switch_07_power:
   friendly_name: Maker Power
   icon: mdi:flash

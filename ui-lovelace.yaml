@@ -40,3 +40,6 @@ views:
   - !include lovelace/power-livingroom-studytable.yaml
   - !include lovelace/power-livingroom-misc.yaml
   - !include lovelace/power-livingroom-maker.yaml
+
+  # Details
+  - !include lovelace/detail-printer-ender3.yaml
