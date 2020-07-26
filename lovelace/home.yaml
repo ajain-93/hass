@@ -213,7 +213,8 @@ cards:
           action: navigate
           navigation_path: /lovelace/updates
 
-
+  - type: media-control
+    entity: media_player.spotify
 
   # - type: entities
   #   title: Weather
