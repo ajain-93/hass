@@ -680,6 +680,8 @@
       value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'linkquality') }}"
     tradfri_led_rgb_04_linkquality:
       value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'linkquality') }}"
+    tradfri_led_rgb_05_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_05_light', 'linkquality') }}"
 # White Lights
     tradfri_led_white_01_linkquality:
       value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'linkquality') }}"

@@ -41,7 +41,9 @@ cards:
       - entity: binary_sensor.tradfri_led_rgb_03_update
         name: Bathroom
       - entity: binary_sensor.tradfri_led_rgb_04_update
-        name: Livingroom
+        name: Livingroom 1
+      - entity: binary_sensor.tradfri_led_rgb_05_update
+        name: Livingroom 2
 
   - type: glance
     title: E27 White Lights

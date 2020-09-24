@@ -212,6 +212,8 @@
       value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'update_available') }}"
     tradfri_led_rgb_04_update:
       value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'update_available' ) }}"
+    tradfri_led_rgb_05_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_05_light', 'update_available' ) }}"
 # White Lights
     tradfri_led_white_01_update:
       value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'update_available') }}"

@@ -70,7 +70,10 @@ cards:
     title: Living Room
     entities:
       - entity: sensor.tradfri_led_rgb_04_linkquality
-        name: Ceiling Lamp
+        name: Ceiling Lamp 1
+        icon: 'mdi:ceiling-light'
+      - entity: sensor.tradfri_led_rgb_05_linkquality
+        name: Ceiling Lamp 2
         icon: 'mdi:ceiling-light'
       - entity: sensor.tradfri_plug_01_linkquality
         name: Study Lamp

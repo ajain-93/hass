@@ -118,6 +118,15 @@
   brightness: true
   xy: true
   schema: "json"
+- platform: "mqtt"
+  name: tradfri_led_rgb_05_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_led_rgb_05"
+  json_attributes_topic: "zigbee2mqtt/tradfri_led_rgb_05"
+  command_topic: "zigbee2mqtt/tradfri_led_rgb_05/set"
+  brightness: true
+  xy: true
+  schema: "json"
 
 
 # Plugs
@@ -188,12 +197,14 @@
   brightness: true
   color_temp: true
   schema: "json"
-- platform: group
+- platform: mqtt
   name: livingroom
-  entities:
-  # - light.tradfri_plug_01_light
-  - light.tradfri_led_rgb_04_light
-  # - light.telldus_switch_06_light
+  state_topic: zigbee2mqtt/lights_livingroom
+  availability_topic: zigbee2mqtt/bridge/state
+  command_topic: zigbee2mqtt/lights_livingroom/set
+  brightness: true
+  xy: true
+  schema: json
 - platform: group
   name: store
   entities:

@@ -358,13 +358,22 @@ binary_sensor.tradfri_button_01_update:
   friendly_name: Livingroom Button Update
 
 light.tradfri_led_rgb_04_light:
-  friendly_name: Living Room Centre
+  friendly_name: Living Room Centre 1
   icon: mdi:ceiling-light
 sensor.tradfri_led_rgb_04_linkquality:
-  friendly_name: Living Room Centre Link
+  friendly_name: Living Room Centre 1 Link
   device_class: signal_strength
 binary_sensor.tradfri_led_rgb_04_update:
-  friendly_name: Living Room Centre Update
+  friendly_name: Living Room Centre 1 Update
+
+light.tradfri_led_rgb_05_light:
+  friendly_name: Living Room Centre 2
+  icon: mdi:ceiling-light
+sensor.tradfri_led_rgb_05_linkquality:
+  friendly_name: Living Room Centre 2 Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_rgb_05_update:
+  friendly_name: Living Room Centre 2 Update
 
 switch.fibaro_switch_01_switch:
   friendly_name: Jain10
