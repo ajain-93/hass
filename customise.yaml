@@ -529,6 +529,10 @@ binary_sensor.ping_nas83:
   friendly_name: Up²
   device_class: connectivity
   icon: mdi:nas
+binary_sensor.ping_jain78:
+  friendly_name: NUC78
+  device_class: connectivity
+  icon: mdi:server
 binary_sensor.ping_jain56:
   friendly_name: HP Jain56
   device_class: connectivity
