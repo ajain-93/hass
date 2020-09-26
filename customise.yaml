@@ -9,6 +9,18 @@ binary_sensor.updater:
   friendly_name: HASS Update
   icon: mdi:cellphone-arrow-down
 
+sensor.tradfri_button_03_action:
+  friendly_name: Lights Button
+sensor.tradfri_button_03_battery:
+  friendly_name: Lights Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_03_linkquality:
+  friendly_name: Lights Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_03_update:
+  friendly_name: Lights Button Update
+
 
 
 # Bathroom
