@@ -5,6 +5,11 @@ light.all:
 light.decorations:
   friendly_name: Decorations
   icon: mdi:string-lights
+binary_sensor.updater:
+  friendly_name: HASS Update
+  icon: mdi:cellphone-arrow-down
+
+
 
 # Bathroom
 light.bathroom:
