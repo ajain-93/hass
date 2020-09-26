@@ -10,6 +10,9 @@ light.decorations:
 light.bathroom:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
+switch.light_bathroom:
+    friendly_name: Light Bathroom
+    icon: mdi:ceiling-light
 binary_sensor.light_trigger_bathroom:
   friendly_name: Bathroom Light Trigger
   icon: mdi:flash
@@ -88,6 +91,9 @@ binary_sensor.tradfri_motion_01_update:
 light.bedroom:
   friendly_name: "Bedroom"
   icon: mdi:lightbulb-on
+switch.light_bedroom:
+  friendly_name: Light Bedroom
+  icon: mdi:lightbulb-on
 light.bedroom_ceiling:
   friendly_name: "Bedroom Ceiling"
   icon: mdi:spotlight
@@ -151,6 +157,9 @@ sensor.telldus_switch_07_current:
 light.gallery:
   friendly_name: Gallery
   icon: mdi:spotlight
+switch.light_gallery:
+  friendly_name: Light Gallery
+  icon: mdi:spotlight
 binary_sensor.light_trigger_gallery:
   friendly_name: Gallery Light Trigger
   icon: mdi:flash
@@ -191,9 +200,9 @@ binary_sensor.tradfri_led_gu10_04_update:
 binary_sensor.smartthings_motion_temp_01_occupancy:
   friendly_name: Gallery Motion
   device_class: motion
-binary_sensor.smartthings_motion_temp_01_occupancy_delayed:
-  friendly_name: Gallery Motion w Delay
-  device_class: motion
+# binary_sensor.smartthings_motion_temp_01_occupancy_delayed:
+  # friendly_name: Gallery Motion w Delay
+  # device_class: motion
 sensor.smartthings_motion_temp_01_temperature:
   friendly_name: Gallery Temp
   device_class: temperature
@@ -211,6 +220,9 @@ sensor.smartthings_motion_temp_01_battery:
 # Kitchen
 light.kitchen:
   friendly_name: Kitchen
+  icon: mdi:ceiling-light
+switch.light_kitchen:
+  friendly_name: Light Kitchen
   icon: mdi:ceiling-light
 binary_sensor.light_trigger_kitchen:
   friendly_name: Kitchen Light Trigger
@@ -247,9 +259,9 @@ binary_sensor.tradfri_switch_01_update:
 binary_sensor.smartthings_motion_temp_02_occupancy:
   friendly_name: Kitchen Motion
   device_class: motion
-binary_sensor.smartthings_motion_temp_02_occupancy_delayed:
-  friendly_name: Kitchen Motion w Delay
-  device_class: motion
+# binary_sensor.smartthings_motion_temp_02_occupancy_delayed:
+  # friendly_name: Kitchen Motion w Delay
+  # device_class: motion
 sensor.smartthings_motion_temp_02_temperature:
   friendly_name: Kitchen Temp
   device_class: temperature
@@ -327,6 +339,9 @@ sensor.telldus_switch_05_current:
 # Living room
 light.livingroom:
   friendly_name: Living room
+  icon: mdi:ceiling-light
+switch.light_livingroom:
+  friendly_name: Light Living room
   icon: mdi:ceiling-light
 light.tradfri_plug_01_light:
   friendly_name: Study Light
@@ -468,6 +483,9 @@ sensor.telldus_switch_06_current:
 light.store:
   friendly_name: Store
   icon: mdi:ceiling-light
+switch.light_store:
+  friendly_name: Light Store
+  icon: mdi:ceiling-light
 binary_sensor.light_trigger_store:
   friendly_name: Store Light Trigger
   icon: mdi:flash
@@ -605,6 +623,28 @@ binary_sensor.ping_chromecast_video:
   friendly_name: Chromecast Video
   device_class: connectivity
   icon: mdi:google-chrome
+
+
+
+# Timers
+timer.bathroom:
+  friendly_name: Bathroom Timer
+timer.bathroom_max:
+  friendly_name: Bathroom Timer Limit
+timer.bedroom_max:
+  friendly_name: Bedroom Timer Limit
+timer.gallery:
+  friendly_name: Gallery Timer
+timer.gallery_max:
+  friendly_name: Gallery Timer Limit
+timer.kitchen:
+  friendly_name: Kitchen Timer
+timer.kitchen_max:
+  friendly_name: Kitchen Timer Limit
+timer.livingroom_max:
+  friendly_name: Livingroom Timer Limit
+timer.store_max:
+  friendly_name: Store Timer Limit
 
 
 

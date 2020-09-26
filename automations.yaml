@@ -1,1 +1,372 @@
 
+# Bathroom
+## Trådfri sensors
+- alias: Bathroom - Motion - Light Switch On
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.tradfri_motion_01_occupancy
+    to: 'on'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_bathroom
+
+- alias: Bathroom - Motion - Light Switch Off
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.tradfri_motion_01_occupancy
+    to: 'off'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_bathroom
+
+##Aeotec sensors
+- alias: Bathroom - Motion - Timer on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.aeotec_sensor6_01_motion
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.bathroom
+
+- alias: Bathroom - Timer - Light Switch On
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.bathroom
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_bathroom
+
+- alias: Bathroom - Timer - Light Switch Off
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bathroom
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_bathroom
+
+## Common
+- alias: Bathroom - Lights - Timer Max On
+  trigger:
+  - platform: state
+    entity_id: light.bathroom
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.bathroom_max
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_bathroom
+
+- alias: Bathroom - Timer Max - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bathroom_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_bathroom
+
+- alias: Bathroom - Lights - Timers Off
+  trigger:
+  - platform: state
+    entity_id: light.bathroom
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.bathroom
+  - service: timer.finish
+    data:
+      entity_id: timer.bathroom_max
+
+
+
+# Bedroom
+- alias: Bedroom - Light - Timer Max on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: light.bedroom
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.bedroom_max
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_bedroom
+
+- alias: Bedroom - Light - Timer off
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: light.bedroom
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.bedroom_max
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_bedroom
+
+- alias: Bedroom - Timer Max - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bedroom_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_bedroom
+
+
+
+# Gallery
+- alias: Gallery - Motion - Timer on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.smartthings_motion_temp_01_occupancy
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.gallery
+
+- alias: Gallery - Timer - Light Switch On
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.gallery
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_gallery
+
+- alias: Gallery - Timer - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.gallery
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_gallery
+
+- alias: Gallery - Timer Max - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.gallery_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_gallery
+
+- alias: Gallery - Lights - Timer Max On/Switch
+  trigger:
+    platform: state
+    entity_id: light.gallery
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.gallery_max
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_gallery
+
+- alias: Gallery - Lights - Timers Off
+  trigger:
+    platform: state
+    entity_id: light.gallery
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.gallery
+  - service: timer.finish
+    data:
+      entity_id: timer.gallery_max
+
+
+
+# Kitchen
+- alias: Kitchen - Motion - Timer on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.smartthings_motion_temp_02_occupancy
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.kitchen
+
+- alias: Kitchen - Timer - Light Switch On
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.kitchen
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_kitchen
+
+- alias: Kitchen - Timer - Light Switch Off
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_kitchen
+
+- alias: Kitchen - Timer Max - Light Switch Off
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_kitchen
+
+- alias: Kitchen - Lights - Timer Max On/Switch
+  trigger:
+  - platform: state
+    entity_id: light.kitchen
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.kitchen_max
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_kitchen
+
+- alias: Kitchen - Lights - Timers Off
+  trigger:
+  - platform: state
+    entity_id: light.kitchen
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.kitchen
+  - service: timer.finish
+    data:
+      entity_id: timer.kitchen_max
+
+
+
+# Livingroom
+- alias: Livingroom - Light - Timer Max on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: light.livingroom
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.livingroom_max
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_livingroom
+
+- alias: Livingroom - Light - Timer off
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: light.livingroom
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.livingroom_max
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_livingroom
+
+- alias: Livingroom - Timer Max - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.livingroom_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_livingroom
+
+
+
+# Store
+- alias: Store - Door/Light - Timer on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.aqara_sensor_switch_01_contact, light.store
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.store_max
+
+- alias: Store - Door/Light - Timer off
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.aqara_sensor_switch_01_contact, light.store
+    to: 'off'
+  action:
+  - service: timer.finish
+    data:
+      entity_id: timer.store_max
+
+- alias: Store - Timer - Light Switch On
+  trigger:
+  - platform: event
+    event_type: timer.started
+    event_data:
+      entity_id: timer.store_max
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.light_store
+
+- alias: Store - Timer - Light Switch Off
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.store_max
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.light_store
+

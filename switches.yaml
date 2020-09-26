@@ -210,3 +210,36 @@
   payload_on: "night"
   payload_off: "night"
   retain: "on"
+
+
+# Light Switches
+- platform: "mqtt"
+  name: light_bathroom
+  state_topic: "hass/lights/bathroom"
+  command_topic: "hass/lights/bathroom"
+  retain: "on"
+- platform: "mqtt"
+  name: light_bedroom
+  state_topic: "hass/lights/bedroom"
+  command_topic: "hass/lights/bedroom"
+  retain: "on"
+- platform: "mqtt"
+  name: light_gallery
+  state_topic: "hass/lights/gallery"
+  command_topic: "hass/lights/gallery"
+  retain: "on"
+- platform: "mqtt"
+  name: light_kitchen
+  state_topic: "hass/lights/kitchen"
+  command_topic: "hass/lights/kitchen"
+  retain: "on"
+- platform: "mqtt"
+  name: light_livingroom
+  state_topic: "hass/lights/livingroom"
+  command_topic: "hass/lights/livingroom"
+  retain: "on"
+- platform: "mqtt"
+  name: light_store
+  state_topic: "hass/lights/store"
+  command_topic: "hass/lights/store"
+  retain: "on"
