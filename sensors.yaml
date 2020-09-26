@@ -661,7 +661,6 @@
       value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'linkquality') }}"
 # Door Sensors
     aqara_sensor_switch_01_linkquality:
-      entity_id: binary_sensor.aqara_sensor_switch_01_contact
       value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'linkquality') }}"
 # Motion Sensors
     smartthings_motion_temp_01_linkquality:
@@ -718,7 +717,6 @@
       value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'battery') }}"
 # Door Sensors
     aqara_sensor_switch_01_battery:
-      entity_id: binary_sensor.aqara_sensor_switch_01_contact
       value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'battery') }}"
 # Motion Sensors
     tradfri_motion_01_battery:
