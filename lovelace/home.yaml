@@ -50,32 +50,50 @@ cards:
 
       - entity: light.bathroom
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_bathroom
         hold_action:
           action: more-info
       - entity: light.bedroom
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_bedroom
         hold_action:
           action: more-info
       - entity: light.gallery
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_gallery
         hold_action:
           action: more-info
       - entity: light.kitchen
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_kitchen
         hold_action:
           action: more-info
       - entity: light.livingroom
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_livingroom
         hold_action:
           action: more-info
       - entity: light.store
         tap_action:
-          action: toggle
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.light_store
         hold_action:
           action: more-info
 
@@ -149,7 +167,7 @@ cards:
         hold_action:
           action: navigate
           navigation_path: /lovelace/lights
-      - entity: light.all
+      - entity: binary_sensor.light_timers
         name: Triggers
         icon: mdi:lightbulb-group-outline
         tap_action:
@@ -158,7 +176,7 @@ cards:
         hold_action:
           action: navigate
           navigation_path: /lovelace/light-triggers
-      - entity: binary_sensor.aeotec_sensor6_01_motion
+      - entity: binary_sensor.motion_state_sensors
         name: Sensors
         icon: 'mdi:ghost'
         tap_action:
