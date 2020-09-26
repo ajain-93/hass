@@ -37,7 +37,12 @@ cards:
       - entity: binary_sensor.smartthings_motion_temp_02_occupancy
       - entity: sensor.smartthings_motion_temp_02_temperature
 
-  # - type: glance
-  #   title: Living Room
-  #   show_name: false
-  #   entities:
+  - type: glance
+    title: Buttons
+    # show_state: false
+    entities:
+      - entity: sensor.tradfri_button_03_action
+      - entity: sensor.tradfri_button_02_action
+      - entity: sensor.tradfri_switch_02_action
+      - entity: sensor.tradfri_switch_01_action
+      - entity: sensor.tradfri_button_01_action
