@@ -3,7 +3,7 @@ version: "2.4"
 services:
 
     hass:
-        image: homeassistant/home-assistant:0.113.1
+        image: homeassistant/home-assistant:0.115.3
         environment:
             - PUID=1000
             - PGID=1000
