@@ -39,7 +39,7 @@ cards:
 
   - type: glance
     title: Buttons
-    # show_state: false
+    show_state: false
     entities:
       - entity: sensor.tradfri_button_03_action
       - entity: sensor.tradfri_button_02_action
