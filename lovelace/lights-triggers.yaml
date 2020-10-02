@@ -150,6 +150,14 @@ cards:
           action: toggle
         hold_action:
           action: more-info
+      - entity: timer.livingroom_study_max
+        name: Study Timer Max
+      - entity: light.tradfri_plug_01_light
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+
 
   - type: glance
     title: Store

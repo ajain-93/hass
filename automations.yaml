@@ -147,10 +147,10 @@
 
 - alias: Gallery - Motion - Timer on
   trigger:
-  - platform: event
-    event_type: timer.started
-    event_data:
-      entity_id: timer.gallery
+  - platform: state
+    entity_id: binary_sensor.smartthings_motion_temp_01_occupancy
+    from: 'on'
+    to: 'off'
   action:
     - service: timer.start
       data:
@@ -217,6 +217,9 @@
   - service: switch.turn_on
     data:
       entity_id: switch.light_kitchen
+  - service: timer.cancel
+    data:
+      entity_id: timer.kitchen
 
 - alias: Kitchen - Motion - Timer On
   mode: restart
@@ -312,6 +315,40 @@
   - service: switch.turn_off
     data:
       entity_id: switch.light_livingroom
+
+- alias: Livingroom - Study Light - Timer Max on
+  mode: restart
+  trigger:
+  - platform: state
+    entity_id: light.tradfri_plug_01_light
+    from: 'off'
+    to: 'on'
+  action:
+  - service: timer.start
+    data:
+      entity_id: timer.livingroom_study_max
+
+- alias: Livingroom - Study Light - Timer off
+  trigger:
+  - platform: state
+    entity_id: light.tradfri_plug_01_light
+    from: 'on'
+    to: 'off'
+  action:
+  - service: timer.cancel
+    data:
+      entity_id: timer.livingroom_study_max
+
+- alias: Livingroom - Study Timer Max - Light Switch Off
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.livingroom_study_max
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.tradfri_plug_01_light
 
 
 

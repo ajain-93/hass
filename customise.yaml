@@ -660,6 +660,8 @@ timer.kitchen_max:
   friendly_name: Kitchen Timer Limit
 timer.livingroom_max:
   friendly_name: Livingroom Timer Limit
+timer.livingroom_study_max:
+  friendly_name: Study Timer Limit
 timer.store_max:
   friendly_name: Store Timer Limit
 
