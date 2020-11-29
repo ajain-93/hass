@@ -6,151 +6,153 @@ badges: []
   # - entity: binary_sensor.updater
 
 cards:
-  - type: glance
-    title: Lights
-    show_state: false
-    columns: 6
-    entities:
-      - entity: light.all
-        name: All
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-      - entity: switch.ha_lights_manual_control
-        name: Manual
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-      - entity: switch.ha_lights_mode_morning
-        name: Morning
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-      - entity: switch.ha_lights_mode_afternoon
-        name: Afternoon
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-      - entity: switch.ha_lights_mode_evening
-        name: Evening
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-      - entity: switch.ha_lights_mode_night
-        name: Night
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
+  - type: vertical-stack
+    cards:
+    - type: glance
+      title: Lights
+      show_state: false
+      columns: 6
+      entities:
+        - entity: light.all
+          name: All
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - entity: switch.ha_lights_manual_control
+          name: Manual
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - entity: switch.ha_lights_mode_morning
+          name: Morning
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - entity: switch.ha_lights_mode_afternoon
+          name: Afternoon
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - entity: switch.ha_lights_mode_evening
+          name: Evening
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - entity: switch.ha_lights_mode_night
+          name: Night
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
 
-      - entity: light.bathroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_bathroom
-        hold_action:
-          action: more-info
-      - entity: light.bedroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_bedroom
-        hold_action:
-          action: more-info
-      - entity: light.gallery
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_gallery
-        hold_action:
-          action: more-info
-      - entity: light.kitchen
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_kitchen
-        hold_action:
-          action: more-info
-      - entity: light.livingroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_livingroom
-        hold_action:
-          action: more-info
-      - entity: light.store
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_store
-        hold_action:
-          action: more-info
+        - entity: light.bathroom
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_bathroom
+          hold_action:
+            action: more-info
+        - entity: light.bedroom
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_bedroom
+          hold_action:
+            action: more-info
+        - entity: light.gallery
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_gallery
+          hold_action:
+            action: more-info
+        - entity: light.kitchen
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_kitchen
+          hold_action:
+            action: more-info
+        - entity: light.livingroom
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_livingroom
+          hold_action:
+            action: more-info
+        - entity: light.store
+          tap_action:
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_store
+          hold_action:
+            action: more-info
 
-  - type: glance
-    title: Rooms
-    show_name: false
-    show_state: false
-    columns: 6
-    entities:
-      - entity: light.bathroom
-        icon: 'mdi:shower'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/bathroom
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/bathroom
-      - entity: light.bedroom
-        icon: 'mdi:bed-double'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/bedroom
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/bedroom
-      - entity: light.gallery
-        icon: 'mdi:shoe-print'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/gallery
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/gallery
-      - entity: light.kitchen
-        icon: 'mdi:table-chair'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/kitchen
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/kitchen
-      - entity: light.livingroom
-        icon: 'mdi:sofa'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/livingroom
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/livingroom
-      - entity: light.store
-        icon: 'mdi:wardrobe-outline'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/store
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/store
+    - type: glance
+      title: Rooms
+      show_name: false
+      show_state: false
+      columns: 6
+      entities:
+        - entity: light.bathroom
+          icon: 'mdi:shower'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/bathroom
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/bathroom
+        - entity: light.bedroom
+          icon: 'mdi:bed-double'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/bedroom
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/bedroom
+        - entity: light.gallery
+          icon: 'mdi:shoe-print'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/gallery
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/gallery
+        - entity: light.kitchen
+          icon: 'mdi:table-chair'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/kitchen
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/kitchen
+        - entity: light.livingroom
+          icon: 'mdi:sofa'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/livingroom
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/livingroom
+        - entity: light.store
+          icon: 'mdi:wardrobe-outline'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/store
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/store
 
   - type: glance
     title: Navigation
