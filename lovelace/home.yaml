@@ -257,34 +257,48 @@ cards:
     - type: horizontal-stack
       cards:
       - type: sensor
-        name: Sweden
+        name: 🇸🇪 Confirmed
         entity: sensor.sweden_coronavirus_confirmed
         graph: line
         hours_to_show: 170
       - type: sensor
-        name: India
-        entity: sensor.india_coronavirus_confirmed
-        graph: line
-        hours_to_show: 170
-      - type: sensor
-        name: Worldwide
-        entity: sensor.worldwide_coronavirus_confirmed
+        entity: sensor.sweden_coronavirus_deaths
+        name: 🇸🇪 Deaths
         graph: line
         hours_to_show: 170
     - type: horizontal-stack
       cards:
       - type: sensor
-        entity: sensor.sweden_coronavirus_deaths
-        name: Sweden
+        name: 🇮🇪 Confirmed
+        entity: sensor.ireland_coronavirus_confirmed
         graph: line
         hours_to_show: 170
       - type: sensor
-        name: India
+        name: 🇮🇪 Deaths
+        entity: sensor.ireland_coronavirus_deaths
+        graph: line
+        hours_to_show: 170
+    - type: horizontal-stack
+      cards:
+      - type: sensor
+        name: 🇮🇳 Confirmed
+        entity: sensor.india_coronavirus_confirmed
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: 🇮🇳 Deaths
         entity: sensor.india_coronavirus_deaths
         graph: line
         hours_to_show: 170
+    - type: horizontal-stack
+      cards:
       - type: sensor
-        name: Worldwide
+        name: 🌍 Confirmed
+        entity: sensor.worldwide_coronavirus_confirmed
+        graph: line
+        hours_to_show: 170
+      - type: sensor
+        name: 🌍 Deaths
         entity: sensor.worldwide_coronavirus_deaths
         graph: line
         hours_to_show: 170
