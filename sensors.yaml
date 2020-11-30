@@ -74,7 +74,7 @@
 - platform: "mqtt"
   name: telldus_switch_01_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_01/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -91,7 +91,7 @@
 - platform: "mqtt"
   name: telldus_switch_02_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_02/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -108,7 +108,7 @@
 - platform: "mqtt"
   name: telldus_switch_03_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_03/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -125,7 +125,7 @@
 - platform: "mqtt"
   name: telldus_switch_04_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_04/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -142,7 +142,7 @@
 - platform: "mqtt"
   name: telldus_switch_05_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_05/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -159,7 +159,7 @@
 - platform: "mqtt"
   name: telldus_switch_06_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_06/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
@@ -176,7 +176,7 @@
 - platform: "mqtt"
   name: telldus_switch_07_power
   icon: "mdi:flash"
-  state_topic: "zwave2mqtt/telldus_switch_07/50/1/8"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/2"
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
