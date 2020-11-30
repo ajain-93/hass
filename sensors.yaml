@@ -469,7 +469,7 @@
 - platform: "mqtt"
   name: telldus_switch_01_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_01/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   # device_class: "None"
@@ -486,7 +486,7 @@
 - platform: "mqtt"
   name: telldus_switch_02_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_02/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   # device_class: "None"
@@ -503,7 +503,7 @@
 - platform: "mqtt"
   name: telldus_switch_03_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_03/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   # device_class: "None"
@@ -520,7 +520,7 @@
 - platform: "mqtt"
   name: telldus_switch_04_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_04/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   unique_id: telldus_switch_04_current
@@ -536,7 +536,7 @@
 - platform: "mqtt"
   name: telldus_switch_05_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_05/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   unique_id: telldus_switch_05_current
@@ -552,7 +552,7 @@
 - platform: "mqtt"
   name: telldus_switch_06_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_06/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   unique_id: telldus_switch_06_current
@@ -568,7 +568,7 @@
 - platform: "mqtt"
   name: telldus_switch_07_current
   icon: "mdi:flash-circle"
-  state_topic: "zwave2mqtt/telldus_switch_07/50/1/20"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/5"
   unit_of_measurement: "A"
   value_template: "{{value}}"
   unique_id: telldus_switch_07_current
