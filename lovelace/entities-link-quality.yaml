@@ -87,6 +87,9 @@ cards:
   - type: glance
     title: Bedroom
     entities:
+      - entity: sensor.tradfri_plug_03_linkquality
+        name: Decoration Lights
+        icon: 'mdi:string-lights'
       - entity: sensor.tradfri_led_rgb_02_linkquality
         icon: 'mdi:lightbulb'
         name: Bed - West

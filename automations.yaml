@@ -409,3 +409,25 @@
     data:
       entity_id: switch.light_store
 
+
+
+# Decoration Lights
+- alias: Decoration Lights - Night - Light Off
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_night
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.tradfri_plug_03_power
+
+- alias: Decoration Lights - Not Night - Light On
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_night
+    to: 'off'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.tradfri_plug_03_power

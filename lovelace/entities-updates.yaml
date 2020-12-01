@@ -12,6 +12,8 @@ cards:
         name: Study Light
       - entity: binary_sensor.tradfri_plug_02_update
         name: Monitor
+      - entity: binary_sensor.tradfri_plug_03_update
+        name: Decoration Lights
 
   - type: glance
     title: Remotes

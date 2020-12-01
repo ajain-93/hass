@@ -193,6 +193,8 @@
       value_template: "{{ state_attr('light.tradfri_plug_01_light', 'update_available') }}"
     tradfri_plug_02_update:
       value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'update_available') }}"
+    tradfri_plug_03_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'update_available') }}"
 # Remotes
     tradfri_switch_01_update:
       value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'update_available') }}"

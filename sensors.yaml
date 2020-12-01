@@ -657,6 +657,8 @@
       value_template: "{{ state_attr('light.tradfri_plug_01_light', 'linkquality') }}"
     tradfri_plug_02_linkquality:
       value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'linkquality') }}"
+    tradfri_plug_03_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'linkquality') }}"
 # Remotes
     tradfri_switch_01_linkquality:
       value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'linkquality') }}"
