@@ -52,3 +52,14 @@ cards:
     hours_to_show: 24
     entities:
       - entity: sensor.smartthings_motion_temp_01_temperature
+
+  - type: glance
+    show_name: false
+    show_state: false
+    entities:
+    - entity: switch.tradfri_plug_07_power
+      tap_action:
+        action: toggle
+    - entity: switch.tradfri_plug_09_power
+      tap_action:
+        action: toggle

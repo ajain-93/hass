@@ -664,6 +664,20 @@
       value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'linkquality') }}"
     tradfri_plug_03_linkquality:
       value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'linkquality') }}"
+    tradfri_plug_04_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_04_power', 'linkquality') }}"
+    tradfri_plug_05_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_05_power', 'linkquality') }}"
+    tradfri_plug_06_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_06_power', 'linkquality') }}"
+    tradfri_plug_07_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_07_power', 'linkquality') }}"
+    tradfri_plug_08_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_08_power', 'linkquality') }}"
+    tradfri_plug_09_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_09_power', 'linkquality') }}"
+    tradfri_plug_10_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_10_power', 'linkquality') }}"
 # Remotes
     tradfri_switch_01_linkquality:
       value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'linkquality') }}"

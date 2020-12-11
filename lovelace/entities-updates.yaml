@@ -13,7 +13,21 @@ cards:
       - entity: binary_sensor.tradfri_plug_02_update
         name: Monitor
       - entity: binary_sensor.tradfri_plug_03_update
-        name: Decoration Lights
+        name: Bedroom Curtain
+      - entity: binary_sensor.tradfri_plug_04_update
+        name: Livingroom Curtain
+      - entity: binary_sensor.tradfri_plug_05_update
+        name: Livingroom Tree
+      - entity: binary_sensor.tradfri_plug_06_update
+        name: Bedroom Tree
+      - entity: binary_sensor.tradfri_plug_07_update
+        name: Asus A810
+      - entity: binary_sensor.tradfri_plug_08_update
+        name: Fan Lamp
+      - entity: binary_sensor.tradfri_plug_09_update
+        name: Lamina
+      - entity: binary_sensor.tradfri_plug_10_update
+        name: Acer W600
 
   - type: glance
     title: Remotes

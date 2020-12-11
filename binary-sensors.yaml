@@ -195,6 +195,20 @@
       value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'update_available') }}"
     tradfri_plug_03_update:
       value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'update_available') }}"
+    tradfri_plug_04_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_04_power', 'update_available') }}"
+    tradfri_plug_05_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_05_power', 'update_available') }}"
+    tradfri_plug_06_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_06_power', 'update_available') }}"
+    tradfri_plug_07_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_07_power', 'update_available') }}"
+    tradfri_plug_08_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_08_power', 'update_available') }}"
+    tradfri_plug_09_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_09_power', 'update_available') }}"
+    tradfri_plug_10_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_10_power', 'update_available') }}"
 # Remotes
     tradfri_switch_01_update:
       value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'update_available') }}"

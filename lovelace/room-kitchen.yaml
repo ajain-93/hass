@@ -27,6 +27,12 @@ cards:
           action: toggle
         hold_action:
           action: more-info
+      - entity: switch.tradfri_plug_08_power
+        name: Fan Lamp
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
 
   - type: glance
     show_name: false

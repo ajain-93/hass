@@ -6,99 +6,122 @@ badges: []
 
 cards:
   - type: glance
-    title: Store
+    title: Door & Motion Sensors
     entities:
-      - entity: sensor.tradfri_led_white_03_linkquality
-        name: Ceiling Light
-        icon: 'mdi:ceiling-light'
       - entity: sensor.aqara_sensor_switch_01_linkquality
-        name: Door Sensor
-        icon: 'mdi:door-closed'
-
-  - type: glance
-    show_name: true
-    title: Bathroom
-    entities:
-      - entity: sensor.tradfri_led_rgb_03_linkquality
-        name: Ceiling Light
-        icon: 'mdi:ceiling-light'
-      - entity: sensor.tradfri_switch_02_linkquality
-        name: Switch
-        icon: 'mdi:gesture-double-tap'
+        name: Study
+        icon: mdi:door-closed
       - entity: sensor.tradfri_motion_01_linkquality
-        name: Motion Sensor
-        icon: 'mdi:motion-sensor'
-      - entity: sensor.tradfri_button_02_linkquality
-        name: Button
-
-  - type: glance
-    title: Gallery
-    entities:
-      - entity: sensor.tradfri_led_gu10_01_linkquality
-        name: Lamp 1
-        icon: 'mdi:spotlight-beam'
-      - entity: sensor.tradfri_led_gu10_02_linkquality
-        name: Lamp 2
-        icon: 'mdi:spotlight-beam'
-      - entity: sensor.tradfri_led_gu10_03_linkquality
-        name: Lamp 3
-        icon: 'mdi:spotlight-beam'
-      - entity: sensor.tradfri_led_gu10_04_linkquality
-        name: Lamp 4
-        icon: 'mdi:spotlight-beam'
+        name: Bathroom
+        icon: mdi:motion-sensor
       - entity: sensor.smartthings_motion_temp_01_linkquality
-        name: Motion Sensor
+        name: Gallery
         icon: 'mdi:motion-sensor'
-
-  - type: glance
-    title: Kitchen
-    entities:
-      - entity: sensor.tradfri_led_white_01_linkquality
-        name: Light - Sink
-        icon: 'mdi:ceiling-light'
-      - entity: sensor.tradfri_led_white_02_linkquality
-        name: Light - Stove
-        icon: 'mdi:ceiling-light'
-      - entity: sensor.tradfri_switch_01_linkquality
-        name: Switch
-        icon: 'mdi:gesture-double-tap'
       - entity: sensor.smartthings_motion_temp_02_linkquality
-        name: Motion Sensor
+        name: Kitchen
         icon: 'mdi:motion-sensor'
 
   - type: glance
-    title: Living Room
+    title: Plugs
     entities:
-      - entity: sensor.tradfri_led_rgb_04_linkquality
-        name: Ceiling Lamp 1
-        icon: 'mdi:ceiling-light'
-      - entity: sensor.tradfri_led_rgb_05_linkquality
-        name: Ceiling Lamp 2
-        icon: 'mdi:ceiling-light'
       - entity: sensor.tradfri_plug_01_linkquality
-        name: Study Lamp
-        icon: 'mdi:wall-sconce-flat'
+        name: Study Light
+        icon: mdi:wall-sconce-flat
       - entity: sensor.tradfri_plug_02_linkquality
         name: Monitor
-        icon: 'mdi:desktop-tower-monitor'
-      - entity: sensor.tradfri_button_01_linkquality
-        name: Button
+        icon: mdi:desktop-tower-monitor
+      - entity: sensor.tradfri_plug_03_linkquality
+        name: Bedroom Curtain
+        icon: mdi:string-lights
+      - entity: sensor.tradfri_plug_04_linkquality
+        name: Livingroom Curtain
+        icon: mdi:string-lights
+      - entity: sensor.tradfri_plug_05_linkquality
+        name: Livingroom Tree
+        icon: mdi:pine-tree
+      - entity: sensor.tradfri_plug_06_linkquality
+        name: Bedroom Tree
+        icon: mdi:palm-tree
+      - entity: sensor.tradfri_plug_07_linkquality
+        name: Asus A810
+        icon: mdi:tablet-dashboard
+      - entity: sensor.tradfri_plug_08_linkquality
+        name: Fan Lamp
+        icon: mdi:wall-sconce-flat
+      - entity: sensor.tradfri_plug_09_linkquality
+        name: Lamina
+        icon: mdi:tablet-dashboard
+      - entity: sensor.tradfri_plug_10_linkquality
+        name: Acer W600
+        icon: mdi:tablet-dashboard
 
   - type: glance
-    title: Bedroom
+    title: Remotes
     entities:
-      - entity: sensor.tradfri_plug_03_linkquality
-        name: Decoration Lights
-        icon: 'mdi:string-lights'
-      - entity: sensor.tradfri_led_rgb_02_linkquality
-        icon: 'mdi:lightbulb'
-        name: Bed - West
+      - entity: sensor.tradfri_switch_01_linkquality
+        name: Kitchen
+        icon: mdi:gesture-double-tap
+      - entity: sensor.tradfri_switch_02_linkquality
+        name: Bathroom
+        icon: mdi:gesture-double-tap
+      - entity: sensor.tradfri_button_01_linkquality
+        name: Livingroom
+        icon: mdi:gesture-double-tap
+      - entity: sensor.tradfri_button_02_linkquality
+        name: Bathroom
+        icon: mdi:gesture-double-tap
+
+  - type: glance
+    title: E27 RGB Lights
+    entities:
       - entity: sensor.tradfri_led_rgb_01_linkquality
-        icon: 'mdi:lightbulb'
         name: Bed - East
-      - entity: sensor.tradfri_led_gu10_06_linkquality
-        icon: 'mdi:spotlight-beam'
-        name: Ceiling - North
+        icon: mdi:lamp
+      - entity: sensor.tradfri_led_rgb_02_linkquality
+        name: Bed - West
+        icon: mdi:lamp
+      - entity: sensor.tradfri_led_rgb_03_linkquality
+        name: Bathroom
+        icon: mdi:ceiling-light
+      - entity: sensor.tradfri_led_rgb_04_linkquality
+        name: Livingroom 1
+        icon: mdi:ceiling-light
+      - entity: sensor.tradfri_led_rgb_05_linkquality
+        name: Livingroom 2
+        icon: mdi:ceiling-light
+
+  - type: glance
+    title: E27 White Lights
+    entities:
+      - entity: sensor.tradfri_led_white_01_linkquality
+        name: Kitchen - Sink
+        icon: mdi:ceiling-light
+      - entity: sensor.tradfri_led_white_02_linkquality
+        name: Kitchen - Stove
+        icon: mdi:ceiling-light
+      - entity: sensor.tradfri_led_white_03_linkquality
+        name: Store
+        icon: mdi:ceiling-light
+
+  - type: glance
+    title: GU10 White Lights
+    columns: 4
+    entities:
+      - entity: sensor.tradfri_led_gu10_01_linkquality
+        name: Gallery 01
+        icon: mdi:spotlight-beam
+      - entity: sensor.tradfri_led_gu10_02_linkquality
+        name: Gallery 02
+        icon: mdi:spotlight-beam
+      - entity: sensor.tradfri_led_gu10_03_linkquality
+        name: Gallery 03
+        icon: mdi:spotlight-beam
+      - entity: sensor.tradfri_led_gu10_04_linkquality
+        name: Gallery 04
+        icon: mdi:spotlight-beam
       - entity: sensor.tradfri_led_gu10_05_linkquality
-        icon: 'mdi:spotlight-beam'
         name: Ceiling - South
+        icon: mdi:spotlight-beam
+      - entity: sensor.tradfri_led_gu10_06_linkquality
+        name: Ceiling - North
+        icon: mdi:spotlight-beam

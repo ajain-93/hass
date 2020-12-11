@@ -15,6 +15,11 @@ cards:
         action: toggle
       hold_action:
         action: more-info
+    - entity: switch.tradfri_plug_06_power
+      tap_action:
+        action: toggle
+      hold_action:
+        action: more-info
 
   - type: glance
     show_name: false

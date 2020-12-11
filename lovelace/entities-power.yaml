@@ -77,6 +77,27 @@ cards:
       - entity: switch.tradfri_plug_03_power
         tap_action:
           action: toggle
+      - entity: switch.tradfri_plug_04_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_05_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_06_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_07_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_08_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_09_power
+        tap_action:
+          action: toggle
+      - entity: switch.tradfri_plug_10_power
+        tap_action:
+          action: toggle
 
   - type: glance
     title: Voltage

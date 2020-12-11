@@ -153,13 +153,22 @@ binary_sensor.tradfri_led_gu10_06_update:
   friendly_name: Bedroom - Ceilng North Update
 
 switch.tradfri_plug_03_power:
-  friendly_name: Decoration Lights
+  friendly_name: Decoration Lights Bedroom Curtain
   icon: mdi:string-lights
 sensor.tradfri_plug_03_linkquality:
-  friendly_name: Decoration Lights Link
+  friendly_name: Decoration Lights Bedroom Curtain Link
   device_class: signal_strength
 binary_sensor.tradfri_plug_03_update:
-  friendly_name: Decoration Lights Update
+  friendly_name: Decoration Lights Bedroom Curtain Update
+
+switch.tradfri_plug_06_power:
+  friendly_name: Decoration Lights Bedroom Tree
+  icon: mdi:palm-tree
+sensor.tradfri_plug_06_linkquality:
+  friendly_name: Decoration Lights Bedroom Tree Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_06_update:
+  friendly_name: Decoration Lights Bedroom Tree Update
 
 switch.telldus_switch_07_switch:
   friendly_name: Maker
@@ -241,6 +250,14 @@ sensor.smartthings_motion_temp_01_battery:
   device_class: battery
   unit_of_measurement: "%"
 
+switch.tradfri_plug_07_power:
+  friendly_name: Asus A810 Power
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_07_linkquality:
+  friendly_name: Asus A810 Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_07_update:
+  friendly_name: Asus A810 Update
 
 
 # Kitchen
@@ -360,6 +377,23 @@ sensor.telldus_switch_05_current:
   friendly_name: Toaster Current
   icon: mdi:current-dc
 
+switch.tradfri_plug_08_power:
+  friendly_name: Fan Lamp Tree
+  icon: mdi:wall-sconce-flat
+sensor.tradfri_plug_08_linkquality:
+  friendly_name: Fan Lamp Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_08_update:
+  friendly_name: Fan Lamp Update
+
+switch.tradfri_plug_09_power:
+  friendly_name: Lamina Power
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_09_linkquality:
+  friendly_name: Lamina Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_09_update:
+  friendly_name: Lamina Update
 
 
 # Living room
@@ -503,6 +537,33 @@ sensor.telldus_switch_06_voltage:
 sensor.telldus_switch_06_current:
   friendly_name: Fan Lamp Current
   icon: mdi:current-dc
+
+switch.tradfri_plug_04_power:
+  friendly_name: Decoration Livingroom Curtain Lights
+  icon: mdi:string-lights
+sensor.tradfri_plug_04_linkquality:
+  friendly_name: Decoration Lights Livingroom Curtain Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_04_update:
+  friendly_name: Decoration Lights Livingroom Curtain Update
+
+switch.tradfri_plug_05_power:
+  friendly_name: Decoration Livingroom Tree Lights
+  icon: mdi:pine-tree
+sensor.tradfri_plug_05_linkquality:
+  friendly_name: Decoration Lights Livingroom Tree Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_05_update:
+  friendly_name: Decoration Lights Livingroom Tree Update
+
+switch.tradfri_plug_10_power:
+  friendly_name: Acer W600 Plug
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_10_linkquality:
+  friendly_name: Acer W600 Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_10_update:
+  friendly_name: Acer W600 Update
 
 
 # Store

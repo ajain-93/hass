@@ -420,7 +420,11 @@
   action:
   - service: switch.turn_off
     data:
-      entity_id: switch.tradfri_plug_03_power
+      entity_id:
+        - switch.tradfri_plug_03_power
+        - switch.tradfri_plug_04_power
+        - switch.tradfri_plug_05_power
+        - switch.tradfri_plug_06_power
 
 - alias: Decoration Lights - Not Night - Light On
   trigger:
@@ -430,4 +434,8 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.tradfri_plug_03_power
+      entity_id:
+        - switch.tradfri_plug_03_power
+        - switch.tradfri_plug_04_power
+        - switch.tradfri_plug_05_power
+        - switch.tradfri_plug_06_power
