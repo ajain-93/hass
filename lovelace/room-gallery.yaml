@@ -8,7 +8,10 @@ badges: []
 cards:
   - type: glance
     show_state: false
+    columns: 6
     entities:
+      - entity: binary_sensor.smartthings_motion_temp_01_occupancy
+        name: Motion
       - entity: light.gallery
         name: Gallery
         tap_action:
@@ -40,18 +43,10 @@ cards:
         hold_action:
           action: more-info
 
-  - type: glance
-    show_name: false
-    show_state: true
-    entities:
-      - entity: binary_sensor.smartthings_motion_temp_01_occupancy
-      - entity: sensor.smartthings_motion_temp_01_temperature
-
-  - type: history-graph
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.smartthings_motion_temp_01_temperature
+  - type: sensor
+    entity: sensor.smartthings_motion_temp_01_temperature
+    graph: line
+    detail: 2
 
   - type: glance
     show_name: false

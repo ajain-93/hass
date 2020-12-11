@@ -17,6 +17,7 @@ cards:
 
   - type: glance
     show_name: false
+    columns: 6
     entities:
       - entity: binary_sensor.tradfri_motion_01_occupancy
       - entity: binary_sensor.aeotec_sensor6_01_motion
@@ -41,23 +42,20 @@ cards:
       - entity: binary_sensor.aeotec_sensor6_01_vibration
         name: Vibration
 
-  - type: history-graph
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.aeotec_sensor6_01_temperature
-        name: Temperature
+  - type: sensor
+    entity: sensor.aeotec_sensor6_01_temperature
+    name: Temperature
+    graph: line
+    detail: 2
 
-  - type: history-graph
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.aeotec_sensor6_01_luminance
-        name: Luminance
+  - type: sensor
+    entity: sensor.aeotec_sensor6_01_luminance
+    name: Luminance
+    graph: line
+    detail: 2
 
-  - type: history-graph
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.aeotec_sensor6_01_humidity
-        name: Humidity
+  - type: sensor
+    entity: sensor.aeotec_sensor6_01_humidity
+    name: Humidity
+    graph: line
+    detail: 2
