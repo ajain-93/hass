@@ -28,8 +28,8 @@ light.bathroom:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
 switch.light_bathroom:
-    friendly_name: Light Bathroom
-    icon: mdi:ceiling-light
+  friendly_name: Light Bathroom
+  icon: mdi:light-switch
 binary_sensor.light_trigger_bathroom:
   friendly_name: Bathroom Light Trigger
   icon: mdi:flash
@@ -98,7 +98,7 @@ light.bedroom:
   icon: mdi:lightbulb-on
 switch.light_bedroom:
   friendly_name: Light Bedroom
-  icon: mdi:lightbulb-on
+  icon: mdi:light-switch
 light.bedroom_ceiling:
   friendly_name: "Bedroom Ceiling"
   icon: mdi:spotlight
@@ -194,7 +194,7 @@ light.gallery:
   icon: mdi:spotlight
 switch.light_gallery:
   friendly_name: Light Gallery
-  icon: mdi:spotlight
+  icon: mdi:light-switch
 binary_sensor.light_trigger_gallery:
   friendly_name: Gallery Light Trigger
   icon: mdi:flash
@@ -266,7 +266,7 @@ light.kitchen:
   icon: mdi:ceiling-light
 switch.light_kitchen:
   friendly_name: Light Kitchen
-  icon: mdi:ceiling-light
+  icon: mdi:light-switch
 binary_sensor.light_trigger_kitchen:
   friendly_name: Kitchen Light Trigger
   icon: mdi:flash
@@ -402,7 +402,7 @@ light.livingroom:
   icon: mdi:ceiling-light
 switch.light_livingroom:
   friendly_name: Light Living room
-  icon: mdi:ceiling-light
+  icon: mdi:light-switch
 light.tradfri_plug_01_light:
   friendly_name: Study Light
   icon: mdi:lamp
@@ -572,7 +572,7 @@ light.store:
   icon: mdi:ceiling-light
 switch.light_store:
   friendly_name: Light Store
-  icon: mdi:ceiling-light
+  icon: mdi:light-switch
 binary_sensor.light_trigger_store:
   friendly_name: Store Light Trigger
   icon: mdi:flash
