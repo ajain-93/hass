@@ -205,6 +205,7 @@
       entity_id: switch.light_gallery
 
 
+
 # Kitchen
 - alias: Kitchen - Motion - Light Switch On
   mode: restart
@@ -439,3 +440,127 @@
         - switch.tradfri_plug_04_power
         - switch.tradfri_plug_05_power
         - switch.tradfri_plug_06_power
+
+
+
+# Light Switches
+## Bathroom
+- alias: Light Switch - Bathroom - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_bathroom
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.bathroom
+- alias: Light Switch - Bathroom - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_bathroom
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.bathroom
+
+## Bedroom
+- alias: Light Switch - Bedroom - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_bedroom
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.bedroom
+- alias: Light Switch - Bedroom - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_bedroom
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.bedroom
+
+## Gallery
+- alias: Light Switch - Gallery - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_gallery
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.gallery
+- alias: Light Switch - Gallery - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_gallery
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.gallery
+
+## Kitchen
+- alias: Light Switch - Kitchen - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_kitchen
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.kitchen
+- alias: Light Switch - Kitchen - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_kitchen
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.kitchen
+
+## Living Room
+- alias: Light Switch - Living Room - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_livingroom
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.livingroom
+- alias: Light Switch - Living Room - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_livingroom
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.livingroom
+
+## Store
+- alias: Light Switch - Store - ON
+  trigger:
+  - platform: state
+    entity_id: switch.light_store
+    to: 'on'
+  action:
+  - service: script.light_on
+    data:
+      entity_id: light.store
+- alias: Light Switch - Store - Off
+  trigger:
+  - platform: state
+    entity_id: switch.light_store
+    to: 'off'
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.store
+

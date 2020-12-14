@@ -1,2 +1,239 @@
+# Lights On
+light_on:
+  alias: Light - Turn On
+  icon: "mdi:party-popper"
+  description: 'Turns on the specified lights depending on time day'
+  variables:
+    # entity_id: light.tradfri_led_rgb_04_light
+    brightness_high: 100
+    brightness_mid: 50
+    brightness_low: 1
+    temp_cold: 250
+    temp_mid: 350
+    temp_warm: 450
+    transition: 1
+    col_cold: blanchedalmond
+    col_mid: navajowhite
+    col_warm: sandybrown
+  fields:
+    entity_id:
+      description: The Light to be turned on.
+      example: light.livingroom
+  mode: parallel
+  sequence:
+    - choose:
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_morning
+          state: 'on'
+        sequence:
+        - service: script.light_on_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_cold }}"
+            color_temp: "{{ temp_cold }}"
+            transition: "{{ transition }}"
 
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_afternoon
+          state: 'on'
+        sequence:
+        - service: script.light_on_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_mid }}"
+            color_temp: "{{ temp_mid }}"
+            transition: "{{ transition }}"
+
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_evening
+          state: 'on'
+        sequence:
+        - service: script.light_on_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_warm }}"
+            color_temp: "{{ temp_warm }}"
+            transition: "{{ transition }}"
+
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_night
+          state: 'on'
+        sequence:
+        - service: script.light_on_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_low }}"
+            color_name: "{{ col_warm }}"
+            color_temp: "{{ temp_warm }}"
+            transition: "{{ transition }}"
+
+
+light_on_worker:
+  alias: Worker - Light On
+  icon: mdi:lamp
+  description: 'Worker to actually turn on the light'
+  fields:
+    entity_id:
+      description: The Light to be turned on.
+      example: light.tradfri_led_rgb_04_light
+    brightness_pct:
+      description: The brightness in percent [0 - 100]
+      example: '100'
+    color_name:
+      description: The color in human readable format
+      example: navajowhite
+    color_temp:
+      description: Colour temperature in mireds
+      example: '250'
+    transition:
+      description: The transition time (in seconds)
+      example: '1'
+  mode: parallel
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: 1
+        color_temp: "{{ color_temp }}"
+        transition: 0
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: 1
+        color_name: "{{ color_name }}"
+        transition: 0
+    - delay:
+        milliseconds: 500
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: "{{ brightness_pct }}"
+        transition: "{{ transition }}"
+
+
+
+# Lights change when already on
+light_switch:
+  alias: Light - Switch
+  icon: "mdi:party-popper"
+  description: 'Turns on the specified lights depending on time day'
+  variables:
+    # entity_id: light.tradfri_led_rgb_04_light
+    brightness_high: 100
+    brightness_mid: 50
+    brightness_low: 1
+    temp_cold: 250
+    temp_mid: 350
+    temp_warm: 450
+    transition: 1
+    col_cold: blanchedalmond
+    col_mid: navajowhite
+    col_warm: sandybrown
+  fields:
+    entity_id:
+      description: The Light to be turned on.
+      example: light.livingroom
+  mode: parallel
+  sequence:
+    - choose:
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_morning
+          state: 'on'
+        sequence:
+        - service: script.light_switch_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_cold }}"
+            color_temp: "{{ temp_cold }}"
+            transition: "{{ transition }}"
+
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_afternoon
+          state: 'on'
+        sequence:
+        - service: script.light_switch_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_mid }}"
+            color_temp: "{{ temp_mid }}"
+            transition: "{{ transition }}"
+
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_evening
+          state: 'on'
+        sequence:
+        - service: script.light_switch_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_high }}"
+            color_name: "{{ col_warm }}"
+            color_temp: "{{ temp_warm }}"
+            transition: "{{ transition }}"
+
+      - conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_night
+          state: 'on'
+        sequence:
+        - service: script.light_switch_worker
+          data:
+            entity_id: "{{ entity_id }}"
+            brightness_pct: "{{ brightness_low }}"
+            color_name: "{{ col_warm }}"
+            color_temp: "{{ temp_warm }}"
+            transition: "{{ transition }}"
+
+
+light_switch_worker:
+  alias: Worker - Light Sitch
+  icon: mdi:lamp
+  description: 'Worker when light is already on'
+  fields:
+    entity_id:
+      description: The Light to be turned switched.
+      example: light.tradfri_led_rgb_04_light
+    brightness_pct:
+      description: The brightness in percent [0 - 100]
+      example: '100'
+    color_name:
+      description: The color in human readable format
+      example: navajowhite
+    color_temp:
+      description: Colour temperature in mireds
+      example: '250'
+    transition:
+      description: The transition time (in seconds)
+      example: '1'
+  mode: parallel
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        color_temp: "{{ color_temp }}"
+        transition: "{{ transition / 2}}"
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        color_name: "{{ color_name }}"
+        transition: "{{ transition / 2}}"
+    - delay:
+        seconds: "{{ transition / 2}}"
+        milliseconds: 500
+    - service: light.turn_on
+      data:
+        entity_id: "{{ entity_id }}"
+        brightness_pct: "{{ brightness_pct }}"
+        transition: "{{ transition / 2}}"
 
