@@ -335,7 +335,7 @@ cards:
         content: >-
           {% for package in states.sensor.seventeentrack_packages_in_transit.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }}):**
+          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
           {{ package.info_text }}
 
@@ -350,7 +350,7 @@ cards:
         content: >-
           {% for package in states.sensor.seventeentrack_packages_undelivered.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }}):**
+          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
           {{ package.info_text }}
 
@@ -365,7 +365,7 @@ cards:
         content: >-
           {% for package in states.sensor.seventeentrack_packages_ready_to_be_picked_up.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }}):**
+          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
           {{ package.info_text }}
 
@@ -380,7 +380,7 @@ cards:
         content: >-
           {% for package in states.sensor.seventeentrack_packages_delivered.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }}):**
+          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
           {{ package.info_text }}
 
@@ -395,7 +395,7 @@ cards:
         content: >-
           {% for package in states.sensor.seventeentrack_packages_returned.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }}):**
+          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
           {{ package.info_text }}
 
