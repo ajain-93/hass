@@ -377,7 +377,7 @@ sensor.aeotec_sensor6_01_battery:
 ## Plugs
 light.tradfri_plug_01_light:
   friendly_name: Study Light
-  icon: mdi:lamp
+  icon: mdi:wall-sconce-flat
 sensor.tradfri_plug_01_linkquality:
   friendly_name: Study Light Link
   device_class: signal_strength
