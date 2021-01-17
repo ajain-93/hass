@@ -1,123 +1,91 @@
+# Location
+person.arnav:
+  hidden: true
+
+
+
 # Generic
+binary_sensor.updater:
+  friendly_name: HASS Update
+  icon: mdi:cellphone-arrow-down
+
+
+
+# Lights
 light.all:
   friendly_name: All Lights
   icon: mdi:home-lightbulb
 light.decorations:
   friendly_name: Decorations
   icon: mdi:string-lights
-binary_sensor.updater:
-  friendly_name: HASS Update
-  icon: mdi:cellphone-arrow-down
-
-sensor.tradfri_button_03_action:
-  friendly_name: Lights Button
-sensor.tradfri_button_03_battery:
-  friendly_name: Lights Button Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.tradfri_button_03_linkquality:
-  friendly_name: Lights Button Link
-  device_class: signal_strength
-binary_sensor.tradfri_button_03_update:
-  friendly_name: Lights Button Update
 
 
-
-# Bathroom
+## Area Lights
 light.bathroom:
   friendly_name: Bathroom
   icon: mdi:ceiling-light
-switch.light_bathroom:
-  friendly_name: Light Bathroom
-  icon: mdi:light-switch
-binary_sensor.light_trigger_bathroom:
-  friendly_name: Bathroom Light Trigger
-  icon: mdi:flash
-light.tradfri_led_rgb_03_light:
-  friendly_name: Bathroom
-  icon: mdi:ceiling-light
-sensor.tradfri_led_rgb_03_linkquality:
-  friendly_name: Bathroom Link
-  device_class: signal_strength
-
-sensor.tradfri_button_02_action:
-  friendly_name: Bathroom Button
-sensor.tradfri_button_02_battery:
-  friendly_name: Bathroom Button Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.tradfri_button_02_linkquality:
-  friendly_name: Bathroom Button Link
-  device_class: signal_strength
-binary_sensor.tradfri_button_02_update:
-  friendly_name: Bathroom Button Update
-
-sensor.aeotec_sensor6_01_temperature:
-  friendly_name: Bathroom Temperature
-  device_class: temperature
-  unit_of_measurement: "°C"
-sensor.aeotec_sensor6_01_luminance:
-  friendly_name: Bathroom Luminance
-  device_class: illuminance
-  icon: mdi:brightness-5
-sensor.aeotec_sensor6_01_battery:
-  friendly_name: Bathroom Sensor Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.aeotec_sensor6_01_humidity:
-  friendly_name: Bathroom Humidity
-  device_class: humidity
-  icon: mdi:water-percent
-sensor.aeotec_sensor6_01_motion_vibration:
-  friendly_name: Bathroom Motion & Vibration
-  hidden: true
-binary_sensor.aeotec_sensor6_01_motion:
-  friendly_name: Bathroom Motion
-  device_class: motion
-binary_sensor.aeotec_sensor6_01_vibration:
-  friendly_name: Bathroom Vibration
-  device_class: vibration
-
-binary_sensor.tradfri_motion_01_occupancy:
-  friendly_name: Bathroom Motion Wall
-sensor.tradfri_motion_01_battery:
-  friendly_name: Bathroom Motion Wall Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.tradfri_motion_01_linkquality:
-  friendly_name: Bathroom Motion Wall Link
-  device_class: signal_strength
-binary_sensor.tradfri_motion_01_update:
-  friendly_name: Bathroom Motion Wall Update
-
-
-
-# Bedroom
 light.bedroom:
   friendly_name: "Bedroom"
   icon: mdi:lightbulb-on
-switch.light_bedroom:
-  friendly_name: Light Bedroom
-  icon: mdi:light-switch
 light.bedroom_ceiling:
   friendly_name: "Bedroom Ceiling"
   icon: mdi:spotlight
 light.bedroom_bed:
   friendly_name: "Bedroom Bed"
   icon: mdi:lamp
+light.livingroom:
+  friendly_name: Living room
+  icon: mdi:ceiling-light
+light.store:
+  friendly_name: Store
+  icon: mdi:ceiling-light
+light.gallery:
+  friendly_name: Gallery
+  icon: mdi:spotlight
+light.kitchen:
+  friendly_name: Kitchen
+  icon: mdi:ceiling-light
 
-sensor.tradfri_switch_02_action:
-  friendly_name: Gallery Switch
-sensor.tradfri_switch_02_linkquality:
-  friendly_name: Gallery Switch Link
-  device_class: signal_strength
-sensor.tradfri_switch_02_battery:
-  friendly_name: Gallery Switch Battery
-  device_class: battery
-  unit_of_measurement: "%"
-binary_sensor.tradfri_switch_02_update:
-  friendly_name: Gallery Switch Update
 
+## Light Switches
+switch.light_bathroom:
+  friendly_name: Light Bathroom
+  icon: mdi:light-switch
+switch.light_bedroom:
+  friendly_name: Light Bedroom
+  icon: mdi:light-switch
+switch.light_livingroom:
+  friendly_name: Light Living room
+  icon: mdi:light-switch
+switch.light_store:
+  friendly_name: Light Store
+  icon: mdi:light-switch
+switch.light_gallery:
+  friendly_name: Light Gallery
+  icon: mdi:light-switch
+switch.light_kitchen:
+  friendly_name: Light Kitchen
+  icon: mdi:light-switch
+
+
+## Light Triggers
+binary_sensor.light_trigger_bathroom:
+  friendly_name: Bathroom Light Trigger
+  icon: mdi:flash
+binary_sensor.light_trigger_store:
+  friendly_name: Store Light Trigger
+  icon: mdi:flash
+binary_sensor.light_trigger_gallery:
+  friendly_name: Gallery Light Trigger
+  icon: mdi:flash
+binary_sensor.light_trigger_kitchen:
+  friendly_name: Kitchen Light Trigger
+  icon: mdi:flash
+
+
+
+# IKEA Lights
+## RGB
 light.tradfri_led_rgb_01_light:
   friendly_name: Bedroom - Bed East
   icon: mdi:lamp
@@ -126,6 +94,7 @@ sensor.tradfri_led_rgb_01_linkquality:
   device_class: signal_strength
 binary_sensor.tradfri_led_rgb_01_update:
   friendly_name: Bedroom - Bed East Update
+
 light.tradfri_led_rgb_02_light:
   friendly_name: Bedroom - Bed West
   icon: mdi:lamp
@@ -135,302 +104,14 @@ sensor.tradfri_led_rgb_02_linkquality:
 binary_sensor.tradfri_led_rgb_02_update:
   friendly_name: Bedroom - Bed West Update
 
-light.tradfri_led_gu10_05_light:
-  friendly_name: Bedroom - Ceilng South
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_05_linkquality:
-  friendly_name: Bedroom - Ceilng South Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_05_update:
-  friendly_name: Bedroom - Ceilng South Update
-light.tradfri_led_gu10_06_light:
-  friendly_name: Bedroom - Ceilng North
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_06_linkquality:
-  friendly_name: Bedroom - Ceilng North Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_06_update:
-  friendly_name: Bedroom - Ceilng North Update
-
-switch.tradfri_plug_03_power:
-  friendly_name: Decoration Lights Bedroom Curtain
-  icon: mdi:string-lights
-sensor.tradfri_plug_03_linkquality:
-  friendly_name: Decoration Lights Bedroom Curtain Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_03_update:
-  friendly_name: Decoration Lights Bedroom Curtain Update
-
-switch.tradfri_plug_06_power:
-  friendly_name: Decoration Lights Bedroom Tree
-  icon: mdi:palm-tree
-sensor.tradfri_plug_06_linkquality:
-  friendly_name: Decoration Lights Bedroom Tree Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_06_update:
-  friendly_name: Decoration Lights Bedroom Tree Update
-
-switch.telldus_switch_07_switch:
-  friendly_name: Maker
-  icon: mdi:printer-3d-nozzle
-sensor.telldus_switch_07_power:
-  friendly_name: Maker Power
-  icon: mdi:flash
-sensor.telldus_switch_07_energy:
-  friendly_name: Maker Energy
-  icon: mdi:power-plug
-sensor.telldus_switch_07_voltage:
-  friendly_name: Maker Voltage
-  icon: mdi:current-ac
-sensor.telldus_switch_07_current:
-  friendly_name: Maker Current
-  icon: mdi:current-dc
-
-
-
-#Galley
-light.gallery:
-  friendly_name: Gallery
-  icon: mdi:spotlight
-switch.light_gallery:
-  friendly_name: Light Gallery
-  icon: mdi:light-switch
-binary_sensor.light_trigger_gallery:
-  friendly_name: Gallery Light Trigger
-  icon: mdi:flash
-
-light.tradfri_led_gu10_01_light:
-  friendly_name: Gallery 01
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_01_linkquality:
-  friendly_name: Gallery 01 Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_01_update:
-  friendly_name: Gallery 01 Update
-light.tradfri_led_gu10_02_light:
-  friendly_name: Gallery 02
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_02_linkquality:
-  friendly_name: Gallery 02 Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_02_update:
-  friendly_name: Gallery 02 Update
-light.tradfri_led_gu10_03_light:
-  friendly_name: Gallery 03
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_03_linkquality:
-  friendly_name: Gallery 03 Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_03_update:
-  friendly_name: Gallery 03 Update
-light.tradfri_led_gu10_04_light:
-  friendly_name: Gallery 04
-  icon: mdi:spotlight-beam
-sensor.tradfri_led_gu10_04_linkquality:
-  friendly_name: Gallery 04 Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_gu10_04_update:
-  friendly_name: Gallery 04 Update
-
-binary_sensor.smartthings_motion_temp_01_occupancy:
-  friendly_name: Gallery Motion
-  device_class: motion
-# binary_sensor.smartthings_motion_temp_01_occupancy_delayed:
-  # friendly_name: Gallery Motion w Delay
-  # device_class: motion
-sensor.smartthings_motion_temp_01_temperature:
-  friendly_name: Gallery Temp
-  device_class: temperature
-  unit_of_measurement: "°C"
-sensor.smartthings_motion_temp_01_linkquality:
-  friendly_name: Gallery Motion Link
-  device_class: signal_strength
-sensor.smartthings_motion_temp_01_battery:
-  friendly_name: Gallery Motion Battery
-  device_class: battery
-  unit_of_measurement: "%"
-
-switch.tradfri_plug_07_power:
-  friendly_name: Asus A810 Power
-  icon: mdi:tablet-dashboard
-sensor.tradfri_plug_07_linkquality:
-  friendly_name: Asus A810 Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_07_update:
-  friendly_name: Asus A810 Update
-
-
-# Kitchen
-light.kitchen:
-  friendly_name: Kitchen
+light.tradfri_led_rgb_03_light:
+  friendly_name: Bathroom
   icon: mdi:ceiling-light
-switch.light_kitchen:
-  friendly_name: Light Kitchen
-  icon: mdi:light-switch
-binary_sensor.light_trigger_kitchen:
-  friendly_name: Kitchen Light Trigger
-  icon: mdi:flash
-light.tradfri_led_white_01_light:
-  friendly_name: Kitchen - Sink
-  icon: mdi:ceiling-light
-sensor.tradfri_led_white_01_linkquality:
-  friendly_name: Kitchen - Sink Link
+sensor.tradfri_led_rgb_03_linkquality:
+  friendly_name: Bathroom Link
   device_class: signal_strength
-binary_sensor.tradfri_led_white_01_update:
-  friendly_name: itchen - Sink Update
-light.tradfri_led_white_02_light:
-  friendly_name: Kitchen - Stove
-  icon: mdi:ceiling-light
-sensor.tradfri_led_white_02_linkquality:
-  friendly_name: Kitchen - Stove Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_white_02_update:
-  friendly_name: Kitchen - Stove Update
-
-sensor.tradfri_switch_01_action:
-  friendly_name: Kitchen Switch
-sensor.tradfri_switch_01_linkquality:
-  friendly_name: Kitchen Switch Link
-  device_class: signal_strength
-sensor.tradfri_switch_01_battery:
-  friendly_name: Kitchen Switch Battery
-  device_class: battery
-  unit_of_measurement: "%"
-binary_sensor.tradfri_switch_01_update:
-  friendly_name: Kitchen Switch Update
-
-binary_sensor.smartthings_motion_temp_02_occupancy:
-  friendly_name: Kitchen Motion
-  device_class: motion
-# binary_sensor.smartthings_motion_temp_02_occupancy_delayed:
-  # friendly_name: Kitchen Motion w Delay
-  # device_class: motion
-sensor.smartthings_motion_temp_02_temperature:
-  friendly_name: Kitchen Temp
-  device_class: temperature
-  unit_of_measurement: "°C"
-sensor.smartthings_motion_temp_02_linkquality:
-  friendly_name: Kitchen Motion Link
-  device_class: signal_strength
-sensor.smartthings_motion_temp_02_battery:
-  friendly_name: Kitchen Motion Battery
-  device_class: battery
-  unit_of_measurement: "%"
-
-switch.tplink_plug_01:
-  friendly_name: Fridge
-  icon: mdi:fridge
-sensor.tplink_plug_01_amps:
-  icon: mdi:current-dc
-sensor.tplink_plug_01_watts:
-  icon: mdi:flash
-sensor.tplink_plug_01_volts:
-  icon: mdi:current-ac
-sensor.tplink_plug_01_today_kwh:
-  icon: mdi:power-plug
-sensor.tplink_plug_01_total_kwh:
-  icon: mdi:power-plug
-
-switch.tplink_plug_02:
-  friendly_name: Microwave
-  icon: mdi:microwave
-sensor.tplink_plug_02_amps:
-  icon: mdi:current-dc
-sensor.tplink_plug_02_watts:
-  icon: mdi:flash
-sensor.tplink_plug_02_volts:
-  icon: mdi:current-ac
-sensor.tplink_plug_02_today_kwh:
-  icon: mdi:power-plug
-sensor.tplink_plug_02_total_kwh:
-  icon: mdi:power-plug
-
-switch.telldus_switch_02_switch:
-  friendly_name: Dishwasher
-  icon: mdi:dishwasher
-sensor.telldus_switch_02_power:
-  friendly_name: Dishwasher Power
-  icon: mdi:flash
-sensor.telldus_switch_02_energy:
-  friendly_name: Dishwasher Energy
-  icon: mdi:power-plug
-sensor.telldus_switch_02_voltage:
-  friendly_name: Dishwasher Voltage
-  icon: mdi:current-ac
-sensor.telldus_switch_02_current:
-  friendly_name: Dishwasher Current
-  icon: mdi:current-dc
-
-switch.telldus_switch_05_switch:
-  friendly_name: Toaster
-  icon: mdi:toaster
-sensor.telldus_switch_05_power:
-  friendly_name: Toaster Power
-  icon: mdi:flash
-sensor.telldus_switch_05_energy:
-  friendly_name: Toaster Energy
-  icon: mdi:power-plug
-sensor.telldus_switch_05_voltage:
-  friendly_name: Toaster Voltage
-  icon: mdi:current-ac
-sensor.telldus_switch_05_current:
-  friendly_name: Toaster Current
-  icon: mdi:current-dc
-
-switch.tradfri_plug_08_power:
-  friendly_name: Fan Lamp Tree
-  icon: mdi:wall-sconce-flat
-sensor.tradfri_plug_08_linkquality:
-  friendly_name: Fan Lamp Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_08_update:
-  friendly_name: Fan Lamp Update
-
-switch.tradfri_plug_09_power:
-  friendly_name: Lamina Power
-  icon: mdi:tablet-dashboard
-sensor.tradfri_plug_09_linkquality:
-  friendly_name: Lamina Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_09_update:
-  friendly_name: Lamina Update
-
-
-# Living room
-light.livingroom:
-  friendly_name: Living room
-  icon: mdi:ceiling-light
-switch.light_livingroom:
-  friendly_name: Light Living room
-  icon: mdi:light-switch
-light.tradfri_plug_01_light:
-  friendly_name: Study Light
-  icon: mdi:lamp
-sensor.tradfri_plug_01_linkquality:
-  friendly_name: Study Light Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_01_update:
-  friendly_name: Study Light Update
-switch.tradfri_plug_02_power:
-  friendly_name: Monitor
-  icon: mdi:desktop-tower-monitor
-sensor.tradfri_plug_02_linkquality:
-  friendly_name: Monitor Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_02_update:
-  friendly_name: Monitor Update
-
-sensor.tradfri_button_01_action:
-  friendly_name: Livingroom Button
-sensor.tradfri_button_01_battery:
-  friendly_name: Livingroom Button Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.tradfri_button_01_linkquality:
-  friendly_name: Livingroom Button Link
-  device_class: signal_strength
-binary_sensor.tradfri_button_01_update:
-  friendly_name: Livingroom Button Update
+binary_sensor.tradfri_led_rgb_03_update:
+  friendly_name: Bathroom Update
 
 light.tradfri_led_rgb_04_light:
   friendly_name: Living Room Centre 1
@@ -450,26 +131,343 @@ sensor.tradfri_led_rgb_05_linkquality:
 binary_sensor.tradfri_led_rgb_05_update:
   friendly_name: Living Room Centre 2 Update
 
-switch.fibaro_switch_01_switch:
-  friendly_name: Jain10
+## White
+light.tradfri_led_white_01_light:
+  friendly_name: Kitchen - Sink
+  icon: mdi:ceiling-light
+sensor.tradfri_led_white_01_linkquality:
+  friendly_name: Kitchen - Sink Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_white_01_update:
+  friendly_name: itchen - Sink Update
+
+light.tradfri_led_white_02_light:
+  friendly_name: Kitchen - Stove
+  icon: mdi:ceiling-light
+sensor.tradfri_led_white_02_linkquality:
+  friendly_name: Kitchen - Stove Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_white_02_update:
+  friendly_name: Kitchen - Stove Update
+
+light.tradfri_led_white_03_light:
+  friendly_name: Store
+  icon: mdi:ceiling-light
+sensor.tradfri_led_white_03_linkquality:
+  friendly_name: Store Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_white_03_update:
+  friendly_name: Store Update
+
+## GU10
+light.tradfri_led_gu10_01_light:
+  friendly_name: Gallery 01
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_01_linkquality:
+  friendly_name: Gallery 01 Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_01_update:
+  friendly_name: Gallery 01 Update
+
+light.tradfri_led_gu10_02_light:
+  friendly_name: Gallery 02
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_02_linkquality:
+  friendly_name: Gallery 02 Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_02_update:
+  friendly_name: Gallery 02 Update
+
+light.tradfri_led_gu10_03_light:
+  friendly_name: Gallery 03
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_03_linkquality:
+  friendly_name: Gallery 03 Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_03_update:
+  friendly_name: Gallery 03 Update
+
+light.tradfri_led_gu10_04_light:
+  friendly_name: Gallery 04
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_04_linkquality:
+  friendly_name: Gallery 04 Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_04_update:
+  friendly_name: Gallery 04 Update
+
+light.tradfri_led_gu10_05_light:
+  friendly_name: Bedroom - Ceilng South
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_05_linkquality:
+  friendly_name: Bedroom - Ceilng South Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_05_update:
+  friendly_name: Bedroom - Ceilng South Update
+
+light.tradfri_led_gu10_06_light:
+  friendly_name: Bedroom - Ceilng North
+  icon: mdi:spotlight-beam
+sensor.tradfri_led_gu10_06_linkquality:
+  friendly_name: Bedroom - Ceilng North Link
+  device_class: signal_strength
+binary_sensor.tradfri_led_gu10_06_update:
+  friendly_name: Bedroom - Ceilng North Update
+
+
+
+# IKEA Motion Triggers
+binary_sensor.tradfri_motion_01_occupancy:
+  friendly_name: Bathroom Motion Wall
+sensor.tradfri_motion_01_battery:
+  friendly_name: Bathroom Motion Wall Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_motion_01_linkquality:
+  friendly_name: Bathroom Motion Wall Link
+  device_class: signal_strength
+binary_sensor.tradfri_motion_01_update:
+  friendly_name: Bathroom Motion Wall Update
+
+
+
+# IKEA Trådfri Buttons
+## On/Off
+sensor.tradfri_button_01_action:
+  friendly_name: Livingroom Button
+sensor.tradfri_button_01_battery:
+  friendly_name: Livingroom Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_01_linkquality:
+  friendly_name: Livingroom Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_01_update:
+  friendly_name: Livingroom Button Update
+
+sensor.tradfri_button_02_action:
+  friendly_name: Bathroom Button
+sensor.tradfri_button_02_battery:
+  friendly_name: Bathroom Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_02_linkquality:
+  friendly_name: Bathroom Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_02_update:
+  friendly_name: Bathroom Button Update
+
+sensor.tradfri_button_03_action:
+  friendly_name: Lights Button
+sensor.tradfri_button_03_battery:
+  friendly_name: Lights Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_03_linkquality:
+  friendly_name: Lights Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_03_update:
+  friendly_name: Lights Button Update
+
+## 4-WAY
+sensor.tradfri_switch_01_action:
+  friendly_name: Kitchen Switch
+sensor.tradfri_switch_01_battery:
+  friendly_name: Kitchen Switch Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_switch_01_linkquality:
+  friendly_name: Kitchen Switch Link
+  device_class: signal_strength
+binary_sensor.tradfri_switch_01_update:
+  friendly_name: Kitchen Switch Update
+
+sensor.tradfri_switch_02_action:
+  friendly_name: Gallery Switch
+sensor.tradfri_switch_02_battery:
+  friendly_name: Gallery Switch Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_switch_02_linkquality:
+  friendly_name: Gallery Switch Link
+  device_class: signal_strength
+binary_sensor.tradfri_switch_02_update:
+  friendly_name: Gallery Switch Update
+
+
+
+# Samsung SmartThings
+## Motion
+binary_sensor.smartthings_motion_temp_01_occupancy:
+  friendly_name: Gallery Motion
+  device_class: motion
+sensor.smartthings_motion_temp_01_temperature:
+  friendly_name: Gallery Temp
+  device_class: temperature
+  unit_of_measurement: "°C"
+sensor.smartthings_motion_temp_01_battery:
+  friendly_name: Gallery Motion Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.smartthings_motion_temp_01_linkquality:
+  friendly_name: Gallery Motion Link
+  device_class: signal_strength
+
+binary_sensor.smartthings_motion_temp_02_occupancy:
+  friendly_name: Kitchen Motion
+  device_class: motion
+sensor.smartthings_motion_temp_02_temperature:
+  friendly_name: Kitchen Temp
+  device_class: temperature
+  unit_of_measurement: "°C"
+sensor.smartthings_motion_temp_02_battery:
+  friendly_name: Kitchen Motion Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.smartthings_motion_temp_02_linkquality:
+  friendly_name: Kitchen Motion Link
+  device_class: signal_strength
+
+
+
+# Aqara Door
+binary_sensor.aqara_sensor_switch_01_contact:
+  friendly_name: Store Door
+  device_class: door
+sensor.aqara_sensor_switch_01_battery:
+  friendly_name: Store Door Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.aqara_sensor_switch_01_linkquality:
+  friendly_name: Store Door Link
+  device_class: signal_strength
+
+
+
+# Aeotec Multisensor
+binary_sensor.aeotec_sensor6_01_motion:
+  friendly_name: Bathroom Motion
+  device_class: motion
+binary_sensor.aeotec_sensor6_01_vibration:
+  friendly_name: Bathroom Vibration
+  device_class: vibration
+sensor.aeotec_sensor6_01_motion_vibration:
+  friendly_name: Bathroom Motion & Vibration
+  hidden: true
+sensor.aeotec_sensor6_01_temperature:
+  friendly_name: Bathroom Temperature
+  device_class: temperature
+  unit_of_measurement: "°C"
+sensor.aeotec_sensor6_01_humidity:
+  friendly_name: Bathroom Humidity
+  device_class: humidity
+  icon: mdi:water-percent
+sensor.aeotec_sensor6_01_luminance:
+  friendly_name: Bathroom Luminance
+  device_class: illuminance
+  icon: mdi:brightness-5
+sensor.aeotec_sensor6_01_battery:
+  friendly_name: Bathroom Sensor Battery
+  device_class: battery
+  unit_of_measurement: "%"
+
+
+
+# IKEA Trådfri Plugs
+## Plugs
+light.tradfri_plug_01_light:
+  friendly_name: Study Light
+  icon: mdi:lamp
+sensor.tradfri_plug_01_linkquality:
+  friendly_name: Study Light Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_01_update:
+  friendly_name: Study Light Update
+
+switch.tradfri_plug_02_power:
+  friendly_name: Monitor
   icon: mdi:desktop-tower-monitor
-sensor.fibaro_switch_01_power:
-  friendly_name: Jain10 Power
-  icon: mdi:flash
-sensor.fibaro_switch_01_energy:
-  friendly_name: Jain10 Energy
-  icon: mdi:power-plug
+sensor.tradfri_plug_02_linkquality:
+  friendly_name: Monitor Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_02_update:
+  friendly_name: Monitor Update
 
-binary_sensor.fibaro_switch_02_switch:
-  friendly_name: Jain56
-  icon: mdi:server
-sensor.fibaro_switch_02_power:
-  friendly_name: Jain56 Power
-  icon: mdi:flash
-sensor.fibaro_switch_02_energy:
-  friendly_name: Jain56 Energy
-  icon: mdi:power-plug
+switch.tradfri_plug_03_power:
+  friendly_name: Decoration Lights Bedroom Curtain
+  icon: mdi:string-lights
+sensor.tradfri_plug_03_linkquality:
+  friendly_name: Decoration Lights Bedroom Curtain Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_03_update:
+  friendly_name: Decoration Lights Bedroom Curtain Update
 
+switch.tradfri_plug_04_power:
+  friendly_name: Decoration Livingroom Curtain Lights
+  icon: mdi:string-lights
+sensor.tradfri_plug_04_linkquality:
+  friendly_name: Decoration Lights Livingroom Curtain Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_04_update:
+  friendly_name: Decoration Lights Livingroom Curtain Update
+
+switch.tradfri_plug_05_power:
+  friendly_name: Decoration Livingroom Tree Lights
+  icon: mdi:pine-tree
+sensor.tradfri_plug_05_linkquality:
+  friendly_name: Decoration Lights Livingroom Tree Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_05_update:
+  friendly_name: Decoration Lights Livingroom Tree Update
+
+switch.tradfri_plug_06_power:
+  friendly_name: Decoration Lights Bedroom Tree
+  icon: mdi:palm-tree
+sensor.tradfri_plug_06_linkquality:
+  friendly_name: Decoration Lights Bedroom Tree Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_06_update:
+  friendly_name: Decoration Lights Bedroom Tree Update
+
+switch.tradfri_plug_07_power:
+  friendly_name: Asus A810 Power
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_07_linkquality:
+  friendly_name: Asus A810 Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_07_update:
+  friendly_name: Asus A810 Update
+
+switch.tradfri_plug_08_power:
+  friendly_name: Fan Lamp Tree
+  icon: mdi:wall-sconce-flat
+sensor.tradfri_plug_08_linkquality:
+  friendly_name: Fan Lamp Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_08_update:
+  friendly_name: Fan Lamp Update
+
+switch.tradfri_plug_09_power:
+  friendly_name: Lamina Power
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_09_linkquality:
+  friendly_name: Lamina Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_09_update:
+  friendly_name: Lamina Update
+
+switch.tradfri_plug_10_power:
+  friendly_name: Acer W600 Plug
+  icon: mdi:tablet-dashboard
+sensor.tradfri_plug_10_linkquality:
+  friendly_name: Acer W600 Link
+  device_class: signal_strength
+binary_sensor.tradfri_plug_10_update:
+  friendly_name: Acer W600 Update
+
+
+
+# Telldus
 switch.telldus_switch_01_switch:
   friendly_name: TV45
   icon: mdi:television-classic
@@ -484,6 +482,22 @@ sensor.telldus_switch_01_voltage:
   icon: mdi:current-ac
 sensor.telldus_switch_01_current:
   friendly_name: TV45 Current
+  icon: mdi:current-dc
+
+switch.telldus_switch_02_switch:
+  friendly_name: Dishwasher
+  icon: mdi:dishwasher
+sensor.telldus_switch_02_power:
+  friendly_name: Dishwasher Power
+  icon: mdi:flash
+sensor.telldus_switch_02_energy:
+  friendly_name: Dishwasher Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_02_voltage:
+  friendly_name: Dishwasher Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_02_current:
+  friendly_name: Dishwasher Current
   icon: mdi:current-dc
 
 binary_sensor.telldus_switch_03_switch:
@@ -522,6 +536,22 @@ sensor.telldus_switch_04_current:
   friendly_name: Misc Current
   icon: mdi:current-dc
 
+switch.telldus_switch_05_switch:
+  friendly_name: Toaster
+  icon: mdi:toaster
+sensor.telldus_switch_05_power:
+  friendly_name: Toaster Power
+  icon: mdi:flash
+sensor.telldus_switch_05_energy:
+  friendly_name: Toaster Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_05_voltage:
+  friendly_name: Toaster Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_05_current:
+  friendly_name: Toaster Current
+  icon: mdi:current-dc
+
 switch.telldus_switch_06_switch:
   friendly_name: Fan Lamp
   icon: mdi:ceiling-light
@@ -538,69 +568,77 @@ sensor.telldus_switch_06_current:
   friendly_name: Fan Lamp Current
   icon: mdi:current-dc
 
-switch.tradfri_plug_04_power:
-  friendly_name: Decoration Livingroom Curtain Lights
-  icon: mdi:string-lights
-sensor.tradfri_plug_04_linkquality:
-  friendly_name: Decoration Lights Livingroom Curtain Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_04_update:
-  friendly_name: Decoration Lights Livingroom Curtain Update
-
-switch.tradfri_plug_05_power:
-  friendly_name: Decoration Livingroom Tree Lights
-  icon: mdi:pine-tree
-sensor.tradfri_plug_05_linkquality:
-  friendly_name: Decoration Lights Livingroom Tree Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_05_update:
-  friendly_name: Decoration Lights Livingroom Tree Update
-
-switch.tradfri_plug_10_power:
-  friendly_name: Acer W600 Plug
-  icon: mdi:tablet-dashboard
-sensor.tradfri_plug_10_linkquality:
-  friendly_name: Acer W600 Link
-  device_class: signal_strength
-binary_sensor.tradfri_plug_10_update:
-  friendly_name: Acer W600 Update
-
-
-# Store
-light.store:
-  friendly_name: Store
-  icon: mdi:ceiling-light
-switch.light_store:
-  friendly_name: Light Store
-  icon: mdi:light-switch
-binary_sensor.light_trigger_store:
-  friendly_name: Store Light Trigger
+switch.telldus_switch_07_switch:
+  friendly_name: Maker
+  icon: mdi:printer-3d-nozzle
+sensor.telldus_switch_07_power:
+  friendly_name: Maker Power
   icon: mdi:flash
-light.tradfri_led_white_03_light:
-  friendly_name: Store
-  icon: mdi:ceiling-light
-sensor.tradfri_led_white_03_linkquality:
-  friendly_name: Store Link
-  device_class: signal_strength
-binary_sensor.tradfri_led_white_03_update:
-  friendly_name: Store Update
-
-binary_sensor.aqara_sensor_switch_01_contact:
-  friendly_name: Store Door
-  device_class: door
-sensor.aqara_sensor_switch_01_battery:
-  friendly_name: Store Door Battery
-  device_class: battery
-  unit_of_measurement: "%"
-sensor.aqara_sensor_switch_01_linkquality:
-  friendly_name: Store Door Link
-  device_class: signal_strength
+sensor.telldus_switch_07_energy:
+  friendly_name: Maker Energy
+  icon: mdi:power-plug
+sensor.telldus_switch_07_voltage:
+  friendly_name: Maker Voltage
+  icon: mdi:current-ac
+sensor.telldus_switch_07_current:
+  friendly_name: Maker Current
+  icon: mdi:current-dc
 
 
+# Fibaro Plugs
+## Switch
+switch.fibaro_switch_01_switch:
+  friendly_name: Jain10
+  icon: mdi:desktop-tower-monitor
+sensor.fibaro_switch_01_power:
+  friendly_name: Jain10 Power
+  icon: mdi:flash
+sensor.fibaro_switch_01_energy:
+  friendly_name: Jain10 Energy
+  icon: mdi:power-plug
 
-# Location
-person.arnav:
-  hidden: true
+binary_sensor.fibaro_switch_02_switch:
+  friendly_name: Jain56
+  icon: mdi:server
+sensor.fibaro_switch_02_power:
+  friendly_name: Jain56 Power
+  icon: mdi:flash
+sensor.fibaro_switch_02_energy:
+  friendly_name: Jain56 Energy
+  icon: mdi:power-plug
+
+
+
+
+# TP-Link Plugs
+## Switch
+switch.tplink_plug_01:
+  friendly_name: Fridge
+  icon: mdi:fridge
+sensor.tplink_plug_01_amps:
+  icon: mdi:current-dc
+sensor.tplink_plug_01_watts:
+  icon: mdi:flash
+sensor.tplink_plug_01_volts:
+  icon: mdi:current-ac
+sensor.tplink_plug_01_today_kwh:
+  icon: mdi:power-plug
+sensor.tplink_plug_01_total_kwh:
+  icon: mdi:power-plug
+
+switch.tplink_plug_02:
+  friendly_name: Microwave
+  icon: mdi:microwave
+sensor.tplink_plug_02_amps:
+  icon: mdi:current-dc
+sensor.tplink_plug_02_watts:
+  icon: mdi:flash
+sensor.tplink_plug_02_volts:
+  icon: mdi:current-ac
+sensor.tplink_plug_02_today_kwh:
+  icon: mdi:power-plug
+sensor.tplink_plug_02_total_kwh:
+  icon: mdi:power-plug
 
 
 
