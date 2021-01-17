@@ -65,8 +65,8 @@ mqtt:
 tplink:
   discovery: false
   switch:
-    - host: tplink-plug-01.jain.lan
-    - host: tplink-plug-02.jain.lan
+    - host: iot05.jain.lan
+    - host: iot06.jain.lan
 
 prometheus:
   namespace: hass

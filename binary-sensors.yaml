@@ -101,12 +101,12 @@
 
 # Connected Devices
 - platform: ping
-  host: RT242.jain.lan
+  host: NET01.jain.lan
   name: ping_asus_router242
   count: 1
   scan_interval: 30
 - platform: ping
-  host: jain78.jain.lan
+  host: SRV78.jain.lan
   name: ping_jain78
   count: 1
   scan_interval: 30
@@ -134,12 +134,12 @@
   name: ping_jain70
   count: 1
 - platform: ping
-  host: stolx0831.jain.lan
+  host: com49.jain.lan
   name: ping_sas_stolx0831
   count: 1
 
 - platform: ping
-  host: octopi.jain.lan
+  host: iot02.jain.lan
   name: ping_octopi
   count: 1
 - platform: ping
@@ -152,36 +152,36 @@
   count: 1
 
 - platform: ping
-  host: MotoG6Plus.jain.lan
+  host: mob05.jain.lan
   name: ping_motorola_g6_plus
   count: 1
 - platform: ping
-  host: XperiaZR.jain.lan
+  host: mob04.jain.lan
   name: ping_sony_xperia_zr
   count: 1
 - platform: ping
-  host: Tablet35.jain.lan
+  host: mob07.jain.lan
   name: ping_asus_a810
   count: 1
 - platform: ping
-  host: nexus10.jain.lan
+  host: mob23.jain.lan
   name: ping_google_nexus_10
   count: 1
 - platform: ping
-  host: Kindle65.jain.lan
+  host: mob04.jain.lan
   name: ping_amazon_kindle_fire_7
   count: 1
 
 - platform: ping
-  host: ChromeAudioBedroom.jain.lan
+  host: med07.jain.lan
   name: ping_chromecast_audio_bedroom
   count: 1
 - platform: ping
-  host: ChromeAudioLivingroom.jain.lan
+  host: med08.jain.lan
   name: ping_chromecast_audio_livingroom
   count: 1
 - platform: ping
-  host: Cast50.jain.lan
+  host: med03.jain.lan
   name: ping_chromecast_video
   count: 1
 
