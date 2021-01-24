@@ -1,13 +1,13 @@
-title: Microwave
-path: kitchen-microwave
-icon: 'mdi:microwave'
+title: Toaster
+path: telldus-plug-05
+icon: 'mdi:toaster'
 visible: false
 
 badges: []
 
 cards:
   - type: entity-button
-    entity: switch.tplink_plug_02
+    entity: switch.telldus_switch_05_switch
     show_icon: true
     show_name: false
     tap_action:
@@ -18,50 +18,42 @@ cards:
   - type: glance
     show_name: false
     entities:
-      - entity: sensor.tplink_plug_02_watts
-      - entity: sensor.tplink_plug_02_today_kwh
-      - entity: sensor.tplink_plug_02_total_kwh
-      - entity: sensor.tplink_plug_02_volts
-      - entity: sensor.tplink_plug_02_amps
+      - entity: sensor.telldus_switch_05_power
+      - entity: sensor.telldus_switch_05_energy
+      - entity: sensor.telldus_switch_05_voltage
+      - entity: sensor.telldus_switch_05_current
 
   - type: history-graph
     title: Power Usage 60m
     refresh_interval: 0
     hours_to_show: 1
     entities:
-      - entity: sensor.tplink_plug_02_watts
+      - entity: sensor.telldus_switch_05_power
 
   - type: history-graph
     title: Power Usage
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.tplink_plug_02_watts
-
-  - type: history-graph
-    title: Energy (Today)
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.tplink_plug_02_today_kwh
+      - entity: sensor.telldus_switch_05_power
 
   - type: history-graph
     title: Energy
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.tplink_plug_02_total_kwh
+      - entity: sensor.telldus_switch_05_energy
 
   - type: history-graph
     title: Voltage
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.tplink_plug_02_volts
+      - entity: sensor.telldus_switch_05_voltage
 
   - type: history-graph
     title: Current
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.tplink_plug_02_amps
+      - entity: sensor.telldus_switch_05_current

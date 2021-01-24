@@ -49,12 +49,14 @@ cards:
     detail: 2
 
   - type: glance
-    show_name: false
+    show_name: true
     show_state: false
     entities:
     - entity: switch.tradfri_plug_07_power
+      name: Asus A810
       tap_action:
-        action: toggle
+        action: more-info
     - entity: switch.tradfri_plug_09_power
+      name: Lamina
       tap_action:
-        action: toggle
+        action: more-info

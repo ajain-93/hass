@@ -32,7 +32,7 @@ cards:
       - entity: switch.tradfri_plug_08_power
         name: Fan Lamp
         tap_action:
-          action: toggle
+          action: more-info
         hold_action:
           action: more-info
 
@@ -48,16 +48,16 @@ cards:
       - entity: switch.tplink_plug_01
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-fridge
+          navigation_path: /lovelace/tplink-plug-01
       - entity: switch.tplink_plug_02
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-microwave
+          navigation_path: /lovelace/tplink-plug-02
       - entity: switch.telldus_switch_02_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-dishwasher
+          navigation_path: /lovelace/telldus-plug-02
       - entity: switch.telldus_switch_05_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-toaster
+          navigation_path: /lovelace/telldus-plug-05

@@ -1,13 +1,13 @@
-title: Misc Appliance
-path: livingroom-misc
-icon: 'mdi:power-socket-eu'
+title: TV
+path: telldus-plug-01
+icon: 'mdi:television-classic'
 visible: false
 
 badges: []
 
 cards:
   - type: entity-button
-    entity: switch.telldus_switch_04_switch
+    entity: switch.telldus_switch_01_switch
     show_icon: true
     show_name: false
     tap_action:
@@ -18,42 +18,42 @@ cards:
   - type: glance
     show_name: false
     entities:
-      - entity: sensor.telldus_switch_04_power
-      - entity: sensor.telldus_switch_04_energy
-      - entity: sensor.telldus_switch_04_voltage
-      - entity: sensor.telldus_switch_04_current
+      - entity: sensor.telldus_switch_01_power
+      - entity: sensor.telldus_switch_01_energy
+      - entity: sensor.telldus_switch_01_voltage
+      - entity: sensor.telldus_switch_01_current
 
   - type: history-graph
-    title: Power Usage 60m
     refresh_interval: 0
     hours_to_show: 1
+    title: Power Usage 60m
     entities:
-      - entity: sensor.telldus_switch_04_power
+      - entity: sensor.telldus_switch_01_power
 
   - type: history-graph
-    title: Power Usage
     refresh_interval: 0
     hours_to_show: 24
+    title: Power Usage
     entities:
-      - entity: sensor.telldus_switch_04_power
+      - entity: sensor.telldus_switch_01_power
 
   - type: history-graph
     title: Energy
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_04_energy
+      - entity: sensor.telldus_switch_01_energy
 
   - type: history-graph
     title: Voltage
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_04_voltage
+      - entity: sensor.telldus_switch_01_voltage
 
   - type: history-graph
     title: Current
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_04_current
+      - entity: sensor.telldus_switch_01_current

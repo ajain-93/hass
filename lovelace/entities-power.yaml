@@ -12,11 +12,11 @@ cards:
       - entity: switch.tplink_plug_01
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-fridge
+          navigation_path: /lovelace/tplink-plug-01
       - entity: switch.tplink_plug_02
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-microwave
+          navigation_path: /lovelace/tplink-plug-02
 
   - type: glance
     title: Fibaro
@@ -25,11 +25,11 @@ cards:
       - entity: switch.fibaro_switch_01_switch
         tap_action:
           action: navigate
-          navigation_path: livingroom-jain10
+          navigation_path: fibaro-plug-01
       - entity: binary_sensor.fibaro_switch_02_switch
         tap_action:
           action: navigate
-          navigation_path: livingroom-jain56
+          navigation_path: fibaro-plug-02
 
   - type: glance
     title: Telldus
@@ -38,31 +38,31 @@ cards:
       - entity: switch.telldus_switch_01_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/livingroom-tv
+          navigation_path: /lovelace/telldus-plug-01
       - entity: switch.telldus_switch_02_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-dishwasher
+          navigation_path: /lovelace/telldus-plug-02
       - entity: binary_sensor.telldus_switch_03_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/livingroom-studytable
+          navigation_path: /lovelace/telldus-plug-03
       - entity: switch.telldus_switch_04_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/livingroom-misc
+          navigation_path: /lovelace/telldus-plug-04
       - entity: switch.telldus_switch_05_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-toaster
+          navigation_path: /lovelace/telldus-plug-05
       - entity: switch.telldus_switch_06_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/kitchen-fanlamp
+          navigation_path: /lovelace/telldus-plug-06
       - entity: switch.telldus_switch_07_switch
         tap_action:
           action: navigate
-          navigation_path: /lovelace/livingroom-maker
+          navigation_path: /lovelace/telldus-plug-07
 
   - type: glance
     title: Trådfri

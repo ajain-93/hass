@@ -27,19 +27,21 @@ views:
   # - !include lovelace/floorplan-home-lights.yaml
   # - !include lovelace/floorplan-bedroom.yaml
 
-  ## Kitchen
-  - !include lovelace/power-kitchen-fridge.yaml
-  - !include lovelace/power-kitchen-microwave.yaml
-  - !include lovelace/power-kitchen-toaster.yaml
-  - !include lovelace/power-kitchen-dishwasher.yaml
-  - !include lovelace/power-kitchen-fanlamp.yaml
-  ## Living Room
-  - !include lovelace/power-livingroom-jain10.yaml
-  - !include lovelace/power-livingroom-jain56.yaml
-  - !include lovelace/power-livingroom-tv.yaml
-  - !include lovelace/power-livingroom-studytable.yaml
-  - !include lovelace/power-livingroom-misc.yaml
-  - !include lovelace/power-livingroom-maker.yaml
+  #plugs
+  ## TP-Link
+  - !include lovelace/power-tplink-plug-01.yaml
+  - !include lovelace/power-tplink-plug-02.yaml
+  ## Fibaro
+  - !include lovelace/power-fibaro-plug-01.yaml
+  - !include lovelace/power-fibaro-plug-02.yaml
+  ## Telldus
+  - !include lovelace/power-telldus-plug-01.yaml
+  - !include lovelace/power-telldus-plug-02.yaml
+  - !include lovelace/power-telldus-plug-03.yaml
+  - !include lovelace/power-telldus-plug-04.yaml
+  - !include lovelace/power-telldus-plug-05.yaml
+  - !include lovelace/power-telldus-plug-06.yaml
+  - !include lovelace/power-telldus-plug-07.yaml
 
   # Details
   - !include lovelace/detail-printer-ender3.yaml

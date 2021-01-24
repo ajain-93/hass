@@ -1,13 +1,13 @@
-title: Dishwasher
-path: kitchen-dishwasher
-icon: 'mdi:dishwasher'
+title: Maker
+path: telldus-plug-07
+icon: mdi:printer-3d-nozzle
 visible: false
 
 badges: []
 
 cards:
   - type: entity-button
-    entity: switch.telldus_switch_02_switch
+    entity: switch.telldus_switch_07_switch
     show_icon: true
     show_name: false
     tap_action:
@@ -18,43 +18,43 @@ cards:
   - type: glance
     show_name: false
     entities:
-      - entity: sensor.telldus_switch_02_power
-      - entity: sensor.telldus_switch_02_energy
-      - entity: sensor.telldus_switch_02_voltage
-      - entity: sensor.telldus_switch_02_current
+      - entity: sensor.telldus_switch_07_power
+      - entity: sensor.telldus_switch_07_energy
+      - entity: sensor.telldus_switch_07_voltage
+      - entity: sensor.telldus_switch_07_current
 
   - type: history-graph
     title: Power Usage 60m
     refresh_interval: 0
     hours_to_show: 1
     entities:
-      - entity: sensor.telldus_switch_02_power
+      - entity: sensor.telldus_switch_07_power
 
   - type: history-graph
     title: Power Usage
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_02_power
+      - entity: sensor.telldus_switch_07_power
 
   - type: history-graph
     title: Energy
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_02_energy
+      - entity: sensor.telldus_switch_07_energy
 
   - type: history-graph
     title: Voltage
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_02_voltage
+      - entity: sensor.telldus_switch_07_voltage
 
   - type: history-graph
     title: Current
     refresh_interval: 0
     hours_to_show: 24
     entities:
-      - entity: sensor.telldus_switch_02_current
+      - entity: sensor.telldus_switch_07_current
 
