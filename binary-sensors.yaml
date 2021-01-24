@@ -218,6 +218,14 @@
       value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'update_available') }}"
     tradfri_button_02_update:
       value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'update_available') }}"
+    tradfri_button_03_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_03_action', 'update_available') }}"
+    tradfri_button_04_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_04_action', 'update_available') }}"
+    tradfri_button_05_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'update_available') }}"
+    tradfri_button_06_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'update_available') }}"
 # Door Sensors
 # N/A
 # Motion Sensors

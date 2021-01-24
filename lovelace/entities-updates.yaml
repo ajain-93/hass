@@ -30,15 +30,29 @@ cards:
         name: Acer W600
 
   - type: glance
-    title: Remotes
+    title: Remotes - On/Off
+    columns: 6
+    entities:
+      - entity: binary_sensor.tradfri_button_01_update
+        name: Livingroom
+      - entity: binary_sensor.tradfri_button_02_update
+        name: Bathroom
+      - entity: binary_sensor.tradfri_button_03_update
+        name: All
+      - entity: binary_sensor.tradfri_button_04_update
+        name: Study Light
+      - entity: binary_sensor.tradfri_button_05_update
+        name: Bedroom Bed
+      - entity: binary_sensor.tradfri_button_06_update
+        name: Bedroom Ceiling
+
+
+  - type: glance
+    title: Remotes 4-way
     entities:
       - entity: binary_sensor.tradfri_switch_01_update
         name: Kitchen
       - entity: binary_sensor.tradfri_switch_02_update
-        name: Bathroom
-      - entity: binary_sensor.tradfri_button_01_update
-        name: Livingroom
-      - entity: binary_sensor.tradfri_button_02_update
         name: Bathroom
 
   - type: glance

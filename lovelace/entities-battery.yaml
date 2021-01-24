@@ -31,18 +31,35 @@ cards:
         icon: 'mdi:table-chair'
 
   - type: glance
-    title: Buttons
+    title: Remotes - On/Off
+    columns: 6
     entities:
-      - entity: sensor.tradfri_switch_02_battery
-        name: Bathroom
-        icon: 'mdi:shower'
-      - entity: sensor.tradfri_switch_01_battery
-        name: Kitchen
-        icon: 'mdi:table-chair'
       - entity: sensor.tradfri_button_01_battery
         name: Livingroom
         icon: 'mdi:sofa'
       - entity: sensor.tradfri_button_02_battery
         name: Livingroom
         icon: 'mdi:shower'
+      - entity: sensor.tradfri_button_03_battery
+        name: All
+        icon: 'mdi:home-lightbulb'
+      - entity: sensor.tradfri_button_04_battery
+        name: Study Light
+        icon: 'mdi:wall-sconce-flat'
+      - entity: sensor.tradfri_button_05_battery
+        name: Bedroom Bed
+        icon: 'mdi:lamp'
+      - entity: sensor.tradfri_button_06_battery
+        name: Bedroom Ceiling
+        icon: 'mdi:spotlight'
+
+  - type: glance
+    title: Remotes - 4-way
+    entities:
+      - entity: sensor.tradfri_switch_02_battery
+        name: Gallery
+        icon: 'mdi:spotlight'
+      - entity: sensor.tradfri_switch_01_battery
+        name: Kitchen
+        icon: 'mdi:table-chair'
 

@@ -269,6 +269,42 @@ sensor.tradfri_button_03_linkquality:
 binary_sensor.tradfri_button_03_update:
   friendly_name: Lights Button Update
 
+sensor.tradfri_button_04_action:
+  friendly_name: Study Light Button
+sensor.tradfri_button_04_battery:
+  friendly_name: Study Light Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_04_linkquality:
+  friendly_name: Study Light Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_04_update:
+  friendly_name: Study Light Button Update
+
+sensor.tradfri_button_05_action:
+  friendly_name: Bedroom Bed Button
+sensor.tradfri_button_05_battery:
+  friendly_name: Bedroom Bed Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_05_linkquality:
+  friendly_name: Bedroom Bed Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_05_update:
+  friendly_name: Bedroom Bed Button Update
+
+sensor.tradfri_button_06_action:
+  friendly_name: Bedroom Ceiling Button
+sensor.tradfri_button_06_battery:
+  friendly_name: Bedroom Ceiling Button Battery
+  device_class: battery
+  unit_of_measurement: "%"
+sensor.tradfri_button_06_linkquality:
+  friendly_name: Bedroom Ceiling Button Link
+  device_class: signal_strength
+binary_sensor.tradfri_button_06_update:
+  friendly_name: Bedroom Ceiling Button Update
+
 ## 4-WAY
 sensor.tradfri_switch_01_action:
   friendly_name: Kitchen Switch

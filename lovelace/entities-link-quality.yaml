@@ -56,20 +56,37 @@ cards:
         icon: mdi:tablet-dashboard
 
   - type: glance
-    title: Remotes
+    title: Remotes - On/Off
+    columns: 6
+    entities:
+      - entity: sensor.tradfri_button_01_linkquality
+        name: Livingroom
+        icon: mdi:sofa
+      - entity: sensor.tradfri_button_02_linkquality
+        name: Bathroom
+        icon: mdi:shower
+      - entity: sensor.tradfri_button_03_linkquality
+        name: All
+        icon: mdi:home-lightbulb
+      - entity: sensor.tradfri_button_04_linkquality
+        name: Study Light
+        icon: mdi:wall-sconce-flat
+      - entity: sensor.tradfri_button_05_linkquality
+        name: Bedroom Bed
+        icon: mdi:lamp
+      - entity: sensor.tradfri_button_06_linkquality
+        name: Bedroom Ceiling
+        icon: mdi:spotlight
+
+  - type: glance
+    title: Remotes 4-way
     entities:
       - entity: sensor.tradfri_switch_01_linkquality
         name: Kitchen
-        icon: mdi:gesture-double-tap
+        icon: mdi:table-chair
       - entity: sensor.tradfri_switch_02_linkquality
         name: Bathroom
-        icon: mdi:gesture-double-tap
-      - entity: sensor.tradfri_button_01_linkquality
-        name: Livingroom
-        icon: mdi:gesture-double-tap
-      - entity: sensor.tradfri_button_02_linkquality
-        name: Bathroom
-        icon: mdi:gesture-double-tap
+        icon: mdi:table-chair
 
   - type: glance
     title: E27 RGB Lights

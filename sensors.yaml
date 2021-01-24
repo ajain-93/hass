@@ -625,6 +625,27 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action }}"
   icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_04_action
+  state_topic: "zigbee2mqtt/tradfri_button_04"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_04"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_04_action
+  state_topic: "zigbee2mqtt/tradfri_button_05"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_05"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_06_action
+  state_topic: "zigbee2mqtt/tradfri_button_06"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_06"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
 
 
 
@@ -687,6 +708,14 @@
       value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'linkquality') }}"
     tradfri_button_02_linkquality:
       value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'linkquality') }}"
+    tradfri_button_03_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_03_action', 'linkquality') }}"
+    tradfri_button_04_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_04_action', 'linkquality') }}"
+    tradfri_button_05_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'linkquality') }}"
+    tradfri_button_06_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'linkquality') }}"
 # Door Sensors
     aqara_sensor_switch_01_linkquality:
       value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'linkquality') }}"
@@ -743,6 +772,14 @@
       value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'battery') }}"
     tradfri_button_02_battery:
       value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'battery') }}"
+    tradfri_button_03_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_03_action', 'battery') }}"
+    tradfri_button_04_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_04_action', 'battery') }}"
+    tradfri_button_05_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'battery') }}"
+    tradfri_button_06_battery:
+      value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'battery') }}"
 # Door Sensors
     aqara_sensor_switch_01_battery:
       value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'battery') }}"
