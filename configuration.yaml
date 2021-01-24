@@ -91,3 +91,14 @@ octoprint:
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
+
+telegram_bot:
+  - platform: broadcast
+    api_key: !secret telegram_bot_api_key
+    allowed_chat_ids:
+      - !secret telegram_bot_chat_id
+
+notify:
+  - platform: telegram
+    name: telegram_arnav
+    chat_id: !secret telegram_bot_chat_id
