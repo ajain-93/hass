@@ -9,6 +9,10 @@ binary_sensor.updater:
   friendly_name: HASS Update
   icon: mdi:cellphone-arrow-down
 
+binary_sensor.battery_bicycle_charging:
+  friendly_name: Bicycle Battery Charging
+  device_class: battery_charging
+  icon: mdi:battery-charging-100
 
 
 # Lights

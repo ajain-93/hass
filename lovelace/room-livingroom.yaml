@@ -49,6 +49,9 @@ cards:
         hold_action:
           action: more-info
 
+  - type: entity
+    entity: binary_sensor.battery_bicycle_charging
+
   - type: glance
     title: Devices
     show_state: false
@@ -69,6 +72,11 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/telldus-plug-01
+      - entity: switch.telldus_switch_06_switch
+        name: Battery
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/telldus-plug-06
       - entity: binary_sensor.telldus_switch_03_switch
         name: Table
         tap_action:

@@ -564,3 +564,24 @@
     data:
       entity_id: light.store
 
+
+
+# Battery Charging Complete
+- alias: Bicycle Battery Charge Complete
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.battery_bicycle_charging
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.telldus_switch_06_switch
+    state:  'on'
+  action:
+    - service: notify.telegram_arnav
+      data:
+        title: "Bicycle Battery"
+        message: "Charging Complete"
+    - service: switch.turn_off
+      data:
+        entity_id: switch.telldus_switch_06_switch
+
