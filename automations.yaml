@@ -581,6 +581,12 @@
       data:
         title: "Bicycle Battery"
         message: "Charging Complete"
+    - delay:
+        minutes: 10
+    - service: notify.telegram_arnav
+      data:
+        title: "Bicycle Battery"
+        message: "Turning off charger"
     - service: switch.turn_off
       data:
         entity_id: switch.telldus_switch_06_switch
