@@ -589,19 +589,19 @@ sensor.telldus_switch_05_current:
   icon: mdi:current-dc
 
 switch.telldus_switch_06_switch:
-  friendly_name: Fan Lamp
-  icon: mdi:ceiling-light
+  friendly_name: Battery Charger
+  icon: mdi:battery-charging
 sensor.telldus_switch_06_power:
-  friendly_name: Fan Lamp Power
+  friendly_name: Battery Charger Power
   icon: mdi:flash
 sensor.telldus_switch_06_energy:
-  friendly_name: Fan Lamp Energy
+  friendly_name: Battery Charger Energy
   icon: mdi:power-plug
 sensor.telldus_switch_06_voltage:
-  friendly_name: Fan Lamp Voltage
+  friendly_name: Battery Charger Voltage
   icon: mdi:current-ac
 sensor.telldus_switch_06_current:
-  friendly_name: Fan Lamp Current
+  friendly_name: Battery Charger Current
   icon: mdi:current-dc
 
 switch.telldus_switch_07_switch:
