@@ -120,15 +120,11 @@
       target_timer: timer.livingroom_study_max
 - id: '1611605184591'
   alias: Timer - Study Light - Off
-  trigger:
-    platform: event
-    event_type: timer.finished
-    event_data:
-      entity_id: timer.livingroom_study_max
-  action:
-  - service: light.turn_off
-    data:
-      entity_id: light.tradfri_plug_01_light
+  use_blueprint:
+    path: switch_timer_finish.yaml
+    input:
+      light_switch_entity: switch.light_study
+      target_timer: timer.livingroom_study_max
 - id: '1611605747439'
   alias: Light Switch - Living Room
   description: ''
@@ -151,7 +147,7 @@
   use_blueprint:
     path: light_switch.yaml
     input:
-      light_switch_entity: switch.light_bedroom
+      light_switch_entity: switch.light_bedroom_bed
       light_entity: light.bedroom_bed
 - id: '1611605930704'
   alias: Light Switch - Bedroom - Ceiling
@@ -159,7 +155,7 @@
   use_blueprint:
     path: light_switch.yaml
     input:
-      light_switch_entity: switch.light_bedroom
+      light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.bedroom_ceiling
 - id: '1611606188886'
   alias: Timer - Bedroom - On
@@ -217,3 +213,25 @@
     input:
       light_entity: light.store
       target_timer: timer.store_max
+- id: '1611610011220'
+  alias: Light Switch - Study
+  description: ''
+  use_blueprint:
+    path: light_switch.yaml
+    input:
+      light_switch_entity: switch.light_study
+      light_entity: light.tradfri_plug_01_light
+- id: '1611611216928'
+  alias: Light Switch - Bedroom
+  description: ''
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: switch.light_bedroom
+  action:
+    service: "{% if trigger.to_state.state == \"on\" %}\n  switch.turn_on\n{% else\
+      \ %}\n  switch.turn_off\n{% endif %}\n"
+    data:
+      entity_id:
+      - switch.light_bedroom_bed
+      - switch.light_bedroom_ceiling
