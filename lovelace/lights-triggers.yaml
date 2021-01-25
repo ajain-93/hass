@@ -35,8 +35,30 @@ cards:
   - type: glance
     title: Bedroom
     show_state: false
-  #   columns: 3
+    columns: 4
     entities:
+      - entity: switch.light_bedroom_bed
+        name: Bed
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: light.bedroom_bed
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: switch.light_bedroom_ceiling
+        name: Ceiling
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: light.bedroom_ceiling
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
       - entity: switch.light_bedroom
         name: Switch
         tap_action:
@@ -136,6 +158,7 @@ cards:
   - type: glance
     title: Living Room
     show_state: false
+    columns: 6
     entities:
       - entity: switch.light_livingroom
         name: Switch
@@ -146,6 +169,12 @@ cards:
       - entity: timer.livingroom_max
         name: Timer Max
       - entity: light.livingroom
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+      - entity: switch.light_study
+        name: Study
         tap_action:
           action: toggle
         hold_action:

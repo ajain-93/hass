@@ -58,8 +58,17 @@ switch.light_bathroom:
 switch.light_bedroom:
   friendly_name: Light Bedroom
   icon: mdi:light-switch
+switch.light_bedroom_bed:
+  friendly_name: Light Bedroom Bed
+  icon: mdi:light-switch
+switch.light_bedroom_ceiling:
+  friendly_name: Light Bedroom Ceiling
+  icon: mdi:light-switch
 switch.light_livingroom:
   friendly_name: Light Living room
+  icon: mdi:light-switch
+switch.light_study:
+  friendly_name: Light Study
   icon: mdi:light-switch
 switch.light_store:
   friendly_name: Light Store

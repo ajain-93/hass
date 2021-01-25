@@ -280,6 +280,16 @@
   command_topic: "hass/lights/bedroom"
   retain: "on"
 - platform: "mqtt"
+  name: light_bedroom_bed
+  state_topic: "hass/lights/bedroom_bed"
+  command_topic: "hass/lights/bedroom_bed"
+  retain: "on"
+- platform: "mqtt"
+  name: light_bedroom_ceiling
+  state_topic: "hass/lights/bedroom_ceiling"
+  command_topic: "hass/lights/bedroom_ceiling"
+  retain: "on"
+- platform: "mqtt"
   name: light_gallery
   state_topic: "hass/lights/gallery"
   command_topic: "hass/lights/gallery"
@@ -293,6 +303,11 @@
   name: light_livingroom
   state_topic: "hass/lights/livingroom"
   command_topic: "hass/lights/livingroom"
+  retain: "on"
+- platform: "mqtt"
+  name: light_study
+  state_topic: "hass/lights/study_light"
+  command_topic: "hass/lights/study_light"
   retain: "on"
 - platform: "mqtt"
   name: light_store
