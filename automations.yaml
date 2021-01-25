@@ -213,6 +213,15 @@
     input:
       light_entity: light.store
       target_timer: timer.store_max
+- id: '1611608224958'
+  alias: Button - Study Light
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_04_action
+      light_switch_entity: switch.light_study
+      light_entity: light.tradfri_plug_01_light
 - id: '1611610011220'
   alias: Light Switch - Study
   description: ''
@@ -221,6 +230,15 @@
     input:
       light_switch_entity: switch.light_study
       light_entity: light.tradfri_plug_01_light
+- id: '1611610227692'
+  alias: Button - Living Room
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_01_action
+      light_switch_entity: switch.light_livingroom
+      light_entity: light.livingroom
 - id: '1611611216928'
   alias: Light Switch - Bedroom
   description: ''
@@ -235,3 +253,21 @@
       entity_id:
       - switch.light_bedroom_bed
       - switch.light_bedroom_ceiling
+- id: '1611611534011'
+  alias: Button - Bedroom - Bed
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_05_action
+      light_switch_entity: switch.light_bedroom_bed
+      light_entity: light.bedroom_bed
+- id: '1611611563843'
+  alias: Button - Bedroom - Ceiling
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_06_action
+      light_switch_entity: switch.light_bedroom_ceiling
+      light_entity: light.bedroom_ceiling
