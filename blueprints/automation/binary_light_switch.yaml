@@ -1,0 +1,51 @@
+blueprint:
+  name: Binary Sensor to Light Switch
+  description: Turn a light switch on/off based on motion sensor
+  domain: automation
+
+  input:
+    motion_entity:
+      name: Motion Sensor
+      description: An on value means 'motion', an off values means 'no motion'
+      selector:
+        entity:
+          domain: binary_sensor
+    target_switch:
+      name: Light Switch
+      description: The light switch of the room
+      selector:
+        entity:
+          domain: switch
+    no_motion_wait:
+      name: Wait time
+      description: Time to leave the light on after last motion is detected.
+      default: 5
+      selector:
+        number:
+          min: 0
+          max: 60
+          unit_of_measurement: minutes
+
+mode: restart
+max_exceeded: silent
+
+trigger:
+  platform: state
+  entity_id: !input motion_entity
+  from: 'off'
+  to: 'on'
+
+action:
+  - service: switch.turn_on
+    data:
+      entity_id: !input target_switch
+  - wait_for_trigger:
+      platform: state
+      entity_id: !input motion_entity
+      from: 'on'
+      to: 'off'
+  - delay:
+      minutes: !input no_motion_wait
+  - service: switch.turn_off
+    data:
+      entity_id: !input target_switch

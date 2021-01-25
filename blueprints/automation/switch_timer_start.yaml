@@ -1,0 +1,43 @@
+blueprint:
+  name: Light Timer Start
+  description: Turn on timer when light switch turns on
+  domain: automation
+
+  input:
+    light_entity:
+      name: Light
+      description: The light to be monitored
+      selector:
+        entity:
+          domain: light
+    target_timer:
+      name: Timer
+      description: The timer of the light
+      selector:
+        entity:
+          domain: timer
+
+mode: restart
+max_exceeded: silent
+
+trigger:
+  platform: state
+  entity_id: !input light_entity
+  # from: 'off'
+  to: 'on'
+
+action:
+  - service: timer.start
+    data:
+      entity_id: !input target_timer
+  - wait_for_trigger:
+      platform: state
+      entity_id: !input light_entity
+      from: 'on'
+      to: 'off'
+  - delay:
+      seconds: 1
+  - service: timer.cancel
+    data:
+      entity_id: !input target_timer
+

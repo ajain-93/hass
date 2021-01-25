@@ -1,0 +1,36 @@
+blueprint:
+  name: Light Switch Control
+  description: Control corresponding light with the light switch
+  domain: automation
+
+  input:
+    light_switch_entity:
+      name: Light Switch
+      description: The light switch to control
+      selector:
+        entity:
+          domain: switch
+    light_entity:
+      name: Light
+      description: The light to be controlled
+      selector:
+        entity:
+          domain: light
+
+mode: restart
+max_exceeded: silent
+
+trigger:
+  platform: state
+  entity_id: !input light_switch_entity
+
+action:
+  - service: >
+      {% if trigger.to_state.state == "on" %}
+        script.light_on
+      {% else %}
+        light.turn_off
+      {% endif %}
+    data:
+      entity_id: !input light_entity
+
