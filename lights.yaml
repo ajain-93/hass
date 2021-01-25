@@ -151,11 +151,6 @@
     - light.tradfri_plug_01_light
     - light.store
 - platform: group
-  name: decorations
-  entities:
-  - light.telldus_switch_06_light
-  - light.telldus_switch_07_light
-- platform: group
   name: bathroom
   entities:
   - light.tradfri_led_rgb_03_light
