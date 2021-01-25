@@ -1,0 +1,77 @@
+blueprint:
+  name: IKEA E1743 ON/OFF button
+  description: Control a light with an IKEA E1743 button
+  domain: automation
+
+  input:
+    button_entity:
+      name: Button
+      description: The button/switch to monitor
+      selector:
+        entity:
+          domain: sensor
+    light_switch_entity:
+      name: Light Switch
+      description: The light switch to control
+      selector:
+        entity:
+          domain: switch
+    light_entity:
+      name: Light
+      description: The light switch to control
+      selector:
+        entity:
+          domain: light
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  platform: state
+  entity_id: !input button_entity
+
+action:
+  - choose:
+    - conditions:
+        - condition: state
+          entity_id: !input button_entity
+          state: 'on'
+      sequence:
+        - service: switch.turn_on
+          data:
+            entity_id: !input light_switch_entity
+    - conditions:
+        - condition: state
+          entity_id: !input button_entity
+          state: 'off'
+      sequence:
+        - service: switch.turn_off
+          data:
+            entity_id: !input light_switch_entity
+    - conditions:
+        - condition: state
+          entity_id: !input button_entity
+          state: 'brightness_move_up'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: !input light_entity
+            brightness_step_pct: 49
+    - conditions:
+        - condition: state
+          entity_id: !input button_entity
+          state: 'brightness_move_down'
+      sequence:
+        - service: light.turn_on
+          data:
+            entity_id: !input light_entity
+            brightness_step_pct: -49
+    # - conditions:
+    #     - condition: state
+    #       entity_id: !input button_entity
+    #       state: 'brightness_stop'
+    #   sequence:
+    #     - service: notify.telegram_arnav
+    #       data:
+    #         title: Button
+    #         message: 'Long Press Released'
