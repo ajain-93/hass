@@ -633,7 +633,7 @@
   value_template: "{{ value_json.action }}"
   icon: mdi:gesture-double-tap
 - platform: "mqtt"
-  name: tradfri_button_04_action
+  name: tradfri_button_05_action
   state_topic: "zigbee2mqtt/tradfri_button_05"
   json_attributes_topic: "zigbee2mqtt/tradfri_button_05"
   availability_topic: "zigbee2mqtt/bridge/state"
