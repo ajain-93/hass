@@ -25,6 +25,7 @@ cards:
     entities:
       - entity: binary_sensor.ping_asus_router242
       - entity: binary_sensor.ping_jain78
+      - entity: binary_sensor.ping_srv01
       - entity: binary_sensor.ping_octopi
 
   - type: glance
@@ -40,9 +41,15 @@ cards:
     entities:
       - entity: binary_sensor.ping_motorola_g6_plus
       - entity: binary_sensor.ping_sony_xperia_zr
+      - entity: binary_sensor.ping_sony_xperia_z1
+
+  - type: glance
+    show_state: false
+    entities:
       - entity: binary_sensor.ping_asus_a810
       - entity: binary_sensor.ping_google_nexus_10
       - entity: binary_sensor.ping_amazon_kindle_fire_7
+      - entity: binary_sensor.ping_lamina_1010
 
   - type: glance
     show_state: false

@@ -111,6 +111,11 @@
   count: 1
   scan_interval: 30
 - platform: ping
+  host: SRV01.jain.lan
+  name: ping_srv01
+  count: 1
+  scan_interval: 30
+- platform: ping
   host: nas83.jain.lan
   name: ping_nas83
   count: 1
@@ -160,6 +165,10 @@
   name: ping_sony_xperia_zr
   count: 1
 - platform: ping
+  host: mob58.jain.lan
+  name: ping_sony_xperia_z1
+  count: 1
+- platform: ping
   host: mob07.jain.lan
   name: ping_asus_a810
   count: 1
@@ -170,6 +179,10 @@
 - platform: ping
   host: mob65.jain.lan
   name: ping_amazon_kindle_fire_7
+  count: 1
+- platform: ping
+  host: jain01.jain.lan
+  name: ping_lamina_1010
   count: 1
 
 - platform: ping

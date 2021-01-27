@@ -725,6 +725,10 @@ binary_sensor.ping_jain78:
   friendly_name: NUC78
   device_class: connectivity
   icon: mdi:server
+binary_sensor.ping_srv01:
+  friendly_name: Seagate NAS
+  device_class: connectivity
+  icon: mdi:nas
 binary_sensor.ping_jain56:
   friendly_name: HP Jain56
   device_class: connectivity
@@ -772,6 +776,10 @@ binary_sensor.ping_sony_xperia_zr:
   friendly_name: Sony Xperia ZR
   device_class: connectivity
   icon: mdi:cellphone-android
+binary_sensor.ping_sony_xperia_z1:
+  friendly_name: Sony Xperia Z1
+  device_class: connectivity
+  icon: mdi:cellphone-android
 binary_sensor.ping_asus_a810:
   friendly_name: Asus A810
   device_class: connectivity
@@ -784,6 +792,10 @@ binary_sensor.ping_amazon_kindle_fire_7:
   friendly_name: Amazon Kindle Fire 7
   device_class: connectivity
   icon: mdi:tablet-android
+binary_sensor.ping_lamina_1010:
+  friendly_name: Lamina T1010B
+  device_class: connectivity
+  icon: mdi:tablet-dashboard
 
 binary_sensor.ping_chromecast_audio_bedroom:
   friendly_name: Chromecast Audio Bedroom
