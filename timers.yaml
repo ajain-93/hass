@@ -17,10 +17,10 @@ kitchen_max:
   duration: '01:00:00'
 
 livingroom_max:
-  duration: '02:00:00'
+  duration: '04:00:00'
 
 livingroom_study_max:
-  duration: '02:00:00'
+  duration: '08:00:00'
 
 store_max:
   duration: '00:10:00'
