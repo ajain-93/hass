@@ -168,7 +168,7 @@
   name: ping_google_nexus_10
   count: 1
 - platform: ping
-  host: mob04.jain.lan
+  host: mob65.jain.lan
   name: ping_amazon_kindle_fire_7
   count: 1
 
