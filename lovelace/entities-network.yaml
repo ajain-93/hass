@@ -20,6 +20,12 @@ cards:
         name: Upload
         graph: line
 
+  - type: entities
+    state_color: true
+    entities:
+      - entity: switch.jain10
+      - entity: switch.srv01
+
   - type: glance
     show_state: false
     entities:

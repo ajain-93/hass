@@ -873,3 +873,13 @@ sensor.worldwide_coronavirus_confirmed:
 sensor.worldwide_coronavirus_deaths:
   friendly_name: Worldwide Deaths
 
+
+
+# Manual Switches
+switch.jain10:
+  friendly_name: Jain10
+  icon: mdi:power-plug
+switch.srv01:
+  friendly_name: Seagate NAS
+  icon: mdi:power-plug
+

@@ -314,3 +314,20 @@
   state_topic: "hass/lights/store"
   command_topic: "hass/lights/store"
   retain: "on"
+
+
+# Templates
+- platform: template
+  switches:
+    jain10:
+      value_template: "{{ states('binary_sensor.ping_jain10') }}"
+      turn_on:
+        - service: shell_command.jain10_wake
+      turn_off:
+        - service: shell_command.jain10_sleep
+    srv01:
+      value_template: "{{ states('binary_sensor.ping_srv01') }}"
+      turn_on:
+        - service: shell_command.srv01_wake
+      turn_off:
+        - service: shell_command.srv01_sleep

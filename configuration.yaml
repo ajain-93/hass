@@ -50,6 +50,11 @@ sensor: !include sensors.yaml
 binary_sensor: !include binary-sensors.yaml
 device_tracker: !include device_trackers.yaml
 
+shell_command:
+  jain10_sleep: 'ssh jain78 "/media/infra/scripts/jain10.sleep.sh"'
+  jain10_wake: 'ssh jain78 "/media/infra/scripts/jain10.wake.sh"'
+  srv01_sleep: 'ssh jain78 "/media/infra/scripts/srv01.sleep.sh"'
+  srv01_wake: 'ssh jain78 "/media/infra/scripts/srv01.wake.sh"'
 
 mqtt:
   discovery: false
