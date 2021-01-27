@@ -1,18 +1,12 @@
-bathroom:
-  duration: '00:03:00'
 bathroom_max:
   duration: '00:30:00'
 
 bedroom_max:
   duration: '01:00:00'
 
-gallery:
-  duration: '00:05:00'
 gallery_max:
   duration: '00:30:00'
 
-kitchen:
-  duration: '00:10:00'
 kitchen_max:
   duration: '01:00:00'
 
