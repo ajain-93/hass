@@ -23,32 +23,50 @@ cards:
       entities:
         - entity: light.bathroom
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_bathroom
           hold_action:
             action: more-info
         - entity: light.bedroom
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_bedroom
           hold_action:
             action: more-info
         - entity: light.gallery
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_gallery
           hold_action:
             action: more-info
         - entity: light.kitchen
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_kitchen
           hold_action:
             action: more-info
         - entity: light.livingroom
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_livingroom
           hold_action:
             action: more-info
         - entity: light.store
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.toggle
+            service_data:
+              entity_id: switch.light_store
           hold_action:
             action: more-info
 
@@ -87,64 +105,66 @@ cards:
           hold_action:
             action: more-info
 
-    - type: glance
-      title: Switches
-      show_state: false
-      columns: 6
-      entities:
-      - entity: light.bathroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_bathroom
-        hold_action:
-          action: more-info
-      - entity: light.bedroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_bedroom
-        hold_action:
-          action: more-info
-      - entity: light.gallery
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_gallery
-        hold_action:
-          action: more-info
-      - entity: light.kitchen
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_kitchen
-        hold_action:
-          action: more-info
-      - entity: light.livingroom
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_livingroom
-        hold_action:
-          action: more-info
-      - entity: light.store
-        tap_action:
-          action: call-service
-          service: switch.toggle
-          service_data:
-            entity_id: switch.light_store
-        hold_action:
-          action: more-info
+    # - type: glance
+    #   title: Switches
+    #   show_state: false
+    #   columns: 6
+    #   entities:
+    #   - entity: light.bathroom
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_bathroom
+    #     hold_action:
+    #       action: more-info
+    #   - entity: light.bedroom
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_bedroom
+    #     hold_action:
+    #       action: more-info
+    #   - entity: light.gallery
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_gallery
+    #     hold_action:
+    #       action: more-info
+    #   - entity: light.kitchen
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_kitchen
+    #     hold_action:
+    #       action: more-info
+    #   - entity: light.livingroom
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_livingroom
+    #     hold_action:
+    #       action: more-info
+    #   - entity: light.store
+    #     tap_action:
+    #       action: call-service
+    #       service: switch.toggle
+    #       service_data:
+    #         entity_id: switch.light_store
+    #     hold_action:
+    #       action: more-info
 
   - type: glance
     title: Bathroom
     show_state: false
     entities:
+      - entity: binary_sensor.tradfri_motion_01_occupancy
+        name: Wall
       - entity: light.tradfri_led_rgb_03_light
         name: Ceiling Light
         tap_action:
