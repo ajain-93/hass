@@ -20,11 +20,18 @@ cards:
         name: Upload
         graph: line
 
-  - type: entities
-    state_color: true
-    entities:
-      - entity: switch.jain10
-      - entity: switch.srv01
+  - type: grid
+    cards:
+      - type: entity
+        entity: switch.jain10
+      - type: entity
+        entity: switch.srv01
+      - type: button
+        name: SRV78 Update GIT
+        icon: mdi:update
+        tap_action:
+          action: call-service
+          service: shell_command.srv78_update_gits
 
   - type: glance
     show_state: false

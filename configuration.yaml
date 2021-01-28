@@ -55,6 +55,7 @@ shell_command:
   jain10_wake: 'ssh jain78 "/media/infra/scripts/jain10.wake.sh"'
   srv01_sleep: 'ssh jain78 "/media/infra/scripts/srv01.sleep.sh"'
   srv01_wake: 'ssh jain78 "/media/infra/scripts/srv01.wake.sh"'
+  srv78_update_gits: 'ssh jain78 "/media/infra/scripts/update.git.sh"'
 
 mqtt:
   discovery: false
