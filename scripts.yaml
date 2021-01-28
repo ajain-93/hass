@@ -237,3 +237,61 @@ light_switch_worker:
         brightness_pct: "{{ brightness_pct }}"
         transition: "{{ transition / 2}}"
 
+
+# Alarm
+lights_wake_up:
+  alias: Lights - Alarm Gradiant
+  icon: mdi:alarm
+  description: Turn on Light with a timer
+  fields:
+    light:
+      description: The light to be turned on
+      example: light.bedroom
+    light_switch:
+      description: The light switch of the light to be turned on
+      example: switch.light_bedroom
+    timer:
+      description: Minutes for the gradient
+      example: '30'
+  mode: restart
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.ha_lights_mode_morning
+    - delay:
+        seconds: 2
+    - service: switch.turn_on
+      data:
+        entity_id: "{{ light_switch }}"
+    - delay:
+        seconds: 5
+    - service: light.turn_on
+      data:
+        entity_id: "{{ light }}"
+        brightness_pct: '1'
+    - delay:
+        seconds: 5
+    - service: notify.telegram_arnav
+      data:
+        title: Alarm
+        message: Light is {{ states(light) }}, with brightness {{ state_attr(light, 'brightness') }}
+    - repeat:
+        while:
+          - condition: template
+            value_template: "{{ is_state(light, 'on') }}"
+          - condition: template
+            value_template: "{{ state_attr(light, 'brightness') < 250 }}"
+        sequence:
+          - delay: "{{ float( timer ) * 60 / 100 * 5}}"
+          - service: light.turn_on
+            data:
+              entity_id: "{{ light }}"
+              brightness_step_pct: '5'
+          # - service: notify.telegram_arnav
+          #   data:
+          #     title: Alarm
+          #     message: Light is {{ states(light) }}, with brightness {{ state_attr(light, 'brightness') }}
+
+
+
+
