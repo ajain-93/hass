@@ -4,6 +4,34 @@
   password: !secret 17track_password
 
 
+# Currency Exchange Rates
+- platform: openexchangerates
+  api_key: !secret openexchangeapi
+  quote: "SEK"
+- platform: template
+  sensors:
+    exchangerate_usd_sek:
+      friendly_name: "Exchange Rate SEK-USD"
+      icon_template: mdi:cash
+      value_template: "{{ state_attr('sensor.exchange_rate_sensor', 'SEK') | float | round(2) | float }}"
+    exchangerate_nok_sek:
+      friendly_name: "Exchange Rate NOK-SEK"
+      icon_template: mdi:cash
+      value_template: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'NOK') * 100 ) | round(2) | float }}"
+    exchangerate_eur_sek:
+      friendly_name: "Exchange Rate EUR-SEK"
+      icon_template: mdi:cash
+      value_template: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'EUR') ) | round(2) | float }}"
+    exchangerate_gbp_sek:
+      friendly_name: "Exchange Rate GBP-SEK"
+      icon_template: mdi:cash
+      value_template: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'GBP') ) | round(2) | float }}"
+    exchangerate_sek_inr:
+      friendly_name: "Exchange Rate SEK-INR"
+      icon_template: mdi:cash
+      value_template: "{{ ( state_attr('sensor.exchange_rate_sensor', 'INR') / state_attr('sensor.exchange_rate_sensor', 'SEK') ) | round(2) | float }}"
+
+
 # Date & Time
 - platform: time_date
   display_options:

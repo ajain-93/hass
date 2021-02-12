@@ -251,6 +251,21 @@ cards:
   - type: weather-forecast
     entity: weather.frosunda
 
+  - type: glance
+    title: Exchange Rates
+    show_icon: false
+    entities:
+      - entity: sensor.exchangerate_usd_sek
+        name: $ 🇺🇸
+      - entity: sensor.exchangerate_nok_sek
+        name: 🇳🇴 kr
+      - entity: sensor.exchangerate_eur_sek
+        name: € 🇪🇺
+      - entity: sensor.exchangerate_gbp_sek
+        name: £ 🇬🇧
+      - entity: sensor.exchangerate_sek_inr
+        name: ₹ 🇮🇳
+
   - type: vertical-stack
     title: Corona Virus
     cards:
