@@ -238,6 +238,7 @@ light_switch_worker:
         transition: "{{ transition / 2}}"
 
 
+
 # Alarm
 lights_wake_up:
   alias: Lights - Alarm Gradiant
@@ -294,4 +295,25 @@ lights_wake_up:
 
 
 
-
+# Notification
+notify:
+  alias: Notify
+  icon: mdi:bell-badge
+  description: Send notification
+  fields:
+    title:
+      description: The title of the message
+      example: Title
+    message:
+      description: The body of the message
+      example: Body text
+  mode: queued
+  sequence:
+    - service: notify.notify
+      data:
+        title: "{{ title }}"
+        message: "{{ message }}"
+    - service: notify.telegram_arnav
+      data:
+        title: "{{ title }}"
+        message: "{{ message }}"
