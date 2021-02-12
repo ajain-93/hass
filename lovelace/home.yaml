@@ -309,107 +309,112 @@ cards:
   #         action: navigate
   #         navigation_path: /lovelace/test
 
-  - type: vertical-stack
-    title: Parcel Tracking
-    cards:
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_not_found
-          state_not: '0'
-      card:
-        type: markdown
-        title: Not Found
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_not_found.attributes.packages %}
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.packages_active
+        state: 'on'
+    card:
+      type: vertical-stack
+      title: Parcel Tracking
+      cards:
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_not_found
+            state_not: '0'
+        card:
+          type: markdown
+          title: Not Found
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_not_found.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number }})**
+            **{{ package.friendly_name}} ({{ package.tracking_number }})**
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_in_transit
-          state_not: '0'
-      card:
-        type: markdown
-        title: In transit
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_in_transit.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_in_transit
+            state_not: '0'
+        card:
+          type: markdown
+          title: In transit
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_in_transit.attributes.packages %}
 
-          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
+            **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
-          {{ package.info_text }}
+            {{ package.info_text }}
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_undelivered
-          state_not: '0'
-      card:
-        type: markdown
-        title: Undelivered
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_undelivered.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_undelivered
+            state_not: '0'
+        card:
+          type: markdown
+          title: Undelivered
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_undelivered.attributes.packages %}
 
-          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
+            **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
-          {{ package.info_text }}
+            {{ package.info_text }}
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_ready_to_be_picked_up
-          state_not: '0'
-      card:
-        type: markdown
-        title: Ready to be picked up
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_ready_to_be_picked_up.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_ready_to_be_picked_up
+            state_not: '0'
+        card:
+          type: markdown
+          title: Ready to be picked up
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_ready_to_be_picked_up.attributes.packages %}
 
-          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
+            **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
-          {{ package.info_text }}
+            {{ package.info_text }}
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_delivered
-          state_not: '0'
-      card:
-        type: markdown
-        title: Delivered
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_delivered.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_delivered
+            state_not: '0'
+        card:
+          type: markdown
+          title: Delivered
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_delivered.attributes.packages %}
 
-          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
+            **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
-          {{ package.info_text }}
+            {{ package.info_text }}
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_returned
-          state_not: '0'
-      card:
-        type: markdown
-        title: Returned
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_returned.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_returned
+            state_not: '0'
+        card:
+          type: markdown
+          title: Returned
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_returned.attributes.packages %}
 
-          **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
+            **{{ package.friendly_name}} ([{{ package.tracking_number }}](https://www.postnord.se/vara-verktyg/spara-brev-paket-och-pall2#dynamicloading=true&shipmentid={{ package.tracking_number }})):**
 
-          {{ package.info_text }}
+            {{ package.info_text }}
 
-          {% endfor %}
-    - type: conditional
-      conditions:
-        - entity: sensor.seventeentrack_packages_expired
-          state_not: '0'
-      card:
-        type: markdown
-        title: Expired
-        content: >-
-          {% for package in states.sensor.seventeentrack_packages_expired.attributes.packages %}
+            {% endfor %}
+      - type: conditional
+        conditions:
+          - entity: sensor.seventeentrack_packages_expired
+            state_not: '0'
+        card:
+          type: markdown
+          title: Expired
+          content: >-
+            {% for package in states.sensor.seventeentrack_packages_expired.attributes.packages %}
 
-          **{{ package.friendly_name}} ({{ package.tracking_number}})**
+            **{{ package.friendly_name}} ({{ package.tracking_number}})**
 
-          {% endfor %}
+            {% endfor %}

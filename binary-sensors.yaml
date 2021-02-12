@@ -309,3 +309,12 @@
     #   value_template: "{{ is_state('binary_sensor.smartthings_motion_temp_02_occupancy_delayed', 'on') }}"
     # light_trigger_store:
     #   value_template: "{{ is_state('binary_sensor.aqara_sensor_switch_01_contact', 'on') }}"
+
+    packages_active:
+      value_template: "{{ ((states('sensor.seventeentrack_packages_delivered') | int) +
+                           (states('sensor.seventeentrack_packages_expired') | int) +
+                           (states('sensor.seventeentrack_packages_in_transit') | int) +
+                           (states('sensor.seventeentrack_packages_not_found') | int) +
+                           (states('sensor.seventeentrack_packages_ready_to_be_picked_up') | int) +
+                           (states('sensor.seventeentrack_packages_undelivered') | int) +
+                           (states('sensor.seventeentrack_packages_delivered') | int)) > 0}}"
