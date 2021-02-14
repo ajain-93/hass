@@ -35,10 +35,17 @@ trigger:
   from: 'off'
   to: 'on'
 
+variables:
+  light_entity: !input target_light
+
 action:
-  - service: script.light_on
-    data:
-      entity_id: !input target_light
+  - choose:
+    - conditions: # Check for colour support
+      - "{{ is_state(light_entity, 'off') }}"
+      sequence:
+      - service: script.light_on
+        data:
+          entity_id: !input target_light
   - wait_for_trigger:
       platform: state
       entity_id: !input motion_entity
