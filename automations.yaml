@@ -356,7 +356,7 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_04_action
-      light_switch_entity: switch.light_study
+      # light_switch_entity: switch.light_study
       light_entity: light.tradfri_plug_01_light
 - id: '1611610227692'
   alias: Button - Living Room
@@ -365,7 +365,7 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_01_action
-      light_switch_entity: switch.light_livingroom
+      # light_switch_entity: switch.light_livingroom
       light_entity: light.livingroom
 - id: '1611611534011'
   alias: Button - Bedroom - Bed
@@ -374,7 +374,7 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_05_action
-      light_switch_entity: switch.light_bedroom_bed
+      # light_switch_entity: switch.light_bedroom_bed
       light_entity: light.bedroom_bed
 - id: '1611611563843'
   alias: Button - Bedroom - Ceiling
@@ -383,5 +383,5 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_06_action
-      light_switch_entity: switch.light_bedroom_ceiling
+      # light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.bedroom_ceiling
