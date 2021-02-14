@@ -56,6 +56,7 @@ shell_command:
   srv01_sleep: 'ssh jain78 "/media/infra/scripts/srv01.sleep.sh"'
   srv01_wake: 'ssh jain78 "/media/infra/scripts/srv01.wake.sh"'
   srv78_update_gits: 'ssh jain78 "/media/infra/scripts/update.git.sh"'
+  srv78_dir_clean: 'ssh jain78 "docker start directorycleaner_cleaner_1"'
 
 mqtt:
   discovery: false
