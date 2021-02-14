@@ -1,0 +1,23 @@
+lights_morning:
+  name: Time Morning Lights
+  has_date: false
+  has_time: true
+  initial: "08:00"
+
+lights_afternoon:
+  name: Time Afternoon Lights
+  has_date: false
+  has_time: true
+  initial: "17:00"
+
+lights_evening:
+  name: Time Evening Lights
+  has_date: false
+  has_time: true
+  initial: "20:00"
+
+lights_night:
+  name: Time Night Lights
+  has_date: false
+  has_time: true
+  initial: "22:20"

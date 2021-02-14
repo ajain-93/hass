@@ -35,7 +35,7 @@
   id: arnav-jain-se_decoration_lights_mode_morning
   trigger:
   - platform: time
-    at: '08:00:00'
+    at: input_datetime.lights_morning
   - platform: sun
     event: sunrise
   action:
@@ -48,7 +48,7 @@
   id: arnav-jain-se_decoration_lights_mode_afternoon
   trigger:
     platform: time
-    at: '17:00:00'
+    at: input_datetime.lights_afternoon
   action:
   - service: switch.turn_on
     entity_id: switch.ha_lights_mode_afternoon
@@ -59,7 +59,7 @@
   id: arnav-jain-se_decoration_lights_mode_evening
   trigger:
     platform: time
-    at: '20:00:00'
+    at: input_datetime.lights_evening
   action:
   - service: switch.turn_on
     entity_id: switch.ha_lights_mode_evening
@@ -70,7 +70,7 @@
   id: arnav-jain-se_decoration_lights_mode_night
   trigger:
     platform: time
-    at: '22:00:00'
+    at: input_datetime.lights_night
   action:
   - service: switch.turn_on
     entity_id: switch.ha_lights_mode_night
