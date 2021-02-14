@@ -31,8 +31,10 @@
         - switch.tradfri_plug_06_power
 
 
-- alias: Lights Mode - Morning
-  id: arnav-jain-se_decoration_lights_mode_morning
+
+# Lights Mode Time
+- alias: Time - Lights Mode - Morning
+  id: arnav-jain-se_time_lights_mode_morning
   trigger:
   - platform: time
     at: input_datetime.lights_morning
@@ -44,8 +46,8 @@
   mode: single
 
 
-- alias: Lights Mode - Afternoon
-  id: arnav-jain-se_decoration_lights_mode_afternoon
+- alias: Time - Lights Mode - Afternoon
+  id: arnav-jain-se_time_lights_mode_afternoon
   trigger:
     platform: time
     at: input_datetime.lights_afternoon
@@ -55,8 +57,8 @@
   mode: single
 
 
-- alias: Lights Mode - Evening
-  id: arnav-jain-se_decoration_lights_mode_evening
+- alias: Time - Lights Mode - Evening
+  id: arnav-jain-se_time_lights_mode_evening
   trigger:
     platform: time
     at: input_datetime.lights_evening
@@ -66,8 +68,8 @@
   mode: single
 
 
-- alias: Lights Mode - Night
-  id: arnav-jain-se_decoration_lights_mode_night
+- alias: Timer - Lights Mode - Night
+  id: arnav-jain-se_timer_lights_mode_night
   trigger:
     platform: time
     at: input_datetime.lights_night
@@ -76,6 +78,72 @@
     entity_id: switch.ha_lights_mode_night
   mode: single
 
+
+# Lights Mode
+- alias: Lights Mode - Morning
+  id: arnav-jain-se_lights_mode_morning
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_morning
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id:
+        # - switch.ha_lights_mode_morning
+        - switch.ha_lights_mode_afternoon
+        - switch.ha_lights_mode_evening
+        - switch.ha_lights_mode_night
+  - service: script.light_mode_change
+- alias: Lights Mode - Afternoon
+  id: arnav-jain-se_lights_mode_afternoon
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_afternoon
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.ha_lights_mode_morning
+        # - switch.ha_lights_mode_afternoon
+        - switch.ha_lights_mode_evening
+        - switch.ha_lights_mode_night
+  - service: script.light_mode_change
+- alias: Lights Mode - Evening
+  id: arnav-jain-se_lights_mode_evening
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_evening
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.ha_lights_mode_morning
+        - switch.ha_lights_mode_afternoon
+        # - switch.ha_lights_mode_evening
+        - switch.ha_lights_mode_night
+  - service: script.light_mode_change
+- alias: Lights Mode - Night
+  id: arnav-jain-se_lights_mode_night
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_night
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.ha_lights_mode_morning
+        - switch.ha_lights_mode_afternoon
+        - switch.ha_lights_mode_evening
+        # - switch.ha_lights_mode_night
+  - service: script.light_mode_change
 
 
 # Common

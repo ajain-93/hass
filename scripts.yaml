@@ -140,7 +140,7 @@ light_switch:
     entity_id:
       description: The Light to be turned on.
       example: light.livingroom
-  mode: parallel
+  mode: queued
   sequence:
     - choose:
       - conditions:
@@ -236,6 +236,81 @@ light_switch_worker:
         entity_id: "{{ entity_id }}"
         brightness_pct: "{{ brightness_pct }}"
         transition: "{{ transition / 2}}"
+
+
+
+# Lights Mode Change
+light_mode_change:
+  alias: Lights - Mode Change
+  description: Change lights to new light mode
+  mode: restart
+  sequence:
+  # - delay: 00:00:01
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.store
+        state: 'on'
+      sequence:
+        - service: script.light_switch
+          data:
+            entity_id: light.store
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.bathroom
+        state: 'on'
+      sequence:
+        - service: script.light_switch
+          data:
+            entity_id: light.bathroom
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.gallery
+        state: 'on'
+      sequence:
+        - service: script.light_switch
+          data:
+            entity_id: light.gallery
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.kitchen
+        state: 'on'
+      sequence:
+        - service: script.light_switch
+          data:
+            entity_id: light.kitchen
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.livingroom
+        state: 'on'
+      sequence:
+        - service: script.light_switch
+          data:
+            entity_id: light.livingroom
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.bedroom_ceiling
+        state: 'on'
+      sequence:
+        - delay: 00:00:02
+        - service: script.light_switch
+          data:
+            entity_id: light.bedroom_ceiling
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: light.bedroom_bed
+        state: 'on'
+      sequence:
+        - delay: 00:00:02
+        - service: script.light_switch
+          data:
+            entity_id: light.bedroom_bed
 
 
 
