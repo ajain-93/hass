@@ -268,52 +268,52 @@
   retain: "on"
 
 
-# Light Switches
-- platform: "mqtt"
-  name: light_bathroom
-  state_topic: "hass/lights/bathroom"
-  command_topic: "hass/lights/bathroom"
-  retain: "on"
-- platform: "mqtt"
-  name: light_bedroom
-  state_topic: "hass/lights/bedroom"
-  command_topic: "hass/lights/bedroom"
-  retain: "on"
-- platform: "mqtt"
-  name: light_bedroom_bed
-  state_topic: "hass/lights/bedroom_bed"
-  command_topic: "hass/lights/bedroom_bed"
-  retain: "on"
-- platform: "mqtt"
-  name: light_bedroom_ceiling
-  state_topic: "hass/lights/bedroom_ceiling"
-  command_topic: "hass/lights/bedroom_ceiling"
-  retain: "on"
-- platform: "mqtt"
-  name: light_gallery
-  state_topic: "hass/lights/gallery"
-  command_topic: "hass/lights/gallery"
-  retain: "on"
-- platform: "mqtt"
-  name: light_kitchen
-  state_topic: "hass/lights/kitchen"
-  command_topic: "hass/lights/kitchen"
-  retain: "on"
-- platform: "mqtt"
-  name: light_livingroom
-  state_topic: "hass/lights/livingroom"
-  command_topic: "hass/lights/livingroom"
-  retain: "on"
-- platform: "mqtt"
-  name: light_study
-  state_topic: "hass/lights/study_light"
-  command_topic: "hass/lights/study_light"
-  retain: "on"
-- platform: "mqtt"
-  name: light_store
-  state_topic: "hass/lights/store"
-  command_topic: "hass/lights/store"
-  retain: "on"
+# # Light Switches
+# - platform: "mqtt"
+#   name: light_bathroom
+#   state_topic: "hass/lights/bathroom"
+#   command_topic: "hass/lights/bathroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom
+#   state_topic: "hass/lights/bedroom"
+#   command_topic: "hass/lights/bedroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom_bed
+#   state_topic: "hass/lights/bedroom_bed"
+#   command_topic: "hass/lights/bedroom_bed"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom_ceiling
+#   state_topic: "hass/lights/bedroom_ceiling"
+#   command_topic: "hass/lights/bedroom_ceiling"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_gallery
+#   state_topic: "hass/lights/gallery"
+#   command_topic: "hass/lights/gallery"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_kitchen
+#   state_topic: "hass/lights/kitchen"
+#   command_topic: "hass/lights/kitchen"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_livingroom
+#   state_topic: "hass/lights/livingroom"
+#   command_topic: "hass/lights/livingroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_study
+#   state_topic: "hass/lights/study_light"
+#   command_topic: "hass/lights/study_light"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_store
+#   state_topic: "hass/lights/store"
+#   command_topic: "hass/lights/store"
+#   retain: "on"
 
 
 # Templates

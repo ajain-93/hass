@@ -1,15 +1,15 @@
 blueprint:
   name: Light Timer Finished
-  description: Turn off light switch when timer finishes
+  description: Turn off light when timer finishes
   domain: automation
 
   input:
-    light_switch_entity:
-      name: Light Switch
-      description: The light switch of the room
+    light_entity:
+      name: Light
+      description: The light
       selector:
         entity:
-          domain: switch
+          domain: light
     target_timer:
       name: Timer
       description: The timer of the light
@@ -27,7 +27,7 @@ trigger:
     entity_id: !input target_timer
 
 action:
-  - service: switch.turn_off
+  - service: light.turn_off
     data:
-      entity_id: !input light_switch_entity
+      entity_id: !input light_entity
 

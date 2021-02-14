@@ -1,6 +1,6 @@
 blueprint:
-  name: Binary Sensor to Light Switch
-  description: Turn a light switch on/off based on motion sensor
+  name: Binary Sensor to Light
+  description: Turn a light on/off based on motion sensor
   domain: automation
 
   input:
@@ -10,12 +10,12 @@ blueprint:
       selector:
         entity:
           domain: binary_sensor
-    target_switch:
+    target_light:
       name: Light Switch
       description: The light switch of the room
       selector:
         entity:
-          domain: switch
+          domain: light
     no_motion_wait:
       name: Wait time
       description: Time to leave the light on after last motion is detected.
@@ -36,16 +36,17 @@ trigger:
   to: 'on'
 
 action:
-  - service: switch.turn_on
+  - service: script.light_on
     data:
-      entity_id: !input target_switch
+      entity_id: !input target_light
   - wait_for_trigger:
       platform: state
       entity_id: !input motion_entity
       from: 'on'
       to: 'off'
   - delay:
-      minutes: !input no_motion_wait
-  - service: switch.turn_off
+      seconds: !input no_motion_wait  # Testing
+      # minutes: !input no_motion_wait  # Production
+  - service: light.turn_off
     data:
-      entity_id: !input target_switch
+      entity_id: !input target_light

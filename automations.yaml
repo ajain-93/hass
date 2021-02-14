@@ -113,48 +113,50 @@
   action:
   - service: shell_command.srv78_dir_clean
 
-
+# Sensors
 - id: '1611599662235'
-  alias: Door - Store
+  alias: Sensor - Door - Store
   description: ''
   use_blueprint:
-    path: binary_light_switch.yaml
+    path: binary_to_light.yaml
     input:
       motion_entity: binary_sensor.aqara_sensor_switch_01_contact
-      target_switch: switch.light_store
+      target_light: light.store
       no_motion_wait: '0'
 - id: '1611599690804'
-  alias: Motion - Bathroom
+  alias: Sensor - Motion - Bathroom
   description: ''
   use_blueprint:
-    path: binary_light_switch.yaml
+    path: binary_to_light.yaml
     input:
       motion_entity: binary_sensor.tradfri_motion_01_occupancy
-      target_switch: switch.light_bathroom
+      target_light: light.bathroom
       no_motion_wait: '0'
 - id: '1611603275104'
-  alias: 'Motion - Kitchen '
+  alias: Sensor - Motion - Kitchen
   description: ''
   use_blueprint:
-    path: binary_light_switch.yaml
+    path: binary_to_light.yaml
     input:
       no_motion_wait: '10'
       motion_entity: binary_sensor.smartthings_motion_temp_02_occupancy
-      target_switch: switch.light_kitchen
+      target_light: light.kitchen
 - id: '1611603110137'
-  alias: Motion - Gallery
+  alias: Sensor - Motion - Gallery
   description: ''
   use_blueprint:
-    path: binary_light_switch.yaml
+    path: binary_to_light.yaml
     input:
       no_motion_wait: '10'
       motion_entity: binary_sensor.smartthings_motion_temp_01_occupancy
-      target_switch: switch.light_gallery
+      target_light: light.gallery
+
+# Timers
 - id: '1611604721116'
   alias: Timer - Living Room - On
   description: ''
   use_blueprint:
-    path: switch_timer_start.yaml
+    path: light_timer_start.yaml
     input:
       light_entity: light.livingroom
       target_timer: timer.livingroom_max
@@ -162,62 +164,32 @@
   alias: Timer - Living Room - Off
   description: ''
   use_blueprint:
-    path: switch_timer_finish.yaml
+    path: light_timer_finish.yaml
     input:
-      light_switch_entity: switch.light_livingroom
+      light_entity: light.livingroom
       target_timer: timer.livingroom_max
+
 - id: '1611605184590'
   alias: Timer - Study Light - On
   description: ''
   use_blueprint:
-    path: switch_timer_start.yaml
+    path: light_timer_start.yaml
     input:
       light_entity: light.tradfri_plug_01_light
       target_timer: timer.livingroom_study_max
 - id: '1611605184591'
   alias: Timer - Study Light - Off
   use_blueprint:
-    path: switch_timer_finish.yaml
+    path: light_timer_finish.yaml
     input:
-      light_switch_entity: switch.light_study
+      light_entity: light.tradfri_plug_01_light
       target_timer: timer.livingroom_study_max
-- id: '1611605747439'
-  alias: Light Switch - Living Room
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_livingroom
-      light_entity: light.livingroom
-- id: '1611605820512'
-  alias: Light Switch - Bathroom
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_bathroom
-      light_entity: light.bathroom
-- id: '1611605844398'
-  alias: Light Switch - Bedroom - Bed
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_bedroom_bed
-      light_entity: light.bedroom_bed
-- id: '1611605930704'
-  alias: Light Switch - Bedroom - Ceiling
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_bedroom_ceiling
-      light_entity: light.bedroom_ceiling
+
 - id: '1611606188886'
   alias: Timer - Bedroom - On
   description: ''
   use_blueprint:
-    path: switch_timer_start.yaml
+    path: light_timer_start.yaml
     input:
       light_entity: light.bedroom
       target_timer: timer.bedroom_max
@@ -225,50 +197,158 @@
   alias: Timer - Bedroom - Off
   description: ''
   use_blueprint:
-    path: switch_timer_finish.yaml
+    path: light_timer_finish.yaml
     input:
-      light_switch_entity: switch.light_bedroom
+      light_entity: light.bedroom
       target_timer: timer.bedroom_max
-- id: '1611606272944'
-  alias: Light Switch - Gallery
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_gallery
-      light_entity: light.gallery
-- id: '1611606284135'
-  alias: Light Switch - Kitchen
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_kitchen
-      light_entity: light.kitchen
-- id: '1611606310479'
-  alias: Light Switch - Store
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
-      light_switch_entity: switch.light_store
-      light_entity: light.store
-- id: '1611606345967'
-  alias: Timer - Store - Off
-  description: ''
-  use_blueprint:
-    path: switch_timer_finish.yaml
-    input:
-      light_switch_entity: switch.light_store
-      target_timer: timer.store_max
 - id: '1611606359886'
   alias: Timer - Store - On
   description: ''
   use_blueprint:
-    path: switch_timer_start.yaml
+    path: light_timer_start.yaml
     input:
       light_entity: light.store
       target_timer: timer.store_max
+- id: '1611606345967'
+  alias: Timer - Store - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.store
+      target_timer: timer.store_max
+- id: arnav-jain-se_timer_kitchen_on
+  alias: Timer - Kitchen - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.kitchen
+      target_timer: timer.kitchen_max
+- id: arnav-jain-se_timer_kitchen_off
+  alias: Timer - Kitchen - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.kitchen
+      target_timer: timer.kitchen_max
+- id: arnav-jain-se_timer_gallery_on
+  alias: Timer - Gallery - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.gallery
+      target_timer: timer.gallery_max
+- id: arnav-jain-se_timer_gallery_off
+  alias: Timer - Gallery - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.gallery
+      target_timer: timer.gallery_max
+- id: arnav-jain-se_timer_bathroom_on
+  alias: Timer - Bathroom - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.bathroom
+      target_timer: timer.bathroom_max
+- id: arnav-jain-se_timer_bathroom_off
+  alias: Timer - Bathroom - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.bathroom
+      target_timer: timer.bathroom_max
+
+
+## Light Switches
+# - id: '1611605747439'
+#   alias: Light Switch - Living Room
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_livingroom
+#       light_entity: light.livingroom
+# - id: '1611605820512'
+#   alias: Light Switch - Bathroom
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bathroom
+#       light_entity: light.bathroom
+# - id: '1611605844398'
+#   alias: Light Switch - Bedroom - Bed
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bedroom_bed
+#       light_entity: light.bedroom_bed
+# - id: '1611605930704'
+#   alias: Light Switch - Bedroom - Ceiling
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bedroom_ceiling
+#       light_entity: light.bedroom_ceiling
+# - id: '1611606272944'
+#   alias: Light Switch - Gallery
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_gallery
+#       light_entity: light.gallery
+# - id: '1611606284135'
+#   alias: Light Switch - Kitchen
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_kitchen
+#       light_entity: light.kitchen
+# - id: '1611606310479'
+#   alias: Light Switch - Store
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_store
+#       light_entity: light.store
+# - id: '1611610011220'
+#   alias: Light Switch - Study
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_study
+#       light_entity: light.tradfri_plug_01_light
+# - id: '1611611216928'
+#   alias: Light Switch - Bedroom
+#   description: ''
+#   mode: single
+#   trigger:
+#   - platform: state
+#     entity_id: switch.light_bedroom
+#   action:
+#     service: "{% if trigger.to_state.state == \"on\" %}\n  switch.turn_on\n{% else\
+#       \ %}\n  switch.turn_off\n{% endif %}\n"
+#     data:
+#       entity_id:
+#       - switch.light_bedroom_bed
+#       - switch.light_bedroom_ceiling
+
+
+# Buttons
 - id: '1611608224958'
   alias: Button - Study Light
   description: ''
@@ -276,14 +356,6 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_04_action
-      light_switch_entity: switch.light_study
-      light_entity: light.tradfri_plug_01_light
-- id: '1611610011220'
-  alias: Light Switch - Study
-  description: ''
-  use_blueprint:
-    path: light_switch.yaml
-    input:
       light_switch_entity: switch.light_study
       light_entity: light.tradfri_plug_01_light
 - id: '1611610227692'
@@ -295,20 +367,6 @@
       button_entity: sensor.tradfri_button_01_action
       light_switch_entity: switch.light_livingroom
       light_entity: light.livingroom
-- id: '1611611216928'
-  alias: Light Switch - Bedroom
-  description: ''
-  mode: single
-  trigger:
-  - platform: state
-    entity_id: switch.light_bedroom
-  action:
-    service: "{% if trigger.to_state.state == \"on\" %}\n  switch.turn_on\n{% else\
-      \ %}\n  switch.turn_off\n{% endif %}\n"
-    data:
-      entity_id:
-      - switch.light_bedroom_bed
-      - switch.light_bedroom_ceiling
 - id: '1611611534011'
   alias: Button - Bedroom - Bed
   description: ''

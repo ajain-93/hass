@@ -1,14 +1,14 @@
 bathroom_max:
-  duration: '00:30:00'
+  duration: '02:00:00'
 
 bedroom_max:
   duration: '01:00:00'
 
 gallery_max:
-  duration: '00:30:00'
+  duration: '02:00:00'
 
 kitchen_max:
-  duration: '01:00:00'
+  duration: '02:00:00'
 
 livingroom_max:
   duration: '04:00:00'
