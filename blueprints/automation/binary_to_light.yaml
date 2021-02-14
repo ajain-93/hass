@@ -45,8 +45,8 @@ action:
       from: 'on'
       to: 'off'
   - delay:
-      seconds: !input no_motion_wait  # Testing
-      # minutes: !input no_motion_wait  # Production
+      # seconds: !input no_motion_wait  # Testing
+      minutes: !input no_motion_wait  # Production
   - service: light.turn_off
     data:
       entity_id: !input target_light
