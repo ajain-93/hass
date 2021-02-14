@@ -1,3 +1,13 @@
+# Source: https://github.com/home-assistant/core/blob/dev/homeassistant/components/light/__init__.py#L41
+# Supported Features
+# 128  1000000  White Value
+# 032  0100000  Transition
+# 016  0010000  Colour
+# 008  0001000  Flash
+# 004  0000100  Effect
+# 002  0000010  Color_TEMP
+# 001  0000001  Brightness
+
 # White E27
 - platform: "mqtt"
   name: tradfri_led_white_01_light

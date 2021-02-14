@@ -97,25 +97,30 @@ light_on_worker:
       example: '1'
   mode: parallel
   sequence:
+  - choose:
+    - conditions: # Check for colour support
+      - "{{ state_attr(entity_id, 'supported_features') | bitwise_and(16) == 16}}"
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: "{{ entity_id }}"
+          brightness_pct: 1
+          color_name: "{{ color_name }}"
+          transition: 0
+    default:
     - service: light.turn_on
       data:
         entity_id: "{{ entity_id }}"
         brightness_pct: 1
         color_temp: "{{ color_temp }}"
         transition: 0
-    - service: light.turn_on
-      data:
-        entity_id: "{{ entity_id }}"
-        brightness_pct: 1
-        color_name: "{{ color_name }}"
-        transition: 0
-    - delay:
-        milliseconds: 500
-    - service: light.turn_on
-      data:
-        entity_id: "{{ entity_id }}"
-        brightness_pct: "{{ brightness_pct }}"
-        transition: "{{ transition }}"
+  - delay:
+      milliseconds: 500
+  - service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      brightness_pct: "{{ brightness_pct }}"
+      transition: "{{ transition }}"
 
 
 
@@ -197,7 +202,7 @@ light_switch:
 
 
 light_switch_worker:
-  alias: Worker - Light Sitch
+  alias: Worker - Light Switch
   icon: mdi:lamp
   description: 'Worker when light is already on'
   fields:
@@ -218,24 +223,29 @@ light_switch_worker:
       example: '1'
   mode: parallel
   sequence:
+  - choose:
+    - conditions: # Check for colour support
+      - "{{ state_attr(entity_id, 'supported_features') | bitwise_and(16) == 16}}"
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: "{{ entity_id }}"
+          color_name: "{{ color_name }}"
+          transition: "{{ transition / 2}}"
+    default:
     - service: light.turn_on
       data:
         entity_id: "{{ entity_id }}"
         color_temp: "{{ color_temp }}"
         transition: "{{ transition / 2}}"
-    - service: light.turn_on
-      data:
-        entity_id: "{{ entity_id }}"
-        color_name: "{{ color_name }}"
-        transition: "{{ transition / 2}}"
-    - delay:
-        seconds: "{{ transition / 2}}"
-        milliseconds: 500
-    - service: light.turn_on
-      data:
-        entity_id: "{{ entity_id }}"
-        brightness_pct: "{{ brightness_pct }}"
-        transition: "{{ transition / 2}}"
+  - delay:
+      seconds: "{{ transition / 2}}"
+      milliseconds: 500
+  - service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      brightness_pct: "{{ brightness_pct }}"
+      transition: "{{ transition / 2}}"
 
 
 
@@ -297,7 +307,7 @@ light_mode_change:
         entity_id: light.bedroom_ceiling
         state: 'on'
       sequence:
-        - delay: 00:00:02
+        # - delay: 00:00:02
         - service: script.light_switch
           data:
             entity_id: light.bedroom_ceiling
@@ -307,7 +317,7 @@ light_mode_change:
         entity_id: light.bedroom_bed
         state: 'on'
       sequence:
-        - delay: 00:00:02
+        # - delay: 00:00:02
         - service: script.light_switch
           data:
             entity_id: light.bedroom_bed
