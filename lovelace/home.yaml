@@ -51,51 +51,57 @@ cards:
             action: more-info
 
         - entity: light.bathroom
+          icon: 'mdi:shower'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_bathroom
+              entity_id: light.bathroom
           hold_action:
             action: more-info
         - entity: light.bedroom
+          icon: 'mdi:bed-double'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_bedroom
+              entity_id: light.bedroom
           hold_action:
             action: more-info
         - entity: light.gallery
+          icon: 'mdi:shoe-print'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_gallery
+              entity_id: light.gallery
           hold_action:
             action: more-info
         - entity: light.kitchen
+          icon: 'mdi:table-chair'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_kitchen
+              entity_id: light.kitchen
           hold_action:
             action: more-info
         - entity: light.livingroom
+          icon: 'mdi:sofa'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_livingroom
+              entity_id: light.livingroom
           hold_action:
             action: more-info
         - entity: light.store
+          icon: 'mdi:wardrobe-outline'
           tap_action:
             action: call-service
-            service: switch.toggle
+            service: script.light_toggle
             service_data:
-              entity_id: switch.light_store
+              entity_id: light.store
           hold_action:
             action: more-info
 
@@ -169,15 +175,15 @@ cards:
         hold_action:
           action: navigate
           navigation_path: /lovelace/lights
-      - entity: binary_sensor.light_timers
-        name: Triggers
-        icon: mdi:lightbulb-group-outline
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/light-triggers
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/light-triggers
+      # - entity: binary_sensor.light_timers
+      #   name: Triggers
+      #   icon: mdi:lightbulb-group-outline
+      #   tap_action:
+      #     action: navigate
+      #     navigation_path: /lovelace/light-triggers
+      #   hold_action:
+      #     action: navigate
+      #     navigation_path: /lovelace/light-triggers
       - entity: binary_sensor.motion_state_sensors
         name: Sensors
         icon: 'mdi:ghost'
@@ -232,6 +238,15 @@ cards:
         hold_action:
           action: navigate
           navigation_path: /lovelace/updates
+      - entity: switch.telldus_switch_07_switch
+        name: Ender 3
+        # icon: 'mdi:cellphone-arrow-down'
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/ender3
+        hold_action:
+          action: navigate
+          navigation_path: /lovelace/ender3
 
   - type: media-control
     entity: media_player.spotify
