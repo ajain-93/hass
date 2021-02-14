@@ -356,7 +356,7 @@
     path: ikea_2_button.yaml
     input:
       button_entity: sensor.tradfri_button_04_action
-      light_switch_entity: switch.light_study
+      # light_switch_entity: switch.light_study
       light_entity: light.tradfri_plug_01_light
 - id: '1611610227692'
   alias: Button - Living Room

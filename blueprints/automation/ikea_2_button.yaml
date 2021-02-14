@@ -10,12 +10,12 @@ blueprint:
       selector:
         entity:
           domain: sensor
-    light_switch_entity:
-      name: Light Switch
-      description: The light switch to control
-      selector:
-        entity:
-          domain: switch
+    # light_switch_entity:
+    #   name: Light Switch
+    #   description: The light switch to control
+    #   selector:
+    #     entity:
+    #       domain: switch
     light_entity:
       name: Light
       description: The light switch to control
@@ -37,17 +37,17 @@ action:
           entity_id: !input button_entity
           state: 'on'
       sequence:
-        - service: switch.turn_on
+        - service: script.light_on
           data:
-            entity_id: !input light_switch_entity
+            entity_id: !input light_entity
     - conditions:
         - condition: state
           entity_id: !input button_entity
           state: 'off'
       sequence:
-        - service: switch.turn_off
+        - service: light.turn_off
           data:
-            entity_id: !input light_switch_entity
+            entity_id: !input light_entity
     - conditions:
         - condition: state
           entity_id: !input button_entity
