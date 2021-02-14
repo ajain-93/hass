@@ -31,6 +31,53 @@
         - switch.tradfri_plug_06_power
 
 
+- alias: Lights Mode - Morning
+  id: arnav-jain-se_decoration_lights_mode_morning
+  trigger:
+  - platform: time
+    at: '08:00:00'
+  - platform: sun
+    event: sunrise
+  action:
+  - service: switch.turn_on
+    entity_id: switch.ha_lights_mode_morning
+  mode: single
+
+
+- alias: Lights Mode - Afternoon
+  id: arnav-jain-se_decoration_lights_mode_afternoon
+  trigger:
+    platform: time
+    at: '17:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.ha_lights_mode_afternoon
+  mode: single
+
+
+- alias: Lights Mode - Evening
+  id: arnav-jain-se_decoration_lights_mode_evening
+  trigger:
+    platform: time
+    at: '20:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.ha_lights_mode_evening
+  mode: single
+
+
+- alias: Lights Mode - Night
+  id: arnav-jain-se_decoration_lights_mode_night
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.ha_lights_mode_night
+  mode: single
+
+
+
 # Common
 - alias: Bicycle Battery Charge Complete
   id: arnav-jain-se_battery_charge
