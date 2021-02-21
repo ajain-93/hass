@@ -1,0 +1,52 @@
+blueprint:
+  name: Disco Light
+  description: Continously change colour of selected light
+  domain: automation
+
+  input:
+    switch_entity:
+      name: Switch
+      description: The switch that turns on the changer
+      selector:
+        entity:
+          domain: switch
+    light_entity:
+      name: Light
+      description: The light to be controlled
+      selector:
+        entity:
+          domain: light
+    transition_time:
+      name: Transition Time
+      description: The transition time of each change (s)
+      selector:
+        entity:
+          domain: number
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  platform: state
+  entity_id: !input switch_entity
+  to: 'on'
+
+action:
+- repeat:
+    while:
+    - condition: state
+      entity_id: !input switch_entity
+      state: 'on'
+    - condition: state
+      entity_id: !input light_entity
+      state: 'on'
+    sequence:
+    - service: script.disco_light
+      data:
+        entity_id: !input light_entity
+        transition: !input transition_time
+    - delay:
+        seconds: !input transition_time
+- service: script.light_switch
+  data:
+    entity_id: !input light_entity

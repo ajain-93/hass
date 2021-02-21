@@ -172,6 +172,25 @@ cards:
     #     hold_action:
     #       action: more-info
 
+    - type: glance
+      title: Disco
+      show_state: false
+      show_name: false
+      # columns: 7
+      entities:
+        - entity: switch.light_disco_bathroom
+          icon: 'mdi:shower'
+          tap_action:
+            action: toggle
+        - entity: switch.light_disco_bedroom_bed
+          icon: 'mdi:bed-double'
+          tap_action:
+            action: toggle
+        - entity: switch.light_disco_livingroom
+          icon: 'mdi:sofa'
+          tap_action:
+            action: toggle
+
   - type: glance
     title: Bathroom
     show_state: false

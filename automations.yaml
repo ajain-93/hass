@@ -146,6 +146,33 @@
   - service: script.light_mode_change
 
 
+# Disco Lights
+- alias: Lights Disco - Bathroom
+  id: arnav-jain-se_lights_disco_bathroom
+  use_blueprint:
+    path: disco_lights.yaml
+    input:
+      switch_entity: switch.light_disco_bathroom
+      light_entity: light.bathroom
+      transition_time: '10'
+- alias: Lights Disco - Bedroom Bed
+  id: arnav-jain-se_lights_disco_bedroom_bed
+  use_blueprint:
+    path: disco_lights.yaml
+    input:
+      switch_entity: switch.light_disco_bedroom_bed
+      light_entity: light.bedroom_bed
+      transition_time: '10'
+- alias: Lights Disco - Living Room
+  id: arnav-jain-se_lights_disco_living_room
+  use_blueprint:
+    path: disco_lights.yaml
+    input:
+      switch_entity: switch.light_disco_livingroom
+      light_entity: light.livingroom
+      transition_time: '10'
+
+
 # Common
 - alias: Bicycle Battery Charge Complete
   id: arnav-jain-se_battery_charge

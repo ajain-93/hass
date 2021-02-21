@@ -81,6 +81,17 @@ switch.light_kitchen:
   icon: mdi:light-switch
 
 
+switch.light_disco_bathroom:
+  friendly_name: Disco Light Bathroom
+  icon: mdi:light-switch
+switch.light_disco_bedroom_bed:
+  friendly_name: Disco Light Bedroom Bed
+  icon: mdi:light-switch
+switch.light_disco_livingroom:
+  friendly_name: Disco Light Living room
+  icon: mdi:light-switch
+
+
 ## Light Triggers
 binary_sensor.light_trigger_bathroom:
   friendly_name: Bathroom Light Trigger

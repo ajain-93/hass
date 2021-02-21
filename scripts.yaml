@@ -423,3 +423,28 @@ notify:
       data:
         title: "{{ title }}"
         message: "{{ message }}"
+
+
+
+# Disco Light
+disco_light:
+  alias: Disco Light
+  # icon: mdi:bell-badge
+  description: Change Colour of selected light
+  fields:
+    entity_id:
+      description: The entity_id of the light to be changed
+      example: light.livingroom
+    transition:
+      description: Time for transition (s)
+      example: "5"
+  mode: queued
+  sequence:
+    service: light.turn_on
+    data:
+      entity_id: "{{ entity_id }}"
+      hs_color:
+        - "{{ range(360)|random }}"
+        - "{{ range(80,101)|random }}"
+        # brightness_pct: 100
+      transition: "{{ transition }}"
