@@ -1,0 +1,6 @@
+alarm:
+  name: Alarm Light Pre-trigger
+  initial: 30
+  min: 5
+  max: 60
+  step: 1

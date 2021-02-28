@@ -354,34 +354,28 @@ lights_wake_up:
     light:
       description: The light to be turned on
       example: light.bedroom
-    light_switch:
-      description: The light switch of the light to be turned on
-      example: switch.light_bedroom
-    timer:
-      description: Minutes for the gradient
-      example: '30'
   mode: restart
   sequence:
     - service: switch.turn_on
       data:
         entity_id: switch.ha_lights_mode_morning
     - delay:
-        seconds: 2
-    - service: switch.turn_on
+        seconds: 5
+    - service: script.light_on
       data:
-        entity_id: "{{ light_switch }}"
+        entity_id: "{{ light }}"
     - delay:
         seconds: 5
     - service: light.turn_on
       data:
         entity_id: "{{ light }}"
         brightness_pct: '1'
-    - delay:
-        seconds: 5
-    - service: notify.telegram_arnav
+    # - delay:
+    #     seconds: 5
+    - service: script.notify
       data:
         title: Alarm
-        message: Light is {{ states(light) }}, with brightness {{ state_attr(light, 'brightness') }}
+        message: Wake up light is now {{ states(light) }}, on duration is {{states('input_number.alarm') | int}} minutes.
     - repeat:
         while:
           - condition: template
@@ -389,7 +383,7 @@ lights_wake_up:
           - condition: template
             value_template: "{{ state_attr(light, 'brightness') < 250 }}"
         sequence:
-          - delay: "{{ float( timer ) * 60 / 100 * 5}}"
+          - delay: "{{ float( states('input_number.alarm') ) * 60 / 100 * 5}}"
           - service: light.turn_on
             data:
               entity_id: "{{ light }}"

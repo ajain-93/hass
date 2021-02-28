@@ -44,6 +44,7 @@ timer: !include timers.yaml
 group: !include groups.yaml
 script: !include scripts.yaml
 input_datetime: !include date_time.yaml
+input_number: !include numbers.yaml
 
 light: !include lights.yaml
 switch: !include switches.yaml
