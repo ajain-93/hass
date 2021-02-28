@@ -480,3 +480,56 @@
       button_entity: sensor.tradfri_button_06_action
       # light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.bedroom_ceiling
+
+
+
+
+# Alarm
+# Set Next Alarm
+- alias: DateTime - Alarm set on Mobile
+  id: arnav-jain-se_datetime_alarm_mobile
+  trigger:
+  - platform: state
+    entity_id:
+      - input_datetime.next_alarm_manual
+      - input_datetime.next_alarm_zr
+      - input_datetime.next_alarm_a3
+      - input_datetime.next_alarm_g6
+  condition:
+    - condition: template
+      value_template: "{{ as_timestamp(states(trigger.entity_id)) > as_timestamp(now())}}"
+  action:
+  - service: script.set_alarm
+
+
+# Set Pre Trigger
+- alias: DateTime - Alarm Set
+  id: arnav-jain-se_datetime_alarm_set
+  trigger:
+  - platform: state
+    entity_id:
+    - input_datetime.next_alarm
+    - input_number.alarm
+  action:
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm_light
+        timestamp: "{{ state_attr('input_datetime.next_alarm', 'timestamp') | int - (states('input_number.alarm')| int) *60 | int}}"
+
+# Run Wake Up Lights
+- alias: DateTime - Alarm Run
+  id: arnav-jain-se_datetime_alarm_run
+  trigger:
+  - platform: time
+    at: input_datetime.next_alarm_light
+  condition:
+    - condition: state
+      entity_id: switch.morning_alarm_arm
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.morning_alarm_arm
+    - service: script.lights_wake_up
+      data:
+        light: light.bedroom

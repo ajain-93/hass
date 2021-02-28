@@ -19,12 +19,13 @@ cards:
             action: toggle
           hold_action:
             action: more-info
-        - entity: switch.ha_lights_manual_control
-          name: Manual
+        - entity: switch.morning_alarm_arm
+          name: Alarm
           tap_action:
             action: toggle
           hold_action:
-            action: more-info
+            action: navigate
+            navigation_path: /lovelace/alarms
         - entity: switch.ha_lights_mode_morning
           name: Morning
           tap_action:

@@ -21,3 +21,38 @@ lights_night:
   has_date: false
   has_time: true
   initial: "22:20"
+
+next_alarm:
+  name: Next Alarm
+  has_date: true
+  has_time: true
+
+next_alarm_manual:
+  name: Alarm (Manually Set)
+  has_date: true
+  has_time: true
+
+next_alarm_temp:
+  name: Alarm (Temporary)
+  has_date: true
+  has_time: true
+
+next_alarm_zr:
+  name: Alarm (Xperia ZR)
+  has_date: true
+  has_time: true
+
+next_alarm_a3:
+  name: Alarm (Galaxy A3)
+  has_date: true
+  has_time: true
+
+next_alarm_g6:
+  name: Alarm (G6+)
+  has_date: true
+  has_time: true
+
+next_alarm_light:
+  name: Next Wake Up Light
+  has_date: true
+  has_time: true

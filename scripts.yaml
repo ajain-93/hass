@@ -395,6 +395,119 @@ lights_wake_up:
 
 
 
+# Set alarm
+set_pre_alarm:
+  alias: Set next alarm trigger
+  description: Set light trigger 30 minutes before next alarm
+  mode: single
+  sequence:
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm_light
+        timestamp: "{{ state_attr('input_datetime.next_alarm', 'timestamp') | int - (states('input_number.alarm')| int) *60 | int}}"
+
+set_alarm:
+  alias: Set next alarm trigger
+  description: Reviews next alarm and sets the first one ocurring as next alarm
+  mode: restart
+  sequence:
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm_temp
+        timestamp: "{{ as_timestamp(now()) + 7.5 * (24*60*60) | int}}"
+    - delay:
+        seconds: 1
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm_temp
+        timestamp: "{{ as_timestamp(now()) + 7.5 * (24*60*60) | int}}"
+    - delay:
+        seconds: 1
+    # Manual
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ as_timestamp(now()) <
+                              as_timestamp(states('input_datetime.next_alarm_manual')) <
+                              as_timestamp(states('input_datetime.next_alarm_temp')) }}"
+        sequence:
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_manual')) | int}}"
+        - delay:
+            seconds: 1
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_manual')) | int}}"
+    # ZR
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ as_timestamp(now()) <
+                              as_timestamp(states('input_datetime.next_alarm_zr')) <
+                              as_timestamp(states('input_datetime.next_alarm_temp')) }}"
+        sequence:
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_zr')) | int}}"
+        - delay:
+            seconds: 1
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_zr')) | int}}"
+    # A3
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ as_timestamp(now()) <
+                              as_timestamp(states('input_datetime.next_alarm_a3')) <
+                              as_timestamp(states('input_datetime.next_alarm_temp')) }}"
+        sequence:
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_a3')) | int}}"
+        - delay:
+            seconds: 1
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_a3')) | int}}"
+    # G6
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{ as_timestamp(now()) <
+                              as_timestamp(states('input_datetime.next_alarm_g6')) <
+                              as_timestamp(states('input_datetime.next_alarm_temp')) }}"
+        sequence:
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_g6')) | int}}"
+        - delay:
+            seconds: 1
+        - service: input_datetime.set_datetime
+          data:
+            entity_id: input_datetime.next_alarm_temp
+            timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_g6')) | int}}"
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm
+        timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_temp')) | int}}"
+    - delay:
+        seconds: 1
+    - service: input_datetime.set_datetime
+      data:
+        entity_id: input_datetime.next_alarm
+        timestamp: "{{ as_timestamp(states('input_datetime.next_alarm_temp')) | int}}"
+
+
+
 # Notification
 notify:
   alias: Notify

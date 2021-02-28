@@ -8,6 +8,7 @@ views:
   - !include lovelace/entities-lights.yaml
   # - !include lovelace/entities-lights-triggers.yaml
   - !include lovelace/entities-sensors.yaml
+  - !include lovelace/entities-alarms.yaml
   - !include lovelace/entities-battery.yaml
   - !include lovelace/entities-network.yaml
   - !include lovelace/entities-link-quality.yaml

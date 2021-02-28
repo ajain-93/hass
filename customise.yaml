@@ -894,3 +894,9 @@ switch.srv01:
   friendly_name: Seagate NAS
   icon: mdi:power-plug
 
+
+
+# Alarms
+switch.morning_alarm_arm:
+  friendly_name: Arm Wake Up Light
+  icon: mdi:alarm-bell

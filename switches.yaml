@@ -287,6 +287,14 @@
 
 
 
+# Alarm Switches
+- platform: "mqtt"
+  name: morning_alarm_arm
+  state_topic: "hass/morning_alarm/arm"
+  command_topic: "hass/morning_alarm/arm"
+  retain: "on"
+
+
 # # Light Switches
 # - platform: "mqtt"
 #   name: light_bathroom
