@@ -2,7 +2,7 @@ lights_morning:
   name: Time Morning Lights
   has_date: false
   has_time: true
-  initial: "08:00"
+  initial: "07:00"
 
 lights_afternoon:
   name: Time Afternoon Lights
