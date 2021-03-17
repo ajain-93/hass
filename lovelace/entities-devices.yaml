@@ -1,0 +1,69 @@
+title: Devices
+path: devices
+icon: mdi:cellphone
+
+badges: []
+
+cards:
+  - type: entities
+    title: Motorola G6+
+    entities:
+      # - entity: sensor.g6_battery_health
+      # - entity: sensor.g6_charger_type
+      # - entity: binary_sensor.g6_is_charging
+      - entity: sensor.g6_battery_state
+        secondary_info: last-updated
+      - entity: sensor.g6_battery_level
+      - entity: binary_sensor.g6_power_save
+        secondary_info: last-updated
+      - entity: binary_sensor.g6_doze_mode
+        secondary_info: last-updated
+      - entity: sensor.g6_detected_activity
+        secondary_info: last-updated
+      - entity: binary_sensor.g6_bluetooth_state
+      # - entity: sensor.g6_bluetooth_connection
+      - entity: binary_sensor.g6_wifi_state
+        secondary_info: last-updated
+      - entity: sensor.g6_wifi_connection
+      - entity: sensor.g6_wifi_frequency
+      - entity: sensor.g6_internal_storage
+      - entity: sensor.g6_external_storage
+      - entity: sensor.g6_phone_state
+      - entity: sensor.g6_sim_1
+      - entity: sensor.g6_sim_2
+      - entity: binary_sensor.g6_device_locked
+      - entity: binary_sensor.g6_interactive
+      - entity: sensor.g6_geocoded_location
+      - entity: sensor.g6_last_reboot
+      - entity: sensor.g6_next_alarm
+      - entity: sensor.g6_total_rx_gb
+      - entity: sensor.g6_total_tx_gb
+    footer:
+      type: graph
+      entity: sensor.g6_battery_level
+      hours_to_show: 24
+      details: 2
+
+  - type: entities
+    title: Samsung Galaxy A3
+    entities:
+      - entity: sensor.a3_battery_state
+        secondary_info: last-updated
+      - entity: sensor.a3_battery_level
+      - entity: sensor.a3_internal_storage
+      - entity: sensor.a3_external_storage
+      - entity: binary_sensor.a3_bluetooth_state
+      - entity: binary_sensor.a3_device_locked
+        secondary_info: last-updated
+      - entity: sensor.a3_pressure_sensor
+        secondary_info: last-updated
+      - entity: sensor.a3_last_reboot
+      - entity: sensor.a3_next_alarm
+        secondary_info: last-updated
+      - entity: sensor.a3_total_rx_gb
+      - entity: sensor.a3_total_tx_gb
+    footer:
+      type: graph
+      entity: sensor.a3_battery_level
+      hours_to_show: 24
+      details: 2
