@@ -252,6 +252,18 @@ cards:
   - type: media-control
     entity: media_player.spotify
 
+  - type: grid
+    title: Devices
+    square: 'false'
+    # columns: 5
+    cards:
+      - type: button
+        name: Jain10
+        icon: mdi:desktop-tower-monitor
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/jain10
+
   # - type: entities
   #   title: Weather
   #   entities:

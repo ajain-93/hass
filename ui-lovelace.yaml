@@ -16,6 +16,9 @@ views:
   - !include lovelace/entities-power.yaml
   - !include lovelace/entities-updates.yaml
 
+  # Devices
+  - !include lovelace/device-jain10.yaml
+
   # Rooms
   - !include lovelace/room-bathroom.yaml
   - !include lovelace/room-bedroom.yaml

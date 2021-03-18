@@ -716,6 +716,481 @@
 
 
 
+# IOT Link Jain10
+- platform: mqtt
+  name: "Jain10 - Current User"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/system/current-user"
+  unit_of_measurement: ''
+  icon: mdi:account
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - System Boot Time"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/system/boot-time"
+  icon: mdi:timer-outline
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - System Uptime"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/system/uptime"
+  icon: mdi:timer-outlin
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Idle Time"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/system/idle-time"
+  unit_of_measurement: 'seconds'
+  icon: mdi:timer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - CPU Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/cpu/usage"
+  unit_of_measurement: '%'
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: statistics
+  name: "Jain10 - CPU Usage 1 min"
+  entity_id: sensor.jain10_cpu_usage
+  max_age:
+    minutes: 1
+- platform: statistics
+  name: "Jain10 - CPU Usage 5 min"
+  entity_id: sensor.jain10_cpu_usage
+  max_age:
+    minutes: 5
+- platform: statistics
+  name: "Jain10 - CPU Usage 15 min"
+  entity_id: sensor.jain10_cpu_usage
+  max_age:
+    minutes: 15
+- platform: mqtt
+  name: "Jain10 - RAM Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/memory/usage"
+  unit_of_measurement: '%'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - RAM Available"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/memory/available"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - RAM Used"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/memory/used"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - RAM Total"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/memory/total"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Label"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Format"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Used Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Free Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (C) Total Size"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Label"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Format"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Used Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Free Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (M) Total Size"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Label"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Format"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Used Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Free Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (T) Total Size"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Label"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Format"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Used Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Free Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (V) Total Size"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Label"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Format"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Usage"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Used Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Free Space"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - HDD (W) Total Size"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network IPv4"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/ipv4"
+  unit_of_measurement: ''
+  icon: mdi:lan
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network IPv6"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/ipv6"
+  unit_of_measurement: ''
+  icon: mdi:lan
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network Speed"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/speed"
+  unit_of_measurement: 'Mbps'
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network - Bytes Received"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-received"
+  unit_of_measurement: "B"
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network - Bytes Sent"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-sent"
+  unit_of_measurement: "B"
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network - BPS Received"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-received-per-second"
+  unit_of_measurement: "Bps"
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain10 - Network - BPS Sent"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-sent-per-second"
+  unit_of_measurement: "Bps"
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain10/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+
+
+
 # Link Quality
 - platform: template
   sensors:
