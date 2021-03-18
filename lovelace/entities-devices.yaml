@@ -67,3 +67,39 @@ cards:
       entity: sensor.a3_battery_level
       hours_to_show: 24
       details: 2
+
+  - type: entities
+    title: Sony Xperia ZR
+    entities:
+      # - entity: sensor.zr_battery_health
+      # - entity: sensor.zr_charger_type
+      # - entity: binary_sensor.zr_is_charging
+      - entity: sensor.zr_battery_state
+        secondary_info: last-updated
+      - entity: sensor.zr_battery_level
+      # - entity: binary_sensor.zr_power_save
+      # - entity: binary_sensor.zr_doze_mode
+      # - entity: sensor.zr_detected_activity
+      - entity: binary_sensor.zr_bluetooth_state
+      # - entity: sensor.zr_bluetooth_connection
+      - entity: binary_sensor.zr_wifi_state
+        secondary_info: last-updated
+      - entity: sensor.zr_wifi_connection
+      - entity: sensor.zr_wifi_frequency
+      - entity: sensor.zr_internal_storage
+      - entity: sensor.zr_external_storage
+      # - entity: sensor.zr_phone_state
+      # - entity: sensor.zr_sim_1
+      # - entity: sensor.zr_sim_2
+      # - entity: binary_sensor.zr_device_locked
+      # - entity: binary_sensor.zr_interactive
+      - entity: sensor.zr_geocoded_location
+      - entity: sensor.zr_last_reboot
+      - entity: sensor.zr_next_alarm
+      - entity: sensor.zr_total_rx_gb
+      - entity: sensor.zr_total_tx_gb
+    footer:
+      type: graph
+      entity: sensor.zr_battery_level
+      hours_to_show: 24
+      details: 2
