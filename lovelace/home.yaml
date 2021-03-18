@@ -263,6 +263,12 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/jain10
+      - type: button
+        name: Jain70
+        icon: mdi:laptop-windows
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/jain70
 
   # - type: entities
   #   title: Weather
