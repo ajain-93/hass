@@ -220,7 +220,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network Wired"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/wired"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/wired"
   value_template: "{{ value }}"
   payload_on: "True"
   payload_off: "False"
@@ -261,7 +261,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain70 - Network Wired"
-  state_topic: "iotlink/jain/jain70/windows-monitor/stats/network/0/wired"
+  state_topic: "iotlink/jain/jain70/windows-monitor/stats/network/1/wired"
   value_template: "{{ value }}"
   payload_on: "True"
   payload_off: "False"
