@@ -14,10 +14,8 @@ cards:
       - entity: sensor.g6_battery_state
         secondary_info: last-updated
       - entity: sensor.g6_battery_level
-      - entity: binary_sensor.g6_power_save
-        secondary_info: last-updated
-      - entity: binary_sensor.g6_doze_mode
-        secondary_info: last-updated
+      # - entity: binary_sensor.g6_power_save
+      # - entity: binary_sensor.g6_doze_mode
       - entity: sensor.g6_detected_activity
         secondary_info: last-updated
       - entity: binary_sensor.g6_bluetooth_state
