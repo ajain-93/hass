@@ -768,16 +768,19 @@
 - platform: statistics
   name: "Jain10 - CPU Usage 1 min"
   entity_id: sensor.jain10_cpu_usage
+  sampling_size: 6
   max_age:
     minutes: 1
 - platform: statistics
   name: "Jain10 - CPU Usage 5 min"
   entity_id: sensor.jain10_cpu_usage
+  sampling_size: 30
   max_age:
     minutes: 5
 - platform: statistics
   name: "Jain10 - CPU Usage 15 min"
   entity_id: sensor.jain10_cpu_usage
+  sampling_size: 90
   max_age:
     minutes: 15
 - platform: mqtt
@@ -1240,16 +1243,19 @@
 - platform: statistics
   name: "Jain70 - CPU Usage 1 min"
   entity_id: sensor.jain70_cpu_usage
+  sampling_size: 6
   max_age:
     minutes: 1
 - platform: statistics
   name: "Jain70 - CPU Usage 5 min"
   entity_id: sensor.jain70_cpu_usage
+  sampling_size: 30
   max_age:
     minutes: 5
 - platform: statistics
   name: "Jain70 - CPU Usage 15 min"
   entity_id: sensor.jain70_cpu_usage
+  sampling_size: 90
   max_age:
     minutes: 15
 - platform: mqtt
