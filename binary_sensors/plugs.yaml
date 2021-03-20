@@ -1,0 +1,34 @@
+#  Switches
+- platform: "mqtt"
+  name: fibaro_switch_02_switch
+  state_topic: "zwave2mqtt/fibaro_switch_02/37/1/0"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: fibaro_switch_02_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_fibaro_switch_02"
+      ],
+      "manufacturer": "FIBARO System",
+      "model": "0x1001",
+      "name": "FGWPE/F Wall Plug Gen5",
+      "sw_version": "3.02"
+  }
+- platform: "mqtt"
+  name: telldus_switch_03_switch
+  state_topic: "zwave2mqtt/telldus_switch_03/37/1/0"
+  # command_topic: "zwave2mqtt/telldus_switch_03/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_03_switch
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }

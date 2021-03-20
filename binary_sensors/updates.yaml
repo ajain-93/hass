@@ -1,0 +1,78 @@
+# Zigbee Updates
+- platform: template
+  sensors:
+# Plugs
+    tradfri_plug_01_update:
+      value_template: "{{ state_attr('light.tradfri_plug_01_light', 'update_available') }}"
+    tradfri_plug_02_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'update_available') }}"
+    tradfri_plug_03_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'update_available') }}"
+    tradfri_plug_04_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_04_power', 'update_available') }}"
+    tradfri_plug_05_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_05_power', 'update_available') }}"
+    tradfri_plug_06_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_06_power', 'update_available') }}"
+    tradfri_plug_07_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_07_power', 'update_available') }}"
+    tradfri_plug_08_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_08_power', 'update_available') }}"
+    tradfri_plug_09_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_09_power', 'update_available') }}"
+    tradfri_plug_10_update:
+      value_template: "{{ state_attr('switch.tradfri_plug_10_power', 'update_available') }}"
+# Remotes
+    tradfri_switch_01_update:
+      value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'update_available') }}"
+    tradfri_switch_02_update:
+      value_template: "{{ state_attr('sensor.tradfri_switch_02_action', 'update_available') }}"
+    tradfri_button_01_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'update_available') }}"
+    tradfri_button_02_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'update_available') }}"
+    tradfri_button_03_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_03_action', 'update_available') }}"
+    tradfri_button_04_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_04_action', 'update_available') }}"
+    tradfri_button_05_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'update_available') }}"
+    tradfri_button_06_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'update_available') }}"
+# Door Sensors
+# N/A
+# Motion Sensors
+    tradfri_motion_01_update:
+      value_template: "{{ state_attr('binary_sensor.tradfri_motion_01', 'update_available') }}"
+# Lights
+# RGB Lights
+    tradfri_led_rgb_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_01_light', 'update_available') }}"
+    tradfri_led_rgb_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_02_light', 'update_available') }}"
+    tradfri_led_rgb_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'update_available') }}"
+    tradfri_led_rgb_04_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'update_available' ) }}"
+    tradfri_led_rgb_05_update:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_05_light', 'update_available' ) }}"
+# White Lights
+    tradfri_led_white_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'update_available') }}"
+    tradfri_led_white_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_02_light', 'update_available') }}"
+    tradfri_led_white_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_white_03_light', 'update_available') }}"
+# GU10 Lights
+    tradfri_led_gu10_01_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'update_available') }}"
+    tradfri_led_gu10_02_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_02_light', 'update_available') }}"
+    tradfri_led_gu10_03_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_03_light', 'update_available') }}"
+    tradfri_led_gu10_04_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_04_light', 'update_available') }}"
+    tradfri_led_gu10_05_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_05_light', 'update_available') }}"
+    tradfri_led_gu10_06_update:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_06_light', 'update_available') }}"

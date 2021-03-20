@@ -1,0 +1,10 @@
+# Door Sensors
+- platform: "mqtt"
+  name: aqara_sensor_switch_01_contact
+  state_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  json_attributes_topic: "zigbee2mqtt/aqara_sensor_switch_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.contact }}"
+  device_class: "door"
