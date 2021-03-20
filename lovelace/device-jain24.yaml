@@ -72,7 +72,7 @@ cards:
       type: graph
       entity: sensor.jain24_battery
       hours_to_show: 24
-      details: 2
+      detail: 2
 
 
   - type: entities

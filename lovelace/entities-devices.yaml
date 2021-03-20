@@ -40,7 +40,7 @@ cards:
       type: graph
       entity: sensor.g6_battery_level
       hours_to_show: 24
-      details: 2
+      detail: 2
 
   - type: entities
     title: Samsung Galaxy A3
@@ -64,7 +64,7 @@ cards:
       type: graph
       entity: sensor.a3_battery_level
       hours_to_show: 24
-      details: 2
+      detail: 2
 
   - type: entities
     title: Sony Xperia ZR
@@ -100,4 +100,4 @@ cards:
       type: graph
       entity: sensor.zr_battery_level
       hours_to_show: 24
-      details: 2
+      detail: 2
