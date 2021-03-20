@@ -761,6 +761,10 @@ binary_sensor.ping_sas_stolx0831:
   friendly_name: HP Elitebook 840
   device_class: connectivity
   icon: mdi:laptop
+binary_sensor.ping_jain24:
+  friendly_name: Acer W700
+  device_class: connectivity
+  icon: mdi:tablet-dashboard
 
 binary_sensor.ping_octopi:
   friendly_name: Octoprint

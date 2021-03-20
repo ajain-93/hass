@@ -142,6 +142,10 @@
   host: com49.jain.lan
   name: ping_sas_stolx0831
   count: 1
+- platform: ping
+  host: jain24.jain.lan
+  name: ping_jain24
+  count: 1
 
 - platform: ping
   host: iot02.jain.lan
