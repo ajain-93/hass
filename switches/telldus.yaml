@@ -17,15 +17,15 @@
   payload_off: "false"
   payload_on: "true"
   unique_id: telldus_switch_02_switch
-# - platform: "mqtt"
-#   name: telldus_switch_03_switch
-#   icon: "mdi:flash"
-#   state_topic: "zwave2mqtt/telldus_switch_03/37/1/0"
-#   command_topic: "zwave2mqtt/telldus_switch_03/37/1/0/set"
-#   value_template: "{{value}}"
-#   payload_off: "false"
-#   payload_on: "true"
-#   unique_id: telldus_switch_03_switch
+- platform: "mqtt"
+  name: telldus_switch_03_switch
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_03/37/1/0"
+  command_topic: "zwave2mqtt/telldus_switch_03/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: telldus_switch_03_switch
 - platform: "mqtt"
   name: telldus_switch_04_switch
   icon: "mdi:flash"

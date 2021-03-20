@@ -7,7 +7,7 @@ badges: []
 
 cards:
   - type: entity-button
-    entity: binary_sensor.telldus_switch_03_switch
+    entity: switch.telldus_switch_03_switch
     show_icon: true
     show_name: false
     tap_action:

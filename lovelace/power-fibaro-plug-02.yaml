@@ -7,7 +7,7 @@ badges: []
 
 cards:
   - type: entity-button
-    entity: binary_sensor.fibaro_switch_02_switch
+    entity: switch.fibaro_switch_02_switch
     show_icon: true
     show_name: false
     tap_action:

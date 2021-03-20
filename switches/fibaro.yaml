@@ -8,3 +8,12 @@
   payload_off: "false"
   payload_on: "true"
   unique_id: fibaro_switch_01_switch
+- platform: "mqtt"
+  name: fibaro_switch_02_switch
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/fibaro_switch_02/37/1/0"
+  command_topic: "zwave2mqtt/fibaro_switch_02/37/1/0/set"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+  unique_id: fibaro_switch_02_switch

@@ -564,9 +564,9 @@ binary_sensor.telldus_switch_03_switch:
   friendly_name: Study Table
   icon: mdi:desk
   device_class: plug
-# switch.telldus_switch_03_switch:
-#   friendly_name: Study Table
-#   icon: mdi:desk
+switch.telldus_switch_03_switch:
+  friendly_name: Study Table
+  icon: mdi:desk
 sensor.telldus_switch_03_power:
   friendly_name: Study Table Power
   icon: mdi:flash
@@ -658,6 +658,9 @@ sensor.fibaro_switch_01_energy:
   icon: mdi:power-plug
 
 binary_sensor.fibaro_switch_02_switch:
+  friendly_name: Jain56
+  icon: mdi:server
+switch.fibaro_switch_02_switch:
   friendly_name: Jain56
   icon: mdi:server
 sensor.fibaro_switch_02_power:

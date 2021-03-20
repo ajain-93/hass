@@ -64,7 +64,7 @@ cards:
       - entity: switch.tradfri_plug_02_power
         tap_action:
           action: more-info
-      - entity: binary_sensor.fibaro_switch_02_switch
+      - entity: switch.fibaro_switch_02_switch
         tap_action:
           action: navigate
           navigation_path: /lovelace/fibaro-plug-02
@@ -77,7 +77,7 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/telldus-plug-06
-      - entity: binary_sensor.telldus_switch_03_switch
+      - entity: switch.telldus_switch_03_switch
         name: Table
         tap_action:
           action: navigate

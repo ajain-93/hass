@@ -26,7 +26,7 @@ cards:
         tap_action:
           action: navigate
           navigation_path: fibaro-plug-01
-      - entity: binary_sensor.fibaro_switch_02_switch
+      - entity: switch.fibaro_switch_02_switch
         tap_action:
           action: navigate
           navigation_path: fibaro-plug-02
@@ -43,7 +43,7 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/telldus-plug-02
-      - entity: binary_sensor.telldus_switch_03_switch
+      - entity: switch.telldus_switch_03_switch
         tap_action:
           action: navigate
           navigation_path: /lovelace/telldus-plug-03
