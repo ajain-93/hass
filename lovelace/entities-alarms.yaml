@@ -7,15 +7,22 @@ badges: []
 cards:
 
   - type: entities
-    title: Alarms
     entities:
       - switch.morning_alarm_arm
+      - input_datetime.next_alarm
+      - input_number.alarm
+      - input_datetime.next_alarm_light
+
+  - type: entities
+    entities:
       - input_datetime.next_alarm_manual
       - input_datetime.next_alarm_zr
       - input_datetime.next_alarm_a3
       - input_datetime.next_alarm_g6
-      # - input_datetime.next_alarm_temp
-      - input_datetime.next_alarm
-      - input_number.alarm
-      - input_datetime.next_alarm_light
+
+  - type: entities
+    entities:
+      - sensor.zr_next_alarm
+      - sensor.a3_next_alarm
+      - sensor.g6_next_alarm
 
