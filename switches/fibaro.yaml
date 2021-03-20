@@ -8,12 +8,3 @@
   payload_off: "false"
   payload_on: "true"
   unique_id: fibaro_switch_01_switch
-  device: {
-    "identifiers": [
-        "zwave2mqtt_fibaro_switch_01"
-      ],
-    "manufacturer": "FIBARO System",
-    "model": "0x1001",
-    "name": "FGWPE/F Wall Plug Gen5",
-    "sw_version": "3.02"
-  }

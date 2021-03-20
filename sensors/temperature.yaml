@@ -13,12 +13,3 @@
   value_template: "{{value}}"
   device_class: "temperature"
   unique_id: aeotec_sensor6_01_temperature
-  device: {
-    "identifiers": [
-        "zwave2mqtt_aeotec_sensor6_01"
-      ],
-      "manufacturer": "AEON Labs",
-      "model": "ZW100",
-      "name": "ZW100 MultiSensor 6 ",
-      "sw_version": "1.11"
-  }
