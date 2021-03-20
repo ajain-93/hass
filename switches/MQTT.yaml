@@ -1,0 +1,131 @@
+# MQTT Virtual switches
+
+# Light Controls
+- platform: "mqtt"
+  name: ha_lights_manual_control
+  state_topic: "hass/lights/manual-control"
+  command_topic: "hass/lights/manual-control"
+  value_template: "{{value}}"
+  payload_off: "false"
+  payload_on: "true"
+
+- platform: "mqtt"
+  name: ha_lights_mode_morning
+  state_topic: "hass/lights/mode/morning"
+  command_topic: "hass/lights/mode/morning"
+  value_template: "{{value}}"
+  # state_on: "true"
+  # state_off: "false"
+  # payload_on: "morning"
+  # payload_off: "morning"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_afternoon
+  state_topic: "hass/lights/mode/afternoon"
+  command_topic: "hass/lights/mode/afternoon"
+  value_template: "{{value}}"
+  # state_on: "true"
+  # state_off: "false"
+  # payload_on: "afternoon"
+  # payload_off: "afternoon"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_evening
+  state_topic: "hass/lights/mode/evening"
+  command_topic: "hass/lights/mode/evening"
+  value_template: "{{value}}"
+  # state_on: "true"
+  # state_off: "false"
+  # payload_on: "evening"
+  # payload_off: "evening"
+  retain: "on"
+
+- platform: "mqtt"
+  name: ha_lights_mode_night
+  state_topic: "hass/lights/mode/night"
+  command_topic: "hass/lights/mode/night"
+  value_template: "{{value}}"
+  # state_on: "true"
+  # state_off: "false"
+  # payload_on: "night"
+  # payload_off: "night"
+  retain: "on"
+
+
+
+# Disco Light Switches
+- platform: "mqtt"
+  name: light_disco_bathroom
+  state_topic: "hass/lights/bathroom/disco"
+  command_topic: "hass/lights/bathroom/disco"
+  retain: "on"
+- platform: "mqtt"
+  name: light_disco_bedroom_bed
+  state_topic: "hass/lights/bedroom_bed/disco"
+  command_topic: "hass/lights/bedroom_bed/disco"
+  retain: "on"
+- platform: "mqtt"
+  name: light_disco_livingroom
+  state_topic: "hass/lights/livingroom/disco"
+  command_topic: "hass/lights/livingroom/disco"
+  retain: "on"
+
+
+
+# Alarm Switches
+- platform: "mqtt"
+  name: morning_alarm_arm
+  state_topic: "hass/morning_alarm/arm"
+  command_topic: "hass/morning_alarm/arm"
+  retain: "on"
+
+
+
+# # Light Switches
+# - platform: "mqtt"
+#   name: light_bathroom
+#   state_topic: "hass/lights/bathroom"
+#   command_topic: "hass/lights/bathroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom
+#   state_topic: "hass/lights/bedroom"
+#   command_topic: "hass/lights/bedroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom_bed
+#   state_topic: "hass/lights/bedroom_bed"
+#   command_topic: "hass/lights/bedroom_bed"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_bedroom_ceiling
+#   state_topic: "hass/lights/bedroom_ceiling"
+#   command_topic: "hass/lights/bedroom_ceiling"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_gallery
+#   state_topic: "hass/lights/gallery"
+#   command_topic: "hass/lights/gallery"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_kitchen
+#   state_topic: "hass/lights/kitchen"
+#   command_topic: "hass/lights/kitchen"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_livingroom
+#   state_topic: "hass/lights/livingroom"
+#   command_topic: "hass/lights/livingroom"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_study
+#   state_topic: "hass/lights/study_light"
+#   command_topic: "hass/lights/study_light"
+#   retain: "on"
+# - platform: "mqtt"
+#   name: light_store
+#   state_topic: "hass/lights/store"
+#   command_topic: "hass/lights/store"
+#   retain: "on"

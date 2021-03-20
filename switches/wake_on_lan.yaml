@@ -1,0 +1,6 @@
+# Wake On LAN
+# - platform: wake_on_lan
+#   mac: "F8-32-E4-86-7F-BF" -- Change in 0.103
+#   name: "Jain10 WOL"
+#   host: "jain10.jain.lan"
+#   broadcast_address: "192.168.8.255"
