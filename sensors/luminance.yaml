@@ -1,7 +1,7 @@
 # Luminance
 - platform: "mqtt"
   name: aeotec_sensor6_01_luminance
-  icon: "mdi:flash"
+  # icon: mdi:brightness-5
   state_topic: "zwave2mqtt/aeotec_sensor6_01/49/1/3"
   unit_of_measurement: "lx"
   value_template: "{{value}}"

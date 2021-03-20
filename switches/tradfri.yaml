@@ -1,6 +1,7 @@
 # Trådfri Plugs
 - platform: "mqtt"
   name: tradfri_plug_02_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_02"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_02"
@@ -8,6 +9,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_03_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_03"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_03"
@@ -15,6 +17,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_04_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_04"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_04"
@@ -22,6 +25,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_05_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_05"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_05"
@@ -29,6 +33,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_06_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_06"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_06"
@@ -36,6 +41,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_07_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_07"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_07"
@@ -43,6 +49,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_08_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_08"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_08"
@@ -50,6 +57,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_09_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_09"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_09"
@@ -57,6 +65,7 @@
   value_template: "{{ value_json.state }}"
 - platform: "mqtt"
   name: tradfri_plug_10_power
+  icon: mdi:power-socket-eu
   availability_topic: "zigbee2mqtt/bridge/state"
   state_topic: "zigbee2mqtt/tradfri_plug_10"
   json_attributes_topic: "zigbee2mqtt/tradfri_plug_10"

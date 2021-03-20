@@ -1,7 +1,7 @@
 # Telldus Plugs
 - platform: "mqtt"
   name: telldus_switch_01_switch
-  icon: "mdi:flash"
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_01/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_01/37/1/0/set"
   value_template: "{{value}}"
@@ -10,7 +10,7 @@
   unique_id: telldus_switch_01_switch
 - platform: "mqtt"
   name: telldus_switch_02_switch
-  icon: "mdi:flash"
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_02/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_02/37/1/0/set"
   value_template: "{{value}}"
@@ -19,7 +19,7 @@
   unique_id: telldus_switch_02_switch
 - platform: "mqtt"
   name: telldus_switch_03_switch
-  icon: "mdi:flash"
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_03/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_03/37/1/0/set"
   value_template: "{{value}}"
@@ -28,7 +28,7 @@
   unique_id: telldus_switch_03_switch
 - platform: "mqtt"
   name: telldus_switch_04_switch
-  icon: "mdi:flash"
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_04/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_04/37/1/0/set"
   value_template: "{{value}}"
@@ -37,7 +37,7 @@
   unique_id: telldus_switch_04_switch
 - platform: "mqtt"
   name: telldus_switch_05_switch
-  icon: "mdi:flash"
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_05/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_05/37/1/0/set"
   value_template: "{{value}}"
@@ -46,6 +46,7 @@
   unique_id: telldus_switch_05_switch
 - platform: "mqtt"
   name: telldus_switch_06_switch
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_06/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_06/37/1/0/set"
   value_template: "{{value}}"
@@ -54,6 +55,7 @@
   unique_id: telldus_switch_06_switch
 - platform: "mqtt"
   name: telldus_switch_07_switch
+  icon: "mdi:power-socket-eu"
   state_topic: "zwave2mqtt/telldus_switch_07/37/1/0"
   command_topic: "zwave2mqtt/telldus_switch_07/37/1/0/set"
   value_template: "{{value}}"

@@ -14,6 +14,7 @@
   state_topic: "hass/lights/mode/morning"
   command_topic: "hass/lights/mode/morning"
   value_template: "{{value}}"
+  icon: mdi:weather-sunset-up
   # state_on: "true"
   # state_off: "false"
   # payload_on: "morning"
@@ -25,6 +26,7 @@
   state_topic: "hass/lights/mode/afternoon"
   command_topic: "hass/lights/mode/afternoon"
   value_template: "{{value}}"
+  icon: mdi:white-balance-sunny
   # state_on: "true"
   # state_off: "false"
   # payload_on: "afternoon"
@@ -36,6 +38,7 @@
   state_topic: "hass/lights/mode/evening"
   command_topic: "hass/lights/mode/evening"
   value_template: "{{value}}"
+  icon: mdi:weather-sunset
   # state_on: "true"
   # state_off: "false"
   # payload_on: "evening"
@@ -47,6 +50,7 @@
   state_topic: "hass/lights/mode/night"
   command_topic: "hass/lights/mode/night"
   value_template: "{{value}}"
+  icon: mdi:weather-night
   # state_on: "true"
   # state_off: "false"
   # payload_on: "night"
@@ -77,6 +81,7 @@
 # Alarm Switches
 - platform: "mqtt"
   name: morning_alarm_arm
+  icon: mdi:alarm-bell
   state_topic: "hass/morning_alarm/arm"
   command_topic: "hass/morning_alarm/arm"
   retain: "on"

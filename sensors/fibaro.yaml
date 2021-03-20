@@ -1,7 +1,6 @@
 # Power
 - platform: "mqtt"
   name: fibaro_switch_01_power
-  icon: "mdi:flash"
   state_topic: "zwave2mqtt/fibaro_switch_01/49/1/4"
   unit_of_measurement: "W"
   value_template: "{{value}}"
@@ -9,7 +8,6 @@
   unique_id: fibaro_switch_01_power
 - platform: "mqtt"
   name: fibaro_switch_02_power
-  icon: "mdi:flash"
   state_topic: "zwave2mqtt/fibaro_switch_02/49/1/4"
   unit_of_measurement: "W"
   value_template: "{{value}}"
@@ -21,7 +19,7 @@
 # Energy
 - platform: "mqtt"
   name: fibaro_switch_01_energy
-  icon: "mdi:flash-circle"
+  icon: mdi:power-plug
   state_topic: "zwave2mqtt/fibaro_switch_01/50/1/0"
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
@@ -29,7 +27,7 @@
   unique_id: fibaro_switch_01_energy
 - platform: "mqtt"
   name: fibaro_switch_02_energy
-  icon: "mdi:flash-circle"
+  icon: mdi:power-plug
   state_topic: "zwave2mqtt/fibaro_switch_02/50/1/0"
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
