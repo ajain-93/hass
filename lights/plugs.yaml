@@ -1,0 +1,8 @@
+# Plugs
+- platform: "mqtt"
+  name: tradfri_plug_01_light
+  availability_topic: "zigbee2mqtt/bridge/state"
+  state_topic: "zigbee2mqtt/tradfri_plug_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_plug_01"
+  command_topic: "zigbee2mqtt/tradfri_plug_01/set"
+  schema: "json"
