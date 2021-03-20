@@ -1,0 +1,18 @@
+# Humidity
+- platform: "mqtt"
+  name: aeotec_sensor6_01_humidity
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/aeotec_sensor6_01/49/1/5"
+  unit_of_measurement: "%"
+  value_template: "{{value}}"
+  device_class: "humidity"
+  unique_id: aeotec_sensor6_01_humidity
+  device: {
+    "identifiers": [
+        "zwave2mqtt_aeotec_sensor6_01"
+      ],
+      "manufacturer": "AEON Labs",
+      "model": "ZW100",
+      "name": "ZW100 MultiSensor 6 ",
+      "sw_version": "1.11"
+  }

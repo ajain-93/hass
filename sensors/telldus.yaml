@@ -1,0 +1,477 @@
+# Power
+- platform: "mqtt"
+  name: telldus_switch_01_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_01_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_02_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_02_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_03_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_03_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_04_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_04_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_04"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_05_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_05_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_05"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_06_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_06_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_06"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_07_power
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/2"
+  unit_of_measurement: "W"
+  value_template: "{{value}}"
+  device_class: "power"
+  unique_id: telldus_switch_07_power
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_07"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+
+
+
+# Energy
+- platform: "mqtt"
+  name: telldus_switch_01_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_02_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_03_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_03_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_04_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_04_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_04"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_05_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_05_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_05"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_06_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_06_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_06"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_07_energy
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/0"
+  unit_of_measurement: "kWh"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_07_energy
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_07"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+
+
+
+# Voltage
+- platform: "mqtt"
+  name: telldus_switch_01_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_02_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_03_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_03_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_04_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_04_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_04"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_05_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_05_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_05"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_06_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_06_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_06"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_07_voltage
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/4"
+  unit_of_measurement: "V"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_07_voltage
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_07"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+
+
+
+  # Current
+- platform: "mqtt"
+  name: telldus_switch_01_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_01/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_01_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_01"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_02_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_02/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_02_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_02"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_03_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_03/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  # device_class: "None"
+  unique_id: telldus_switch_03_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_03"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.11"
+  }
+- platform: "mqtt"
+  name: telldus_switch_04_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_04/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_04_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_04"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_05_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_05/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_05_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_05"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_06_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_06/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_06_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_06"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }
+- platform: "mqtt"
+  name: telldus_switch_07_current
+  icon: "mdi:flash-circle"
+  state_topic: "zwave2mqtt/telldus_switch_07/50/1/5"
+  unit_of_measurement: "A"
+  value_template: "{{value}}"
+  unique_id: telldus_switch_07_current
+  device: {
+    "identifiers": [
+        "zwave2mqtt_telldus_switch_07"
+      ],
+    "manufacturer": "Telldus",
+    "model": "313510",
+    "name": "TZWP-102 Plug-in Switch",
+    "sw_version": "2.12"
+  }

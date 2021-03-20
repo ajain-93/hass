@@ -1,0 +1,83 @@
+# Link Quality
+- platform: template
+  sensors:
+# Plugs
+    tradfri_plug_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_plug_01_light', 'linkquality') }}"
+    tradfri_plug_02_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_02_power', 'linkquality') }}"
+    tradfri_plug_03_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_03_power', 'linkquality') }}"
+    tradfri_plug_04_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_04_power', 'linkquality') }}"
+    tradfri_plug_05_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_05_power', 'linkquality') }}"
+    tradfri_plug_06_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_06_power', 'linkquality') }}"
+    tradfri_plug_07_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_07_power', 'linkquality') }}"
+    tradfri_plug_08_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_08_power', 'linkquality') }}"
+    tradfri_plug_09_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_09_power', 'linkquality') }}"
+    tradfri_plug_10_linkquality:
+      value_template: "{{ state_attr('switch.tradfri_plug_10_power', 'linkquality') }}"
+# Remotes
+    tradfri_switch_01_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_switch_01_action', 'linkquality') }}"
+    tradfri_switch_02_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_switch_02_action', 'linkquality') }}"
+    tradfri_button_01_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_01_action', 'linkquality') }}"
+    tradfri_button_02_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_02_action', 'linkquality') }}"
+    tradfri_button_03_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_03_action', 'linkquality') }}"
+    tradfri_button_04_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_04_action', 'linkquality') }}"
+    tradfri_button_05_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'linkquality') }}"
+    tradfri_button_06_linkquality:
+      value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'linkquality') }}"
+# Door Sensors
+    aqara_sensor_switch_01_linkquality:
+      value_template: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'linkquality') }}"
+# Motion Sensors
+    smartthings_motion_temp_01_linkquality:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'linkquality') }}"
+    smartthings_motion_temp_02_linkquality:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'linkquality') }}"
+    tradfri_motion_01_linkquality:
+      value_template: "{{ state_attr('binary_sensor.tradfri_motion_01_occupancy', 'linkquality') }}"
+# Lights
+# RGB Lights
+    tradfri_led_rgb_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_01_light', 'linkquality') }}"
+    tradfri_led_rgb_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_02_light', 'linkquality') }}"
+    tradfri_led_rgb_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_03_light', 'linkquality') }}"
+    tradfri_led_rgb_04_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_04_light', 'linkquality') }}"
+    tradfri_led_rgb_05_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_rgb_05_light', 'linkquality') }}"
+# White Lights
+    tradfri_led_white_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_01_light', 'linkquality') }}"
+    tradfri_led_white_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_02_light', 'linkquality') }}"
+    tradfri_led_white_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_white_03_light', 'linkquality') }}"
+# GU10 Lights
+    tradfri_led_gu10_01_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'linkquality') }}"
+    tradfri_led_gu10_02_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_01_light', 'linkquality') }}"
+    tradfri_led_gu10_03_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_03_light', 'linkquality') }}"
+    tradfri_led_gu10_04_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_04_light', 'linkquality') }}"
+    tradfri_led_gu10_05_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_05_light', 'linkquality') }}"
+    tradfri_led_gu10_06_linkquality:
+      value_template: "{{ state_attr('light.tradfri_led_gu10_06_light', 'linkquality') }}"

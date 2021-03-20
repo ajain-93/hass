@@ -1,0 +1,43 @@
+# 2 Button Remotes
+- platform: "mqtt"
+  name: tradfri_button_01_action
+  state_topic: "zigbee2mqtt/tradfri_button_01"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_02_action
+  state_topic: "zigbee2mqtt/tradfri_button_02"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_02"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_03_action
+  state_topic: "zigbee2mqtt/tradfri_button_03"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_03"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_04_action
+  state_topic: "zigbee2mqtt/tradfri_button_04"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_04"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_05_action
+  state_topic: "zigbee2mqtt/tradfri_button_05"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_05"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_06_action
+  state_topic: "zigbee2mqtt/tradfri_button_06"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_06"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap

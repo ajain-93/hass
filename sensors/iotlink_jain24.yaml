@@ -1,0 +1,278 @@
+# IOT Link Jain24
+- platform: mqtt
+  name: "Jain24 - Current User"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/system/current-user"
+  unit_of_measurement: ''
+  icon: mdi:account
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+
+- platform: mqtt
+  name: "Jain24 - System Boot Time"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/system/boot-time"
+  icon: mdi:timer-outline
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - System Uptime"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/system/uptime"
+  icon: mdi:timer-outlin
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Idle Time"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/system/idle-time"
+  unit_of_measurement: 'seconds'
+  icon: mdi:timer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+
+
+
+- platform: mqtt
+  name: "Jain24 - CPU Usage"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/cpu/usage"
+  unit_of_measurement: '%'
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: statistics
+  name: "Jain24 - CPU Usage 1 min"
+  entity_id: sensor.jain24_cpu_usage
+  sampling_size: 6
+  max_age:
+    minutes: 1
+- platform: statistics
+  name: "Jain24 - CPU Usage 5 min"
+  entity_id: sensor.jain24_cpu_usage
+  sampling_size: 30
+  max_age:
+    minutes: 5
+- platform: statistics
+  name: "Jain24 - CPU Usage 15 min"
+  entity_id: sensor.jain24_cpu_usage
+  sampling_size: 90
+  max_age:
+    minutes: 15
+- platform: mqtt
+
+
+
+  name: "Jain24 - Battery"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/battery/remaining-percent"
+  unit_of_measurement: '%'
+  device_class: battery
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Battery Time"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/battery/remaining-time"
+  unit_of_measurement: 'minutes'
+  icon: mdi:timer
+  value_template: "{{ ( value | float / 60 ) | int }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Predicted Lifetime"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/battery/full-lifetime"
+  unit_of_measurement: 'minutes'
+  icon: mdi:timer
+  value_template: "{{ ( value | float / 60 ) | int }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - RAM Usage"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/memory/usage"
+  unit_of_measurement: '%'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - RAM Available"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/memory/available"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - RAM Used"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/memory/used"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - RAM Total"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/memory/total"
+  unit_of_measurement: 'MB'
+  icon: mdi:memory
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+
+
+
+- platform: mqtt
+  name: "Jain24 - HDD (C) Label"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/volume-label"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - HDD (C) Format"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/drive-format"
+  unit_of_measurement: ''
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - HDD (C) Usage"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/drive-usage"
+  unit_of_measurement: '%'
+  icon: mdi:chart-donut
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - HDD (C) Used Space"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/used-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - HDD (C) Free Space"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/available-free-space"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - HDD (C) Total Size"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/hard-drive/c/total-size"
+  unit_of_measurement: 'GB'
+  icon: mdi:harddisk
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+
+
+
+- platform: mqtt
+  name: "Jain24 - Network IPv4"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/ipv4"
+  unit_of_measurement: ''
+  icon: mdi:lan
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network IPv6"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/ipv6"
+  unit_of_measurement: ''
+  icon: mdi:lan
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network Speed"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/speed"
+  unit_of_measurement: 'Mbps'
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network - Bytes Received"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/bytes-received"
+  unit_of_measurement: "B"
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network - Bytes Sent"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/bytes-sent"
+  unit_of_measurement: "B"
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network - BPS Received"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/bytes-received-per-second"
+  unit_of_measurement: "Bps"
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1
+- platform: mqtt
+  name: "Jain24 - Network - BPS Sent"
+  state_topic: "iotlink/jain/jain24/windows-monitor/stats/network/0/bytes-sent-per-second"
+  unit_of_measurement: "Bps"
+  icon: mdi:speedometer
+  value_template: "{{ value }}"
+  availability_topic: "iotlink/jain/jain24/lwt"
+  payload_available: "ON"
+  payload_not_available: "OFF"
+  qos: 1

@@ -1,0 +1,24 @@
+# Temperature
+- platform: template
+  sensors:
+    smartthings_motion_temp_01_temperature:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'temperature') }}"
+    smartthings_motion_temp_02_temperature:
+      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'temperature') }}"
+- platform: "mqtt"
+  name: aeotec_sensor6_01_temperature
+  icon: "mdi:flash"
+  state_topic: "zwave2mqtt/aeotec_sensor6_01/49/1/1"
+  unit_of_measurement: "°C"
+  value_template: "{{value}}"
+  device_class: "temperature"
+  unique_id: aeotec_sensor6_01_temperature
+  device: {
+    "identifiers": [
+        "zwave2mqtt_aeotec_sensor6_01"
+      ],
+      "manufacturer": "AEON Labs",
+      "model": "ZW100",
+      "name": "ZW100 MultiSensor 6 ",
+      "sw_version": "1.11"
+  }
