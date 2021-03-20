@@ -6,7 +6,7 @@ visible: false
 badges: []
 
 cards:
-  - type: entity-button
+  - type: button
     entity: switch.tplink_plug_01
     show_icon: true
     show_name: false

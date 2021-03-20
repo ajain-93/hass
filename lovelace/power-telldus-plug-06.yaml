@@ -6,7 +6,7 @@ visible: false
 badges: []
 
 cards:
-  - type: entity-button
+  - type: button
     entity: switch.telldus_switch_06_switch
     show_icon: true
     show_name: false

@@ -9,7 +9,7 @@ cards:
   - type: grid
     columns: 2
     cards:
-      - type: entity-button
+      - type: button
         entity: light.store
         show_icon: true
         show_name: false
@@ -18,7 +18,7 @@ cards:
         hold_action:
           action: more-info
 
-      - type: entity-button
+      - type: button
         entity: binary_sensor.aqara_sensor_switch_01_contact
         show_icon: true
         show_name: false

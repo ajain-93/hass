@@ -9,7 +9,7 @@ cards:
   - type: vertical-stack
     cards:
 
-    - type: entity-button
+    - type: button
       entity: light.all
       show_name: false
       tap_action:
