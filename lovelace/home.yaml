@@ -258,14 +258,12 @@ cards:
     # columns: 5
     cards:
       - type: button
-        name: Jain10
-        icon: mdi:desktop-tower-monitor
+        entity: binary_sensor.ping_jain10
         tap_action:
           action: navigate
           navigation_path: /lovelace/jain10
       - type: button
-        name: Jain70
-        icon: mdi:laptop-windows
+        entity: binary_sensor.ping_jain70
         tap_action:
           action: navigate
           navigation_path: /lovelace/jain70
