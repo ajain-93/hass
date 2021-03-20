@@ -267,6 +267,11 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/jain70
+      - type: button
+        entity: binary_sensor.ping_jain24
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/jain24
 
   # - type: entities
   #   title: Weather

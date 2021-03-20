@@ -19,6 +19,7 @@ views:
   # Devices
   - !include lovelace/device-jain10.yaml
   - !include lovelace/device-jain70.yaml
+  - !include lovelace/device-jain24.yaml
 
   # Rooms
   - !include lovelace/room-bathroom.yaml
