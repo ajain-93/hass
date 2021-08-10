@@ -29,25 +29,37 @@ cards:
         - entity: switch.ha_lights_mode_morning
           name: Morning
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.turn_on
+            service_data:
+              entity_id: switch.ha_lights_mode_morning
           hold_action:
             action: more-info
         - entity: switch.ha_lights_mode_afternoon
           name: Afternoon
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.turn_on
+            service_data:
+              entity_id: switch.ha_lights_mode_afternoon
           hold_action:
             action: more-info
         - entity: switch.ha_lights_mode_evening
           name: Evening
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.turn_on
+            service_data:
+              entity_id: switch.ha_lights_mode_evening
           hold_action:
             action: more-info
         - entity: switch.ha_lights_mode_night
           name: Night
           tap_action:
-            action: toggle
+            action: call-service
+            service: switch.turn_on
+            service_data:
+              entity_id: switch.ha_lights_mode_night
           hold_action:
             action: more-info
 
