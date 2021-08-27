@@ -12,7 +12,7 @@ light_on:
     temp_mid: 350
     temp_warm: 450
     transition: 1
-    col_cold: blanchedalmond
+    col_cold: antiquewhite
     col_mid: navajowhite
     col_warm: sandybrown
   fields:
@@ -58,7 +58,7 @@ light_on:
             entity_id: "{{ entity_id }}"
             brightness_pct: "{{ brightness_high }}"
             color_name: "{{ col_warm }}"
-            color_temp: "{{ temp_warm }}"
+            color_temp: "{{ col_mid }}"
             transition: "{{ transition }}"
 
       - conditions:
