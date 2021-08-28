@@ -68,7 +68,7 @@
   mode: single
 
 
-- alias: Timer - Lights Mode - Night
+- alias: Time - Lights Mode - Night
   id: arnav-jain-se_timer_lights_mode_night
   trigger:
     platform: time
