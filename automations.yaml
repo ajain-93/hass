@@ -490,6 +490,15 @@
       button_entity: sensor.tradfri_button_06_action
       # light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.bedroom_ceiling
+- id: '1630150031'
+  alias: Button - Bathroom
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_02_action
+      # light_switch_entity: switch.light_bedroom_ceiling
+      light_entity: light.bathroom
 
 
 
