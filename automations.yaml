@@ -33,6 +33,16 @@
 
 
 # Lights Mode Time
+- alias: Lights Mode - Start Up
+  id: arnav-jain-se_timer_lights_mode_starup
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+  - service: script.set_light_mode
+  mode: single
+
+
 - alias: Time - Lights Mode - Morning
   id: arnav-jain-se_time_lights_mode_morning
   trigger:
