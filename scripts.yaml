@@ -58,7 +58,7 @@ light_on:
             entity_id: "{{ entity_id }}"
             brightness_pct: "{{ brightness_high }}"
             color_name: "{{ col_warm }}"
-            color_temp: "{{ col_mid }}"
+            color_temp: "{{ temp_mid }}"
             transition: "{{ transition }}"
 
       - conditions:
