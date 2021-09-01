@@ -88,12 +88,12 @@ speedtestdotnet:
   scan_interval:
     minutes: 30
 
-octoprint:
-  host: !secret octoprint_host
-  api_key: !secret octoprint_api_key
-  name: Ender3
-  bed: true
-  number_of_tools: 2
+# octoprint:
+#   host: !secret octoprint_host
+#   api_key: !secret octoprint_api_key
+#   name: Ender3
+#   bed: true
+#   number_of_tools: 2
 
 # netatmo:
 #   api_key: 5d7e1acb400903001940c8cc
