@@ -195,13 +195,13 @@
     entity_id: switch.telldus_switch_06_switch
     state: 'on'
   action:
-  - service: notify.telegram_arnav
+  - service: notify.notify
     data:
       title: Bicycle Battery
       message: Charging Complete
   - delay:
       minutes: 10
-  - service: notify.telegram_arnav
+  - service: notify.notify
     data:
       title: Bicycle Battery
       message: Turning off charger
