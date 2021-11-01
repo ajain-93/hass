@@ -55,6 +55,7 @@ switch: !include_dir_merge_list switches/
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
 device_tracker: !include device_trackers.yaml
+camera: !include cameras.yaml
 
 shell_command:
   jain10_sleep: 'ssh jain78 "/media/infra/scripts/jain10.sleep.sh"'

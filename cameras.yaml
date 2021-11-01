@@ -1,0 +1,4 @@
+  - platform: generic
+    name: Weather Forecast Solna
+    still_image_url: https://www.yr.no/en/content/2-2675397/meteogram.svg
+    content_type: "image/svg+xml"
