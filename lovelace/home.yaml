@@ -307,6 +307,13 @@ cards:
       show_name: false
       show_state: false
 
+  - type: markdown
+    title: Mail
+    content: >
+      **Next delivery:** {{ state_attr('sensor.postnord_16973', 'delivery') }}
+
+      **Upcoming delivery:** {{ state_attr('sensor.postnord_16973', 'upcoming') }}
+
   - type: glance
     title: Exchange Rates
     show_icon: false

@@ -9,3 +9,11 @@
     - 'time_date'
     - 'time_utc'
     - 'beat'
+
+
+- platform: template
+  sensors:
+    current_date_swe:
+      value_template: >
+        {% set months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] %}
+        {{ (now().day ) ~ ' ' ~ months[now().month-1] ~ ', ' ~ now().year}}

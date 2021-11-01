@@ -1,0 +1,9 @@
+- platform: rest
+  name: Postnord - 16973
+  resource: https://portal.postnord.com/api/sendoutarrival/closest?postalCode=16973
+  method: GET
+  json_attributes:
+    - postalCode
+    - city
+    - delivery
+    - upcoming
