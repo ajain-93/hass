@@ -118,7 +118,7 @@
 
 - platform: mqtt
   name: "Jain10 - Network IPv4"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/ipv4"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/ipv4"
   unit_of_measurement: ''
   icon: mdi:lan
   value_template: "{{ value }}"
@@ -128,7 +128,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network IPv6"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/ipv6"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/ipv6"
   unit_of_measurement: ''
   icon: mdi:lan
   value_template: "{{ value }}"
@@ -138,7 +138,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network Speed"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/speed"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/speed"
   unit_of_measurement: 'Mbps'
   icon: mdi:speedometer
   value_template: "{{ value }}"
@@ -148,7 +148,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network - Bytes Received"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-received"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/bytes-received"
   unit_of_measurement: "B"
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -157,7 +157,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network - Bytes Sent"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-sent"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/bytes-sent"
   unit_of_measurement: "B"
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -166,7 +166,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network - BPS Received"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-received-per-second"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/bytes-received-per-second"
   unit_of_measurement: "Bps"
   icon: mdi:speedometer
   value_template: "{{ value }}"
@@ -176,7 +176,7 @@
   qos: 1
 - platform: mqtt
   name: "Jain10 - Network - BPS Sent"
-  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/1/bytes-sent-per-second"
+  state_topic: "iotlink/jain/jain10/windows-monitor/stats/network/0/bytes-sent-per-second"
   unit_of_measurement: "Bps"
   icon: mdi:speedometer
   value_template: "{{ value }}"
