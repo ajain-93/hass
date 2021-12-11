@@ -58,12 +58,12 @@ device_tracker: !include device_trackers.yaml
 camera: !include cameras.yaml
 
 shell_command:
-  jain10_sleep: 'ssh jain78 "/media/infra/scripts/jain10.sleep.sh"'
-  jain10_wake: 'ssh jain78 "/media/infra/scripts/jain10.wake.sh"'
-  srv01_sleep: 'ssh jain78 "/media/infra/scripts/srv01.sleep.sh"'
-  srv01_wake: 'ssh jain78 "/media/infra/scripts/srv01.wake.sh"'
-  srv78_update_gits: 'ssh jain78 "/media/infra/scripts/update.git.sh"'
-  srv78_dir_clean: 'ssh jain78 "docker start directorycleaner_cleaner_1"'
+  jain10_sleep: !secret jain10_sleep
+  jain10_wake: !secret jain10_wake
+  srv01_sleep: !secret srv01_sleep
+  srv01_wake: !secret srv01_wake
+  srv78_update_gits: !secret srv78_update_gits
+  srv78_dir_clean: !secret srv78_dir_clean
 
 mqtt:
   discovery: false
