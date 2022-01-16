@@ -113,6 +113,9 @@ spotify:
 #       - !secret telegram_bot_chat_id
 
 notify:
+  - platform: discord
+    name: discord_16973
+    token: !secret  discord_bot_token
   # - platform: telegram
   #   name: telegram_arnav
   #   chat_id: !secret telegram_bot_chat_id
