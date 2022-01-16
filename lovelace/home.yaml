@@ -262,7 +262,7 @@ cards:
           navigation_path: /lovelace/ender3
 
   - type: media-control
-    entity: media_player.spotify
+    entity: media_player.spotify_rufy93
 
   - type: grid
     title: Devices
