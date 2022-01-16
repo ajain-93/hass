@@ -113,3 +113,6 @@ spotify:
 #       - !secret telegram_bot_chat_id
 
 notify:
+  # - platform: telegram
+  #   name: telegram_arnav
+  #   chat_id: !secret telegram_bot_chat_id
