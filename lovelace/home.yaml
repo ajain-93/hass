@@ -313,8 +313,10 @@ cards:
       show_state: false
 
   - type: markdown
-    title: Mail
+    title: Mail Delivery in Frösunda (16973)
     content: >
+      {% if is_state('binary_sensor.postnord_16973_delivery_today', 'on') %} Mail delivery {% else %} No mail delivery {% endif %} today.
+
       **Next delivery:** {{ state_attr('sensor.postnord_16973', 'delivery') }}
 
       **Upcoming delivery:** {{ state_attr('sensor.postnord_16973', 'upcoming') }}

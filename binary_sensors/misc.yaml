@@ -52,3 +52,6 @@
                            (states('sensor.seventeentrack_packages_ready_to_be_picked_up') | int) +
                            (states('sensor.seventeentrack_packages_undelivered') | int) +
                            (states('sensor.seventeentrack_packages_delivered') | int)) > 0}}"
+
+    postnord_16973_delivery_today:
+      value_template: "{{ states('sensor.current_date_swe') == state_attr('sensor.postnord_16973', 'delivery')}}"
