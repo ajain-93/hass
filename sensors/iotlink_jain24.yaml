@@ -55,18 +55,21 @@
   name: "Jain24 - CPU Usage 1 min"
   entity_id: sensor.jain24_cpu_usage
   sampling_size: 6
+  state_characteristic: mean
   max_age:
     minutes: 1
 - platform: statistics
   name: "Jain24 - CPU Usage 5 min"
   entity_id: sensor.jain24_cpu_usage
   sampling_size: 30
+  state_characteristic: mean
   max_age:
     minutes: 5
 - platform: statistics
   name: "Jain24 - CPU Usage 15 min"
   entity_id: sensor.jain24_cpu_usage
   sampling_size: 90
+  state_characteristic: mean
   max_age:
     minutes: 15
 - platform: mqtt
