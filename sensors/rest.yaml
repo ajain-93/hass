@@ -2,6 +2,7 @@
   name: Postnord - 16973
   resource: https://portal.postnord.com/api/sendoutarrival/closest?postalCode=16973
   method: GET
+  scan_interval: 3600
   json_attributes:
     - postalCode
     - city
