@@ -82,6 +82,22 @@ cards:
         name: Sent
 
 
+  - type: history-graph
+    title: Disk Space
+    hours_to_show: 168
+    refresh_interval: 0
+    entities:
+      - entity: sensor.jain10_hdd_C_usage
+        name: System (C)
+      - entity: sensor.jain10_hdd_M_usage
+        name: Media (M)
+      - entity: sensor.jain10_hdd_T_usage
+        name: Temp (T)
+      - entity: sensor.jain10_hdd_V_usage
+        name: Archive (V)
+      - entity: sensor.jain10_hdd_W_usage
+        name: Projects (W)
+
   - type: entities
     title: 'System (C:)'
     entities:
