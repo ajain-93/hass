@@ -499,6 +499,15 @@
       button_entity: sensor.tradfri_button_02_action
       # light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.bathroom
+- id: '1642345626'
+  alias: Button - All
+  description: ''
+  use_blueprint:
+    path: ikea_2_button.yaml
+    input:
+      button_entity: sensor.tradfri_button_03_action
+      # light_switch_entity: switch.light_bedroom_ceiling
+      light_entity: light.all
 
 
 
