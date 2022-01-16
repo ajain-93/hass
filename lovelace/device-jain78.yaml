@@ -1,0 +1,127 @@
+title: Jain78
+path: jain78
+icon: mdi:desktop-tower-monitor
+visible: false
+
+badges: []
+
+cards:
+  - type: entities
+    title: Overview
+    state_color: true
+    entities:
+      - entity: binary_sensor.jain78_power_status
+        name: Status
+      - entity: sensor.jain78_system_boot_time
+        name: Boot Time
+      - entity: sensor.jain78_system_uptime
+        name: Uptime
+      - entity: sensor.jain78_cpu_usage
+        name: CPU Usage
+        secondary_info: last-updated
+
+
+  - type: history-graph
+    title: CPU & Ram
+    hours_to_show: 1
+    refresh_interval: 0
+    entities:
+      - entity: sensor.jain78_cpu_usage_1_min
+        name: 1 min
+      - entity: sensor.jain78_cpu_usage_5_min
+        name: 5 min
+      - entity: sensor.jain78_cpu_usage_15_min
+        name: 15 min
+      - entity: sensor.jain78_ram_usage
+        name: RAM
+
+
+  - type: vertical-stack
+    title: Memory
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.jain78_ram_usage
+            secondary_info: last-updated
+            name: RAM Usage
+          - entity: sensor.jain78_ram_available
+            secondary_info: last-updated
+            name: RAM Free
+          - entity: sensor.jain78_ram_total
+            name: RAM Total
+      - type: history-graph
+        entities:
+          - entity: sensor.jain78_ram_used
+            name: Used
+          - entity: sensor.jain78_ram_available
+            name: Free
+        hours_to_show: 1
+        refresh_interval: 0
+
+
+  - type: entities
+    title: Network
+    entities:
+      - entity: binary_sensor.jain78_network_wired
+        name: Ethernet
+      - entity: sensor.jain78_network_speed
+        name: Link Speed
+      - entity: sensor.jain78_network_ipv4
+        name: IPv4
+      - entity: sensor.jain78_network_ipv6
+        name: IPv6
+      - entity: sensor.jain78_network_bps_received
+        secondary_info: last-updated
+        name: Receive
+      - entity: sensor.jain78_network_bytes_received
+        secondary_info: last-updated
+        name: Received
+      - entity: sensor.jain78_network_bps_sent
+        secondary_info: last-updated
+        name: Send
+      - entity: sensor.jain78_network_bytes_sent
+        secondary_info: last-updated
+        name: Sent
+
+
+  - type: history-graph
+    title: Disk Space
+    hours_to_show: 168
+    refresh_interval: 0
+    entities:
+      - entity: sensor.jain78_hdd_C_usage
+        name: System (C)
+      - entity: sensor.jain78_hdd_S_usage
+        name: Media (S)
+
+  - type: entities
+    title: 'System (C:)'
+    entities:
+      - entity: sensor.jain78_hdd_c_label
+        name: Label
+      - entity: sensor.jain78_hdd_c_format
+        name: File Format
+      - entity: sensor.jain78_hdd_c_usage
+        name: Usage
+      - entity: sensor.jain78_hdd_c_used_space
+        name: Used Space
+      - entity: sensor.jain78_hdd_c_free_space
+        name: Free Space
+      - entity: sensor.jain78_hdd_c_total_size
+        name: Total Capacity
+
+  - type: entities
+    title: 'Media (S:)'
+    entities:
+      - entity: sensor.jain78_hdd_s_label
+        name: Label
+      - entity: sensor.jain78_hdd_s_format
+        name: File Format
+      - entity: sensor.jain78_hdd_s_usage
+        name: Usage
+      - entity: sensor.jain78_hdd_s_used_space
+        name: Used Space
+      - entity: sensor.jain78_hdd_s_free_space
+        name: Free Space
+      - entity: sensor.jain78_hdd_s_total_size
+        name: Total Capacity

@@ -267,7 +267,7 @@ cards:
   - type: grid
     title: Devices
     square: 'false'
-    # columns: 5
+    columns: 4
     cards:
       - type: button
         entity: binary_sensor.ping_jain10
@@ -284,6 +284,11 @@ cards:
         tap_action:
           action: navigate
           navigation_path: /lovelace/jain24
+      - type: button
+        entity: binary_sensor.ping_jain78
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/jain78
 
   # - type: entities
   #   title: Weather
