@@ -293,6 +293,15 @@ sensor.tradfri_button_06_linkquality:
 binary_sensor.tradfri_button_06_update:
   friendly_name: Bedroom Ceiling Button Update
 
+sensor.tradfri_button_07_action:
+  friendly_name: Livingroom Button
+sensor.tradfri_button_07_battery:
+  friendly_name: Livingroom Button Battery
+sensor.tradfri_button_07_linkquality:
+  friendly_name: Livingroom Button Link
+binary_sensor.tradfri_button_07_update:
+  friendly_name: Livingroom Button Update
+
 ## 4-WAY
 sensor.tradfri_switch_01_action:
   friendly_name: Kitchen Switch

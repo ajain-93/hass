@@ -32,13 +32,13 @@ cards:
 
   - type: glance
     title: Remotes - On/Off
-    columns: 6
+    columns: 4
     entities:
       - entity: sensor.tradfri_button_01_battery
         name: Livingroom
         icon: 'mdi:sofa'
       - entity: sensor.tradfri_button_02_battery
-        name: Livingroom
+        name: Bathroom
         icon: 'mdi:shower'
       - entity: sensor.tradfri_button_03_battery
         name: All

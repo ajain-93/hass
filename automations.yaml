@@ -469,7 +469,7 @@
   use_blueprint:
     path: ikea_2_button.yaml
     input:
-      button_entity: sensor.tradfri_button_01_action
+      button_entity: sensor.tradfri_button_07_action
       # light_switch_entity: switch.light_livingroom
       light_entity: light.livingroom
 - id: '1611611534011'

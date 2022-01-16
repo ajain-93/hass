@@ -45,6 +45,8 @@ cards:
         name: Bedroom Bed
       - entity: binary_sensor.tradfri_button_06_update
         name: Bedroom Ceiling
+      - entity: binary_sensor.tradfri_button_07_update
+        name: Living Room
 
 
   - type: glance

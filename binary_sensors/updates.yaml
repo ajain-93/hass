@@ -39,6 +39,8 @@
       value_template: "{{ state_attr('sensor.tradfri_button_05_action', 'update_available') }}"
     tradfri_button_06_update:
       value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'update_available') }}"
+    tradfri_button_07_update:
+      value_template: "{{ state_attr('sensor.tradfri_button_07_action', 'update_available') }}"
 # Door Sensors
 # N/A
 # Motion Sensors
