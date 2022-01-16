@@ -511,7 +511,7 @@
 
 # TV Button
 - id: '1642347417819'
-  alias: Button - Lights
+  alias: Button - TV Lights
   description: ''
   mode: single
   trigger:
