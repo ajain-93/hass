@@ -55,6 +55,9 @@ cards:
       - entity: sensor.tradfri_button_07_battery
         name: Living Room
         icon: 'mdi:sofa'
+      - entity: sensor.tradfri_button_08_battery
+        name: TV
+        icon: 'mdi:television-classic'
 
   - type: glance
     title: Remotes - 4-way

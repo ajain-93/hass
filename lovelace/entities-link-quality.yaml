@@ -80,6 +80,9 @@ cards:
       - entity: sensor.tradfri_button_07_linkquality
         name: Livingroom
         icon: mdi:sofa
+      - entity: sensor.tradfri_button_08_linkquality
+        name: TV
+        icon: mdi:television-classic
 
   - type: glance
     title: Remotes 4-way

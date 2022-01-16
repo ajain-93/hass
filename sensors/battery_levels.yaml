@@ -38,6 +38,10 @@
       device_class: battery
       unit_of_measurement: "%"
       value_template: "{{ state_attr('sensor.tradfri_button_07_action', 'battery') }}"
+    tradfri_button_08_battery:
+      device_class: battery
+      unit_of_measurement: "%"
+      value_template: "{{ state_attr('sensor.tradfri_button_08_action', 'battery') }}"
 # Door Sensors
     aqara_sensor_switch_01_battery:
       device_class: battery
