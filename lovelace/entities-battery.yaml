@@ -52,6 +52,9 @@ cards:
       - entity: sensor.tradfri_button_06_battery
         name: Bedroom Ceiling
         icon: 'mdi:spotlight'
+      - entity: sensor.tradfri_button_07_battery
+        name: Living Room
+        icon: 'mdi:sofa'
 
   - type: glance
     title: Remotes - 4-way

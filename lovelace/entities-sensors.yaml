@@ -41,8 +41,12 @@ cards:
     title: Buttons
     show_state: false
     entities:
-      - entity: sensor.tradfri_button_03_action
-      - entity: sensor.tradfri_button_02_action
-      - entity: sensor.tradfri_switch_02_action
       - entity: sensor.tradfri_switch_01_action
+      - entity: sensor.tradfri_switch_02_action
       - entity: sensor.tradfri_button_01_action
+      - entity: sensor.tradfri_button_02_action
+      - entity: sensor.tradfri_button_03_action
+      - entity: sensor.tradfri_button_04_action
+      - entity: sensor.tradfri_button_05_action
+      - entity: sensor.tradfri_button_06_action
+      - entity: sensor.tradfri_button_07_action
