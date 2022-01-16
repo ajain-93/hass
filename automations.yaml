@@ -509,6 +509,59 @@
       # light_switch_entity: switch.light_bedroom_ceiling
       light_entity: light.all
 
+# TV Button
+- id: '1642347417819'
+  alias: Button - Lights
+  description: ''
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: sensor.tradfri_button_08_action
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_08_action
+        state: 'on'
+      sequence:
+      - service: script.light_on
+        data:
+          entity_id: light.livingroom
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_08_action
+        state: 'off'
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id:
+          - light.bedroom_bed
+          - light.bedroom_ceiling
+          - light.kitchen
+          - light.gallery
+        data:
+          transition: 2
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_08_action
+        state: brightness_move_down
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id:
+          - light.livingroom
+          - light.tradfri_plug_01_light
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_08_action
+        state: brightness_move_up
+      sequence:
+      - service: light.turn_on
+        target:
+          entity_id: light.tradfri_plug_01_light
+    default: []
+
 
 
 
