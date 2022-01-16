@@ -113,6 +113,7 @@
   name: "Jain70 - RAM Usage"
   state_topic: "iotlink/jain/jain70/windows-monitor/stats/memory/usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:memory
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain70/lwt"
@@ -176,6 +177,7 @@
   name: "Jain70 - HDD (C) Usage"
   state_topic: "iotlink/jain/jain70/windows-monitor/stats/hard-drive/c/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain70/lwt"

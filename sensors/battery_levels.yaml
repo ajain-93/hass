@@ -65,4 +65,5 @@
   unit_of_measurement: "%"
   value_template: "{{value}}"
   device_class: "battery"
+  state_class: measurement
   unique_id: aeotec_sensor6_01_battery

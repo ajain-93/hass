@@ -80,6 +80,7 @@
   name: "Jain10 - RAM Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/memory/usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:memory
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -214,6 +215,7 @@
   name: "Jain10 - HDD (C) Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/c/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -277,6 +279,7 @@
   name: "Jain10 - HDD (M) Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/m/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -340,6 +343,7 @@
   name: "Jain10 - HDD (T) Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/t/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -403,6 +407,7 @@
   name: "Jain10 - HDD (V) Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/v/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"
@@ -466,6 +471,7 @@
   name: "Jain10 - HDD (W) Usage"
   state_topic: "iotlink/jain/jain10/windows-monitor/stats/hard-drive/w/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain10/lwt"

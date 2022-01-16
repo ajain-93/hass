@@ -80,6 +80,7 @@
   name: "Jain78 - RAM Usage"
   state_topic: "iotlink/jain/jain78/windows-monitor/stats/memory/usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:memory
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain78/lwt"
@@ -214,6 +215,7 @@
   name: "Jain78 - HDD (C) Usage"
   state_topic: "iotlink/jain/jain78/windows-monitor/stats/hard-drive/c/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain78/lwt"
@@ -277,6 +279,7 @@
   name: "Jain78 - HDD (S) Usage"
   state_topic: "iotlink/jain/jain78/windows-monitor/stats/hard-drive/s/drive-usage"
   unit_of_measurement: '%'
+  state_class: measurement
   icon: mdi:chart-donut
   value_template: "{{ value }}"
   availability_topic: "iotlink/jain/jain78/lwt"

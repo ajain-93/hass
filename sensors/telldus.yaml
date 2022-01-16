@@ -132,6 +132,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_01_voltage
 - platform: "mqtt"
   name: telldus_switch_02_voltage
@@ -139,6 +140,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_02_voltage
 - platform: "mqtt"
   name: telldus_switch_03_voltage
@@ -146,6 +148,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_03_voltage
 - platform: "mqtt"
   name: telldus_switch_04_voltage
@@ -153,6 +156,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_04_voltage
 - platform: "mqtt"
   name: telldus_switch_05_voltage
@@ -160,6 +164,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_05_voltage
 - platform: "mqtt"
   name: telldus_switch_06_voltage
@@ -167,6 +172,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_06_voltage
 - platform: "mqtt"
   name: telldus_switch_07_voltage
@@ -174,6 +180,7 @@
   unit_of_measurement: "V"
   value_template: "{{value}}"
   device_class: "voltage"
+  state_class: measurement
   unique_id: telldus_switch_07_voltage
 
 
@@ -185,6 +192,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_01_current
 - platform: "mqtt"
   name: telldus_switch_02_current
@@ -192,6 +200,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_02_current
 - platform: "mqtt"
   name: telldus_switch_03_current
@@ -199,6 +208,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_03_current
 - platform: "mqtt"
   name: telldus_switch_04_current
@@ -206,6 +216,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_04_current
 - platform: "mqtt"
   name: telldus_switch_05_current
@@ -213,6 +224,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_05_current
 - platform: "mqtt"
   name: telldus_switch_06_current
@@ -220,6 +232,7 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_06_current
 - platform: "mqtt"
   name: telldus_switch_07_current
@@ -227,4 +240,5 @@
   unit_of_measurement: "A"
   value_template: "{{value}}"
   device_class: "current"
+  state_class: measurement
   unique_id: telldus_switch_07_current
