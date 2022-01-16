@@ -1,20 +1,21 @@
-# Groups
-- platform: group
+- platform: "mqtt"
   name: all
-  entities:
-    - light.bathroom
-    - light.bedroom
-    - light.gallery
-    - light.kitchen
-    - light.livingroom
-    - light.tradfri_plug_01_light
-    - light.store
+  state_topic: "zigbee2mqtt/lights_all"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_all/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
 
 
-- platform: group
+- platform: "mqtt"
   name: bathroom
-  entities:
-  - light.tradfri_led_rgb_03_light
+  state_topic: "zigbee2mqtt/lights_bathroom"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_bathroom/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
 
 
 - platform: group
@@ -73,7 +74,11 @@
   schema: json
 
 
-- platform: group
+- platform: "mqtt"
   name: store
-  entities:
-  - light.tradfri_led_white_03_light
+  state_topic: "zigbee2mqtt/lights_store"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  command_topic: "zigbee2mqtt/lights_store/set"
+  brightness: true
+  color_temp: true
+  schema: "json"
