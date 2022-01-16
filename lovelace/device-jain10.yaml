@@ -22,7 +22,7 @@ cards:
 
 
   - type: history-graph
-    title: CPU
+    title: CPU & RAM
     hours_to_show: 1
     refresh_interval: 0
     entities:
@@ -32,6 +32,8 @@ cards:
         name: 5 min
       - entity: sensor.jain10_cpu_usage_15_min
         name: 15 min
+      - entity: sensor.jain10_ram_usage
+        name: RAM
 
 
   - type: vertical-stack
