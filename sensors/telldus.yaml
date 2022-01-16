@@ -5,6 +5,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_01_power
 - platform: "mqtt"
   name: telldus_switch_02_power
@@ -12,6 +13,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_02_power
 - platform: "mqtt"
   name: telldus_switch_03_power
@@ -19,6 +21,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_03_power
 - platform: "mqtt"
   name: telldus_switch_04_power
@@ -26,6 +29,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_04_power
 - platform: "mqtt"
   name: telldus_switch_05_power
@@ -33,6 +37,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_05_power
 - platform: "mqtt"
   name: telldus_switch_06_power
@@ -40,6 +45,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_06_power
 - platform: "mqtt"
   name: telldus_switch_07_power
@@ -47,6 +53,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: telldus_switch_07_power
 
 
@@ -59,6 +66,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_01_energy
 - platform: "mqtt"
   name: telldus_switch_02_energy
@@ -67,6 +75,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_02_energy
 - platform: "mqtt"
   name: telldus_switch_03_energy
@@ -75,6 +84,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_03_energy
 - platform: "mqtt"
   name: telldus_switch_04_energy
@@ -83,6 +93,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_04_energy
 - platform: "mqtt"
   name: telldus_switch_05_energy
@@ -91,6 +102,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_05_energy
 - platform: "mqtt"
   name: telldus_switch_06_energy
@@ -99,6 +111,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_06_energy
 - platform: "mqtt"
   name: telldus_switch_07_energy
@@ -107,6 +120,7 @@
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
   device_class: "energy"
+  state_class: total
   unique_id: telldus_switch_07_energy
 
 

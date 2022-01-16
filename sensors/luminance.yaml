@@ -6,4 +6,5 @@
   unit_of_measurement: "lx"
   value_template: "{{value}}"
   device_class: "illuminance"
+  state_class: measurement
   unique_id: aeotec_sensor6_01_luminance

@@ -526,10 +526,11 @@ notify:
       data:
         title: "{{ title }}"
         message: "{{ message }}"
-    - service: notify.telegram_arnav
-      data:
-        title: "{{ title }}"
-        message: "{{ message }}"
+    # - service: notify.telegram_arnav
+    #   data:
+    #     title: "{{ title }}"
+    #     message: "{{ message }}"
+
 
 
 

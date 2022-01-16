@@ -15,4 +15,5 @@
   unit_of_measurement: "°C"
   value_template: "{{value}}"
   device_class: "temperature"
+  state_class: measurement
   unique_id: aeotec_sensor6_01_temperature

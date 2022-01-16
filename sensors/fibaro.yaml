@@ -5,6 +5,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: fibaro_switch_01_power
 - platform: "mqtt"
   name: fibaro_switch_02_power
@@ -12,6 +13,7 @@
   unit_of_measurement: "W"
   value_template: "{{value}}"
   device_class: "power"
+  state_class: measurement
   unique_id: fibaro_switch_02_power
 
 
@@ -23,7 +25,8 @@
   state_topic: "zwave2mqtt/fibaro_switch_01/50/1/0"
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
-  # device_class: "None"
+  device_class: "energy"
+  state_class: total
   unique_id: fibaro_switch_01_energy
 - platform: "mqtt"
   name: fibaro_switch_02_energy
@@ -31,5 +34,6 @@
   state_topic: "zwave2mqtt/fibaro_switch_02/50/1/0"
   unit_of_measurement: "kWh"
   value_template: "{{value}}"
-  # device_class: "None"
+  device_class: "energy"
+  state_class: total
   unique_id: fibaro_switch_02_energy
