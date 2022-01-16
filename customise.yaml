@@ -566,10 +566,34 @@ sensor.fibaro_switch_02_energy:
 switch.tplink_plug_01:
   friendly_name: Fridge
   icon: mdi:fridge
+switch.tplink_plug_01_led:
+  friendly_name: Fridge Switch LED
+sensor.tplink_plug_01_current:
+  friendly_name: Fridge Current
+sensor.tplink_plug_01_current_consumption:
+  friendly_name: Fridge Current Consumption
+sensor.tplink_plug_01_today_s_consumption:
+  friendly_name: Fridge Today's Consumption
+sensor.tplink_plug_01_total_consumption:
+  friendly_name: Fridge Total Consumption
+sensor.tplink_plug_01_voltage:
+  friendly_name: Fridge Voltage
 switch.tplink_plug_02:
   friendly_name: Microwave
   icon: mdi:microwave
 
+switch.tplink_plug_02_led:
+  friendly_name: Microwave Switch LED
+sensor.tplink_plug_02_current:
+  friendly_name: Microwave Current
+sensor.tplink_plug_02_current_consumption:
+  friendly_name: Microwave Current Consumption
+sensor.tplink_plug_02_today_s_consumption:
+  friendly_name: Microwave Today's Consumption
+sensor.tplink_plug_02_total_consumption:
+  friendly_name: Microwave Total Consumption
+sensor.tplink_plug_02_voltage:
+  friendly_name: Microwave Voltage
 
 
 # Weather

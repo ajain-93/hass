@@ -76,11 +76,11 @@ mqtt:
     topic: 'hass/status'
     payload: 'offline'
 
-tplink:
-  discovery: false
-  switch:
-    - host: iot05.jain.lan
-    - host: iot06.jain.lan
+# tplink:
+#   discovery: false
+#   switch:
+#     - host: iot05.jain.lan
+#     - host: iot06.jain.lan
 
 prometheus:
   namespace: hass
