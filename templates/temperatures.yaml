@@ -1,0 +1,11 @@
+- sensor:
+  - name: smartthings_motion_temp_01_temperature
+    device_class: temperature
+    state_class: measurement
+    unit_of_measurement: "°C"
+    state: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'temperature') }}"
+  - name: smartthings_motion_temp_02_temperature
+    device_class: temperature
+    state_class: measurement
+    unit_of_measurement: "°C"
+    state: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'temperature') }}"

@@ -1,0 +1,74 @@
+# Battery Levels
+- sensor:
+# Remotes
+  - name: tradfri_switch_01_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_switch_01_action', 'battery') }}"
+  - name: tradfri_switch_02_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_switch_02_action', 'battery') }}"
+  - name: tradfri_button_01_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_01_action', 'battery') }}"
+  - name: tradfri_button_02_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_02_action', 'battery') }}"
+  - name: tradfri_button_03_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_03_action', 'battery') }}"
+  - name: tradfri_button_04_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_04_action', 'battery') }}"
+  - name: tradfri_button_05_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_05_action', 'battery') }}"
+  - name: tradfri_button_06_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_06_action', 'battery') }}"
+  - name: tradfri_button_07_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_07_action', 'battery') }}"
+  - name: tradfri_button_08_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_08_action', 'battery') }}"
+# Door Sensors
+  - name: aqara_sensor_switch_01_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('binary_sensor.aqara_sensor_switch_01_contact', 'battery') }}"
+# Motion Sensors
+  - name: tradfri_motion_01_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('binary_sensor.tradfri_motion_01_occupancy', 'battery') }}"
+  - name: smartthings_motion_temp_01_battery
+    state: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'battery') }}"
+    device_class: battery
+    state_class: measurement
+  - name: smartthings_motion_temp_02_battery
+    device_class: battery
+    unit_of_measurement: "%"
+    state_class: measurement
+    state: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'battery') }}"

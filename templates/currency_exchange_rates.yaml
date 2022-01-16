@@ -1,0 +1,21 @@
+- sensor:
+  - name: exchangerate_usd_sek
+    icon: mdi:cash
+    state: "{{ state_attr('sensor.exchange_rate_sensor', 'SEK') | float | round(2) | float }}"
+    state_class: measurement
+  - name: exchangerate_nok_sek
+    icon: mdi:cash
+    state: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'NOK') * 100 ) | round(2) | float }}"
+    state_class: measurement
+  - name: exchangerate_eur_sek
+    icon: mdi:cash
+    state: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'EUR') ) | round(2) | float }}"
+    state_class: measurement
+  - name: exchangerate_gbp_sek
+    icon: mdi:cash
+    state: "{{ ( state_attr('sensor.exchange_rate_sensor', 'SEK') / state_attr('sensor.exchange_rate_sensor', 'GBP') ) | round(2) | float }}"
+    state_class: measurement
+  - name: exchangerate_sek_inr
+    icon: mdi:cash
+    state: "{{ ( state_attr('sensor.exchange_rate_sensor', 'INR') / state_attr('sensor.exchange_rate_sensor', 'SEK') ) | round(2) | float }}"
+    state_class: measurement

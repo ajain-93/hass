@@ -1,14 +1,4 @@
 # Temperature
-- platform: template
-  sensors:
-    smartthings_motion_temp_01_temperature:
-      device_class: temperature
-      unit_of_measurement: "°C"
-      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_01_occupancy', 'temperature') }}"
-    smartthings_motion_temp_02_temperature:
-      device_class: temperature
-      unit_of_measurement: "°C"
-      value_template: "{{ state_attr('binary_sensor.smartthings_motion_temp_02_occupancy', 'temperature') }}"
 - platform: "mqtt"
   name: aeotec_sensor6_01_temperature
   state_topic: "zwave2mqtt/aeotec_sensor6_01/49/1/1"

@@ -54,6 +54,7 @@ light: !include_dir_merge_list lights/
 switch: !include_dir_merge_list switches/
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
+template: !include_dir_merge_list templates/
 device_tracker: !include device_trackers.yaml
 camera: !include cameras.yaml
 

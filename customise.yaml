@@ -805,3 +805,17 @@ sensor.worldwide_coronavirus_deaths:
 # Alarms
 switch.morning_alarm_arm:
   friendly_name: Arm Wake Up Light
+
+
+
+# Exchange Rates
+sensor.exchangerate_usd_sek:
+  friendly_name: Exchange Rate SEK-USD
+sensor.exchangerate_nok_sek:
+  friendly_name: Exchange Rate NOK-SEK
+sensor.exchangerate_eur_sek:
+  friendly_name: Exchange Rate EUR-SEK
+sensor.exchangerate_gbp_sek:
+  friendly_name: Exchange Rate GBP-SEK
+sensor.exchangerate_sek_inr:
+  friendly_name: Exchange Rate SEK-INR
