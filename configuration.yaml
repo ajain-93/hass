@@ -36,6 +36,7 @@ http:
 # Set this to your NGINX machine IP, or localhost if hosted on the same machine.
   trusted_proxies:
     - 192.168.8.10
+    - 172.23.0.0/24
   server_port: 8123
   #server_port: 443
 
