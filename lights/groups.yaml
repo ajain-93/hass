@@ -5,6 +5,7 @@
   command_topic: "zigbee2mqtt/lights_all/set"
   brightness: true
   color_temp: true
+  xy: true
   schema: "json"
 
 
@@ -14,7 +15,7 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   command_topic: "zigbee2mqtt/lights_bathroom/set"
   brightness: true
-  color_temp: true
+  xy: true
   schema: "json"
 
 
