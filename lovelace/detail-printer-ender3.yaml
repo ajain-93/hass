@@ -15,40 +15,43 @@ cards:
       entities:
         - entity: switch.telldus_switch_07_switch
           name: Power
-        - entity: sensor.ender3_current_state
+        - entity: sensor.octoprint_current_state
           name: Status
 
   - type: conditional
     conditions:
-      - entity: binary_sensor.ender3_printing
+      - entity: binary_sensor.octoprint_printing
         state: 'on'
     card:
       type: vertical-stack
       cards:
         - type: entity
-          entity: sensor.ender3_current_state
+          entity: sensor.octoprint_current_state
           name: Ender 3
         - type: glance
           title: Progress
           show_icon: true
-          show_name: false
+          show_name: true
           entities:
-            - entity: sensor.ender3_time_elapsed
-            - entity: sensor.ender3_job_percentage
-            - entity: sensor.ender3_time_remaining
+            - entity: sensor.octoprint_start_time
+              name: Start
+            - entity: sensor.octoprint_job_percentage
+              name:
+            - entity: sensor.octoprint_estimated_finish_time
+              name: Finish
         - type: glance
           title: Temperature
           columns: 2
           entities:
-            - entity: sensor.ender3_actual_bed_temp
+            - entity: sensor.octoprint_actual_bed_temp
               name: Bed
               icon: 'mdi:printer-3d'
-            - entity: sensor.ender3_target_bed_temp
+            - entity: sensor.octoprint_target_bed_temp
               name: Target Bed
               icon: 'mdi:printer-3d'
-            - entity: sensor.ender3_actual_tool0_temp
+            - entity: sensor.octoprint_actual_tool0_temp
               name: Extruder
               icon: 'mdi:printer-3d-nozzle-outline'
-            - entity: sensor.ender3_target_tool0_temp
+            - entity: sensor.octoprint_target_tool0_temp
               name: Target Extruder
               icon: 'mdi:printer-3d-nozzle'
