@@ -1,0 +1,6 @@
+jain10_sleep: !secret jain10_sleep
+jain10_wake: !secret jain10_wake
+srv01_sleep: !secret srv01_sleep
+srv01_wake: !secret srv01_wake
+srv78_update_gits: !secret srv78_update_gits
+srv78_dir_clean: !secret srv78_dir_clean
