@@ -614,3 +614,23 @@
     - service: script.lights_wake_up
       data:
         light: light.bedroom
+
+
+
+
+
+# Postnord alert on mail delivery day
+- alias: Postnord Mail Alert
+  id: arnav-jain-se_postnord_16973_mail_alert
+  trigger:
+  - platform: template
+    value_template: "{{ now() > today_at(states('input_datetime.postnord_16973_mail_alert')) }}"
+  condition:
+    - condition: state
+      entity_id: binary_sensor.postnord_16973_delivery_today
+      state: 'on'
+  action:
+    - service: script.notify
+      data:
+        title: Mail Delivery
+        message: Mail delivered today by Postnord in area 16973.

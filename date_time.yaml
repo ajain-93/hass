@@ -22,6 +22,14 @@ lights_night:
   has_time: true
   initial: "22:20"
 
+
+postnord_16973_mail_alert:
+  name: Postnord 16973 Mail Alert Time
+  has_date: false
+  has_time: true
+  initial: "17:30"
+
+
 next_alarm:
   name: Next Alarm
   has_date: true
