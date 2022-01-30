@@ -15,6 +15,7 @@ views:
   - !include lovelace/entities-link-quality.yaml
   - !include lovelace/entities-power.yaml
   - !include lovelace/entities-updates.yaml
+  - !include lovelace/entities-fuel.yaml
 
   # Devices
   - !include lovelace/device-jain10.yaml

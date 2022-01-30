@@ -1,0 +1,46 @@
+title: Fuel Prices
+path: fuel-prices
+icon: mdi:gas-station
+badges: []
+cards:
+  - type: history-graph
+    title: Individual
+    hours_to_show: 160
+    refresh_interval: 0
+    entities:
+      - entity: sensor.b95_circle_k_kista_akalla
+      - entity: sensor.b95_circle_k_sollentuna_tureberg
+      - entity: sensor.b95_circle_k_solna_centrum
+      - entity: sensor.b95_circle_k_solna_jarva_krog
+      - entity: sensor.b95_ingo_kista_akalla
+      - entity: sensor.b95_ingo_solna_huvudsta
+      - entity: sensor.b95_ingo_spanga_tensta
+      - entity: sensor.b95_okq8_kista_akalla
+      - entity: sensor.b95_okq8_solna_bergshamra
+      - entity: sensor.b95_preem_solna_karolinska
+  - type: history-graph
+    title: Base Price
+    hours_to_show: 24
+    refresh_interval: 0
+    entities:
+      - entity: sensor.b95_tanka
+  - type: entities
+    title: Base Price
+    entities:
+      - entity: sensor.b95_tanka
+  - type: entities
+    title: Akalla/Sollentuna
+    entities:
+      - entity: sensor.b95_circle_k_kista_akalla
+      - entity: sensor.b95_okq8_kista_akalla
+      - entity: sensor.b95_ingo_kista_akalla
+      - entity: sensor.b95_circle_k_sollentuna_tureberg
+  - type: entities
+    title: Solna
+    entities:
+      - entity: sensor.b95_circle_k_solna_jarva_krog
+      - entity: sensor.b95_circle_k_solna_centrum
+      - entity: sensor.b95_ingo_solna_huvudsta
+      - entity: sensor.b95_preem_solna_karolinska
+      - entity: sensor.b95_okq8_solna_bergshamra
+

@@ -1,0 +1,127 @@
+# - platform: scrape
+#   resource: https://tanka.se/prishistorik
+#   name: Tanka B95
+#   select: div.row div
+
+
+- platform: rest
+  name: B95 - Tanka
+  resource: https://tanka.se/api/prices
+  method: GET
+  value_template: "{{ value_json[-1]['95'] | float}}"
+  scan_interval: 3600
+
+
+# - platform: scrape
+#   resource: https://tanka.se/prishistorik
+#   name: B95 - Preem
+#   select: '.Table-body tr:nth-child(2) td:nth-child(2)'
+
+# - platform: scrape
+#   name: B95 - HASS Version
+#   resource: https://www.home-assistant.io
+#   select: ".current-version h1"
+
+# - platform: rest
+#   scan_interval: 1800
+#   resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+#   name: B95 -
+#   value_template: '{{ value_json. | float }}'
+#   state_class: measurement
+#   unit_of_measurement: 'kr/l'
+
+# - platform: rest
+#   scan_interval: 1800
+#   resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+#   name: B95 -
+#   value_template: '{{ value_json. | float }}'
+#   state_class: measurement
+#   unit_of_measurement: 'kr/l'
+
+# - platform: rest
+#   scan_interval: 1800
+#   resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+#   name: B95 -
+#   value_template: '{{ value_json. | float }}'
+#   state_class: measurement
+#   unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Preem Solna/Karolinska
+  value_template: '{{ value_json.stockholmslan_Preem_SolnaSolnavagen_15A__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Ingo Spånga/Tensta
+  value_template: '{{ value_json.stockholmslan_Ingo_StockholmDuvbovagen_170_Spanga__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - OKQ8 Solna/Bergshamra
+  value_template: '{{ value_json.stockholmslan_OKQ8_SolnaKungshamravagen_1__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Circle K Sollentuna/Tureberg
+  value_template: '{{ value_json.stockholmslan_Circle_K_SollentunaKanalvagen_13__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Circle K Kista/Akalla
+  value_template: '{{ value_json.stockholmslan_Circle_K_StockholmFinlandsgatan_1_Kista__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Circle K Solna/Centrum
+  value_template: '{{ value_json.stockholmslan_Circle_K_SolnaCentrumslingan_42__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Circle K Solna/Järva Krog
+  value_template: '{{ value_json.stockholmslan_Circle_K_SolnaJarva_krog__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Ingo Solna/Huvudsta
+  value_template: '{{ value_json.stockholmslan_Ingo_SolnaArmégatan_13__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - Ingo Kista/Akalla
+  value_template: '{{ value_json.stockholmslan_Ingo_StockholmEsbogatan__Hanstavagen_Tammerforsgatan__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
+
+- platform: rest
+  scan_interval: 1800
+  resource: https://henrikhjelm.se/api/getdata.php?lan=stockholms-lan
+  name: B95 - OKQ8 Kista/Akalla
+  value_template: '{{ value_json.stockholmslan_OKQ8_StockholmKottbygatan_1_Kista__95 | float }}'
+  state_class: measurement
+  unit_of_measurement: 'kr/l'
