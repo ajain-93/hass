@@ -1,5 +1,7 @@
 # UI configured items
 
+* ASUSWRT
+
 * TP-Link Plugs
   * tplink_plug_01: iot05.jain.lan
   * tplink_plug_02: iot06.jain.lan
@@ -14,6 +16,7 @@
 
 * Spotify
 
+* Octoprint
 
 # Energy
 * Fibaro Plugs
