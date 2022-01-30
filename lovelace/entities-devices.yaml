@@ -6,6 +6,48 @@ badges: []
 
 cards:
   - type: entities
+    title: Samsung Galaxy S21
+    entities:
+      # - entity: sensor.galaxys21_battery_health
+      # - entity: sensor.galaxys21_charger_type
+      - entity: binary_sensor.galaxys21_is_charging
+      - entity: sensor.galaxys21_charger_type
+      - entity: sensor.galaxys21_battery_state
+        # secondary_info: last-updated
+      - entity: sensor.galaxys21_battery_level
+      - entity: sensor.galaxys21_battery_temperature
+      - entity: sensor.galaxys21_atmospheric_pressure
+      - entity: sensor.galaxys21_uptime
+      - entity: sensor.galaxys21_remaining_data
+      # - entity: binary_sensor.galaxys21_power_save
+      # - entity: binary_sensor.galaxys21_doze_mode
+      # - entity: sensor.galaxys21_detected_activity
+        # secondary_info: last-updated
+      # - entity: binary_sensor.galaxys21_bluetooth_state
+      # - entity: sensor.galaxys21_bluetooth_connection
+      # - entity: binary_sensor.galaxys21_wifi_state
+      #   secondary_info: last-updated
+      # - entity: sensor.galaxys21_wifi_connection
+      # - entity: sensor.galaxys21_wifi_frequency
+      # - entity: sensor.galaxys21_internal_storage
+      # - entity: sensor.galaxys21_external_storage
+      # - entity: sensor.galaxys21_phone_state
+      # - entity: sensor.galaxys21_sim_1
+      # - entity: sensor.galaxys21_sim_2
+      # - entity: binary_sensor.galaxys21_device_locked
+      # - entity: binary_sensor.galaxys21_interactive
+      # - entity: sensor.galaxys21_geocoded_location
+      # - entity: sensor.galaxys21_last_reboot
+      # - entity: sensor.galaxys21_next_alarm
+      # - entity: sensor.galaxys21_total_rx_gb
+      # - entity: sensor.galaxys21_total_tx_gb
+    footer:
+      type: graph
+      entity: sensor.galaxys21_battery_level
+      hours_to_show: 24
+      detail: 2
+
+  - type: entities
     title: Motorola G6+
     entities:
       # - entity: sensor.g6_battery_health

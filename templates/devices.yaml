@@ -1,0 +1,16 @@
+- sensor:
+  - name: GalaxyS21 Atmospheric Pressure
+    device_class: pressure
+    state_class: measurement
+    unit_of_measurement: "mbar"
+    state: "{{ state_attr('sensor.galaxys21_device_information', 'pressure') | float }}"
+  - name: GalaxyS21 Remaining Data
+    state_class: total
+    unit_of_measurement: "GB"
+    state: "{{ state_attr('sensor.galaxys21_device_information', 'data') | float }}"
+    icon: mdi:wan
+  - name: GalaxyS21 Uptime
+    state_class: total_increasing
+    unit_of_measurement: "h"
+    state: "{{ int(state_attr('sensor.galaxys21_device_information', 'uptime') / 3600 * 100) / 100 }}"
+    icon: mdi:sort-clock-descending-outline

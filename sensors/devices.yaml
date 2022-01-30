@@ -1,0 +1,6 @@
+- platform: "mqtt"
+  name: GalaxyS21 Device Information
+  state_topic: "hass/devices/s21"
+  json_attributes_topic: "hass/devices/s21"
+  icon: mdi:cellphone-information
+
