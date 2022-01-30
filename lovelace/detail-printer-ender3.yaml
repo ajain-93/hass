@@ -15,13 +15,16 @@ cards:
       entities:
         - entity: switch.telldus_switch_07_switch
           name: Power
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/telldus-plug-07
         - entity: sensor.octoprint_current_state
           name: Status
 
   - type: conditional
     conditions:
       - entity: binary_sensor.octoprint_printing
-        state: 'on'
+        state_not: 'unavailable'
     card:
       type: vertical-stack
       cards:
