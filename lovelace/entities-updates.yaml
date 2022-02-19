@@ -31,7 +31,7 @@ cards:
 
   - type: glance
     title: Remotes - On/Off
-    columns: 6
+    columns: 5
     entities:
       - entity: binary_sensor.tradfri_button_01_update
         name: Livingroom

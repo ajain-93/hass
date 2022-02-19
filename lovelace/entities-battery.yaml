@@ -32,7 +32,7 @@ cards:
 
   - type: glance
     title: Remotes - On/Off
-    columns: 4
+    columns: 5
     entities:
       - entity: sensor.tradfri_button_01_battery
         name: Livingroom

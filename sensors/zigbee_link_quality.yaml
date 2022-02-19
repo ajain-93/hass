@@ -60,10 +60,10 @@
       value_template: "{{ state_attr('sensor.tradfri_button_06_action', 'linkquality') }}"
     tradfri_button_07_linkquality:
       device_class: signal_strength
-      value_template: "{{ state_attr('sensor.tradfri_button_07', 'linkquality') }}"
+      value_template: "{{ state_attr('sensor.tradfri_button_07_action', 'linkquality') }}"
     tradfri_button_08_linkquality:
       device_class: signal_strength
-      value_template: "{{ state_attr('sensor.tradfri_button_08', 'linkquality') }}"
+      value_template: "{{ state_attr('sensor.tradfri_button_08_action', 'linkquality') }}"
     tradfri_button_09_linkquality:
       device_class: signal_strength
       value_template: "{{ state_attr('sensor.tradfri_button_09_action', 'linkquality') }}"
