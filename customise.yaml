@@ -605,10 +605,10 @@ sensor.tplink_plug_01_total_consumption:
   friendly_name: Fridge Total Consumption
 sensor.tplink_plug_01_voltage:
   friendly_name: Fridge Voltage
+
 switch.tplink_plug_02:
   friendly_name: Microwave
   icon: mdi:microwave
-
 switch.tplink_plug_02_led:
   friendly_name: Microwave Switch LED
 sensor.tplink_plug_02_current:
