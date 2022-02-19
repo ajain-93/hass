@@ -100,37 +100,53 @@ cards:
         tap_action:
           action: toggle
 
-  - type: glance
-    title: Voltage
-    columns: 3
-    entities:
-      - entity: sensor.tplink_plug_01_volts
-        name: Fridge
-      - entity: sensor.tplink_plug_02_volts
-        name: Microwave
-      - entity: sensor.telldus_switch_05_voltage
-        name: Toaster
-      - entity: sensor.telldus_switch_06_voltage
-        name: Fan Lamp
-      - entity: sensor.telldus_switch_02_voltage
-        name: Dishwasher
-      - entity: sensor.telldus_switch_01_voltage
-        name: TV
-      - entity: sensor.telldus_switch_03_voltage
-        name: Study Table
-      - entity: sensor.telldus_switch_04_voltage
-        name: Misc
-      - entity: sensor.telldus_switch_07_voltage
-        name: Maker
+  - type: vertical-stack
+    title: Power
+    cards:
+    - type: glance
+      title: Fibaro
+      show_name: false
+      entities:
+        - entity: sensor.fibaro_switch_01_power
+          icon: mdi:desktop-tower-monitor
+        - entity: sensor.fibaro_switch_02_power
+          icon: mdi:server
+    - type: glance
+      title: TP-Link
+      show_name: false
+      entities:
+        - entity: sensor.tplink_plug_01_current_consumption
+          icon: mdi:fridge
+        - entity: sensor.tplink_plug_02_current_consumption
+          icon: mdi:microwave
+    - type: glance
+      title: Telldus
+      columns: 4
+      show_name: false
+      entities:
+        - entity: sensor.telldus_switch_05_power
+          icon: mdi:toaster
+        - entity: sensor.telldus_switch_06_power
+          icon: mdi:battery-charging
+        - entity: sensor.telldus_switch_02_power
+          icon: mdi:dishwasher
+        - entity: sensor.telldus_switch_01_power
+          icon: mdi:television-classic
+        - entity: sensor.telldus_switch_03_power
+          icon: mdi:desk
+        - entity: sensor.telldus_switch_04_power
+          name: Misc
+        - entity: sensor.telldus_switch_07_power
+          icon: mdi:printer-3d-nozzle
 
   - type: history-graph
     title: Voltage 60m
     refresh_interval: 0
     hours_to_show: 1
     entities:
-      - entity: sensor.tplink_plug_01_volts
+      - entity: sensor.tplink_plug_01_voltage
         name: Fridge
-      - entity: sensor.tplink_plug_02_volts
+      - entity: sensor.tplink_plug_02_voltage
         name: Microwave
       - entity: sensor.telldus_switch_05_voltage
         name: Toaster
