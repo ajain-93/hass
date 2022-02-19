@@ -19,7 +19,6 @@ cards:
     show_name: false
     entities:
       - entity: sensor.tplink_plug_02_current_consumption
-      - entity: sensor.tplink_plug_02_today_s_consumption
       - entity: sensor.tplink_plug_02_total_consumption
       - entity: sensor.tplink_plug_02_voltage
       - entity: sensor.tplink_plug_02_current
@@ -30,38 +29,20 @@ cards:
     hours_to_show: 1
     entities:
       - entity: sensor.tplink_plug_02_current_consumption
+        name: Power
 
-  - type: history-graph
+  - type: statistics-graph
     title: Power Usage
     refresh_interval: 0
-    hours_to_show: 24
+    days_to_show: 7
     entities:
       - entity: sensor.tplink_plug_02_current_consumption
+        name: W
 
-  - type: history-graph
-    title: Energy (Today)
+  - type: statistics-graph
+    title: Energy Usage
     refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.tplink_plug_02_today_s_consumption
-
-  - type: history-graph
-    title: Energy
-    refresh_interval: 0
-    hours_to_show: 24
+    days_to_show: 7
     entities:
       - entity: sensor.tplink_plug_02_total_consumption
-
-  - type: history-graph
-    title: Voltage
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.tplink_plug_02_voltage
-
-  - type: history-graph
-    title: Current
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.tplink_plug_02_current
+        name: kWh

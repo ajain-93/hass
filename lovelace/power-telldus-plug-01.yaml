@@ -24,36 +24,26 @@ cards:
       - entity: sensor.telldus_switch_01_current
 
   - type: history-graph
+    title: Power Usage 60m
     refresh_interval: 0
     hours_to_show: 1
-    title: Power Usage 60m
     entities:
       - entity: sensor.telldus_switch_01_power
+        name: Power
 
-  - type: history-graph
-    refresh_interval: 0
-    hours_to_show: 24
+  - type: statistics-graph
     title: Power Usage
+    refresh_interval: 0
+    days_to_show: 7
     entities:
       - entity: sensor.telldus_switch_01_power
+        name: W
 
-  - type: history-graph
-    title: Energy
+  - type: statistics-graph
+    title: Energy Usage
     refresh_interval: 0
-    hours_to_show: 24
+    days_to_show: 7
+    period: hour
     entities:
       - entity: sensor.telldus_switch_01_energy
-
-  - type: history-graph
-    title: Voltage
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.telldus_switch_01_voltage
-
-  - type: history-graph
-    title: Current
-    refresh_interval: 0
-    hours_to_show: 24
-    entities:
-      - entity: sensor.telldus_switch_01_current
+        name: kWh
