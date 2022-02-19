@@ -42,20 +42,21 @@ cards:
       - entity: binary_sensor.aeotec_sensor6_01_vibration
         name: Vibration
 
-  - type: sensor
-    entity: sensor.aeotec_sensor6_01_temperature
-    name: Temperature
-    graph: line
-    detail: 2
 
-  - type: sensor
-    entity: sensor.aeotec_sensor6_01_luminance
-    name: Luminance
-    graph: line
-    detail: 2
+  - type: statistics-graph
+    stat_types: mean
+    days_to_show: 1
+    entities:
+      - entity: sensor.aeotec_sensor6_01_temperature
 
-  - type: sensor
-    entity: sensor.aeotec_sensor6_01_humidity
-    name: Humidity
-    graph: line
-    detail: 2
+  - type: statistics-graph
+    stat_types: mean
+    days_to_show: 1
+    entities:
+      - entity: sensor.aeotec_sensor6_01_luminance
+
+  - type: statistics-graph
+    # stat_types: mean
+    days_to_show: 1
+    entities:
+      - entity: sensor.aeotec_sensor6_01_humidity

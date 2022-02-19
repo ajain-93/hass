@@ -43,10 +43,11 @@ cards:
         hold_action:
           action: more-info
 
-  - type: sensor
-    entity: sensor.smartthings_motion_temp_01_temperature
-    graph: line
-    detail: 2
+  - type: statistics-graph
+    stat_types: mean
+    days_to_show: 1
+    entities:
+      - entity: sensor.smartthings_motion_temp_01_temperature
 
   - type: glance
     show_name: true
