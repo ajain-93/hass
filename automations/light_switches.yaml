@@ -1,0 +1,80 @@
+
+## Light Switches
+# - id: '1611605747439'
+#   alias: Light Switch - Living Room
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_livingroom
+#       light_entity: light.livingroom
+# - id: '1611605820512'
+#   alias: Light Switch - Bathroom
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bathroom
+#       light_entity: light.bathroom
+# - id: '1611605844398'
+#   alias: Light Switch - Bedroom - Bed
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bedroom_bed
+#       light_entity: light.bedroom_bed
+# - id: '1611605930704'
+#   alias: Light Switch - Bedroom - Ceiling
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_bedroom_ceiling
+#       light_entity: light.bedroom_ceiling
+# - id: '1611606272944'
+#   alias: Light Switch - Gallery
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_gallery
+#       light_entity: light.gallery
+# - id: '1611606284135'
+#   alias: Light Switch - Kitchen
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_kitchen
+#       light_entity: light.kitchen
+# - id: '1611606310479'
+#   alias: Light Switch - Store
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_store
+#       light_entity: light.store
+# - id: '1611610011220'
+#   alias: Light Switch - Study
+#   description: ''
+#   use_blueprint:
+#     path: light_switch.yaml
+#     input:
+#       light_switch_entity: switch.light_study
+#       light_entity: light.tradfri_plug_01_light
+# - id: '1611611216928'
+#   alias: Light Switch - Bedroom
+#   description: ''
+#   mode: single
+#   trigger:
+#   - platform: state
+#     entity_id: switch.light_bedroom
+#   action:
+#     service: "{% if trigger.to_state.state == \"on\" %}\n  switch.turn_on\n{% else\
+#       \ %}\n  switch.turn_off\n{% endif %}\n"
+#     data:
+#       entity_id:
+#       - switch.light_bedroom_bed
+#       - switch.light_bedroom_ceiling

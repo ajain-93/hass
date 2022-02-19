@@ -1,0 +1,174 @@
+# Living Room
+- id: '1611604721116'
+  alias: Timer - Living Room - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.livingroom
+      target_timer: timer.livingroom_max
+
+- id: '1611604755633'
+  alias: Timer - Living Room - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.livingroom
+      target_timer: timer.livingroom_max
+
+
+- id: '1611605184590'
+  alias: Timer - Study Light - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.tradfri_plug_01_light
+      target_timer: timer.livingroom_study_max
+
+- id: '1611605184591'
+  alias: Timer - Study Light - Off
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.tradfri_plug_01_light
+      target_timer: timer.livingroom_study_max
+
+
+# Bedroom
+- id: '1611606188886'
+  alias: Timer - Bedroom - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.bedroom
+      target_timer: timer.bedroom_max
+
+- id: '1611606214670'
+  alias: Timer - Bedroom - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.bedroom
+      target_timer: timer.bedroom_max
+
+
+# Store
+- id: '1611606359886'
+  alias: Timer - Store - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.store
+      target_timer: timer.store_max
+
+- id: '1611606345967'
+  alias: Timer - Store - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.store
+      target_timer: timer.store_max
+
+
+# Kitchen
+- id: arnav-jain-se_timer_kitchen_on
+  alias: Timer - Kitchen - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.kitchen
+      target_timer: timer.kitchen_max
+
+- id: arnav-jain-se_timer_kitchen_off
+  alias: Timer - Kitchen - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.kitchen
+      target_timer: timer.kitchen_max
+
+
+- id: arnav-jain-se_timer_kitchen_workspace_on
+  alias: Timer - Kitchen Workspace - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.shellyplus1_01_switch_0
+      target_timer: timer.kitchen_workspace_max
+
+- id: arnav-jain-se_timer_kitchen_workspace_off
+  alias: Timer - Kitchen Workspace - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.shellyplus1_01_switch_0
+      target_timer: timer.kitchen_workspace_max
+
+
+- id: arnav-jain-se_timer_kitchen_dining_on
+  alias: Timer - Kitchen Dining - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.shellyplus1_02_switch_0
+      target_timer: timer.kitchen_dining_max
+
+- id: arnav-jain-se_timer_kitchen_dining_off
+  alias: Timer - Kitchen Dining - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.shellyplus1_02_switch_0
+      target_timer: timer.kitchen_dining_max
+
+
+# Gallery
+- id: arnav-jain-se_timer_gallery_on
+  alias: Timer - Gallery - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.gallery
+      target_timer: timer.gallery_max
+
+- id: arnav-jain-se_timer_gallery_off
+  alias: Timer - Gallery - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.gallery
+      target_timer: timer.gallery_max
+
+
+# Bathroom
+- id: arnav-jain-se_timer_bathroom_on
+  alias: Timer - Bathroom - On
+  description: ''
+  use_blueprint:
+    path: light_timer_start.yaml
+    input:
+      light_entity: light.bathroom
+      target_timer: timer.bathroom_max\
+
+- id: arnav-jain-se_timer_bathroom_off
+  alias: Timer - Bathroom - Off
+  description: ''
+  use_blueprint:
+    path: light_timer_finish.yaml
+    input:
+      light_entity: light.bathroom
+      target_timer: timer.bathroom_max

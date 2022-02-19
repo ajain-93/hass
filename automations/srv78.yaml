@@ -1,0 +1,7 @@
+- alias: SRV78 Directory Cleaner
+  id: arnav-jain-se_srv78_dir_clean
+  trigger:
+    platform: time_pattern
+    minutes: "/5" # Trigger every 5 minutes
+  action:
+  - service: shell_command.srv78_dir_clean

@@ -1,0 +1,26 @@
+
+- alias: Bicycle Battery Charge Complete
+  id: arnav-jain-se_battery_charge
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.battery_bicycle_charging
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.telldus_switch_06_switch
+    state: 'on'
+  action:
+  - service: script.notify
+    data:
+      title: Bicycle Battery
+      message: Charging Complete
+  - delay:
+      minutes: 10
+  - service: script.notify
+    data:
+      title: Bicycle Battery
+      message: Turning off charger
+  - service: switch.turn_off
+    data:
+      entity_id: switch.telldus_switch_06_switch
+

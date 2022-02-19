@@ -1,0 +1,37 @@
+# Sensors
+- id: '1611599662235'
+  alias: Sensor - Door - Store
+  description: ''
+  use_blueprint:
+    path: binary_to_light.yaml
+    input:
+      motion_entity: binary_sensor.aqara_sensor_switch_01_contact
+      target_light: light.store
+      no_motion_wait: '0'
+- id: '1611599690804'
+  alias: Sensor - Motion - Bathroom
+  description: ''
+  use_blueprint:
+    path: binary_to_light.yaml
+    input:
+      motion_entity: binary_sensor.tradfri_motion_01_occupancy
+      target_light: light.bathroom
+      no_motion_wait: '0'
+- id: '1611603275104'
+  alias: Sensor - Motion - Kitchen
+  description: ''
+  use_blueprint:
+    path: binary_to_light.yaml
+    input:
+      no_motion_wait: '10'
+      motion_entity: binary_sensor.smartthings_motion_temp_02_occupancy
+      target_light: light.kitchen
+- id: '1611603110137'
+  alias: Sensor - Motion - Gallery
+  description: ''
+  use_blueprint:
+    path: binary_to_light.yaml
+    input:
+      no_motion_wait: '10'
+      motion_entity: binary_sensor.smartthings_motion_temp_01_occupancy
+      target_light: light.gallery

@@ -1,0 +1,30 @@
+# Decoration Lights
+- alias: Light Mode - Decoration Lights - Night
+  id: arnav-jain-se_decoration_lights_off
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_night
+    to: 'on'
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id:
+        - switch.tradfri_plug_03_power
+        - switch.tradfri_plug_04_power
+        - switch.tradfri_plug_05_power
+        - switch.tradfri_plug_06_power
+
+- alias: Light Mode - Decoration Lights - Day
+  id: arnav-jain-se_decoration_lights_on
+  trigger:
+  - platform: state
+    entity_id: switch.ha_lights_mode_night
+    to: 'off'
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id:
+        - switch.tradfri_plug_03_power
+        - switch.tradfri_plug_04_power
+        - switch.tradfri_plug_05_power
+        - switch.tradfri_plug_06_power
