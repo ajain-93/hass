@@ -20,6 +20,27 @@ cards:
           navigation_path: /lovelace/tplink-plug-02
 
   - type: glance
+    title: Shelly
+    show_state: false
+    entities:
+      - entity: light.shellyplus1_01_switch_0
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/shellyplus1-01
+      - entity: light.shellyplus1_02_switch_0
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/shellyplus1-01
+      - entity: switch.shellyplus1pm_01_switch_0
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/shellyplus1pm-01
+      - entity: switch.shellyplus1pm_02_switch_0
+        tap_action:
+          action: navigate
+          navigation_path: /lovelace/shellyplus1pm-02
+
+  - type: glance
     title: Fibaro
     show_state: false
     entities:
@@ -138,6 +159,13 @@ cards:
           name: Misc
         - entity: sensor.telldus_switch_07_power
           icon: mdi:printer-3d-nozzle
+    - type: glance
+      title: Shelly
+      entities:
+        - entity: sensor.shellyplus1pm_01_switch_0_power
+          name: Washing Machine
+        - entity: sensor.shellyplus1pm_02_switch_0_power
+          name: Dryer
 
   - type: history-graph
     title: Voltage 60m
@@ -162,6 +190,10 @@ cards:
         name: Misc
       - entity: sensor.telldus_switch_07_voltage
         name: Maker
+      - entity: sensor.shellyplus1pm_01_switch_0_voltage
+        name: Washing Machine
+      - entity: sensor.shellyplus1pm_02_switch_0_voltage
+        name: Dryer
 
   # - type: entities
   #   title: Power

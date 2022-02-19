@@ -289,6 +289,14 @@ cards:
           action: toggle
         hold_action:
           action: more-info
+      - entity: light.shellyplus1_01_switch_0
+        name: Kitchen Workspace
+        tap_action:
+          action: toggle
+      - entity: light.shellyplus1_02_switch_0
+        name: Kitchen Dining
+        tap_action:
+          action: toggle
       - entity: light.tradfri_led_white_01_light
         name: Light - Sink
         tap_action:

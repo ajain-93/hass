@@ -623,6 +623,101 @@ sensor.tplink_plug_02_voltage:
   friendly_name: Microwave Voltage
 
 
+
+
+# Shelly Plus 1
+light.shellyplus1_01_switch_0:
+  friendly_name: Kitchen Workspace Light
+  icon: mdi:countertop
+binary_sensor.shellyplus1_01_switch_0_input:
+  friendly_name: Kitchen Workspace Switch
+binary_sensor.shellyplus1_01_cloud:
+  friendly_name: Kitchen Workspace Cloud Connection
+binary_sensor.shellyplus1_01_firmware_update:
+  friendly_name: Kitchen Workspace Firmware Update
+button.shellyplus1_01_ota_update:
+  friendly_name: Kitchen Workspace OTA Update
+button.shellyplus1_01_reboot:
+  friendly_name: Kitchen Workspace Reboot
+sensor.shellyplus1_01_rssi:
+  friendly_name: Kitchen Workspace RSSI
+sensor.shellyplus1_01_switch_0_temperature:
+  friendly_name: Kitchen Workspace Switch Temperature
+sensor.shellyplus1_01_uptime:
+  friendly_name: Kitchen Workspace Uptime
+
+light.shellyplus1_02_switch_0:
+  friendly_name: Dining Light
+  icon: mdi:vanity-light
+binary_sensor.shellyplus1_02_switch_0_input:
+  friendly_name: Dining Switch
+binary_sensor.shellyplus1_02_cloud:
+  friendly_name: Dining Cloud Connection
+binary_sensor.shellyplus1_02_firmware_update:
+  friendly_name: Dining Firmware Update
+button.shellyplus1_02_ota_update:
+  friendly_name: Dining OTA Update
+button.shellyplus1_02_reboot:
+  friendly_name: Dining Reboot
+sensor.shellyplus1_02_rssi:
+  friendly_name: Dining RSSI
+sensor.shellyplus1_02_switch_0_temperature:
+  friendly_name: Dining Switch Temperature
+sensor.shellyplus1_02_uptime:
+  friendly_name: Dining Uptime
+
+# Shelly Plus 1 PM
+switch.shellyplus1pm_01_switch_0:
+  friendly_name: Washing Machine
+  icon: mdi:washing-machine
+binary_sensor.shellyplus1pm_01_cloud:
+  friendly_name: Washing Machine Cloud Connection
+binary_sensor.shellyplus1pm_01_firmware_update:
+  friendly_name: Washing Machine Firmware Update
+button.shellyplus1pm_01_ota_update:
+  friendly_name: Washing Machine OTA Update
+button.shellyplus1pm_01_reboot:
+  friendly_name: Washing Machine Reboot
+sensor.shellyplus1pm_01_rssi:
+  friendly_name: Washing Machine RSSI
+sensor.shellyplus1pm_01_switch_0_energy:
+  friendly_name: Washing Machine Energy
+sensor.shellyplus1pm_01_switch_0_power:
+  friendly_name: Washing Machine Power
+sensor.shellyplus1pm_01_switch_0_temperature:
+  friendly_name: Washing Machine Switch Temperature
+sensor.shellyplus1pm_01_switch_0_voltage:
+  friendly_name: Washing Machine Voltage
+sensor.shellyplus1pm_01_uptime:
+  friendly_name: Washing Machine Uptime
+
+switch.shellyplus1pm_02_switch_0:
+  friendly_name: Dryer
+  icon: mdi:tumble-dryer
+binary_sensor.shellyplus1pm_02_cloud:
+  friendly_name: Dryer Cloud Connection
+binary_sensor.shellyplus1pm_02_firmware_update:
+  friendly_name: Dryer Firmware Update
+button.shellyplus1pm_02_ota_update:
+  friendly_name: Dryer OTA Update
+button.shellyplus1pm_02_reboot:
+  friendly_name: Dryer Reboot
+sensor.shellyplus1pm_02_rssi:
+  friendly_name: Dryer RSSI
+sensor.shellyplus1pm_02_switch_0_energy:
+  friendly_name: Dryer Energy
+sensor.shellyplus1pm_02_switch_0_power:
+  friendly_name: Dryer Power
+sensor.shellyplus1pm_02_switch_0_temperature:
+  friendly_name: Dryer Switch Temperature
+sensor.shellyplus1pm_02_switch_0_voltage:
+  friendly_name: Dryer Voltage
+sensor.shellyplus1pm_02_uptime:
+  friendly_name: Dryer Uptime
+
+
+
+
 # Weather
 # Frösunda
 sensor.frosunda_wind_strength:

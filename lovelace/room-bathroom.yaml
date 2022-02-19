@@ -31,6 +31,24 @@ cards:
       - entity: sensor.aeotec_sensor6_01_luminance
         name: Luminace
 
+  - type: glance
+    title: Appliances
+    show_name: false
+    columns: 3
+    entities:
+      - entity: switch.shellyplus1pm_01_switch_0
+        tap_action:
+          action: toggle
+      - entity: sensor.shellyplus1pm_01_switch_0_temperature
+      - entity: sensor.shellyplus1pm_01_switch_0_power
+      - entity: switch.shellyplus1pm_02_switch_0
+        tap_action:
+          action: toggle
+      - entity: sensor.shellyplus1pm_02_switch_0_temperature
+      - entity: sensor.shellyplus1pm_02_switch_0_power
+
+
+
   - type: history-graph
     refresh_interval: 0
     hours_to_show: 24

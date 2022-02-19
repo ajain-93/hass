@@ -6,17 +6,28 @@ visible: false
 badges: []
 
 cards:
+  - type: entity
+    entity: light.kitchen
+    name: Kitchen Light
+
   - type: glance
-    show_state: false
+    # show_state: false
     entities:
       - entity: binary_sensor.smartthings_motion_temp_01_occupancy
         name: Motion
-      - entity: light.kitchen
-        name: Kitchen
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
+      - entity: sensor.smartthings_motion_temp_02_temperature
+        name: Temperature
+      - entity: sensor.shellyplus1_01_switch_0_temperature
+        name: Workspace Switch
+        icon: mdi:light-switch
+      - entity: sensor.shellyplus1_02_switch_0_temperature
+        name: Dining Switch
+        icon: mdi:light-switch
+
+
+  - type: glance
+    show_state: false
+    entities:
       - entity: light.tradfri_led_white_01_light
         name: Light - Sink
         tap_action:
@@ -32,7 +43,13 @@ cards:
       - entity: switch.tradfri_plug_08_power
         name: Fan Lamp
         tap_action:
+          action: toggle
+        hold_action:
           action: more-info
+      - entity: light.shellyplus1_01_switch_0
+        name: Workspace
+        tap_action:
+          action: toggle
         hold_action:
           action: more-info
 
