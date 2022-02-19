@@ -575,15 +575,15 @@ sensor.fibaro_switch_01_energy:
   friendly_name: Jain10 Energy
 
 binary_sensor.fibaro_switch_02_switch:
-  friendly_name: Jain56
+  friendly_name: Jain78
   icon: mdi:server
 switch.fibaro_switch_02_switch:
-  friendly_name: Jain56
+  friendly_name: Jain78
   icon: mdi:server
 sensor.fibaro_switch_02_power:
-  friendly_name: Jain56 Power
+  friendly_name: Jain78 Power
 sensor.fibaro_switch_02_energy:
-  friendly_name: Jain56 Energy
+  friendly_name: Jain78 Energy
 
 
 
