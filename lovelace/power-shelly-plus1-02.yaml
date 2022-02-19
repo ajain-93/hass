@@ -1,0 +1,30 @@
+title: TV
+path: shellyplus1-02
+visible: false
+
+badges: []
+
+cards:
+  - type: button
+    entity: light.shellyplus1_02_switch_0
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: glance
+    show_name: false
+    entities:
+      - binary_sensor.shellyplus1_02_cloud
+      - binary_sensor.shellyplus1_02_firmware_update
+      - sensor.shellyplus1_02_switch_0_temperature
+      - sensor.shellyplus1_02_rssi
+      - sensor.shellyplus1_02_uptime
+
+  - type: statistics-graph
+    stat_types: mean
+    days_to_show: 1
+    entities:
+      - entity: sensor.shellyplus1_01_switch_0_temperature

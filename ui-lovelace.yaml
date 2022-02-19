@@ -51,6 +51,13 @@ views:
   - !include lovelace/power-telldus-plug-05.yaml
   - !include lovelace/power-telldus-plug-06.yaml
   - !include lovelace/power-telldus-plug-07.yaml
+  ## Shelly
+  - !include lovelace/power-shelly-plus1-01.yaml
+  - !include lovelace/power-shelly-plus1-02.yaml
+  - !include lovelace/power-shelly-plus1pm-01.yaml
+  - !include lovelace/power-shelly-plus1pm-02.yaml
+
+
 
   # Details
   - !include lovelace/detail-printer-ender3.yaml

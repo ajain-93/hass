@@ -1,0 +1,59 @@
+title: TV
+path: shellyplus1pm-02
+visible: false
+
+badges: []
+
+cards:
+  - type: button
+    entity: switch.shellyplus1pm_02_switch_0
+    show_icon: true
+    show_name: false
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+
+  - type: glance
+    show_name: false
+    columns: 4
+    entities:
+      - sensor.shellyplus1pm_02_switch_0_power
+      - sensor.shellyplus1pm_02_switch_0_energy
+      - sensor.shellyplus1pm_02_switch_0_voltage
+      - sensor.shellyplus1pm_02_switch_0_temperature
+      - binary_sensor.shellyplus1pm_02_cloud
+      - binary_sensor.shellyplus1pm_02_firmware_update
+      - sensor.shellyplus1pm_02_rssi
+      - sensor.shellyplus1pm_02_uptime
+
+  - type: history-graph
+    refresh_interval: 0
+    hours_to_show: 1
+    entities:
+      - entity: sensor.shellyplus1pm_02_switch_0_power
+        name: Power 60m
+
+
+  - type: statistics-graph
+    refresh_interval: 0
+    days_to_show: 7
+    entities:
+      - entity: sensor.shellyplus1pm_02_switch_0_power
+        name: W
+
+  - type: statistics-graph
+    refresh_interval: 0
+    days_to_show: 7
+    period: hour
+    entities:
+      - entity: sensor.shellyplus1pm_02_switch_0_energy
+        name: kWh
+
+  - type: statistics-graph
+    refresh_interval: 0
+    days_to_show: 7
+    entities:
+      - entity: sensor.shellyplus1pm_02_switch_0_temperature
+        name: C
+
