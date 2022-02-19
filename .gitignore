@@ -6,3 +6,5 @@ home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 .storage
 .coder
+home-assistant.log.1
+home-assistant.log.fault
