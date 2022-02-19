@@ -10,6 +10,12 @@ gallery_max:
 kitchen_max:
   duration: '02:00:00'
 
+kitchen_workspace_max:
+  duration: '01:00:00'
+
+kitchen_dining_max:
+  duration: '01:00:00'
+
 livingroom_max:
   duration: '04:00:00'
 

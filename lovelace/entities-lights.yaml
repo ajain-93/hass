@@ -368,6 +368,12 @@ cards:
       - entity: timer.kitchen_max
         name: Kitchen
         icon: 'mdi:table-chair'
+      - entity: timer.kitchen_dining_max
+        name: Kitchen Dining
+        icon: 'mdi:vanity-light'
+      - entity: timer.kitchen_workspace_max
+        name: Kitchen Workspace
+        icon: 'mdi:countertop'
       - entity: timer.livingroom_max
         name: Living Room
         icon: 'mdi:sofa'

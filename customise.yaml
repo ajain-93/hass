@@ -858,6 +858,10 @@ timer.kitchen:
   friendly_name: Kitchen Timer
 timer.kitchen_max:
   friendly_name: Kitchen Timer Limit
+timer.kitchen_workspace_max:
+  friendly_name: Kitchen Workspace Limit
+timer.kitchen_dining_max:
+  friendly_name: Kitchen Dining Limit
 timer.livingroom_max:
   friendly_name: Livingroom Timer Limit
 timer.livingroom_study_max:

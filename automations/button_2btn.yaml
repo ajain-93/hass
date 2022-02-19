@@ -112,3 +112,53 @@
         target:
           entity_id: light.tradfri_plug_01_light
     default: []
+- id: 'arnav-jain-se_button_kitchen_workspace'
+  alias: Button - Kitchen Workspace
+  description: ''
+  mode: single
+  trigger:
+  - platform: state
+    entity_id: sensor.tradfri_button_09_action
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_09_action
+        state: 'on'
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.shellyplus1_01_switch_0
+      - service: switch.turn_on
+        data:
+          entity_id: switch.tradfri_plug_08_power
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_09_action
+        state: 'off'
+      sequence:
+      - service: light.turn_off
+        data:
+          entity_id: light.shellyplus1_01_switch_0
+      - service: switch.turn_off
+        data:
+          entity_id: switch.tradfri_plug_08_power
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_09_action
+        state: brightness_move_up
+      sequence:
+      - service: light.turn_on
+        target:
+          entity_id: light.shellyplus1_02_switch_0
+    - conditions:
+      - condition: state
+        entity_id: sensor.tradfri_button_09_action
+        state: brightness_move_down
+      sequence:
+      - service: light.turn_off
+        target:
+          entity_id:
+          - light.shellyplus1_02_switch_0
+    default: []
