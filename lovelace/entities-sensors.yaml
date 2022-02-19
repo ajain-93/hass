@@ -51,3 +51,4 @@ cards:
       - entity: sensor.tradfri_button_06_action
       - entity: sensor.tradfri_button_07_action
       - entity: sensor.tradfri_button_08_action
+      - entity: sensor.tradfri_button_09_action

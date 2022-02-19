@@ -58,6 +58,9 @@ cards:
       - entity: sensor.tradfri_button_08_battery
         name: TV
         icon: 'mdi:television-classic'
+      - entity: sensor.tradfri_button_09_battery
+        name: Kitchen Workspace
+        icon: 'mdi:countertop'
 
   - type: glance
     title: Remotes - 4-way

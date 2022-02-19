@@ -64,6 +64,9 @@
     tradfri_button_08_linkquality:
       device_class: signal_strength
       value_template: "{{ state_attr('sensor.tradfri_button_08', 'linkquality') }}"
+    tradfri_button_09_linkquality:
+      device_class: signal_strength
+      value_template: "{{ state_attr('sensor.tradfri_button_09_action', 'linkquality') }}"
 # Door Sensors
     aqara_sensor_switch_01_linkquality:
       device_class: signal_strength

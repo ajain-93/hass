@@ -55,3 +55,10 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   value_template: "{{ value_json.action }}"
   icon: mdi:gesture-double-tap
+- platform: "mqtt"
+  name: tradfri_button_09_action
+  state_topic: "zigbee2mqtt/tradfri_button_09"
+  json_attributes_topic: "zigbee2mqtt/tradfri_button_09"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  value_template: "{{ value_json.action }}"
+  icon: mdi:gesture-double-tap

@@ -311,6 +311,15 @@ sensor.tradfri_button_08_linkquality:
 binary_sensor.tradfri_button_08_update:
   friendly_name: TV Button Update
 
+sensor.tradfri_button_09_action:
+  friendly_name: Kitchen Workspace Button
+sensor.tradfri_button_09_battery:
+  friendly_name: Kitchen Workspace Button Battery
+sensor.tradfri_button_09_linkquality:
+  friendly_name: Kitchen Workspace Button Link
+binary_sensor.tradfri_button_09_update:
+  friendly_name: Kitchen Workspace Button Update
+
 ## 4-WAY
 sensor.tradfri_switch_01_action:
   friendly_name: Kitchen Switch

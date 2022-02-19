@@ -51,6 +51,11 @@
     state_class: measurement
     unit_of_measurement: "%"
     state: "{{ state_attr('sensor.tradfri_button_08_action', 'battery') }}"
+  - name: tradfri_button_09_battery
+    device_class: battery
+    state_class: measurement
+    unit_of_measurement: "%"
+    state: "{{ state_attr('sensor.tradfri_button_09_action', 'battery') }}"
 # Door Sensors
   - name: aqara_sensor_switch_01_battery
     device_class: battery
