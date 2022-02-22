@@ -39,6 +39,7 @@ cards:
       - entity: binary_sensor.ping_asus_router242
       - entity: binary_sensor.ping_jain78
       - entity: binary_sensor.ping_srv01
+      - entity: binary_sensor.ping_raspberrypi_ha_bridge
       - entity: binary_sensor.ping_octopi
 
   - type: glance
@@ -46,7 +47,6 @@ cards:
     entities:
       - entity: binary_sensor.ping_jain10
       - entity: binary_sensor.ping_jain70
-      - entity: binary_sensor.ping_sas_stolx0831
       - entity: binary_sensor.ping_jain24
 
 
@@ -83,4 +83,3 @@ cards:
       - entity: binary_sensor.ping_docker56
       - entity: binary_sensor.ping_raspberrypi
       - entity: binary_sensor.ping_nas83
-      - entity: binary_sensor.ping_raspberrypi_ha_bridge
