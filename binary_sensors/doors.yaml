@@ -8,3 +8,14 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
+
+
+- platform: "mqtt"
+  name: sonoff_door_sensor_01_contact
+  state_topic: "zigbee2mqtt/sonoff_door_sensor_01"
+  json_attributes_topic: "zigbee2mqtt/sonoff_door_sensor_01"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  payload_on: false
+  payload_off: true
+  value_template: "{{ value_json.contact }}"
+  device_class: "door"
