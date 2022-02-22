@@ -4,6 +4,7 @@ services:
 
     hass:
         image: homeassistant/home-assistant:2021.12.9
+        restart: unless-stopped
         environment:
             - PUID=1000
             - PGID=1000
