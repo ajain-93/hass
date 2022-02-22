@@ -22,6 +22,12 @@ cards:
         name: Wi-Fi 5Ghz
       - entity: sensor.asuswrt_2_4ghz_temperature
         name: Wi-Fi 2.4Ghz
+      - entity: sensor.asuswrt_load_avg_1m
+        name: 1 min
+      - entity: sensor.asuswrt_load_avg_5m
+        name: 5 min
+      - entity: sensor.asuswrt_load_avg_15m
+        name: 15 min
 
 
   - type: vertical-stack
@@ -33,7 +39,7 @@ cards:
       entities:
         - entity: sensor.asuswrt_load_avg_1m
           name: 1 min
-        - entity: sensor.asuswrt_load_avg_5mn
+        - entity: sensor.asuswrt_load_avg_5m
           name: 5 min
         - entity: sensor.asuswrt_load_avg_15m
           name: 15 min
@@ -43,11 +49,11 @@ cards:
       days_to_show: 7
       entities:
         - entity: sensor.asuswrt_load_avg_1m
-          name: CPU
-        - entity: sensor.asuswrt_load_avg_5mn
-          name: Wi-Fi 5Ghz
+          name: 1m
+        - entity: sensor.asuswrt_load_avg_5m
+          name: 5m
         - entity: sensor.asuswrt_load_avg_15m
-          name: Wi-Fi 2.4Ghz
+          name: 15m
 
   - type: statistics-graph
     title: Temperature
@@ -62,13 +68,33 @@ cards:
       - entity: sensor.asuswrt_2_4ghz_temperature
         name: Wi-Fi 2.4Ghz
 
-  - type: statistics-graph
-    title: Speeds
-    refresh_interval: 0
-    # stat_types: mean
-    days_to_show: 7
-    entities:
-      - entity: sensor.asuswrt_download
-        name: Rx
-      - entity: sensor.asuswrt_upload
-        name: Tx
+  - type: vertical-stack
+    title: Downloads
+    cards:
+    - type: statistics-graph
+      refresh_interval: 0
+      # stat_types: mean
+      days_to_show: 1
+      entities:
+        - entity: sensor.asuswrt_download
+          name: Rx
+        - entity: sensor.asuswrt_upload
+          name: Tx
+    - type: statistics-graph
+      refresh_interval: 0
+      # stat_types: mean
+      days_to_show: 7
+      entities:
+        - entity: sensor.asuswrt_download
+          name: Rx
+        - entity: sensor.asuswrt_upload
+          name: Tx
+    - type: statistics-graph
+      refresh_interval: 0
+      # stat_types: mean
+      days_to_show: 30
+      entities:
+        - entity: sensor.asuswrt_download
+          name: Rx
+        - entity: sensor.asuswrt_upload
+          name: Tx
