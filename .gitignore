@@ -8,3 +8,4 @@ home-assistant_v2.db-wal
 .coder
 home-assistant.log.1
 home-assistant.log.fault
+__pycache__
