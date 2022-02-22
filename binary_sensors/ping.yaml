@@ -39,7 +39,7 @@
   count: 1
 - platform: ping
   host: com49.jain.lan
-  name: ping_sas_stolx0831
+  name: ping_afry
   count: 1
 - platform: ping
   host: jain24.jain.lan

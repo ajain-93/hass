@@ -48,6 +48,7 @@ cards:
       - entity: binary_sensor.ping_jain10
       - entity: binary_sensor.ping_jain70
       - entity: binary_sensor.ping_jain24
+      - entity: binary_sensor.ping_afry
 
 
   - type: glance

@@ -773,8 +773,8 @@ binary_sensor.ping_jain70:
   friendly_name: Surface70
   device_class: connectivity
   icon: mdi:laptop
-binary_sensor.ping_sas_stolx0831:
-  friendly_name: HP Elitebook 840
+binary_sensor.ping_afry:
+  friendly_name: HP Firefly
   device_class: connectivity
   icon: mdi:laptop
 binary_sensor.ping_jain24:
