@@ -802,15 +802,15 @@ device_tracker.motog6:
 binary_sensor.ping_motorola_g6_plus:
   friendly_name: Motorola G6+
   device_class: connectivity
-  icon: mdi:cellphone-android
+  icon: mdi:cellphone
 binary_sensor.ping_sony_xperia_zr:
   friendly_name: Sony Xperia ZR
   device_class: connectivity
-  icon: mdi:cellphone-android
+  icon: mdi:cellphone
 binary_sensor.ping_sony_xperia_z1:
   friendly_name: Sony Xperia Z1
   device_class: connectivity
-  icon: mdi:cellphone-android
+  icon: mdi:cellphone
 binary_sensor.ping_asus_a810:
   friendly_name: Asus A810
   device_class: connectivity
