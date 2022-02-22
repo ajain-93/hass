@@ -116,3 +116,6 @@ notify:
   # - platform: telegram
   #   name: telegram_arnav
   #   chat_id: !secret telegram_bot_chat_id
+
+hacs:
+  token: !secret github_token
