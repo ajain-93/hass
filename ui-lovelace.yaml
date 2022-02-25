@@ -62,3 +62,4 @@ views:
 
   # Details
   - !include lovelace/detail-printer-ender3.yaml
+  - !include lovelace/detail-corona-virus.yaml
