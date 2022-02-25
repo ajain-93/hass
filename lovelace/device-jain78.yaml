@@ -19,44 +19,40 @@ cards:
       - entity: sensor.jain78_cpu_usage
         name: CPU Usage
         secondary_info: last-updated
-
-
-  - type: history-graph
-    title: CPU & Ram
-    hours_to_show: 1
-    refresh_interval: 0
-    entities:
-      - entity: sensor.jain78_cpu_usage_1_min
-        name: 1 min
-      - entity: sensor.jain78_cpu_usage_5_min
-        name: 5 min
-      - entity: sensor.jain78_cpu_usage_15_min
-        name: 15 min
       - entity: sensor.jain78_ram_usage
-        name: RAM
+        secondary_info: last-updated
+        name: RAM Usage
+      - entity: sensor.jain78_ram_used
+        name: RAM Used
+      - entity: sensor.jain78_ram_total
+        name: RAM Total
 
 
   - type: vertical-stack
-    title: Memory
+    title: CPU & RAM
     cards:
-      - type: entities
-        entities:
-          - entity: sensor.jain78_ram_usage
-            secondary_info: last-updated
-            name: RAM Usage
-          - entity: sensor.jain78_ram_available
-            secondary_info: last-updated
-            name: RAM Free
-          - entity: sensor.jain78_ram_total
-            name: RAM Total
-      - type: history-graph
-        entities:
-          - entity: sensor.jain78_ram_used
-            name: Used
-          - entity: sensor.jain78_ram_available
-            name: Free
-        hours_to_show: 1
-        refresh_interval: 0
+    - type: history-graph
+      hours_to_show: 1
+      refresh_interval: 0
+      entities:
+        - entity: sensor.jain78_cpu_usage_1_min
+          name: 1 min
+        - entity: sensor.jain78_cpu_usage_5_min
+          name: 5 min
+        - entity: sensor.jain78_cpu_usage_15_min
+          name: 15 min
+        - entity: sensor.jain78_ram_usage
+          name: RAM
+
+    - type: statistics-graph
+      refresh_interval: 0
+      stat_types: mean
+      days_to_show: 30
+      entities:
+        - entity: sensor.jain78_cpu_usage_5_min
+          name: CPU
+        - entity: sensor.jain78_ram_usage
+          name: RAM
 
 
   - type: entities
@@ -84,14 +80,15 @@ cards:
         name: Sent
 
 
-  - type: history-graph
+  - type: statistics-graph
     title: Disk Space
-    hours_to_show: 168
+    days_to_show: 30
+    stat_types: mean
     refresh_interval: 0
     entities:
-      - entity: sensor.jain78_hdd_C_usage
+      - entity: sensor.jain78_hdd_c_usage
         name: System (C)
-      - entity: sensor.jain78_hdd_S_usage
+      - entity: sensor.jain78_hdd_s_usage
         name: Media (S)
 
   - type: entities
