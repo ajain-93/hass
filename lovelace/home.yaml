@@ -363,6 +363,9 @@ cards:
   #     - light.telldus_switch_06_light
   #     - light.telldus_switch_07_light
 
+
+
+
   - type: vertical-stack
     cards:
     - type: weather-forecast
@@ -373,6 +376,9 @@ cards:
       show_name: false
       show_state: false
 
+
+
+
   - type: markdown
     title: Mail Delivery in Frösunda (16973)
     content: >
@@ -382,11 +388,7 @@ cards:
 
       **Upcoming delivery:** {{ state_attr('sensor.postnord_16973', 'upcoming') }}
 
-  # - type: entity-button
-  #   entity: light.store
-  #   tap_action:
-  #         action: navigate
-  #         navigation_path: /lovelace/test
+
 
   - type: conditional
     conditions:
