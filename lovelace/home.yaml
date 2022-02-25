@@ -7,9 +7,9 @@ badges: []
 
 cards:
   - type: vertical-stack
+    title: Lights
     cards:
     - type: glance
-      title: Lights
       show_state: false
       columns: 6
       entities:
@@ -63,6 +63,11 @@ cards:
           hold_action:
             action: more-info
 
+    - type: glance
+      show_state: false
+      show_name: false
+      columns: 7
+      entities:
         - entity: light.bathroom
           icon: 'mdi:shower'
           tap_action:
@@ -106,6 +111,15 @@ cards:
             service: script.light_toggle
             service_data:
               entity_id: light.livingroom
+          hold_action:
+            action: more-info
+        - entity: light.tradfri_plug_01_light
+          # icon: 'mdi:sofa'
+          tap_action:
+            action: call-service
+            service: light.toggle
+            service_data:
+              entity_id: light.tradfri_plug_01_light
           hold_action:
             action: more-info
         - entity: light.store
