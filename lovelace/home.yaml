@@ -133,6 +133,20 @@ cards:
             action: more-info
 
 
+
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.postnord_16973_delivery_today
+        state: 'on'
+    card:
+      type: entity
+      entity: binary_sensor.postnord_16973_delivery_today
+      state_color: true
+      name: Mail delivery
+      icon: mdi:email-fast
+
+
+
   - type: vertical-stack
     title: Navigation
     cards:
