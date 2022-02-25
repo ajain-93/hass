@@ -364,6 +364,35 @@ cards:
   #     - light.telldus_switch_07_light
 
 
+  - type: conditional
+    conditions:
+    - entity: binary_sensor.battery_bicycle_charging
+      state: 'on'
+    card:
+      type: horizontal-stack
+      cards:
+      - type: entity
+        name: Battery
+        entity: binary_sensor.battery_bicycle_charging
+        state_color: true
+      - type: entity
+        name: Power
+        entity: sensor.telldus_switch_06_power
+  - type: conditional
+    conditions:
+    - entity: binary_sensor.battery_bicycle_charging
+      state: 'off'
+    card:
+      type: horizontal-stack
+      cards:
+      - type: entity
+        name: Battery
+        entity: binary_sensor.battery_bicycle_charging
+        state_color: true
+      - type: entity
+        name: Power
+        entity: switch.telldus_switch_06_switch
+
 
 
   - type: vertical-stack
