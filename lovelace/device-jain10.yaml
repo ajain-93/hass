@@ -9,9 +9,13 @@ cards:
   - type: entities
     title: Overview
     state_color: true
+    show_header_toggle: false
     entities:
       - entity: binary_sensor.jain10_power_status
         name: Status
+      - entity: switch.jain10
+        name: Power Control
+      - entity: switch.telldus_switch_03_switch
       - entity: sensor.jain10_system_boot_time
         name: Boot Time
       - entity: sensor.jain10_system_uptime
