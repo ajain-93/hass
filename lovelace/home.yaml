@@ -132,13 +132,15 @@ cards:
           hold_action:
             action: more-info
 
-    - type: glance
-      title: Rooms
-      show_name: false
-      show_state: false
+
+  - type: vertical-stack
+    title: Navigation
+    cards:
+    - type: grid
       columns: 6
-      entities:
-        - entity: light.bathroom
+      cards:
+        - type: button
+          show_name: false
           icon: 'mdi:shower'
           tap_action:
             action: navigate
@@ -146,7 +148,8 @@ cards:
           hold_action:
             action: navigate
             navigation_path: /lovelace/bathroom
-        - entity: light.bedroom
+        - type: button
+          show_name: false
           icon: 'mdi:bed-double'
           tap_action:
             action: navigate
@@ -154,7 +157,8 @@ cards:
           hold_action:
             action: navigate
             navigation_path: /lovelace/bedroom
-        - entity: light.gallery
+        - type: button
+          show_name: false
           icon: 'mdi:shoe-print'
           tap_action:
             action: navigate
@@ -162,7 +166,8 @@ cards:
           hold_action:
             action: navigate
             navigation_path: /lovelace/gallery
-        - entity: light.kitchen
+        - type: button
+          show_name: false
           icon: 'mdi:table-chair'
           tap_action:
             action: navigate
@@ -170,7 +175,8 @@ cards:
           hold_action:
             action: navigate
             navigation_path: /lovelace/kitchen
-        - entity: light.livingroom
+        - type: button
+          show_name: false
           icon: 'mdi:sofa'
           tap_action:
             action: navigate
@@ -178,7 +184,8 @@ cards:
           hold_action:
             action: navigate
             navigation_path: /lovelace/livingroom
-        - entity: light.store
+        - type: button
+          show_name: false
           icon: 'mdi:wardrobe-outline'
           tap_action:
             action: navigate
@@ -187,122 +194,148 @@ cards:
             action: navigate
             navigation_path: /lovelace/store
 
-  - type: glance
-    title: Navigation
-    show_name: true
-    show_state: false
-    columns: 4
-    entities:
-      - entity: light.all
-        name: Lights
-        icon: mdi:lightbulb-group-outline
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/lights
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/lights
-      # - entity: binary_sensor.light_timers
-      #   name: Triggers
-      #   icon: mdi:lightbulb-group-outline
-      #   tap_action:
-      #     action: navigate
-      #     navigation_path: /lovelace/light-triggers
-      #   hold_action:
-      #     action: navigate
-      #     navigation_path: /lovelace/light-triggers
-      - entity: binary_sensor.motion_state_sensors
-        name: Sensors
-        icon: 'mdi:ghost'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/sensors
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/sensors
-      - entity: sensor.aqara_sensor_switch_01_battery
-        name: Battery
-        icon: 'mdi:battery-charging-wireless-60'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/battery-levels
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/battery-levels
-      - entity: binary_sensor.ping_docker56
-        name: Network
-        icon: 'mdi:check-network'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/network
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/network
-      - entity: sensor.tradfri_led_rgb_01_linkquality
-        name: Link
-        icon: 'mdi:signal-cellular-2'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/zigbee-link
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/zigbee-link
-      - entity: light.tradfri_plug_01_light
-        name: Power
-        icon: 'mdi:flash-outline'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/power
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/power
-      - entity: binary_sensor.updater
-        name: Updates
-        icon: 'mdi:cellphone-arrow-down'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/updates
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/updates
-      - entity: switch.telldus_switch_07_switch
-        name: Ender 3
-        # icon: 'mdi:cellphone-arrow-down'
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/ender3
-        hold_action:
-          action: navigate
-          navigation_path: /lovelace/ender3
+    - type: grid
+      columns: 5
+      cards:
+        - type: button
+          show_name: false
+          icon: mdi:lightbulb-group-outline
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/lights
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/lights
+        # - entity: binary_sensor.light_timers
+        #   name: Triggers
+        #   icon: mdi:lightbulb-group-outline
+        #   tap_action:
+        #     action: navigate
+        #     navigation_path: /lovelace/light-triggers
+        #   hold_action:
+        #     action: navigate
+        #     navigation_path: /lovelace/light-triggers
+        - type: button
+          show_name: false
+          icon: 'mdi:ghost'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/sensors
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/sensors
+        - type: button
+          show_name: false
+          icon: 'mdi:battery-charging-wireless-60'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/battery-levels
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/battery-levels
+        - type: button
+          show_name: false
+          icon: 'mdi:check-network'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/network
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/network
+        - type: button
+          show_name: false
+          icon: 'mdi:signal-cellular-2'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/zigbee-link
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/zigbee-link
+        - type: button
+          show_name: false
+          icon: mdi:power-plug
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/power
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/power
+        - type: button
+          show_name: false
+          entity: binary_sensor.updater
+          icon: 'mdi:cellphone-arrow-down'
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/updates
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/updates
+        - type: button
+          show_name: false
+          name: Exchange Rates
+          icon: mdi:cash-multiple
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/exchangerates
+        - type: button
+          show_name: false
+          icon: mdi:virus
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/corona-virus
+        - type: button
+          show_name: false
+          icon: mdi:gas-station
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/fuel-prices
+
+
+    - type: grid
+      title: Devices
+      columns: 3
+      cards:
+        - type: button
+          entity: binary_sensor.ping_asus_router242
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/net01
+        - type: button
+          entity: binary_sensor.ping_jain10
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/jain10
+        - type: button
+          entity: binary_sensor.ping_jain70
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/jain70
+        - type: button
+          entity: binary_sensor.ping_jain24
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/jain24
+        - type: button
+          entity: binary_sensor.ping_jain78
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/jain78
+        - type: button
+          entity: switch.telldus_switch_07_switch
+          name: Ender 3
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/ender3
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/ender3
+
+
 
   - type: media-control
     entity: media_player.spotify_rufy93
 
-  - type: grid
-    title: Devices
-    square: 'false'
-    columns: 4
-    cards:
-      - type: button
-        entity: binary_sensor.ping_jain10
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/jain10
-      - type: button
-        entity: binary_sensor.ping_jain70
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/jain70
-      - type: button
-        entity: binary_sensor.ping_jain24
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/jain24
-      - type: button
-        entity: binary_sensor.ping_jain78
-        tap_action:
-          action: navigate
-          navigation_path: /lovelace/jain78
+
 
   # - type: entities
   #   title: Weather
