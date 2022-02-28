@@ -16,6 +16,7 @@ views:
   - !include lovelace/entities-power.yaml
   - !include lovelace/entities-updates.yaml
   - !include lovelace/entities-fuel.yaml
+  - !include lovelace/entities-cameras.yaml
 
   # Devices
   - !include lovelace/device-jain10.yaml

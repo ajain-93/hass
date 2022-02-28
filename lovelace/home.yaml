@@ -240,6 +240,15 @@ cards:
             navigation_path: /lovelace/sensors
         - type: button
           show_name: false
+          icon: mdi:webcam
+          tap_action:
+            action: navigate
+            navigation_path: /lovelace/cameras
+          hold_action:
+            action: navigate
+            navigation_path: /lovelace/cameras
+        - type: button
+          show_name: false
           icon: 'mdi:battery-charging-wireless-60'
           tap_action:
             action: navigate
