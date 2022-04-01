@@ -46,6 +46,10 @@
 
 * Octoprint
 
+* TAPO Cameras
+  * TP-Link-camera-01: iot15.jain.lan
+  * TP-Link-camera-02: iot16.jain.lan
+
 # Energy
 * Fibaro Plugs
 * Telldus Plugs
