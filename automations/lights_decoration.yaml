@@ -4,7 +4,17 @@
   trigger:
   - platform: state
     entity_id: switch.ha_lights_mode_night
-    to: 'on'
+  - platform: state
+    entity_id: sun.sun
+  condition:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_night
+          state: 'on'
+        - condition: state
+          entity_id: sun.sun
+          state: 'above_horizon'
   action:
   - service: switch.turn_off
     data:
@@ -14,12 +24,22 @@
         - switch.tradfri_plug_05_power
         - switch.tradfri_plug_06_power
 
-- alias: Light Mode - Decoration Lights - Day
+- alias: Light Mode - Decoration Lights - Daytime darkness
   id: arnav-jain-se_decoration_lights_on
   trigger:
   - platform: state
     entity_id: switch.ha_lights_mode_night
-    to: 'off'
+  - platform: state
+    entity_id: sun.sun
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: switch.ha_lights_mode_night
+          state: 'off'
+        - condition: state
+          entity_id: sun.sun
+          state: 'below_horizon'
   action:
   - service: switch.turn_on
     data:
