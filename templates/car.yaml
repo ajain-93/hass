@@ -1,0 +1,18 @@
+- sensor:
+  - name: bye12b_fuel_remain
+    state_class: measurement
+    unit_of_measurement: "l"
+    icon: mdi:gas-station-outline
+    state: "{{ states('sensor.bye12b_fuel_tank') | float / 100 * 36 }}"
+
+  - name: bye12b_fuel_consumption
+    state_class: measurement
+    unit_of_measurement: "l/100km"
+    icon: mdi:fuel
+    state: "{{ state_attr('sensor.bye12b_current_year_statistics', 'Average_fuel_consumed' )}}"
+
+  - name: bye12b_distance_remain
+    state_class: measurement
+    unit_of_measurement: "km"
+    icon: mdi:map-marker-distance
+    state: "{{ (states('sensor.bye12b_fuel_remain')|float / states('sensor.bye12b_fuel_consumption')|float * 100) | round(0) }}"

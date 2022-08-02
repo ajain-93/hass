@@ -1,0 +1,35 @@
+title: Yaris
+path: car
+icon: mdi:car-hatchback
+visible: true
+
+badges: []
+
+
+cards:
+  - type: glance
+    entities:
+      - entity: sensor.bye12b_fuel_remain
+      - entity: sensor.bye12b_distance_remain
+      - entity: sensor.bye12b_fuel_tank
+      - entity: sensor.bye12b_odometer
+    show_name: false
+    show_state: true
+    show_icon: true
+
+
+  - type: map
+    entities:
+      - entity: device_tracker.bye12b_parking_location
+
+
+  - type: entities
+    entities:
+      - entity: sensor.bye12b_current_week_statistics
+      - entity: sensor.bye12b_current_month_statistics
+      - entity: sensor.bye12b_current_year_statistics
+      - entity: sensor.bye12b_numberplate
+    footer:
+      type: graph
+      entity: sensor.bye12b_odometer
+      hours_to_show: 24
